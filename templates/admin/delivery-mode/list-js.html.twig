@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Modes de Livraison |
+	{{ parent() }}
+{% endblock %}
+
+{# START : admin_delivery_mode_list #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>Liste des Modes de Livraison</h2>
+			{# START : searchProductForm #}
+			{{ form_start(searchDeliveryModeForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'search-delivery-mode-form' }}
+			) }}
+			{# Name #}
+			<div class="form-field">
+				{{ form_label(searchDeliveryModeForm, 'Nom', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(searchDeliveryModeForm.name, { 'id': 'search-delivery-modes-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-search form-field__input-delivery-mode-name', 'placeholder': '🔍 Rechercher par nom' }}
+
+				) }}
+				<p class="error-message error-message_color_red error-message__delivery-mode-name-empty display-none">
+					Merci de saisir un nom de mode de livraison.
+				</p>
+				<p class="error-message error-message_color_red error-message__delivery-mode-name-validity display-none">
+					Merci de saisir un nom de mode de livraison valide.
+				</p>
+				{{ form_errors(searchDeliveryModeForm.name) }}
+			</div>
+			{{ form_end(searchDeliveryModeForm) }}
+			{# END : searchProductForm #}
+			<a class="page__link page__link_text_uppercase page__link-create page__link_background-color_dodger-blue page__link_color_white" href="{{ path('admin_delivery_mode_create') }}" id="create-delivery-mode-link">Créer</a>
+			<div class="list" id="block-delivery-modes-list">
+				<table class="table table_background-color_blue table_color_white table-delivery-mode"></table>
+			</div>
+		</section>
+	</main>
+{% endblock %}
+{# END : admin_delivery_mode_list #}

@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Mettre à jour - Commande -
+	{{ purchase.reference|upper }}
+	-
+	{{ user.firstName }}
+	{{ user.lastName|upper }}
+	|
+	{{ parent() }}
+{% endblock %}
+
+{# START : admin_purchase_update #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>
+				Mettre à jour Commande :
+				{{ purchase.reference|upper }}
+				-
+				{{ user.firstName }}
+				{{ user.lastName|upper }}
+			</h2>
+			{# START : adminUpdatePurchaseForm #}
+			{{ form_start(adminUpdatePurchaseForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'admin-update-purchase-form' }}) }}
+			{# status #}
+			<div class="form-field">
+				{{ form_label(adminUpdatePurchaseForm, 'Statut :', { 'label_attr': { 'class': 'form-field__label' }}) }}
+				{{ form_widget(adminUpdatePurchaseForm.status) }}
+				<p class="error-message error-message_color_red error-message__purchase-status-not-checked display-none">
+					Merci de sélectionner un statut.
+				</p>
+				{{ form_errors(adminUpdatePurchaseForm.status) }}
+			</div>
+			{#! billingAddress not modifiable on update #}
+			{# <div class="form-field">
+							{{ form_label(adminUpdatePurchaseForm, 'Adresse de facturation :', { 'label_attr': { 'class': '' }}) }}
+							{{ form_widget(adminUpdatePurchaseForm.billingAddress) }}
+							<p class="error-message error-message_color_red error-message__billing-address-not-checked display-none">
+								Merci de sélectionner une adresse de facturation.
+							</p>
+							{{ form_errors(adminUpdatePurchaseForm.billingAddress) }}
+			
+						</div> #}
+			{#! deliveryAddress not modifiable on update #}
+			{# <div class="form-field">
+							{{ form_label(adminUpdatePurchaseForm, 'Adresse de livraison :', { 'label_attr': { 'class': '' }}) }}
+							{{ form_widget(adminUpdatePurchaseForm.deliveryAddress) }}
+							<p class="error-message error-message_color_red error-message__delivery-address-not-checked display-none">
+								Merci de sélectionner une adresse de livraison.
+							</p>
+							{{ form_errors(adminUpdatePurchaseForm.deliveryAddress) }}
+						</div> #}
+			{#! deliveryMode not modifiable on update #}
+			{# <div class="form-field">
+							{{ form_label(adminUpdatePurchaseForm, 'Mode de livraison :', { 'label_attr': { 'class': '' }}) }}
+							{{ form_widget(adminUpdatePurchaseForm.deliveryMode) }}
+							<p class="error-message error-message_color_red error-message__purchase-delivery-mode-not-checked display-none">
+								Merci de sélectionner un mode de livraison.
+							</p>
+							{{ form_errors(adminUpdatePurchaseForm.deliveryMode) }}
+						</div> #}
+			{#  Submit adminUpdatePurchaseForm button #}
+				<button type="submit" class="page__button page__button-submit page__button_background-color_safety-orange page__button_color_white" id="admin-update-purchase-button"> Mettre à jour
+			</button>
+			{{ form_end(adminUpdatePurchaseForm) }}
+			{# END : adminUpdatePurchaseForm #}
+		</section>
+	</main>
+{% endblock %}
+{# END : admin_purchase_update #}

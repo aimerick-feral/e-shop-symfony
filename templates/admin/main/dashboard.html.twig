@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Dashboard |
+	{{ parent() }}
+{% endblock %}
+
+{# START : admin_dashboard #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>Dashboard</h2>
+			<div class="list">
+				<div class="card card_color_blue">
+					<h3>
+						<a class="page__link page__link_text_uppercase page__link_padding-and-margin_0 card__link page__link_color_blue" href="{{ path('admin_user_list') }}">Utilisateurs</a>
+					</h3>
+					<p>
+						{{ numberTotalOfUser }}
+						Utilisateurs
+					</p>
+					<p>
+						{{ users }}
+						Utilisateurs avec un ["ROLE_USER"]
+
+					</p>
+					<p>
+						{{ admins }}
+						Utilisateurs avec un ["ROLE_ADMIN","ROLE_USER"]
+					</p>
+					<a class="page__link page__link_text_normal page__link_padding-and-margin_0 card__link page__link_color_blue" href="{{ path('admin_user_statistics') }}">Statistiques 📊</a>
+				</div>
+				<div class="card card_color_blue">
+					<h3>
+						<a class="page__link page__link_text_uppercase page__link_padding-and-margin_0 card__link page__link_color_blue" href="{{ path('admin_address_list') }}">Adresses</a>
+					</h3>
+					<p>
+						{{ addresses }}
+						Adresses
+					</p>
+				</div>
+				<div class="card card_color_blue">
+					<h3>
+						<a class="page__link page__link_text_uppercase card__link page__link_color_blue" href="{{ path('admin_category_list') }}">Catégories</a>
+
+					</h3>
+					<p>
+						{{ categories }}
+						Catégories
+					</p>
+				</div>
+				<div class="card card_color_blue">
+					<h3>
+						<a class="page__link page__link_text_uppercase card__link page__link_color_blue" href="{{ path('admin_product_list') }}">Produits</a>
+
+					</h3>
+					<p>
+						{{ products }}
+						Produits
+					</p>
+				</div>
+				<div class="card card_color_blue">
+					<h3>
+						<a class="page__link page__link_text_uppercase card__link page__link_color_blue" href="{{ path('admin_delivery_mode_list') }}">Modes de Livraison</a>
+					</h3>
+					<p>
+						{{ deliveryModes }}
+						Modes de Livraison
+					</p>
+				</div>
+				<div class="card card_color_blue">
+					<h3>
+						<a class="page__link page__link_text_uppercase card__link page__link_color_blue" href="{{ path('admin_purchase_list') }}">Commandes</a>
+					</h3>
+					<p>
+						{{ purchases }}
+						Commandes
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+{% endblock %}
+{# START : admin_dashboard #}

@@ -1,0 +1,216 @@
+<?php
+
+namespace App\Controller;
+
+use App\Entity\User;
+use App\Form\UserType;
+use App\Service\FileUploader;
+use Doctrine\ORM\EntityManagerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+#[IsGranted('ROLE_USER')]
+class UserController extends AbstractController
+{
+    public function __construct(private EntityManagerInterface $entityManagerInterface)
+    {
+    }
+
+    /** 
+     * Method that display the detail of the logged in user's profile. 
+     * @param Request $request
+     * @param FileUploader $fileUploader
+     * @return Response
+     */
+    #[Route('/profil', name: 'user_profile', methods: 'GET|POST', priority: 3)]
+    public function profile(Request $request, FileUploader $fileUploader): Response
+    {
+        // We get the logged in user.
+        /**
+         * @var User
+         */
+        $user = $this->getUser();
+
+        // TODO #2 START : solve issue on switch civilityTitle.  
+        // dump($user->getCivilityTitle());
+        // TODO #2 END : solve issue on switch civilityTitle.   
+
+        // We create the form.
+        $form = $this->createForm(UserType::class, $user);
+        // We link the form to the request.
+        $form->handleRequest($request);
+
+        // If the form is submitted and valid. 
+        if ($form->isSubmitted() && $form->isValid()) {
+            // We call the uploadFile() method of the FileUploader service is order to upload the picture submit by the user. 
+            $picture = $fileUploader->uploadFile($form, 'upload');
+
+            // TODO #2 END : solve issue on switch civilityTitle.   
+            // dump($user->getCivilityTitle());
+            // dd(42);
+            // TODO #2 END : solve issue on switch civilityTitle.  
+
+            // If we have a picture to upload. 
+            if ($picture) {
+                // We set to the picture property the value of $picture.
+                $user->setPicture($picture);
+            }
+            // Else the user not submit any picture so we set a picture by default depending on his gender.
+            else {
+                // If the user picture is different than User::MAN_PICTURE and than User::WOMAN_PICTURE. 
+                if (
+                    $user->getCivilityTitle() !== User::MAN_CIVILITY_TITLE || $user->getCivilityTitle() !== User::WOMAN_CIVILITY_TITLE
+                ) {
+                    // If the user picture is different than User::MAN_PICTURE and than User::WOMAN_PICTURE 
+                    if ($user->getPicture() !== User::MAN_PICTURE && $user->getPicture() !== User::WOMAN_PICTURE) {
+                        // We don't want to change the picture that the user have already set for himself. 
+                        // We set to the picture property the value of the initial user picture.
+                        $user->setPicture($user->getPicture());
+                    }
+                    // Else the user's picture is one of our picture by default. 
+                    else {
+                        // If the user is a User::MAN_CIVILITY_TITLE. 
+                        if ($user->getCivilityTitle() === User::MAN_CIVILITY_TITLE) {
+                            // We set to the picture property the value of User::MAN_PICTURE.
+                            $user->setPicture(User::MAN_PICTURE);
+                        }
+                        // Else if the user is a User::WOMAN_CIVILITY_TITLE.
+                        else if ($user->getCivilityTitle() === User::WOMAN_CIVILITY_TITLE) {
+                            // We set to the picture property the value of User::WOMAN_PICTURE.
+                            $user->setPicture(User::WOMAN_PICTURE);
+                        }
+                    }
+                }
+
+                // TODO #2 START : solve issue.  
+                // the civility title doesn't switch normaly like all the other properties.
+                // If we use onPreSubmit() in UserType.php : the civility title switch correctly to the new one. 
+                // If don't use onPreSubmit() in UserType.php : the civility title doesn't switch, he keep is hold value.
+                // Why we have to use onPreSubmit() so that the civility title switch correctly ? 
+                // TODO #2 END : solve issue.  
+            }
+
+            // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
+            $this->entityManagerInterface->flush();
+
+            // We display a flash message for the user. 
+            // $this->addFlash('success', 'Bonjour ' . $user->getFirstName() . ', votre profil a bien été mis à jour.');
+            $this->addFlash('success', 'Votre profil a bien été mis à jour.');
+
+            // We redirect the user.
+            return $this->redirectToRoute(
+                'user_profile',
+                // We set a array of optional data. 
+                [],
+                // We specify the related HTTP response status code.
+                301
+            );
+        }
+
+        // We display our template. 
+        return $this->render(
+            'user/profile.html.twig',
+            // We set a array of optional data.
+            [
+                'userProfileForm' => $form->createView()
+            ],
+            // We specify the related HTTP response status code.
+            new Response('', 200)
+        );
+    }
+
+    /** 
+     * Method that delete the logged in user's picture and update his profile picture by default according his gender. 
+     * @param Request $request
+     * @return Response
+     */
+    #[Route('/supprimer-ma-photo', name: 'user_delete_picture', methods: 'GET|POST', priority: 4)]
+    public function deletePicture(Request $request): Response
+    {
+        // We get logged user.
+        /**
+         * @var User
+         */
+        $user = $this->getUser();
+
+        // We catch the csrfToken that the user submit after his click on the delete my picture button.
+        $submittedToken = $request->query->get('token');
+
+        // If the $submittedToken is valid.
+        if ($this->isCsrfTokenValid('delete-my-user-picture' . $user->getId(), $submittedToken)) {
+            // If the user is a man. 
+            if ($user->getCivilityTitle() === User::MAN_CIVILITY_TITLE) {
+                // We set to the picture property the value of User::MAN_PICTURE.
+                $user->setPicture(User::MAN_PICTURE);
+            }
+            // Else if the user is a woman.
+            else if ($user->getCivilityTitle() === User::WOMAN_CIVILITY_TITLE) {
+                // We set to the picture property the value of User::WOMAN_PICTURE.
+                $user->setPicture(User::WOMAN_PICTURE);
+            }
+
+            // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
+            $this->entityManagerInterface->flush();
+
+            // We display a flash message for the user.
+            $this->addFlash('success', 'Votre photo de profil a bien été supprimée.');
+
+            // We redirect the user.
+            return $this->redirectToRoute(
+                'user_profile',
+                // We set a array of optional data. 
+                [],
+                // We specify the related HTTP response status code.
+                301
+            );
+        }
+        // Else, the $submittedToken is not valid.
+        else {
+            // We redirect the user to the page 403.
+            return new Response(
+                'Action interdite',
+                // We specify the related HTTP response status code.
+                403
+            );
+        }
+    }
+
+    /** 
+     * Metho that delete the logged in user's account 30 days after the request. 
+     * @param Request $request
+     * @return Response
+     */
+    #[Route('/supprimer-mon-compte', name: 'user_delete_my-account', methods: 'GET|POST', priority: 5)]
+    public function deleteMyAccount(Request $request): Response
+    {
+        // We get logged user.
+        /**
+         * @var User
+         */
+        $user = $this->getUser();
+
+        // We get the CSRF token.
+        $submittedToken = $request->request->get('token') ?? $request->query->get('token');
+
+        // If the CSRF token is valid. 
+        if ($this->isCsrfTokenValid('user-delete-my-account' . $user->getId(), $submittedToken)) {
+            // TODO #7 START : delete user account 30 days after the request. 
+            dd(42);
+
+            // TODO #7 START : delete user account 30 days after the request.
+
+        }
+
+        // We redirect the user.
+        return $this->redirectToRoute(
+            'home',
+            // We set a array of optional data. 
+            [],
+            // We specify the related HTTP response status code.
+            301
+        );
+    }
+}

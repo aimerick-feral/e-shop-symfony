@@ -1,0 +1,53 @@
+{# START : Mobile navigation #}
+<nav class="nav nav-mobile">
+	<ul>
+		<li class="nav__item nav-mobile__item nav-mobile__item_color_blue">
+			<a class="nav__link" href="{{ path('product_list') }}">Produits</a>
+		</li>
+		<li class="nav__item nav-mobile__item nav-mobile__item_color_blue">
+			<a class="nav__link" href="{{ path('category_list') }}">Catégories</a>
+		</li>
+		{# START : admin access #}
+		{% if is_granted('ROLE_ADMIN') %}
+			<li class="nav__item nav-mobile__item nav-mobile__item_color_blue">
+				<a class="nav__link" href="{{ path('admin_dashboard') }}">Dashboard</a>
+			</li>
+			<li class="nav__item nav-mobile__item nav-mobile__item_color_blue">
+				<a class="nav__link" href="{{ path('admin_user_list') }}">Gestion Utilisateurs</a>
+			</li>
+			<li class="nav__item nav-mobile__item nav-mobile__item_color_blue">
+				<a class="nav__link" href="{{ path('admin_address_list') }}">Gestion Adresses</a>
+			</li>
+			<li class="nav__item nav-mobile__item nav-mobile__item_color_blue">
+				<a class="nav__link" href="{{ path('admin_product_list') }}">Gestion Produits</a>
+
+			</li>
+			<li class="nav__item nav-mobile__item nav-mobile__item_color_blue">
+				<a class="nav__link" href="{{ path('admin_category_list') }}">Gestion Catégories</a>
+			</li>
+			<li class="nav__item nav-mobile__item nav-mobile__item_color_blue">
+				<a class="nav__link" href="{{ path('admin_purchase_list') }}">Gestion Commandes</a>
+			</li>
+			<li class="nav__item nav-mobile__item nav-mobile__item_color_blue">
+				<a class="nav__link" href="{{ path('admin_delivery_mode_list') }}">Gestion Modes de Livraison</a>
+			</li>
+		{% endif %}
+		{# END : admin access #}
+		{% if app.user %}
+			<li class="nav__item nav-mobile__item nav-mobile__item_color_blue">
+				<a class="page__link_color_red nav-mobile__logout-link" id="mobile-logout-link" href="{{ path('app_logout') }}">Déconnexion</a>
+				<a class="header__link_background-color_blue" href="{{ path('user_profile') }}">
+					<img class="header__icon nav-mobile__profile-picture" src="{{ asset('assets/uploads/pictures/users/' ~ app.user.picture) }}" alt="image {{ app.user.firstName }}"/>
+				</a>
+			</li>
+		{% else %}
+			<li class="nav__item nav-mobile__item nav-mobile__item_color_blue">
+				<a class="page__link_color_green nav-mobile__login-link" id="mobile-login-link" href="{{ path('app_login') }}">Connexion</a>
+			</li>
+			<li class="nav__item nav-mobile__item nav-mobile__item_color_blue">
+				<a class="page__link_color_safety-orange nav-mobile__registration-link" id="mobile-registration-link" href="{{ path('app_register') }}">Inscription</a>
+			</li>
+		{% endif %}
+	</ul>
+</nav>
+{# Mobile navigation #}

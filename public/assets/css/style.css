@@ -1,0 +1,4067 @@
+/* ========================================================== */
+/* ========================= RESET ========================== */
+/* ========================================================== */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================ */
+/* ===================== ALL SCREEN SIZES ===================== */
+/* ============================================================ */
+/* Colors used in the app */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --blue: #0000ff;
+  --green: #00ff00;
+  --red: #ff0000;
+  --safety-orange: #ff6600;
+  --purple: #cc00ff;
+  --yellow: #fbbc05;
+  --slimy-green: #009933;
+  --sepia: #663300;
+  --mint-green: #b3ffb3;
+  --salmon-pink: #ff9999;
+  --peach-crayola: #ffc299;
+  --dodger-blue: #0092f2;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  color: var(--black);
+}
+
+.display-none {
+  display: none;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.error-message_color_safety-orange {
+  color: var(--safety-orange);
+}
+
+.error-message_color_yellow {
+  color: var(--yellow);
+}
+
+.error-message_color_blue {
+  color: var(--blue);
+}
+
+.error-message_color_slimy-green {
+  color: var(--slimy-green);
+}
+
+.error-message_color_red {
+  color: var(--red);
+}
+
+/* If mode = dark */
+.dark {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* If mode = light */
+.light {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/* If theme = knick */
+.knick {
+  background-color: var(--blue);
+  color: var(--safety-orange);
+}
+
+/* If theme = lakers */
+.lakers {
+  background-color: var(--purple);
+  color: var(--yellow);
+}
+
+/* If theme = mario */
+.mario {
+  background-color: var(--red);
+  color: var(--blue);
+}
+
+/* If theme = jamaica */
+.jamaica {
+  background-color: var(--slimy-green);
+  color: var(--yellow);
+}
+
+/* If theme = golden-state-warriors */
+.golden-state-warriors {
+  background-color: var(--yellow);
+  color: var(--blue);
+}
+
+/* If theme = flash */
+.flash {
+  background-color: var(--red);
+  color: var(--yellow);
+}
+
+/* If theme = forest */
+.forest {
+  background-color: var(--sepia);
+  color: var(--slimy-green);
+}
+
+.opacity {
+  filter: blur(3px);
+  opacity: 0.5;
+}
+
+.availability,
+.status {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Product availability */
+.availability__avialable_color_green {
+  color: #00ff00;
+}
+
+.availability__unavailable_color_red {
+  color: var(--red);
+}
+
+.availability_color_safety-orange {
+  color: var(--safety-orange);
+}
+
+.availability_color_yellow {
+  color: var(--yellow);
+}
+
+.availability_color_blue {
+  color: var(--blue);
+}
+
+.availability_color_slimy-green {
+  color: var(--slimy-green);
+}
+
+/* Purchase status */
+.status_color_safety-orange {
+  color: var(--safety-orange);
+}
+
+.status_color_yellow {
+  color: var(--yellow);
+}
+
+.status_color_blue {
+  color: var(--blue);
+}
+
+.status_color_slimy-green {
+  color: var(--slimy-green);
+}
+
+.status__paid_color_green {
+  color: #00ff00;
+}
+
+.status__paid_color_safety-orange {
+  color: var(--safety-orange);
+}
+
+.status__paid_color_yellow {
+  color: var(--yellow);
+}
+
+.status__paid_color_blue {
+  color: var(--blue);
+}
+
+.status__paid_color_slimy-green {
+  color: #00ff00;
+}
+
+.status__in-progress_color_safety-orange {
+  color: var(--safety-orange);
+}
+
+.status__in-progress_color_yellow {
+  color: var(--yellow);
+}
+
+.status__in-progress_color_blue {
+  color: var(--blue);
+}
+
+.status__in-progress_color_slimy-green {
+  color: var(--slimy-green);
+}
+
+.status__send_color_purple {
+  color: var(--purple);
+}
+
+.status__send_color_safety-orange {
+  color: var(--safety-orange);
+}
+
+.status__send_color_yellow {
+  color: var(--yellow);
+}
+
+.status__send_color_blue {
+  color: var(--blue);
+}
+
+.status__send_color_slimy-green {
+  color: var(--slimy-green);
+}
+
+.status__deliver_color_slimy-green {
+  color: var(--slimy-green);
+}
+
+.status__deliver_color_safety-orange {
+  color: var(--safety-orange);
+}
+
+.status__deliver_color_yellow {
+  color: var(--yellow);
+}
+
+.status__deliver_color_blue {
+  color: var(--blue);
+}
+
+.status__annul_color_red {
+  color: var(--red);
+}
+
+.status__annul_color_safety-orange {
+  color: var(--safety-orange);
+}
+
+.status__annul_color_yellow {
+  color: var(--yellow);
+}
+
+.status__annul_color_blue {
+  color: var(--blue);
+}
+
+.status__annul_color_slimy-green {
+  color: var(--slimy-green);
+}
+
+/* ============================================================ */
+/* ============== MOBILE WITH SMALL SCREEN SIZE =============== */
+/* ============================================================ */
+@media screen and (min-width: 320px) {
+  /* ============================================================ */
+  /* =================== WRAPPER FOR EACH PAGE ================== */
+  /* ============================================================ */
+  .wrapper {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .wrapper p {
+    font-size: 1em;
+    margin: 0 0 0.5em;
+    line-height: 1.5em;
+  }
+
+  .flash-success,
+  .flash-error,
+  .flash-warning {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 1em;
+    width: 100%;
+    height: 4em;
+  }
+
+  .flash-success p,
+  .flash-error p,
+  .flash-warning p {
+    margin: 0;
+  }
+
+  .flash-success {
+    background-color: var(--mint-green);
+    color: #00802b;
+  }
+
+  .flash-error {
+    background-color: var(--salmon-pink);
+    color: var(--red);
+  }
+
+  .flash-warning {
+    background-color: var(--peach-crayola);
+    color: var(--safety-orange);
+  }
+
+  .flash-error__message {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .circle p {
+    margin: 0;
+  }
+
+  /* ============================================================ */
+  /* =============== MODE, FONT AND THEME SWITCHS =============== */
+  /* ============================================================ */
+  .switchs {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 7em;
+    height: 20em;
+    /* background-color: aquamarine; */
+  }
+
+  /* The box around the slider */
+  .switch {
+    position: absolute;
+    align-self: flex-start;
+    display: block;
+    margin: 1em 1em;
+    width: 3.75em;
+    height: 2.125em;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+
+  .switch__slider::before {
+    position: absolute;
+    content: "";
+    width: 1.625em;
+    height: 1.625em;
+    left: 0.25em;
+    bottom: 0.25em;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+
+  input:checked + .switch__slider::before {
+    -webkit-transform: translateX(1.625em);
+    -ms-transform: translateX(1.625em);
+    transform: translateX(1.625em);
+  }
+
+  /* Rounded sliders */
+  .switch__slider.switch__round {
+    border-radius: 2.125em;
+  }
+
+  .switch__slider.switch__round::before {
+    border-radius: 50%;
+  }
+
+  /* ============================================================ */
+  /* ================ DARK AND LIGHT MODE SWITCH ================ */
+  /* ============================================================ */
+  #mode-switch {
+    top: 5%;
+    left: 0;
+  }
+
+  .switch__slider-mode_background-color_black {
+    background-color: var(--black);
+  }
+
+  .switch__slider-mode_background-color_white::before {
+    background-color: var(--before, var(--white));
+  }
+
+  /* When checked the switch background color is white */
+  input:checked + .switch__slider-mode_background-color_white {
+    background-color: var(--white);
+  }
+
+  /* ============================================================ */
+  /* ===================== FONT COLOR SWITCHS =================== */
+  /* ============================================================ */
+  #blue-switch {
+    top: 20%;
+  }
+
+  .switch__slider-font-color_background-color_blue::before {
+    background-color: var(--blue);
+  }
+
+  #green-switch {
+    top: 35%;
+  }
+
+  .switch__slider-font-color_background-color_green::before {
+    background-color: #00ff00;
+  }
+
+  #red-switch {
+    top: 50%;
+  }
+
+  .switch__slider-font-color_background-color_red::before {
+    background-color: var(--red);
+  }
+
+  #orange-switch {
+    top: 65%;
+  }
+
+  .switch__slider-font-color_background-color_safety-orange::before {
+    background-color: var(--safety-orange);
+  }
+
+  #purple-switch {
+    top: 80%;
+  }
+
+  .switch__slider-font-color_background-color_purple::before {
+    background-color: var(--purple);
+  }
+
+  #yellow-switch {
+    top: 95%;
+  }
+
+  .switch__slider-font-color_background-color_yellow::before {
+    background-color: var(--yellow);
+  }
+
+  .switch__slider-font-color_background-color_white {
+    background-color: var(--white);
+  }
+
+  .switch__slider-font-color_background-color_black {
+    background-color: var(--black);
+  }
+
+  /* ============================================================ */
+  /* ======================= THEME SWITCHS ====================== */
+  /* ============================================================ */
+  /* Switch for knick theme */
+  #knick-switch {
+    top: 5%;
+    left: 70%;
+  }
+
+  .switch__slider-theme_background-color_blue-knick {
+    background-color: var(--blue);
+  }
+
+  input:checked + .switch__slider-theme_background-color_safety-orange-knick {
+    background-color: var(--safety-orange);
+  }
+
+  .switch__slider-theme_background-color_safety-orange-knick::before {
+    background-color: var(--before, var(--safety-orange));
+  }
+
+  /* Switch for lakers theme */
+  #lakers-switch {
+    top: 20%;
+    left: 70%;
+  }
+
+  .switch__slider-theme_background-color_purple-lakers {
+    background-color: var(--purple);
+  }
+
+  input:checked + .switch__slider-theme_background-color_yellow-lakers {
+    background-color: var(--yellow);
+  }
+
+  .switch__slider-theme_background-color_yellow-lakers::before {
+    background-color: var(--before, var(--yellow));
+  }
+
+  /* Switch for mario theme */
+  #mario-switch {
+    top: 35%;
+    left: 70%;
+  }
+
+  .switch__slider-theme_background-color_red-mario {
+    background-color: var(--red);
+  }
+
+  .switch__slider-theme_background-color_blue-mario-2 {
+    background-color: var(--blue);
+  }
+
+  input:checked + .switch__slider-theme_background-color_blue-mario {
+    background-color: var(--blue);
+  }
+
+  .switch__slider-theme_background-color_blue-mario::before {
+    background-color: var(--before, var(--blue));
+  }
+
+  /* Switch for jamaica theme */
+  #jamaica-switch {
+    top: 50%;
+    left: 70%;
+  }
+
+  .switch__slider-theme_background-color_slimy-green-jamaica {
+    background-color: var(--slimy-green);
+  }
+
+  input:checked + .switch__slider-theme_background-color_yellow-jamaica {
+    background-color: var(--yellow);
+  }
+
+  .switch__slider-theme_background-color_yellow-jamaica::before {
+    background-color: var(--before, var(--yellow));
+  }
+
+  /* Switch for golden State Warriors theme */
+  #golden-state-warriors-switch {
+    top: 65%;
+    left: 70%;
+  }
+
+  .switch__slider-theme_background-color_yellow-golden-state-warriors {
+    background-color: var(--yellow);
+  }
+
+  input:checked
+    + .switch__slider-theme_background-color_blue-golden-state-warriors {
+    background-color: var(--blue);
+  }
+
+  .switch__slider-theme_background-color_blue-golden-state-warriors::before {
+    background-color: var(--before, var(--blue));
+  }
+
+  /* Switch for Flash theme */
+  #flash-switch {
+    top: 80%;
+    left: 70%;
+  }
+
+  .switch__slider-theme_background-color_red-flash {
+    background-color: var(--red);
+  }
+
+  .switch__slider-theme_background-color_yellow-flash-2 {
+    background-color: var(--yellow);
+  }
+
+  input:checked + .switch__slider-theme_background-color_yellow-flash {
+    background-color: var(--yellow);
+  }
+
+  .switch__slider-theme_background-color_yellow-flash::before {
+    background-color: var(--before, var(--yellow));
+  }
+
+  /* Switch for Flash theme */
+  #forest-switch {
+    top: 95%;
+    left: 70%;
+  }
+
+  .switch__slider-theme_background-color_sepia {
+    background-color: var(--sepia);
+  }
+
+  input:checked + .switch__slider-theme_background-color_slimy-green-forest {
+    background-color: var(--slimy-green);
+  }
+
+  .switch__slider-theme_background-color_slimy-green-forest::before {
+    background-color: var(--before, var(--slimy-green));
+  }
+
+  .switchs {
+    display: none;
+  }
+
+  /* ============================================================ */
+  /* ========================= BUTTONS ========================== */
+  /* ============================================================ */
+  .page__button {
+    user-select: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 1.5em;
+    margin-top: 1em;
+    width: 60%;
+  }
+
+  .page__button_background-color_blue {
+    background-color: var(--blue);
+  }
+
+  .page__button_background-color_green {
+    background-color: #00ff00;
+  }
+
+  .page__button_background-color_red {
+    background-color: var(--red);
+  }
+
+  .page__button_background-color_safety-orange {
+    background-color: var(--safety-orange);
+  }
+
+  .page__button_background-color_purple {
+    background-color: var(--purple);
+  }
+
+  .page__button_background-color_yellow {
+    background-color: var(--yellow);
+  }
+
+  .page__button_background-color_slimy-green {
+    background-color: var(--slimy-green);
+  }
+
+  .page__button_background-color_dodger-blue {
+    background-color: var(--dodger-blue);
+  }
+
+  .page__button_color_black {
+    color: var(--black);
+  }
+
+  .page__button_color_white {
+    color: var(--white);
+  }
+
+  .page__button_color_blue {
+    color: var(--blue);
+  }
+
+  .page__button_color_purple {
+    color: var(--purple);
+  }
+
+  .page__button_color_red {
+    color: var(--red);
+  }
+
+  .page__button_color_slimy-green {
+    color: var(--slimy-green);
+  }
+
+  .page__button_color_yellow {
+    color: var(--yellow);
+  }
+
+  .page__button_color_sepia {
+    color: var(--sepia);
+  }
+
+  .page__button_text_bold {
+    font-weight: bold;
+  }
+
+  /* ============================================================ */
+  /* ========================== LINKS =========================== */
+  /* ============================================================ */
+  .page__link {
+    user-select: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 1.5em;
+    margin-top: 1em;
+    width: 60%;
+  }
+
+  /* .page__link-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+  } */
+
+  .page__link-disabled_background-color_gray-web {
+    background-color: #808080;
+  }
+
+  .page__link_background-color_blue {
+    background-color: var(--blue);
+  }
+
+  .page__link_background-color_green {
+    background-color: #00ff00;
+  }
+
+  .page__link_background-color_red {
+    background-color: var(--red);
+  }
+
+  .page__link_background-color_safety-orange {
+    background-color: var(--safety-orange);
+  }
+
+  .page__link_background-color_purple {
+    background-color: var(--purple);
+  }
+
+  .page__link_background-color_yellow {
+    background-color: var(--yellow);
+  }
+
+  .page__link_background-color_dodger-blue {
+    background-color: var(--dodger-blue);
+  }
+
+  .page__link_background-color_white {
+    background-color: var(--white);
+  }
+
+  .page__link_background-color_slimy-green {
+    background-color: var(--slimy-green);
+  }
+
+  .page__link_color_black {
+    color: var(--black);
+  }
+
+  .page__link_color_white {
+    color: var(--white);
+  }
+
+  .page__link_color_blue {
+    color: var(--blue);
+  }
+
+  .page__link_color_green {
+    color: #00ff00;
+  }
+
+  .page__link_color_red {
+    color: var(--red);
+  }
+
+  .page__link_color_safety-orange {
+    color: var(--safety-orange);
+  }
+
+  .page__link_color_purple {
+    color: var(--purple);
+  }
+
+  .page__link_color_yellow {
+    color: var(--yellow);
+  }
+
+  .page__link_color_slimy-green {
+    color: var(--slimy-green);
+  }
+
+  .page__link_color_sepia {
+    color: var(--sepia);
+  }
+
+  .page__link_text_uppercase {
+    text-transform: uppercase;
+  }
+
+  .page__link_text_underline {
+    text-decoration: underline;
+  }
+
+  .page__link_text_normal {
+    font-weight: normal;
+  }
+
+  .page__link_padding-and-margin_0 {
+    padding: 0;
+    margin: 0;
+  }
+
+  .page__link_margin-bottom_1em {
+    margin-bottom: 1em;
+  }
+
+  /* ============================================================ */
+  /* ========================== IMAGES ========================== */
+  /* ============================================================ */
+  .page__picture {
+    width: 60%;
+    border-radius: 50%;
+    margin: 0 0 0.5em;
+  }
+
+  .page__picture-entity {
+    border-radius: 50%;
+    margin: 1em 0 1em;
+    width: 6em;
+  }
+
+  .form-field-purchase-delivery-mode .page__picture-delivery-mode,
+  .form-field-purchase-checkout-method .page__picture-checkout-method {
+    vertical-align: middle;
+  }
+
+  .page__picture-delivery-mode {
+    width: 2.5em;
+  }
+
+  .page__picture-entity.page__picture-delivery-mode {
+    border-radius: 0;
+  }
+
+  .form-field-purchase-delivery-mode .page__picture-delivery-mode {
+    margin-right: 0.25em;
+  }
+
+  .form-field-purchase-checkout-method .page__picture-checkout-method {
+    margin-left: 0.25em;
+  }
+
+  .form-field-purchase-checkout-method .page__picture-visa {
+    width: 3em;
+  }
+
+  .form-field-purchase-checkout-method .page__picture-mastercard {
+    width: 2.5em;
+  }
+
+  .form-field-purchase-checkout-method .page__picture-cb {
+    width: 2.2em;
+  }
+
+  .form-field-purchase-checkout-method .page__picture-american-express {
+    width: 2.5em;
+  }
+
+  .form-field-purchase-checkout-method .page__picture-paypal {
+    width: 3.5em;
+  }
+
+  .page__icon-checked {
+    vertical-align: bottom;
+    width: 1.2em;
+  }
+
+  .page__icon {
+    width: 1.8em;
+  }
+
+  .page__icon_color_black {
+    filter: invert(0%) sepia(100%) saturate(13%) hue-rotate(127deg)
+      brightness(94%) contrast(100%);
+  }
+
+  .page__icon_color_white {
+    filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(208deg)
+      brightness(104%) contrast(102%);
+  }
+
+  .page__icon_color_blue {
+    filter: invert(8%) sepia(100%) saturate(7458%) hue-rotate(247deg)
+      brightness(98%) contrast(144%);
+  }
+
+  .page__icon_color_green {
+    filter: invert(59%) sepia(19%) saturate(7109%) hue-rotate(81deg)
+      brightness(119%) contrast(123%);
+  }
+
+  .page__icon_color_red {
+    filter: invert(21%) sepia(87%) saturate(6487%) hue-rotate(356deg)
+      brightness(104%) contrast(119%);
+  }
+
+  .page__icon_color_safety-orange {
+    filter: invert(46%) sepia(31%) saturate(6381%) hue-rotate(2deg)
+      brightness(105%) contrast(103%);
+  }
+
+  .page__icon_color_purple {
+    filter: invert(21%) sepia(87%) saturate(6564%) hue-rotate(284deg)
+      brightness(101%) contrast(126%);
+  }
+
+  .page__icon_color_yellow {
+    filter: invert(83%) sepia(10%) saturate(5304%) hue-rotate(352deg)
+      brightness(97%) contrast(104%);
+  }
+
+  .page__icon_color_slimy-green {
+    filter: invert(42%) sepia(73%) saturate(7011%) hue-rotate(137deg)
+      brightness(100%) contrast(101%);
+  }
+
+  .page__icon_color_sepia {
+    filter: invert(18%) sepia(94%) saturate(1018%) hue-rotate(9deg)
+      brightness(96%) contrast(101%);
+  }
+
+  /* ============================================================ */
+  /* ========================== HEADER ========================== */
+  /* ============================================================ */
+  .header {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header_background-color_blue {
+    background-color: var(--blue);
+  }
+
+  .header_background-color_green {
+    background-color: #00ff00;
+  }
+
+  .header_background-color_red {
+    background-color: var(--red);
+  }
+
+  .header_background-color_safety-orange {
+    background-color: var(--safety-orange);
+  }
+
+  .header_background-color_purple {
+    background-color: var(--purple);
+  }
+
+  .header_background-color_yellow {
+    background-color: var(--yellow);
+  }
+
+  .header_background-color_slimy-green {
+    background-color: var(--slimy-green);
+  }
+
+  .header__title h1 {
+    font-weight: bold;
+    font-size: 1em;
+  }
+
+  .header__title a {
+    text-decoration: none;
+  }
+
+  .header__title_color_black a {
+    color: var(--black);
+  }
+
+  .header__title_color_white a {
+    color: var(--white);
+  }
+
+  .header__title_color_blue a {
+    color: var(--blue);
+  }
+
+  .header__title_color_purple a {
+    color: var(--purple);
+  }
+
+  .header__title_color_red a {
+    color: var(--red);
+  }
+
+  .header__title_color_slimy-green a {
+    color: var(--slimy-green);
+  }
+
+  .header__title_color_yellow a {
+    color: var(--yellow);
+  }
+
+  .header__title_color_sepia a {
+    color: var(--sepia);
+  }
+
+  .header__icon {
+    width: 1.8em;
+  }
+
+  .header__icon_color_black {
+    filter: invert(0%) sepia(100%) saturate(13%) hue-rotate(127deg)
+      brightness(94%) contrast(100%);
+  }
+
+  .header__icon_color_white {
+    filter: invert(100%) sepia(96%) saturate(15%) hue-rotate(208deg)
+      brightness(104%) contrast(102%);
+  }
+
+  .header__icon_color_blue {
+    filter: invert(8%) sepia(100%) saturate(7458%) hue-rotate(247deg)
+      brightness(98%) contrast(144%);
+  }
+
+  .header__icon_color_green {
+    filter: invert(59%) sepia(19%) saturate(7109%) hue-rotate(81deg)
+      brightness(119%) contrast(123%);
+  }
+
+  .header__icon_color_red {
+    filter: invert(21%) sepia(87%) saturate(6487%) hue-rotate(356deg)
+      brightness(104%) contrast(119%);
+  }
+
+  .header__icon_color_safety-orange {
+    filter: invert(46%) sepia(31%) saturate(6381%) hue-rotate(2deg)
+      brightness(105%) contrast(103%);
+  }
+
+  .header__icon_color_purple {
+    filter: invert(21%) sepia(87%) saturate(6564%) hue-rotate(284deg)
+      brightness(101%) contrast(126%);
+  }
+
+  .header__icon_color_yellow {
+    filter: invert(83%) sepia(10%) saturate(5304%) hue-rotate(352deg)
+      brightness(97%) contrast(104%);
+  }
+
+  .header__icon_color_slimy-green {
+    filter: invert(42%) sepia(73%) saturate(7011%) hue-rotate(137deg)
+      brightness(100%) contrast(101%);
+  }
+
+  .header__icon_color_sepia {
+    filter: invert(18%) sepia(94%) saturate(1018%) hue-rotate(9deg)
+      brightness(96%) contrast(101%);
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    width: 3em;
+    height: 3em;
+  }
+
+  .burger-menu_background-color_blue {
+    background-color: var(--blue);
+  }
+
+  .burger-menu_background-color_green {
+    background-color: #00ff00;
+  }
+
+  .burger-menu_background-color_red {
+    background-color: var(--red);
+  }
+
+  .burger-menu_background-color_safety-orange {
+    background-color: var(--safety-orange);
+  }
+
+  .burger-menu_background-color_purple {
+    background-color: var(--purple);
+  }
+
+  .burger-menu_background-color_yellow {
+    background-color: var(--yellow);
+  }
+
+  .burger-menu_background-color_slimy-green {
+    background-color: var(--slimy-green);
+  }
+
+  .header__burger-icon {
+    width: 2.5em;
+  }
+
+  .header__cross-icon {
+    width: 1.5em;
+  }
+
+  .circle {
+    position: absolute;
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    top: 40%;
+    left: 86%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle p {
+    font-size: 0.8em;
+  }
+
+  .circle_background-color_black {
+    background-color: var(--black);
+  }
+
+  .circle_background-color_white {
+    background-color: var(--white);
+  }
+
+  .circle_background-color_blue {
+    background-color: var(--blue);
+  }
+
+  .circle_background-color_green {
+    background-color: #00ff00;
+  }
+
+  .circle_background-color_red {
+    background-color: var(--red);
+  }
+
+  .circle_background-color_safety-orange {
+    background-color: var(--safety-orange);
+  }
+
+  .circle_background-color_purple {
+    background-color: var(--purple);
+  }
+
+  .circle_background-color_yellow {
+    background-color: var(--yellow);
+  }
+
+  .circle_background-color_slimy-green {
+    background-color: var(--slimy-green);
+  }
+
+  .circle_background-color_sepia {
+    background-color: var(--sepia);
+  }
+
+  .circle_color_black {
+    color: var(--black);
+  }
+
+  .circle_color_white {
+    color: var(--white);
+  }
+
+  .circle_color_blue {
+    color: var(--blue);
+  }
+
+  .circle_color_green {
+    color: #00ff00;
+  }
+
+  .circle_color_red {
+    color: var(--red);
+  }
+
+  .circle_color_safety-orange {
+    color: var(--safety-orange);
+  }
+
+  .circle_color_purple {
+    color: var(--purple);
+  }
+
+  .circle_color_yellow {
+    color: var(--yellow);
+  }
+
+  .circle_color_slimy-green {
+    color: var(--slimy-green);
+  }
+
+  /* ===================== nav-desktop ===================== */
+  .nav-desktop {
+    display: none;
+  }
+
+  /* ============================================================ */
+  /* ======================== NAV MOBILE ======================== */
+  /* ============================================================ */
+  .nav {
+    text-align: center;
+    width: 100%;
+    margin-top: 25%;
+  }
+
+  .nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav__item {
+    text-decoration: none;
+    font-size: 1em;
+    padding: 1em;
+  }
+
+  .nav-desktop__item_color_black a {
+    color: var(--black);
+  }
+
+  .nav-desktop__item_color_white a {
+    color: var(--white);
+  }
+
+  .nav-desktop__item_color_blue a {
+    color: var(--blue);
+  }
+
+  .nav-desktop__item_color_red a {
+    color: var(--red);
+  }
+
+  .nav-desktop__item_color_purple a {
+    color: var(--purple);
+  }
+
+  .nav-desktop__item_color_slimy-green a {
+    color: var(--slimy-green);
+  }
+
+  .nav-desktop__item_color_yellow a {
+    color: var(--yellow);
+  }
+
+  .nav-desktop__item_color_sepia a {
+    color: var(--sepia);
+  }
+
+  .nav-mobile__item_color_blue {
+    border-top: solid 0.1em var(--blue);
+  }
+
+  .nav-mobile__item_color_blue:last-child {
+    border-bottom: solid 0.1em var(--blue);
+  }
+
+  .nav-mobile__item_color_green {
+    border-top: solid 0.1em #00ff00;
+  }
+
+  .nav-mobile__item_color_green:last-child {
+    border-bottom: solid 0.1em #00ff00;
+  }
+
+  .nav-mobile__item_color_red {
+    border-top: solid 0.1em var(--red);
+  }
+
+  .nav-mobile__item_color_red:last-child {
+    border-bottom: solid 0.1em var(--red);
+  }
+
+  .nav-mobile__item_color_safety-orange {
+    border-top: solid 0.1em var(--safety-orange);
+  }
+
+  .nav-mobile__item_color_safety-orange:last-child {
+    border-bottom: solid 0.1em var(--safety-orange);
+  }
+
+  .nav-mobile__item_color_purple {
+    border-top: solid 0.1em var(--purple);
+  }
+
+  .nav-mobile__item_color_purple:last-child {
+    border-bottom: solid 0.1em var(--purple);
+  }
+
+  .nav-mobile__item_color_yellow {
+    border-top: solid 0.1em var(--yellow);
+  }
+
+  .nav-mobile__item_color_yellow:last-child {
+    border-bottom: solid 0.1em var(--yellow);
+  }
+
+  .nav-mobile__item_color_slimy-green {
+    border-top: solid 0.1em var(--slimy-green);
+  }
+
+  .nav-mobile__item_color_slimy-green:last-child {
+    border-bottom: solid 0.1em var(--slimy-green);
+  }
+
+  .nav-mobile__login-link,
+  .nav-mobile__logout-link,
+  .nav-mobile__registration-link {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .header__icon.nav-mobile__profile-picture {
+    border-radius: 50%;
+    width: 1.5em;
+    vertical-align: bottom;
+  }
+
+  /* ============================================================ */
+  /* ========================== FOOTER ========================== */
+  /* ============================================================ */
+  .footer,
+  .block-footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  .footer h3 {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 0 0.5em 0;
+  }
+
+  .footer li {
+    margin: 0 0 0.5em;
+  }
+
+  .footer_background-color_blue {
+    background-color: var(--blue);
+  }
+
+  .footer_background-color_green {
+    background-color: #00ff00;
+  }
+
+  .footer_background-color_red {
+    background-color: var(--red);
+  }
+
+  .footer_background-color_safety-orange {
+    background-color: var(--safety-orange);
+  }
+
+  .footer_background-color_purple {
+    background-color: var(--purple);
+  }
+
+  .footer_background-color_yellow {
+    background-color: var(--yellow);
+  }
+
+  .footer_background-color_slimy-green {
+    background-color: var(--slimy-green);
+  }
+
+  .footer__title_color_black {
+    color: var(--black);
+  }
+
+  .footer__title_color_white {
+    color: var(--white);
+  }
+
+  .footer__title_color_blue {
+    color: var(--blue);
+  }
+
+  .footer__title_color_red {
+    color: var(--red);
+  }
+
+  .footer__title_color_purple {
+    color: var(--purple);
+  }
+
+  .footer__title_color_slimy-green {
+    color: var(--slimy-green);
+  }
+
+  .footer__title_color_yellow {
+    color: var(--yellow);
+  }
+
+  .footer__title_color_sepia {
+    color: var(--sepia);
+  }
+
+  .block-footer {
+    width: 90%;
+    margin: 1em 0 0 1em;
+  }
+
+  .block-footer:nth-child(n + 3) {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .page__picture-checkout-method {
+    width: 15%;
+    vertical-align: middle;
+  }
+
+  .footer .page__picture-checkout-method:nth-child(n + 2) {
+    margin: 0 0.25em 0 0;
+  }
+
+  .footer .page__picture-checkout-method {
+    vertical-align: middle;
+  }
+
+  .footer .page__picture-visa {
+    width: 15%;
+  }
+
+  .footer .page__picture-mastercard {
+    width: 12%;
+  }
+
+  .footer .page__picture-cb {
+    width: 11%;
+  }
+
+  .footer .page__picture-american-express {
+    width: 12%;
+  }
+
+  .block-footer__copyright_color_black {
+    color: var(--black);
+  }
+
+  .block-footer__copyright_color_white {
+    color: var(--white);
+  }
+
+  .block-footer__copyright_color_blue {
+    color: var(--blue);
+  }
+
+  .block-footer__copyright_color_red {
+    color: var(--red);
+  }
+
+  .block-footer__copyright_color_purple {
+    color: var(--purple);
+  }
+
+  .block-footer__copyright_color_slimy-green {
+    color: var(--slimy-green);
+  }
+
+  .block-footer__copyright_color_yellow {
+    color: var(--yellow);
+  }
+
+  .block-footer__copyright_color_sepia {
+    color: var(--sepia);
+  }
+
+  /* =========================== home =========================== */
+  .page {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* margin-bottom: 2em; */
+    /* margin-bottom: 6em; */
+    /* margin-bottom: 10em; */
+    margin-bottom: 16em;
+  }
+
+  .page h2,
+  h3,
+  h4 {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .page h2 {
+    font-size: 2em;
+    margin: 1em 0 0;
+  }
+
+  .page h3,
+  h4 {
+    font-size: 1.5em;
+  }
+
+  .page h3 {
+    margin: 0 0 1em;
+  }
+
+  .page h4 {
+    margin: 1em 0 0;
+  }
+
+  .list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    /* background-color: #cc00ff; */
+  }
+
+  .product-preview {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 22em;
+    margin: 2em 0 0;
+    /* background-color: #999999; */
+  }
+
+  .product-preview p {
+    text-align: center;
+  }
+
+  .product-preview p:nth-child(2) {
+    font-weight: bold;
+  }
+
+  .product-preview .availability {
+    margin: 0 0 2em;
+  }
+
+  .link-picture {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page__link-cart {
+    width: unset;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    margin: 0 0 1em;
+    /* For disabled the link */
+    /* pointer-events: none;
+    cursor: default; */
+  }
+
+  /* ========================== contact ========================= */
+  .information {
+    width: 90%;
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  .form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin: 2em auto 0;
+  }
+
+  .form label {
+    user-select: none;
+  }
+
+  .form-field__label {
+    font-weight: bold;
+  }
+
+  .form input {
+    margin: 0 0.25em 0 0;
+  }
+
+  .form input.form-field__input-user-civility-title-woman {
+    margin: 0 0.25em 0 0.5em;
+  }
+
+  .form p {
+    margin: 0.25em 0 0;
+  }
+
+  .form-field {
+    width: 100%;
+    margin: 0.5em 0 0;
+  }
+
+  .form-field:nth-child(1) {
+    margin: 0;
+  }
+
+  .form-check {
+    width: 100%;
+    margin: 0.5em 0 0;
+  }
+
+  .form-field__input,
+  .form-field__input-search {
+    /* border: var(--border, none); */
+    border: none;
+    /* outline: none; */
+    outline: var(--outline, none);
+    width: 100%;
+    padding: 1em;
+  }
+
+  .form-field__input::placeholder,
+  .form-field__input-search::placeholder {
+    font-size: 1em;
+    font-family: "Courier New", Courier, monospace;
+    /* color: #333333; */
+  }
+
+  .form-field__input:focus::placeholder,
+  .form-field__input-search:focus::placeholder {
+    color: transparent;
+  }
+
+  /* If mode = dark */
+  .form-field__input_color_white,
+  .form-field__input-search_color_white {
+    background-color: #333333;
+    color: var(--white);
+  }
+
+  .form-field__input_color_white::placeholder,
+  .form-field__input-search_color_white::placeholder {
+    color: var(--white);
+  }
+
+  /* If mode = light */
+  .form-field__input_color_black,
+  .form-field__input-search_color_black {
+    background-color: #cccccc;
+    color: var(--black);
+  }
+
+  .form-field__input_color_black::placeholder,
+  .form-field__input-search_color_black::placeholder {
+    color: var(--black);
+  }
+
+  /* If theme = knick */
+  .form-field__input_color_safety-orange,
+  .form-field__input-search_color_safety-orange {
+    background-color: var(--safety-orange);
+    color: var(--blue);
+  }
+
+  .form-field__input_color_safety-orange::placeholder,
+  .form-field__input-search_color_safety-orange::placeholder {
+    color: var(--blue);
+  }
+
+  /* If theme = lakers */
+  .form-field__input_color_yellow,
+  .form-field__input-search_color_yellow {
+    background-color: var(--yellow);
+    color: var(--purple);
+  }
+
+  .form-field__input_color_yellow::placeholder,
+  .form-field__input-search_color_yellow::placeholder {
+    color: var(--purple);
+  }
+
+  /* If theme = mario */
+  .form-field__input_color_blue,
+  .form-field__input-search_color_blue {
+    background-color: var(--blue);
+    color: var(--red);
+  }
+
+  .form-field__input_color_blue::placeholder,
+  .form-field__input-search_color_blue::placeholder {
+    color: var(--red);
+  }
+
+  /* If theme = jamaica */
+  .form-field__input_color_yellow-jamaica,
+  .form-field__input-search_color_yellow-jamaica {
+    background-color: var(--yellow);
+    color: var(--slimy-green);
+  }
+
+  .form-field__input_color_yellow-jamaica::placeholder,
+  .form-field__input-search_color_yellow-jamaica::placeholder {
+    color: var(--slimy-green);
+  }
+
+  /* If theme = golden-state-warriors */
+  .form-field__input_color_blue-golden-sate-warriors,
+  .form-field__input-search_color_blue-golden-sate-warriors {
+    background-color: var(--blue);
+    color: var(--yellow);
+  }
+
+  .form-field__input_color_blue-golden-sate-warriors::placeholder,
+  .form-field__input-search_color_blue-golden-sate-warriors::placeholder {
+    color: var(--yellow);
+  }
+
+  /* If theme = flash */
+  .form-field__input_color_yellow-flash,
+  .form-field__input-search_color_yellow-flash {
+    background-color: var(--yellow);
+    color: var(--red);
+  }
+
+  .form-field__input_color_yellow-flash::placeholder,
+  .form-field__input-search_color_yellow-flash::placeholder {
+    color: var(--red);
+  }
+
+  /* If theme = forest */
+  .form-field__input_color_slimy-green-forest,
+  .form-field__input-search_color_slimy-green-forest {
+    background-color: var(--slimy-green);
+    color: var(--sepia);
+  }
+
+  .form-field__input_color_slimy-green-forest::placeholder,
+  .form-field__input-search_color_slimy-green-forest::placeholder {
+    color: var(--sepia);
+  }
+
+  .form-field li {
+    color: var(--red);
+  }
+
+  #contact-message-input,
+  #create-product-description-input,
+  #update-product-description-input,
+  #create-delivery-mode-description-input {
+    height: 8em;
+  }
+
+  /* =========================== about ========================== */
+  /*! None  */
+
+  /* ======================= terms_of_use ======================= */
+  .term {
+    width: 90%;
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  .term li {
+    list-style-type: disc;
+    line-height: 1.5em;
+    margin-left: 2em;
+  }
+
+  /* ====================== terms_of_sales ====================== */
+  /*! None  */
+
+  /* =============== delivery_and_customer_service ============== */
+  .term h4 {
+    text-align: left;
+    margin: 2em 0 1em;
+  }
+
+  .term h3 {
+    text-align: left;
+    margin: 2em 0 1em;
+  }
+
+  .term h3:nth-child(1) {
+    margin: 0 0 1em;
+  }
+
+  .term-customer-service h4 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0 0 0.5em;
+  }
+
+  .term__question {
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0 0 0.5em;
+  }
+
+  .term__question_color_blue {
+    color: var(--blue);
+  }
+
+  .term__question_color_green {
+    color: var(--green);
+  }
+
+  .term__question_color_red {
+    color: var(--red);
+  }
+
+  .term__question_color_safety-orange {
+    color: var(--safety-orange);
+  }
+
+  .term__question_color_purple {
+    color: var(--purple);
+  }
+
+  .term__question_color_yellow {
+    color: var(--yellow);
+  }
+
+  .term__question_color_white {
+    color: var(--white);
+  }
+
+  /* ====================== secure_payment ====================== */
+  .term.term-secure-payment h3 {
+    margin: 2em 0 0;
+  }
+
+  .term.term-secure-payment h3:nth-child(1) {
+    margin: 0;
+  }
+
+  .term.term-secure-payment p {
+    margin: 0 0 1em;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  .term .page__picture-checkout-method {
+    vertical-align: middle;
+  }
+
+  .term .page__picture-visa {
+    width: 18%;
+  }
+
+  .term .page__picture-mastercard {
+    width: 16%;
+  }
+
+  .term .page__picture-cb {
+    width: 15%;
+  }
+
+  .term .page__picture-american-express {
+    width: 16%;
+  }
+
+  .term .page__picture-paypal {
+    width: 22%;
+  }
+
+  /* =======================  app_register ====================== */
+  .form__icon {
+    width: 15%;
+    margin-right: 0.5em;
+    vertical-align: middle;
+  }
+
+  #registration-button,
+  #admin-create-product-button,
+  #admin-create-user-button,
+  #admin-update-user-button,
+  #admin-create-category-button,
+  #order-button,
+  #admin-update-category-button,
+  #admin-update-product-button,
+  #admin-create-purchase-button,
+  #admin-update-purchase-button,
+  #contact-send-email-button {
+    margin-bottom: 2em;
+  }
+
+  #registration-button,
+  #login-button,
+  #submit-delivery-mode-button,
+  #submit-order-button {
+    margin-top: 2em;
+  }
+
+  /* ========================= app_login ======================== */
+  #login-button {
+    margin-bottom: 0.5em;
+  }
+
+  /* ================ app_forgot_password_request =============== */
+  #request-form p:nth-child(2) {
+    align-self: flex-start;
+    margin: 0.5em 0 0;
+  }
+
+  /* ======================== app_check_email =================== */
+  /*! None  */
+
+  /* ==================== app_reset_password ==================== */
+  /*! None  */
+
+  /* ======================= user_profile ======================= */
+  #delete-my-user-picture-button {
+    margin-bottom: 1.5em;
+  }
+
+  #delete-my-user-account-link {
+    width: 56%;
+  }
+
+  .form-field-user-picture {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 0;
+  }
+
+  /* .page__picture-entity {
+    border-radius: 50%;
+    margin: 1em 0 1em;
+    width: 6em;
+  } */
+
+  /* .page__picture-user, */
+  /* .page__picture-product,  */
+  /* .page__picture .page__picture-delivery-mode {
+    border-radius: none;
+  } */
+
+  /* ======================== cart_detail ======================= */
+  .product {
+    display: flex;
+    margin-top: 2em;
+    width: 100%;
+    height: 15em;
+    /* height: 10em; */
+    /* height: 100%; */
+    /* background-color: #00ff00; */
+  }
+
+  .product-image {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 35%;
+  }
+
+  .product-image__picture {
+    border-radius: 50%;
+    width: 70%;
+  }
+
+  .product-property {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 55%;
+    align-items: flex-start;
+  }
+
+  .product-property p:nth-child(2),
+  .product-property p:last-child {
+    font-weight: bold;
+  }
+
+  .product-property h3 {
+    margin: 0 0 0.5em;
+  }
+
+  .page__icon-delete {
+    width: 1em;
+    margin-top: 0.8em;
+  }
+
+  .product-property__icon {
+    width: 1em;
+  }
+
+  .product-property__icon {
+    vertical-align: bottom;
+  }
+
+  .page__icon-incrementation,
+  .page__icon-decrementation {
+    margin-left: 0.5em;
+  }
+
+  .product-delete {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 10%;
+    align-self: flex-start;
+    margin: 0 1em 0 0;
+    margin: 3.5em 1em 0 0;
+    /* background-color:  var(--purple); */
+  }
+
+  .pursue-shopping {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  #pursue-shooping-link {
+    width: 100%;
+  }
+
+  .total-card,
+  .delivery-mode-price,
+  .total {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    /* background-color: red; */
+  }
+
+  .total-card p:last-child {
+    margin-bottom: 0.5em;
+  }
+
+  .total_border-color_blue {
+    border-top: solid 0.1em var(--blue);
+  }
+
+  .total_border-color_green {
+    border-top: solid 0.1em #00ff00;
+  }
+
+  .total_border-color_red {
+    border-top: solid 0.1em var(--red);
+  }
+
+  .total_border-color_safety-orange {
+    border-top: solid 0.1em var(--safety-orange);
+  }
+
+  .total_border-color_purple {
+    border-top: solid 0.1em var(--purple);
+  }
+
+  .total_border-color_yellow {
+    border-top: solid 0.1em var(--yellow);
+  }
+
+  .total_border-color_slimy-green {
+    border-top: solid 0.1em var(--slimy-green);
+  }
+
+  .total p {
+    font-weight: bold;
+    margin-top: 0.5em;
+  }
+
+  /* #purchase-link {
+   margin: 0;
+  } */
+
+  /* ======================= product_list ======================= */
+  /*! None  */
+
+  /* ======================= product_detail ===================== */
+  .product-detail-from-tablet {
+    display: none;
+  }
+
+  .product-detail h2,
+  .product-detail-from-tablet h2 {
+    margin-bottom: 0.5em;
+  }
+
+  .product-detail {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  .product-detail p.availability__avialable_color_green,
+  .admin-preview p.availability__avialable_color_green,
+  .admin-detail p.availability__avialable_color_green {
+    color: #00ff00;
+  }
+
+  .product-detail p.availability__unavailable_color_red,
+  .admin-preview p.availability__unavailable_color_red,
+  .admin-detail p.availability__unavailable_color_red {
+    color: var(--red);
+  }
+
+  .product-detail-property {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-detail-property:nth-child(2) p:nth-child(2) {
+    font-weight: bold;
+  }
+
+  .product-quantity {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-quantity p {
+    margin-top: 0.5em;
+    margin-right: 1em;
+  }
+
+  .page__link-add-to-cart {
+    margin-bottom: 2em;
+  }
+
+  /* ======================= category_list ====================== */
+  .card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 18em;
+    margin-top: 2em;
+  }
+
+  .card_background-color_white {
+    background-color: var(--white);
+  }
+
+  /* ====================== admin_dashboard ===================== */
+  /*! None  */
+
+  /* ====================== admin_user_list ===================== */
+  .table {
+    display: none;
+  }
+
+  .form-field__input-search {
+    width: 100%;
+  }
+
+  #create-user-link,
+  #create-category-link,
+  #create-product-link,
+  #create-address-link,
+  #create-purchase-link,
+  #create-delivery-mode-link {
+    width: 55%;
+  }
+
+  .admin-preview {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  .admin-preview p {
+    text-align: center;
+  }
+
+  .admin-preview .page__link-text:nth-child(1) {
+    margin: 0 0 0.5em;
+  }
+
+  .card_color_blue,
+  .admin-preview_color_blue,
+  .admin-detail_color_blue,
+  .card-address_color_blue,
+  .card-purchase_color_blue {
+    border: solid 0.1em var(--blue);
+  }
+
+  .card_color_green,
+  .admin-preview_color_green,
+  .admin-detail_color_green,
+  .card-address_color_green,
+  .card-purchase_color_green {
+    border: solid 0.1em #00ff00;
+  }
+
+  .card_color_red,
+  .admin-preview_color_red,
+  .admin-detail_color_red,
+  .card-address_color_red,
+  .card-purchase_color_red {
+    border: solid 0.1em var(--red);
+  }
+
+  .card_color_safety-orange,
+  .admin-preview_color_safety-orange,
+  .admin-detail_color_safety-orange,
+  .card-address_color_safety-orange,
+  .card-purchase_color_safety-orange {
+    border: solid 0.1em var(--safety-orange);
+  }
+
+  .card_color_purple,
+  .admin-preview_color_purple,
+  .admin-detail_color_purple,
+  .card-address_color_purple,
+  .card-purchase_color_purple {
+    border: solid 0.1em var(--purple);
+  }
+
+  .card_color_yellow,
+  .admin-preview_color_yellow,
+  .admin-detail_color_yellow,
+  .card-address_color_yellow,
+  .card-purchase_color_yellow {
+    border: solid 0.1em var(--yellow);
+  }
+
+  .card_color_slimy-green,
+  .admin-preview_color_slimy-green,
+  .admin-detail_color_slimy-green,
+  .card-address_color_slimy-green,
+  .card-purchase_color_slimy-green {
+    border: solid 0.1em var(--slimy-green);
+  }
+
+  .admin-preview p.availability__avialable_color_green,
+  .admin-detail p.availability__avialable_color_green {
+    color: #00ff00;
+  }
+
+  .admin-preview p.availability__unavailable_color_red,
+  .admin-detail p.availability__unavailable_color_red {
+    color: var(--red);
+  }
+
+  .admin-preview p:first-child,
+  .admin-detail p:first-child {
+    margin-top: 1em;
+  }
+
+  /* ===================== admin_user_detail ==================== */
+  .admin-detail {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  .admin-detail p {
+    margin: 0 0 0.5em 0.5em;
+  }
+
+  /* ===================== admin_user_create ==================== */
+  /*! None */
+
+  /* ===================== admin_user_update ==================== */
+  #delete-user-picture-button {
+    margin-bottom: 1.5em;
+  }
+
+  /* =================== admin_user_statistics ================== */
+  .block-chart {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 2em 0 0;
+    /* background-color: #999999; */
+  }
+
+  /* ==================== admin_product_list ==================== */
+  /*! None */
+
+  /* =================== admin_product_detail =================== */
+  /*! None */
+
+  /* =================== admin_product_create =================== */
+  /*! None */
+
+  /* =================== admin_product_update =================== */
+  /*! None */
+
+  /* ==================== admin_category_list =================== */
+  /*! None */
+
+  /* =================== admin_category_detail ================== */
+  /*! None */
+
+  /* =================== admin_category_create ================== */
+  /*! None */
+
+  /* =================== admin_category_update ================== */
+  /*! None */
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* ===================== admin_address_user_list =================== */
+  /*! None */
+
+  /* ================== admin_address_detail ==================== */
+  /*! None */
+
+  /* ==================== admin_address_update ================== */
+  /*! None */
+
+  /* ================ admin_purchase_user_create ================ */
+  #purchase_billingAddress,
+  #purchase_deliveryAddress {
+    display: flex;
+  }
+
+  /* ==================== admin_purchase_list =================== */
+  .purchase-subtotal,
+  .purchase-delivery-mode-price,
+  .purchase-total,
+  .purchase-subtotal-reminder,
+  .purchase-delivery-mode-price-reminder,
+  .purchase-total-reminder {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+  }
+
+  .purchase-total p,
+  .purchase-total-reminder p {
+    margin-top: 0.5em;
+    font-weight: bold;
+  }
+
+  .purchase-total_border-color_blue {
+    border-top: solid 0.1em var(--blue);
+  }
+
+  .purchase-total_border-color_green {
+    border-top: solid 0.1em #00ff00;
+  }
+
+  .purchase-total_border-color_red {
+    border-top: solid 0.1em var(--red);
+  }
+
+  .purchase-total_border-color_safety-orange {
+    border-top: solid 0.1em var(--safety-orange);
+  }
+
+  .purchase-total_border-color_purple {
+    border-top: solid 0.1em var(--purple);
+  }
+
+  .purchase-total_border-color_yellow {
+    border-top: solid 0.1em var(--yellow);
+  }
+
+  .purchase-total_border-color_slimy-green {
+    border-top: solid 0.1em var(--slimy-green);
+  }
+
+  .purchase-subtotal,
+  .purchase-subtotal-reminder {
+    margin-top: 2em;
+  }
+
+  /* ================= admin_purchase_user_list ================= */
+  .card-purchase p.status__paid_color_green {
+    color: #00ff00;
+  }
+
+  /* =================== admin_purchase_detail ================== */
+  .purchase-item,
+  .purchase-item-reminder {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 2em 0 0;
+    /* background-color: #00ff00; */
+  }
+
+  .purchase-item-property,
+  .purchase-item-property-reminder {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+    /* margin-left: 1em; */
+  }
+
+  .purchase-item-property h3,
+  .purchase-item-property-reminder h3 {
+    margin: 0 0 0.5em;
+  }
+
+  /* ================ admin_purchase_user_detail ================ */
+  /*! None */
+
+  /* =================== admin_purchase_update ================== */
+  /*! None */
+
+  /* ====================== address_create ====================== */
+  /*! None */
+
+  /* ====================== address_update ====================== */
+  /*! None */
+
+  /* ======================= address_list ======================= */
+  .card-address {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  .card-address h3 {
+    margin: 0.5em 0 0.5em;
+  }
+
+  .card-address p:nth-child(1),
+  .card-purchase p:nth-child(1) {
+    margin: 0.5em 0 0.5em;
+  }
+
+  .card-purchase p:nth-child(1) {
+    text-align: center;
+  }
+
+  /* ========================= purchase ========================= */
+  .form-field-address .form-check {
+    width: 50%;
+  }
+
+  #change-billing-address-link,
+  #add-new-address-link {
+    text-align: left;
+    width: 100%;
+    margin: 0.5em 0 0;
+  }
+
+  /* .form-field-purchase-billing-address,
+  .form-field-purchase-delivery-address,
+  .form-field-purchase-delivery-mode,
+  .form-field-purchase-checkout-method {
+    margin: 0.5em 0 0;
+  } */
+
+  /* .form-field-purchase-billing-address,
+  .form-field-purchase-delivery-address {
+    background-color: #999999;
+  } */
+
+  #admin_purchase_billingAddress,
+  #admin_purchase_deliveryAddress,
+  #purchase_billingAddress,
+  #purchase_deliveryAddress {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: space-around; */
+    /* background-color: violet; */
+  }
+
+  .page__title-purchase-step {
+    text-transform: uppercase;
+    font-weight: bold;
+    align-self: flex-start;
+    cursor: pointer;
+  }
+
+  .page__title-purchase-step_color_shady-lady {
+    color: #999999;
+  }
+
+  .page h3.page__title-address-step {
+    margin: 0;
+  }
+
+  .page h3.page__title-delivery-mode-step,
+  .page h3.page__title-payment-method-step {
+    margin: 1em 0 0;
+  }
+
+  /* .page__icon-checked {
+    vertical-align: bottom;
+    width: 1.2em;
+  } */
+
+  /* .page__picture-entity {
+    border-radius: 50%;
+    margin: 1em 0 1em;
+    width: 6em;
+  }
+
+  .page__picture-delivery-mode,
+  .page__picture-checkout-methode {
+    vertical-align: middle;
+  } */
+
+  /* .page__picture-delivery-mode {
+    width: 2em;
+    margin-right: 0.25em;
+  } */
+
+  /* .page__picture-user, */
+  /* .page__picture-product,  */
+  /* .page__picture .page__picture-delivery-mode {
+    border-radius: none;
+  } */
+
+  .purchase-item-property-reminder p:nth-child(2),
+  .purchase-item-property-reminder p:last-child {
+    font-weight: bold;
+  }
+
+  .paypal-button-container {
+    width: 100%;
+  }
+
+  /* ======================= purchase_list ====================== */
+  .card-purchase {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  /* .card-purchase .page__link {
+    margin-bottom: 1em;
+  } */
+
+  /* ====================== purchase_detail ===================== */
+  .card-purchase .product-property p:nth-child(1) {
+    text-transform: none;
+    margin: 0 0 0.5em;
+  }
+
+  .card-purchase .total-card {
+    margin-top: 2em;
+  }
+
+  .card-purchase .total-card p:nth-child(1),
+  .card-purchase .delivery-mode-price p:nth-child(1),
+  .card-purchase .total p:nth-child(1) {
+    margin: 0 0 0.5em;
+  }
+
+  /* ========================= error404 ========================= */
+  .block-404 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    font-family: "Righteous";
+    text-align: center;
+  }
+
+  .block-404 p:first-child {
+    font-size: 4em;
+    color: var(--red);
+    margin: 0;
+  }
+
+  .block-404 .block-404__back-home-link {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 1em;
+  }
+}
+
+/* ============================================================ */
+/* ============== MOBILE WITH MEDIUM SCREEN SIZE ============== */
+/* ============================================================ */
+@media screen and (min-width: 390px) {
+  /* ============================================================ */
+  /* ========================= BUTTONS ========================== */
+  /* ============================================================ */
+  /*! None  */
+
+  /* ============================================================ */
+  /* ========================== LINKS =========================== */
+  /* ============================================================ */
+  /*! None  */
+
+  /* ============================================================ */
+  /* ========================== IMAGES ========================== */
+  /* ============================================================ */
+  .page__icon-checked {
+    width: 1.2em;
+  }
+
+  .page__icon {
+    width: 1.9em;
+  }
+
+  /* ============================================================ */
+  /* ========================== HEADER ========================== */
+  /* ============================================================ */
+  .header__title {
+    font-size: 1.2em;
+  }
+
+  .header__icon {
+    width: 1.9em;
+  }
+
+  .wrapper__logo {
+    width: 1.2em;
+  }
+
+  .circle {
+    top: 40%;
+    left: 86.5%;
+  }
+
+  /* ============================================================ */
+  /* ======================== NAV MOBILE ======================== */
+  /* ============================================================ */
+  .nav {
+    margin-top: 25%;
+  }
+
+  /* ============================================================ */
+  /* ========================== FOOTER ========================== */
+  /* ============================================================ */
+  /*! None */
+
+  /* =========================== home =========================== */
+  /*! None  */
+
+  /* ========================== contact ========================= */
+  /*! None  */
+
+  /* =========================== about ========================== */
+  /*! None  */
+
+  /* ======================= terms_of_use ======================= */
+  /*! None  */
+
+  /* ====================== terms_of_sales ====================== */
+  /*! None  */
+
+  /* =============== delivery_and_customer_service ============== */
+  /*! None  */
+
+  /* ====================== secure_payment ====================== */
+  /*! None  */
+
+  /* =======================  app_register ====================== */
+  /*! None  */
+
+  /* ========================= app_login ======================== */
+  /*! None  */
+
+  /* ================ app_forgot_password_request =============== */
+  /*! None  */
+
+  /* ======================== app_check_email =================== */
+  /*! None  */
+
+  /* ==================== app_reset_password ==================== */
+
+  /*! None  */
+
+  /* ======================= user_profile ======================= */
+  /*! None  */
+
+  /* ======================== cart_detail ======================= */
+  .product-property h2 {
+    font-size: 1.6em;
+  }
+
+  /* ======================= product_list ======================= */
+  /*! None */
+
+  /* ======================= product_detail ===================== */
+  /*! None */
+
+  /* ======================= category_list ====================== */
+  .card {
+    height: 20em;
+  }
+
+  /* ====================== admin_dashboard ===================== */
+  /*! None */
+
+  /* ====================== admin_user_list ===================== */
+  /*! None */
+
+  /* ===================== admin_user_detail ==================== */
+  /*! None */
+
+  /* ===================== admin_user_create ==================== */
+  /*! None */
+
+  /* ===================== admin_user_update ==================== */
+  /*! None */
+
+  /* =================== admin_user_statistics ================== */
+  /*! None */
+
+  /* ==================== admin_product_list ==================== */
+  /*! None */
+
+  /* =================== admin_product_detail =================== */
+  /*! None */
+
+  /* =================== admin_product_create =================== */
+  /*! None */
+
+  /* =================== admin_product_update =================== */
+  /*! None */
+
+  /* ==================== admin_category_list =================== */
+  /*! None */
+
+  /* =================== admin_category_detail ================== */
+  /*! None */
+
+  /* =================== admin_category_create ================== */
+  /*! None */
+
+  /* =================== admin_category_update ================== */
+  /*! None */
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* ===================== admin_address_user_list =================== */
+  /*! None */
+
+  /* ================== admin_address_detail ==================== */
+  /*! None */
+
+  /* ==================== admin_address_update ================== */
+  /*! None */
+
+  /* ================ admin_purchase_user_create ================ */
+  /*! None */
+
+  /* ==================== admin_purchase_list =================== */
+  /*! None */
+
+  /* ================= admin_purchase_user_list ================= */
+  /*! None */
+
+  /* =================== admin_purchase_detail ================== */
+  /*! None */
+
+  /* ================ admin_purchase_user_detail ================ */
+  /*! None */
+
+  /* =================== admin_purchase_update ================== */
+  /*! None */
+
+  /* ====================== address_create ====================== */
+  /*! None */
+
+  /* ====================== address_update ====================== */
+  /*! None */
+
+  /* ======================= address_list ======================= */
+  /*! None */
+
+  /* ========================= purchase ========================= */
+  /*! None  */
+
+  /* ======================= purchase_list ====================== */
+  /*! None */
+
+  /* ====================== purchase_detail ===================== */
+  /*! None */
+
+  /* ========================= error404 ========================= */
+  /*! None */
+}
+
+/* ============================================================ */
+/* =============== MOBILE WITH LARGE SCREEN SIZE ============== */
+/* ============================================================ */
+@media screen and (min-width: 428px) {
+  /* ============================================================ */
+  /* ========================= BUTTONS ========================== */
+  /* ============================================================ */
+  #delete-my-user-account-button {
+    width: 55%;
+  }
+
+  /* ============================================================ */
+  /* ========================== LINKS =========================== */
+  /* ============================================================ */
+  #delete-my-user-account-button {
+    width: 55%;
+  }
+
+  /* ============================================================ */
+  /* ========================== IMAGES ========================== */
+  /* ============================================================ */
+  .page__picture-entity {
+    width: 8em;
+  }
+
+  .page__icon {
+    width: 2.1em;
+  }
+
+  .wrapper__logo {
+    width: 1.4em;
+  }
+
+  /* ============================================================ */
+  /* ========================== HEADER ========================== */
+  /* ============================================================ */
+  .header__title {
+    font-size: 1.4em;
+  }
+
+  .header__icon {
+    width: 2.1em;
+  }
+
+  .header__burger-icon {
+    width: 3em;
+  }
+
+  .header__cross-icon {
+    width: 2em;
+  }
+
+  /* ============================================================ */
+  /* ======================== NAV MOBILE ======================== */
+  /* ============================================================ */
+  /*! None  */
+
+  /* ============================================================ */
+  /* ========================== FOOTER ========================== */
+  /* ============================================================ */
+  /*! None */
+
+  /* =========================== home =========================== */
+  /*! None  */
+
+  /* ========================== contact ========================= */
+  /*! None  */
+
+  /* =========================== about ========================== */
+  /*! None  */
+
+  /* ======================= terms_of_use ======================= */
+  /*! None  */
+
+  /* ====================== terms_of_sales ====================== */
+  /*! None  */
+
+  /* =============== delivery_and_customer_service ============== */
+  /*! None  */
+
+  /* ====================== secure_payment ====================== */
+  /*! None  */
+
+  /* =======================  app_register ====================== */
+  .form-field__input::placeholder,
+  .form-field__input-search::placeholder
+  /* .form__label, */ {
+    font-size: 1.2em;
+  }
+
+  /* ========================= app_login ======================== */
+  /*! None  */
+
+  /* ================ app_forgot_password_request =============== */
+  /*! None  */
+
+  /* ======================== app_check_email =================== */
+  /*! None  */
+
+  /* ==================== app_reset_password ==================== */
+  /*! None  */
+
+  /* ======================= user_profile ======================= */
+  /*! None  */
+
+  /* ======================== cart_detail ======================= */
+  .product-property h2 {
+    font-size: 1.4em;
+  }
+
+  /* ======================= product_list ======================= */
+  /*! None */
+
+  /* ======================= product_detail ===================== */
+  /*! None */
+
+  /* ======================= category_list ====================== */
+  /*! None */
+
+  /* ====================== admin_dashboard ===================== */
+  /*! None */
+
+  /* ====================== admin_user_list ===================== */
+  /*! None */
+
+  /* ===================== admin_user_detail ==================== */
+  /*! None */
+
+  /* ===================== admin_user_create ==================== */
+  /*! None */
+
+  /* ===================== admin_user_update ==================== */
+  /*! None */
+
+  /* =================== admin_user_statistics ================== */
+  /*! None */
+
+  /* ==================== admin_product_list ==================== */
+  /*! None */
+
+  /* =================== admin_product_detail =================== */
+  /*! None */
+
+  /* =================== admin_product_create =================== */
+  /*! None */
+
+  /* =================== admin_product_update =================== */
+  /*! None */
+
+  /* ==================== admin_category_list =================== */
+  /*! None */
+
+  /* =================== admin_category_detail ================== */
+  /*! None */
+
+  /* =================== admin_category_create ================== */
+  /*! None */
+
+  /* =================== admin_category_update ================== */
+  /*! None */
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* ===================== admin_address_user_list =================== */
+  /*! None */
+
+  /* ================== admin_address_detail ==================== */
+  /*! None */
+
+  /* ==================== admin_address_update ================== */
+  /*! None */
+
+  /* ================ admin_purchase_user_create ================ */
+  /*! None */
+
+  /* ==================== admin_purchase_list =================== */
+  /*! None */
+
+  /* ================= admin_purchase_user_list ================= */
+  /*! None */
+
+  /* =================== admin_purchase_detail ================== */
+  /*! None */
+
+  /* ================ admin_purchase_user_detail ================ */
+  /*! None */
+
+  /* =================== admin_purchase_update ================== */
+  /*! None */
+
+  /* ====================== address_create ====================== */
+  /*! None */
+
+  /* ====================== address_update ====================== */
+  /*! None */
+
+  /* ======================= address_list ======================= */
+  /*! None */
+
+  /* ========================= purchase ========================= */
+  .page__icon-checked {
+    width: 1.2em;
+  }
+
+  /* ======================= purchase_list ====================== */
+  /*! None */
+
+  /* ====================== purchase_detail ===================== */
+  /*! None */
+
+  /* ========================= error404 ========================= */
+  #error-404 {
+    font-size: 4.2em;
+  }
+  #back-home-404-link {
+    font-size: 1.2em;
+  }
+}
+
+/* ============================================================ */
+/* ========================== TABLET ========================== */
+/* ============================================================ */
+@media screen and (min-width: 768px) {
+  /* ============================================================ */
+  /* ========================= BUTTONS ========================== */
+  /* ============================================================ */
+  .page__button {
+    width: 50%;
+  }
+
+  #opening-button,
+  #closing-button {
+    margin-left: 1.5em;
+  }
+
+  #delete-my-user-account-button {
+    width: 45%;
+  }
+
+  /* ============================================================ */
+  /* ========================== LINKS =========================== */
+  /* ============================================================ */
+  .page__link {
+    width: 50%;
+  }
+
+  .page__link-add-to-cart {
+    width: 90%;
+  }
+
+  #purchase-link {
+    width: 30%;
+  }
+
+  #create-user-link,
+  #create-category-link,
+  #create-product-link,
+  #create-address-link,
+  #create-purchase-link,
+  #create-delivery-mode-link {
+    width: 22%;
+  }
+
+  /* ============================================================ */
+  /* ========================== IMAGES ========================== */
+  /* ============================================================ */
+  .page__picture {
+    width: 80%;
+    margin-left: 2em;
+  }
+
+  /* .page__picture-entity {
+    width: 12em;
+  } */
+
+  .page__icon-checked {
+    width: 1.2em;
+  }
+
+  .page__icon_payment-modes {
+    width: 10%;
+  }
+
+  /* ============================================================ */
+  /* ========================== HEADER ========================== */
+  /* ============================================================ */
+  .header {
+    justify-content: space-between;
+  }
+
+  .header__title {
+    font-size: 1.6em;
+  }
+
+  .wrapper__logo {
+    width: 1.6em;
+  }
+
+  .page__icon {
+    width: 3em;
+  }
+
+  .header__icon {
+    width: 2em;
+  }
+
+  .header__cart-icon {
+    margin-right: 2.5em;
+  }
+
+  .circle {
+    height: 1.5em;
+    width: 1.5em;
+    top: 37%;
+    left: 94%;
+  }
+
+  /* ============================================================ */
+  /* ======================== NAV MOBILE ======================== */
+  /* ============================================================ */
+  /*! None  */
+
+  /* ============================================================ */
+  /* ========================== FOOTER ========================== */
+  /* ============================================================ */
+  .footer {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .footer h3 {
+    font-size: 1.65em;
+  }
+
+  .block-footer {
+    width: 45%;
+    margin: 1em auto 0;
+  }
+
+  .block-footer.block-footer-copyright {
+    width: 90%;
+    align-content: center;
+  }
+
+  /* =========================== home =========================== */
+  .list {
+    flex-flow: row wrap;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    /* background-color: #999999; */
+  }
+
+  .product-preview {
+    width: 45%;
+  }
+
+  /* ========================== contact ========================= */
+  .form {
+    width: 45%;
+  }
+
+  /* =========================== about ========================== */
+  /*! None  */
+
+  /* ======================= terms_of_use ======================= */
+  /*! None  */
+
+  /* ====================== terms_of_sales ====================== */
+  /*! None  */
+
+  /* =============== delivery_and_customer_service ============== */
+  /*! None  */
+
+  /* ====================== secure_payment ====================== */
+  /*! None  */
+
+  /* =======================  app_register ====================== */
+  /*! None  */
+
+  /* ========================= app_login ======================== */
+  /*! None  */
+
+  /* ================ app_forgot_password_request =============== */
+  /*! None  */
+
+  /* ======================== app_check_email =================== */
+  /*! None  */
+
+  /* ==================== app_reset_password ==================== */
+  /*! None  */
+
+  /* ======================= user_profile ======================= */
+  /*! None  */
+
+  /* ======================== cart_detail ======================= */
+  .product-property h2 {
+    font-size: 1.4em;
+  }
+
+  /* ======================= product_list ======================= */
+  /*! None */
+
+  /* ======================= product_detail ===================== */
+  .product-detail {
+    display: none;
+  }
+
+  .product-detail-from-tablet {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  .product-detail-property {
+    align-items: flex-start;
+    flex-basis: 50%;
+  }
+
+  .product-detail-property .page__picture {
+    margin: 0;
+  }
+
+  /* .product-detail-property:nth-child(1) {
+    background-color:  var(--red);
+  }
+
+  .product-detail-property:nth-child(2) {
+    background-color:  var(--blue);
+  } */
+
+  /* ======================= category_list ====================== */
+  .card {
+    width: 45%;
+    height: 30em;
+  }
+
+  /* ====================== admin_dashboard ===================== */
+  /*! None */
+
+  /* ====================== admin_user_list ===================== */
+  .admin-preview {
+    width: 45%;
+  }
+
+  /* ===================== admin_user_detail ==================== */
+  /*! None */
+
+  /* ===================== admin_user_create ==================== */
+  /*! None */
+
+  /* ===================== admin_user_update ==================== */
+  /*! None */
+
+  /* =================== admin_user_statistics ================== */
+  .block-chart {
+    width: 50%;
+  }
+
+  /* ======================= product_list ======================= */
+  /*! None */
+
+  /* ======================= product_detail ===================== */
+  /*! None */
+
+  /* ======================= category_list ====================== */
+  /*! None */
+
+  /* ====================== admin_dashboard ===================== */
+  /*! None */
+
+  /* ====================== admin_user_list ===================== */
+  /*! None */
+
+  /* ===================== admin_user_detail ==================== */
+  /*! None */
+
+  /* ===================== admin_user_create ==================== */
+  /*! None */
+
+  /* ===================== admin_user_update ==================== */
+  /*! None */
+
+  /* =================== admin_user_statistics ================== */
+  /*! None */
+
+  /* ==================== admin_product_list ==================== */
+  /*! None */
+
+  /* =================== admin_product_detail =================== */
+  /*! None */
+
+  /* =================== admin_product_create =================== */
+  /*! None */
+
+  /* =================== admin_product_update =================== */
+  /*! None */
+
+  /* ==================== admin_category_list =================== */
+  /*! None */
+
+  /* =================== admin_category_detail ================== */
+  /*! None */
+
+  /* =================== admin_category_create ================== */
+  /*! None */
+
+  /* =================== admin_category_update ================== */
+  /*! None */
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* ===================== admin_address_user_list =================== */
+  /*! None */
+
+  /* ================== admin_address_detail ==================== */
+  /*! None */
+
+  /* ==================== admin_address_update ================== */
+  /*! None */
+
+  /* ================ admin_purchase_user_create ================ */
+  /*! None */
+
+  /* ==================== admin_purchase_list =================== */
+  /*! None */
+
+  /* ================= admin_purchase_user_list ================= */
+  /*! None */
+
+  /* =================== admin_purchase_detail ================== */
+  /*! None */
+
+  /* ================ admin_purchase_user_detail ================ */
+  /*! None */
+
+  /* =================== admin_purchase_update ================== */
+  /*! None */
+
+  /* ====================== address_create ====================== */
+  /*! None */
+
+  /* ====================== address_update ====================== */
+  /*! None */
+
+  /* ======================= address_list ======================= */
+  /*! None */
+
+  /* ========================= purchase ========================= */
+  .card-address,
+  .card-purchase {
+    width: 45%;
+    height: 20em;
+  }
+
+  .card-address h3 {
+    margin: 0 0 0.5em;
+  }
+
+  /* #card-address,
+  #card-purchase {
+    display: none;
+  } */
+
+  /* ==================== purchase ==================== */
+  .form-field-address .form-check {
+    width: 25%;
+  }
+
+  #purchase-confirm-address-button,
+  #purchase-confirm-delivery-mode-button,
+  #purchase-confirm-button {
+    width: 35%;
+  }
+
+  .paypal-button-container {
+    width: 50%;
+  }
+
+  /* ======================= purchase_list ====================== */
+  .form-purchase {
+    width: 90%;
+  }
+
+  /* ====================== purchase_detail ===================== */
+  /*! None */
+
+  /* ========================= error404 ========================= */
+  /* #error-404 {
+    font-size: 4.4em;
+  } */
+
+  .block-404 p:first-child {
+    font-size: 4.4em;
+  }
+
+  .block-404 .block-404__back-home-link {
+    font-size: 1.4em;
+  }
+}
+
+/* ============================================================ */
+/* ========================== DESKTOP ========================= */
+/* ============================================================ */
+@media screen and (min-width: 992px) {
+  /* ============================================================ */
+  /* ========================= BUTTONS ========================== */
+  /* ============================================================ */
+  .page__button {
+    width: 35%;
+  }
+
+  #delete-my-user-account-link,
+  #create-user-link,
+  #create-product-link,
+  #create-category-link,
+  #create-address-link,
+  #create-purchase-link,
+  #create-delivery-mode-link {
+    width: 12%;
+  }
+
+  /* ============================================================ */
+  /* ========================== LINKS =========================== */
+  /* ============================================================ */
+  .page__link {
+    width: 35%;
+  }
+
+  #desktop-login-link,
+  #desktop-logout-link,
+  #desktop-registration-link {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  /* ============================================================ */
+  /* ========================== IMAGES ========================== */
+  /* ============================================================ */
+  .page__icon {
+    width: 2em;
+  }
+
+  /* ============================================================ */
+  /* =============== MODE, FONT AND THEME SWITCHS =============== */
+  /* ============================================================ */
+  .switchs {
+    display: block;
+  }
+
+  /* ============================================================ */
+  /* ========================== HEADER ========================== */
+  /* ============================================================ */
+  .header {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+
+  .header__title {
+    /* font-weight: bold; */
+    font-size: 1em;
+    text-align: center;
+    width: 10%;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .circle {
+    top: 44%;
+    left: 97.25%;
+  }
+
+  /* ===================== nav-desktop ===================== */
+  .nav-desktop {
+    display: block;
+    margin: 0;
+  }
+
+  .nav-desktop ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .nav-desktop__item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #profile-picture-nav-desktop {
+    border-radius: 50%;
+  }
+
+  /* ============================================================ */
+  /* ======================== NAV MOBILE ======================== */
+  /* ============================================================ */
+  .nav-mobile {
+    display: none;
+  }
+
+  /* ============================================================ */
+  /* ========================== FOOTER ========================== */
+  /* ============================================================ */
+  .block-footer {
+    justify-content: center;
+    align-content: center;
+  }
+
+  .footer .page__picture-checkout-method {
+    vertical-align: middle;
+  }
+
+  .footer .page__picture-visa {
+    width: 6%;
+  }
+
+  .footer .page__picture-mastercard {
+    width: 5%;
+  }
+
+  .footer .page__picture-cb {
+    width: 4%;
+  }
+
+  .footer .page__picture-american-express {
+    width: 5%;
+  }
+
+  /* =========================== home =========================== */
+  .list {
+    width: 80%;
+  }
+
+  .product-detail-from-tablet {
+    width: 70%;
+  }
+
+  .product-preview {
+    width: 22.5%;
+  }
+
+  .page__picture {
+    width: 60%;
+    margin-left: 0;
+  }
+
+  .page__link-add-to-cart {
+    width: 40%;
+  }
+
+  /* ========================== contact ========================= */
+
+  .information,
+  .form {
+    width: 35%;
+  }
+
+  /* .form__label {
+    font-size: 1.2em;
+  } */
+
+  .form__checkbox {
+    height: unset;
+  }
+
+  .form-field {
+    width: 100%;
+  }
+
+  .form-field__input::placeholder,
+  .form-field__input-search::placeholder {
+    font-size: 1.4em;
+  }
+
+  /* =========================== about ========================== */
+  /*! None */
+
+  /* ======================= terms_of_use ======================= */
+  .term {
+    width: 100%;
+  }
+
+  /* ====================== terms_of_sales ====================== */
+  /*! None */
+
+  /* =============== delivery_and_customer_service ============== */
+  /*! None  */
+
+  /* ====================== secure_payment ====================== */
+  .term .page__picture-visa {
+    width: 8%;
+  }
+
+  .term .page__picture-mastercard {
+    width: 6%;
+  }
+
+  .term .page__picture-cb {
+    width: 5%;
+  }
+
+  .term .page__picture-american-express {
+    width: 6%;
+  }
+
+  .term .page__picture-paypal {
+    width: 8%;
+  }
+
+  /* =======================  app_register ====================== */
+  .form__icon {
+    width: 10%;
+  }
+
+  .page__picture-entity {
+    width: 6em;
+  }
+
+  /* ========================= app_login ======================== */
+  /*! None  */
+
+  /* ================ app_forgot_password_request =============== */
+  /*! None  */
+
+  /* ======================== app_check_email =================== */
+  /*! None  */
+
+  /* ==================== app_reset_password ==================== */
+  /*! None  */
+
+  /* ======================= user_profile ======================= */
+  #delete-my-user-account-link {
+    width: 12%;
+  }
+
+  .form-field-user-picture .page__picture-entity {
+    width: 8em;
+  }
+
+  /* #delete-my-user-account-button {
+    font-size: 1.2em;
+    width: 16%;
+  } */
+
+  /* ======================== cart_detail ======================= */
+  .product {
+    width: 50%;
+  }
+
+  .total-card,
+  .delivery-mode-price,
+  .total {
+    /* justify-content: center; */
+    /* width: 35%; */
+    width: 50%;
+  }
+
+  /* .total-card p:first-child,
+  .delivery-mode-price p:first-child,
+  .total p:first-child {
+    margin-right: 4em;
+  } */
+
+  #purchase-link {
+    width: 10%;
+  }
+
+  /* ======================= product_list ======================= */
+  /*! None */
+
+  /* ======================= product_detail ===================== */
+  .product-detail-property {
+    align-items: flex-start;
+  }
+
+  .product-detail-property:first-child {
+    align-items: center;
+  }
+
+  /* ======================= category_list ====================== */
+
+  .card {
+    width: 30%;
+  }
+
+  /* ====================== admin_dashboard ===================== */
+  /*! None */
+
+  /* ====================== admin_user_list ===================== */
+  .admin-preview {
+    display: none;
+  }
+
+  .table {
+    display: table;
+    width: 80%;
+    margin: 2em 0 2em;
+    border-collapse: collapse;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .table .page__picture {
+    width: 3em;
+  }
+
+  .list .table {
+    width: 100%;
+  }
+
+  .table caption {
+    margin-bottom: 1em;
+    font-size: 1.8em;
+  }
+
+  .table caption,
+  thead tr {
+    font-weight: bold;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.5em;
+    vertical-align: middle;
+  }
+
+  .table_color_black thead tr {
+    color: var(--black);
+  }
+
+  .table_color_white thead tr {
+    color: var(--white);
+  }
+
+  .table_color_blue thead tr {
+    color: var(--blue);
+  }
+
+  .table_color_red thead tr {
+    color: var(--red);
+  }
+
+  .table_color_purple thead tr {
+    color: var(--purple);
+  }
+
+  .table_color_slimy-green thead tr {
+    color: var(--slimy-green);
+  }
+
+  .table_color_yellow thead tr {
+    color: var(--yellow);
+  }
+
+  .table_color_sepia thead tr {
+    color: var(--sepia);
+  }
+
+  .table_background-color_blue thead tr {
+    background-color: var(--blue);
+  }
+
+  .table_background-color_blue th,
+  .table_background-color_blue td {
+    border: solid 0.1em var(--blue);
+  }
+
+  .table_background-color_blue tbody tr {
+    border: solid 0.1em var(--blue);
+  }
+
+  .table_background-color_green thead tr {
+    background-color: #00ff00;
+  }
+
+  .table_background-color_green th,
+  .table_background-color_green td {
+    border: solid 0.1em #00ff00;
+  }
+
+  .table_background-color_green tbody tr {
+    border: solid 0.1em #00ff00;
+  }
+
+  .table_background-color_red thead tr {
+    background-color: var(--red);
+  }
+
+  .table_background-color_red th,
+  .table_background-color_red td {
+    border: solid 0.1em var(--red);
+  }
+
+  .table_background-color_red tbody tr {
+    border: solid 0.1em var(--red);
+  }
+
+  .table_background-color_safety-orange thead tr {
+    background-color: var(--safety-orange);
+  }
+
+  .table_background-color_safetty-orange th,
+  .table_background-color_safety-orange td {
+    border: solid 0.1em var(--safety-orange);
+  }
+
+  .table_background-color_safety-orange tbody tr {
+    border: solid 0.1em var(--safety-orange);
+  }
+
+  .table_background-color_purple thead tr {
+    background-color: var(--purple);
+  }
+
+  .table_background-color_purple th,
+  .table_background-color_purple td {
+    border: solid 0.1em var(--purple);
+  }
+
+  .table_background-color_purple tbody tr {
+    border: solid 0.1em var(--purple);
+  }
+
+  .table_background-color_yellow thead tr {
+    background-color: var(--yellow);
+  }
+
+  .table_background-color_yellow th,
+  .table_background-color_yellow td {
+    border: solid 0.1em var(--yellow);
+  }
+
+  .table_background-color_yellow tbody tr {
+    border: solid 0.1em var(--yellow);
+  }
+
+  .table_background-color_slimy-green thead tr {
+    background-color: var(--slimy-green);
+  }
+
+  .table_background-color_slimy-green th,
+  .table_background-color_slimy-green td {
+    border: solid 0.1em var(--slimy-green);
+  }
+
+  .table_background-color_slimy-green tbody tr {
+    border: solid 0.1em var(--slimy-green);
+  }
+
+  .table .page__link {
+    font-size: 0.8em;
+  }
+
+  .table .page__link_text_normal {
+    font-size: 1em;
+  }
+
+  .table .page__link-text {
+    font-size: unset;
+  }
+
+  .table .page__picture-entity {
+    width: 3em;
+    margin: 0;
+  }
+
+  /* ===================== admin_user_detail ==================== */
+
+  .admin-detail {
+    display: none;
+  }
+
+  /* ===================== admin_user_create ==================== */
+  /*! None */
+
+  /* ===================== admin_user_update ==================== */
+  /*! None */
+
+  /* =================== admin_user_statistics ================== */
+  .block-chart {
+    width: 35%;
+    /* background-color: #999999; */
+  }
+
+  /* ==================== admin_product_list ==================== */
+  /*! None */
+
+  /* =================== admin_product_detail =================== */
+  /*! None */
+
+  /* =================== admin_product_create =================== */
+  /*! None */
+
+  /* =================== admin_product_update =================== */
+  /*! None */
+
+  /* ==================== admin_category_list =================== */
+  /*! None */
+
+  /* =================== admin_category_detail ================== */
+  /*! None */
+
+  /* =================== admin_category_create ================== */
+  /*! None */
+
+  /* =================== admin_category_update ================== */
+  /*! None */
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* ===================== admin_address_user_list =================== */
+  /*! None */
+
+  /* ================== admin_address_detail ==================== */
+  /*! None */
+
+  /* ==================== admin_address_update ================== */
+  /*! None */
+
+  /* ================ admin_purchase_user_create ================ */
+  /*! None */
+
+  /* ==================== admin_purchase_list =================== */
+  /*! None */
+
+  /* ================= admin_purchase_user_list ================= */
+  /*! None */
+
+  /* =================== admin_purchase_detail ================== */
+  .purchase-item {
+    display: none;
+  }
+
+  /* =================== admin_purchase_update ================== */
+  /*! None */
+
+  /* ====================== address_create ====================== */
+  /*! None */
+
+  /* ====================== address_update ====================== */
+  /*! None */
+
+  /* ======================= address_list ======================= */
+  .card-address,
+  .card-purchase {
+    width: 25%;
+    /* display: none; */
+  }
+
+  /* #confirm-address-card {
+    width: 35%;
+  } */
+
+  #card-address,
+  #card-purchase {
+    display: none;
+  }
+
+  /* ========================= purchase ========================= */
+  .form-purchase {
+    width: 45%;
+  }
+
+  #purchase-confirm-address-button,
+  #purchase-confirm-delivery-mode-button,
+  #purchase-confirm-button {
+    width: 25%;
+  }
+
+  /* #desktop-purchase-item,
+  #desktop-purchase-subtotal,
+  #desktop-purchase-delivery-mode-price,
+  #desktop-purchase-total {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+  } */
+
+  .purchase-item-reminder,
+  .purchase-subtotal-reminder,
+  .purchase-delivery-mode-price-reminder,
+  .purchase-total-reminder {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+  }
+
+  .page__icon-checked {
+    width: 1.2em;
+  }
+
+  /* ======================= purchase_list ====================== */
+
+  .card-purchase {
+    display: none;
+  }
+
+  /* ====================== purchase_detail ===================== */
+
+  .purchase-subtotal,
+  .purchase-delivery-mode-price,
+  .purchase-total {
+    display: none;
+  }
+
+  /* ========================= error404 ========================= */
+  /*! None */
+}

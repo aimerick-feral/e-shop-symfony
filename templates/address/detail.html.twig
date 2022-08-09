@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Adresse -
+	{{ user.firstName }}
+	{{ user.lastName }}
+	|
+	{{ parent() }}
+{% endblock %}
+
+{# START : admin_address_detail #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>Adresse :
+				{{ user.firstName }}
+				{{ user.lastName }}
+			</h2>
+			<div
+				class="list">
+				{# START : card for mobile #}
+				<div class="card-address card-address_color_blue" id="card-address">
+					<p>
+						{{ address.firstName }}
+						{{ address.lastName }}
+					</p>
+					<p>
+						{{ address.streetNumber }}
+						{{ address.streetName }}
+					</p>
+					<p>
+						{{ address.zipCode }}
+						-
+						{{ address.city }}
+					</p>
+					<p>
+						{{ address.country }}
+					</p>
+					<p>
+						{{ address.phoneNumber }}
+					</p>
+					<a class=" page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('address_update', {'id': address.id}) }}">Modifier</a>
+					<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('address_delete', {'id': address.id, 'token':csrf_token('address-delete' ~ address.id)} ) }}">Supprimer</a>
+				</div>
+				{# END : card for mobile #}
+				{# START : table for desktop #}
+				<table class="table table_background-color_blue table_color_white table-address">
+					<thead>
+						<tr>
+							<th>Propriétés</th>
+							<th>Valeurs</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Prénom</th>
+							<td>{{ address.firstName }}</td>
+						</tr>
+						<tr>
+							<th>Nom</th>
+							<td>{{ address.lastName }}</td>
+
+						</tr>
+						<tr>
+							<th>Numéro de rue</th>
+							<td>{{ address.streetNumber }}</td>
+
+						</tr>
+						<tr>
+							<th>Nom de rue</th>
+							<td>{{ address.streetName }}</td>
+						</tr>
+						<tr>
+							<th>Code postal</th>
+							<td>{{ address.zipCode }}</td>
+						</tr>
+						<tr>
+							<th>Ville</th>
+							<td>{{ address.city }}</td>
+						</tr>
+						<tr>
+							<th>Pays</th>
+							<td>{{ address.country }}</td>
+						</tr>
+						<tr>
+							<th>Numéro de téléphone mobile</th>
+							<td>{{ address.phoneNumber }}</td>
+						</tr>
+						<tr>
+							<th>Actions</th>
+							<td>
+								<a class=" page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('address_update', {'id': address.id}) }}">Modifier</a>
+								<a class="page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" href="{{ path('address_delete', {'id': address.id, 'token':csrf_token('address-delete' ~ address.id)} ) }}">Supprimer</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				{# END : table for desktop #}
+			</div>
+		</section>
+	</main>
+{% endblock %}
+{# START : admin_address_detail #}

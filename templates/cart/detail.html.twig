@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Panier |
+	{{ parent() }}
+{% endblock %}
+
+{# START : cart_detail #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>Votre Panier</h2>
+			{% for item in cartItems %}
+				<div class="product">
+					<div class="product-image">
+						<img class="product-image__picture" src="{{ asset('assets/uploads/pictures/products/'~ item.product.picture) }}" alt="image {{ item.product.name }}"/>
+					</div>
+					<div class="product-property">
+						<h3>{{ item.product.name }}</h3>
+						<p>{{ item.product.price|amount }}</p>
+						<p>
+							Quantité x
+							{{ item.quantity }}
+							<a href="{{ path('cart_add', {'id': item.product.id}) }}?returnToCartDetail=true">
+								<img class="product-property__icon page__icon-incrementation page__icon-quantity page__icon_color_black" src="{{ asset('assets/images/icons/plus.svg') }}" alt="icon-incrémentation"/>
+							</a>
+							<a href="{{ path('cart_decremente', {'id': item.product.id}) }}">
+								<img class="product-property__icon page__icon-decrementation page__icon-quantity page__icon_color_black" src="{{ asset('assets/images/icons/less.svg') }}" alt="icon-décrémentation"/>
+							</a>
+						</p>
+						<p>{{ item.total|amount }}</p>
+					</div>
+					<div class="product-delete">
+						<a href="{{ path('cart_delete', {'id': item.product.id}) }}">
+							<img class="page__icon-delete page__icon_color_red" src="{{ asset('assets/images/icons/uncheck-mark.svg') }}" alt="icon-supression"/>
+						</a>
+					</div>
+				</div>
+			{% endfor %}
+			<div class="pursue-shopping">
+				<a class="page__link  page__link_text_uppercase page__link_text_underline page__link_color_blue" id="pursue-shooping-link" href="{{ path('product_list') }}">Continuer mes achats</a>
+			</div>
+			<div class="total-card">
+				<p>Sous-total :</p>
+				<p>{{ subtotal|amount }}</p>
+			</div>
+			<div class="delivery-mode-price">
+				<p>Frais de livraison :</p>
+				<p>{{ deliveryModePrice|amount }}</p>
+			</div>
+			<div class="total total_border-color_blue">
+				<p>TOTAL :</p>
+				<p>{{ total|amount }}</p>
+			</div>
+			<a class="page__link page__link_text_uppercase page__link_background-color_blue page__link_color_white" id="purchase-link" href="{{ path('purchase') }}">Commander</a>
+		</section>
+	</main>
+{% endblock %}
+{# START : cart_detail #}

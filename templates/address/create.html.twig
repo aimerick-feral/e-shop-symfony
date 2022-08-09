@@ -1,0 +1,122 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Créer - Adresse |
+	{{ parent() }}
+{% endblock %}
+
+{# START : address_create #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>Créer une Adresse</h2>
+			{# START :userCreateAddressForm #}
+			{{ form_start(userCreateAddressForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'user-create-address-form' }}) }}
+			{# firstName #}
+			<div class="form-field">
+				{{ form_label(userCreateAddressForm, 'Prénom', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(userCreateAddressForm.firstName, { 'id': 'user-create-address-first-name-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-first-name', 'placeholder': 'Prénom' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-first-name display-none">
+					Merci de saisir un prénom.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-first-name display-none">
+					Merci de saisir un prénom valide.
+				</p>
+				{{ form_errors(userCreateAddressForm.firstName) }}
+			</div>
+			{# lastName #}
+			<div class="form-field">
+				{{ form_label(userCreateAddressForm, 'Nom', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(userCreateAddressForm.lastName, { 'id': 'user-create-address-last-name-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-user-last-name', 'placeholder': 'Nom' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-last-name display-none">
+					Merci de saisir un nom.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-last-name display-none">
+					Merci de saisir un nom valide.
+				</p>
+				{{ form_errors(userCreateAddressForm.lastName) }}
+			</div>
+			{# streetNumber #}
+			<div class="form-field">
+				{{ form_label(userCreateAddressForm, 'Numéro de rue', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(userCreateAddressForm.streetNumber, { 'id': 'user-create-address-street-number-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-address-street-number', 'placeholder': 'Numéro de rue' }}) }}
+
+				<p class="error-message error-message_color_red error-message__empty-street-number display-none">
+					Merci de saisir un numéro de rue.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-street-number display-none">
+					Merci de saisir un numéro de rue valide.
+				</p>
+				{{ form_errors(userCreateAddressForm.streetNumber) }}
+			</div>
+			{# streetName #}
+			<div class="form-field">
+				{{ form_label(userCreateAddressForm, 'Nom de rue', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(userCreateAddressForm.streetName, { 'id': 'user-create-address-street-name-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-address-street-name', 'placeholder': 'Nom de rue' }}) }}
+
+				<p class="error-message error-message_color_red error-message__empty-street-name display-none">
+					Merci de saisir un nom de rue.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-street-name display-none">
+					Merci de saisir un nom de rue valide.
+				</p>
+				{{ form_errors(userCreateAddressForm.streetName) }}
+			</div>
+			{# zipCode #}
+			<div class="form-field">
+				{{ form_label(userCreateAddressForm, 'Code postal', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(userCreateAddressForm.zipCode, { 'id': 'user-create-address-zip-code-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-address-zip-code', 'placeholder': 'Code postal' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-zip-code display-none">
+					Merci de saisir un code postal.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-zip-code display-none">
+					Merci de saisir un code postal valide.
+				</p>
+				{{ form_errors(userCreateAddressForm.zipCode) }}
+			</div>
+			{# city #}
+			<div class="form-field">
+				{{ form_label(userCreateAddressForm, 'Ville', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(userCreateAddressForm.city, { 'id': 'user-create-address-city-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-address-city', 'placeholder': 'Ville' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-city display-none">
+					Merci de saisir un nom de ville.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-city display-none">
+					Merci de saisir un nom de ville valide.
+				</p>
+				{{ form_errors(userCreateAddressForm.city) }}
+			</div>
+			{# country #}
+			<div class="form-field">
+				{{ form_label(userCreateAddressForm, 'Pays', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(userCreateAddressForm.country, { 'id': 'user-create-address-country-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-address-country', 'placeholder': 'Pays' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-country display-none">
+					Merci de saisir un nom de pays.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-country display-none">
+					Merci de saisir un nom de pays valide.
+				</p>
+				{{ form_errors(userCreateAddressForm.country) }}
+			</div>
+			{# phoneNumber #}
+			<div class="form-field">
+				{{ form_label(userCreateAddressForm, 'Numéro de téléphone mobile', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(userCreateAddressForm.phoneNumber, { 'id': 'user-create-address-phone-number-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-phone-number', 'placeholder': 'Numéro de téléphone mobile' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-phone-number display-none">
+					Merci de saisir un numéro de téléphone mobile.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-phone-number display-none">
+					Merci de saisir un numéro de téléphone mobile valide.
+				</p>
+				{{ form_errors(userCreateAddressForm.phoneNumber) }}
+			</div>
+			{# Submit userCreateAddressForm button #}
+			<button type="submit" class="page__button page__button-submit page__button-create page__button_background-color_dodger-blue page__button_color_white " id="user-create-address-button">
+				Créer
+			</button>
+			{# END : userCreateAddressForm #}
+			{{ form_end(userCreateAddressForm) }}
+		</section>
+	</main>
+{% endblock %}
+{# END : address_create #}

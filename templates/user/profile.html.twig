@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Profil -
+	{{ app.user.firstName }}
+	{{ app.user.lastName }}
+	|
+	{{ parent() }}
+{% endblock %}
+
+{# START : user_profile #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>{{ app.user.firstName }}
+				{{ app.user.lastName }}</h2>
+			{# START : userProfileForm #}
+			{{ form_start(userProfileForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'user-profile-form' }}
+			) }}
+			{# picture #}
+			<div class="form-field-user-picture">
+				<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/' ~ app.user.picture) }}" alt="image {{ app.user.firstName }}"/>
+			</div>
+			{# upload #}
+			<div class="form-field form-field-upload-file display-none">
+				{{ form_label(userProfileForm, 'Photo de profil', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(userProfileForm.upload, { 'id': 'update-my-user-picture-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-file' }}) }}
+				<p class="error-message error-message_color_red error-message__file-mime-type display-none">
+					Merci de télécharger un fichier au format PDF, PNG, JPEG ou SVG.
+				</p>
+				<p class="error-message error-message_color_red error-message__file-size display-none">
+					Merci de télécharger un fichier de maximum 300 000 bytes.
+				</p>
+				{{ form_errors(userProfileForm.upload) }}
+			</div>
+			{# delete picture #}
+			<a class="display-none page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-picture-button" href="{{ path('user_delete_picture', {token:csrf_token('delete-my-user-picture' ~ app.user.id)} ) }}">Supprimer ma photo</a>
+			{# civilityTitle #}
+			<div class="form-field">
+				{{ form_widget(userProfileForm.civilityTitle) }}
+				<p class="error-message error-message_color_red error-message__user-gender-not-checked display-none">
+					Merci de sélectionnner une valeur.
+				</p>
+				{{ form_errors(userProfileForm.civilityTitle) }}
+			</div>
+			{# firstName #}
+			<div class="form-field">
+				{{ form_label(userProfileForm, 'Prénom', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(userProfileForm.firstName, { 'id': 'update-my-user-first-name-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-first-name', 'placeholder': 'Prénom', 'disabled':'disabled' }}) }}
+
+				<p class="error-message error-message_color_red error-message__empty-first-name display-none">
+					Merci de saisir un prénom.
+				</p>
+				{{ form_errors(userProfileForm.firstName) }}
+			</div>
+			{# lastName #}
+			<div class="form-field">
+				{{ form_label(userProfileForm, 'Nom', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(userProfileForm.lastName, { 'id': 'update-my-user-last-name-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-user-last-name', 'placeholder': 'Nom', 'disabled':'disabled' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-last-name display-none">
+					Merci de saisir un nom.
+				</p>
+				{{ form_errors(userProfileForm.lastName) }}
+			</div>
+			{# email #}
+			<div class="form-field">
+				{{ form_label(userProfileForm, 'E-mail', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(userProfileForm.email, { 'id': 'update-my-user-email-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-user-email', 'placeholder': 'E-mail', 'disabled':'disabled' }}) }}
+				<p class="error-message error-message_color_red error-message__email-empty display-none">
+					Merci de saisir un e-mail.
+				</p>
+				<p class="error-message error-message_color_red error-message__email-validity display-none">
+					Merci de saisir un e-mail valide.
+				</p>
+				{{ form_errors(userProfileForm.email) }}
+			</div>
+			{# Modify user profile button that allow the user profile modification #}
+			<button type="button" class="page__button       page__button_background-color_safety-orange page__button_color_white" id="modify-my-user-profile-button">
+				Modifier
+			</button>
+			{# Submit userProfileForm button #}
+			<button type="submit" class="display-none page__button page__button-submit   page__button_background-color_safety-orange page__button_color_white" id="update-my-user-profile-button">
+				Mettre à jour
+			</button>
+			{{ form_end(userProfileForm) }}
+			{# END : userProfileForm #}
+				<a class="display-none page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-account-link" href="{{ path('user_delete_my-account', {'token':csrf_token('user-delete-my-account' ~ app.user.id)} ) }}"> Supprimer mon compte
+			</a>
+		</section>
+	</main>
+{% endblock %}
+{# START : user_profile #}

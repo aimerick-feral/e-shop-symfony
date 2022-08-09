@@ -1,0 +1,127 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Mettre à jour - Adresse -
+	{{ user.firstName }}
+	{{ user.lastName|upper }}
+	|
+	{{ parent() }}
+{% endblock %}
+
+{# START : admin_address_update #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>Mettre à jour Adresse :
+				{{ user.firstName }}
+				{{ user.lastName }}</h2>
+			{# START : adminUpdateAddressForm #}
+			{{ form_start(adminUpdateAddressForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'admin-update-address-form' }}) }}
+			{# firstName #}
+			<div class="form-field">
+				{{ form_label(adminUpdateAddressForm, 'Prénom', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminUpdateAddressForm.firstName, { 'id': 'admin-update-address-first-name-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-first-name', 'placeholder': 'Prénom' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-first-name display-none">
+					Merci de saisir un prénom.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-first-name display-none">
+					Merci de saisir un prénom valide.
+				</p>
+				{{ form_errors(adminUpdateAddressForm.firstName) }}
+			</div>
+			{# lastName #}
+			<div class="form-field">
+				{{ form_label(adminUpdateAddressForm, 'Nom', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminUpdateAddressForm.lastName, { 'id': 'admin-update-address-last-name-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-user-last-name', 'placeholder': 'Nom' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-last-name display-none">
+					Merci de saisir un nom.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-last-name display-none">
+					Merci de saisir un nom valide.
+				</p>
+				{{ form_errors(adminUpdateAddressForm.lastName) }}
+			</div>
+			{# streetNumber #}
+			<div class="form-field">
+				{{ form_label(adminUpdateAddressForm, 'Numéro de rue', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminUpdateAddressForm.streetNumber, { 'id': 'admin-update-address-street-number-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-address-street-number', 'placeholder': 'Numéro de rue' }}) }}
+
+				<p class="error-message error-message_color_red error-message__empty-street-number display-none">
+					Merci de saisir un numéro de rue.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-street-number display-none">
+					Merci de saisir un numéro de rue valide.
+				</p>
+				{{ form_errors(adminUpdateAddressForm.streetNumber) }}
+			</div>
+			{# streetName #}
+			<div class="form-field">
+				{{ form_label(adminUpdateAddressForm, 'Nom de rue', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminUpdateAddressForm.streetName, { 'id': 'admin-update-address-street-name-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-address-street-name', 'placeholder': 'Nom de rue' }}) }}
+
+				<p class="error-message error-message_color_red error-message__empty-street-name display-none">
+					Merci de saisir un nom de rue.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-street-name display-none">
+					Merci de saisir un nom de rue valide.
+				</p>
+				{{ form_errors(adminUpdateAddressForm.streetName) }}
+			</div>
+			{# zipCode #}
+			<div class="form-field">
+				{{ form_label(adminUpdateAddressForm, 'Code postal', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminUpdateAddressForm.zipCode, { 'id': 'admin-update-address-zip-code-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-address-zip-code', 'placeholder': 'Code postal' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-zip-code display-none">
+					Merci de saisir un code postal.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-zip-code display-none">
+					Merci de saisir un code postal valide.
+				</p>
+				{{ form_errors(adminUpdateAddressForm.zipCode) }}
+			</div>
+			{# city #}
+			<div class="form-field">
+				{{ form_label(adminUpdateAddressForm, 'Ville', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminUpdateAddressForm.city, { 'id': 'admin-update-address-city-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-address-city', 'placeholder': 'Ville' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-city display-none">
+					Merci de saisir un nom de ville.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-city display-none">
+					Merci de saisir un nom de ville valide.
+				</p>
+				{{ form_errors(adminUpdateAddressForm.city) }}
+			</div>
+			{# country #}
+			<div class="form-field">
+				{{ form_label(adminUpdateAddressForm, 'Pays', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminUpdateAddressForm.country, { 'id': 'admin-update-address-country-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-address-country', 'placeholder': 'Pays' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-country display-none">
+					Merci de saisir un nom de pays.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-country display-none">
+					Merci de saisir un nom de pays valide.
+				</p>
+				{{ form_errors(adminUpdateAddressForm.country) }}
+			</div>
+			{# phoneNumber #}
+			<div class="form-field">
+				{{ form_label(adminUpdateAddressForm, 'Numéro de téléphone mobile', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminUpdateAddressForm.phoneNumber, { 'id': 'admin-update-address-phone-number-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-phone-number', 'placeholder': 'Numéro de téléphone mobile' }}) }}
+				<p class="error-message error-message_color_red error-message__empty-phone-number display-none">
+					Merci de saisir un numéro de téléphone mobile.
+				</p>
+				<p class="error-message error-message_color_red error-message__validity-phone-number display-none">
+					Merci de saisir un numéro de téléphone mobile valide.
+				</p>
+				{{ form_errors(adminUpdateAddressForm.phoneNumber) }}
+			</div>
+			{#  Submit adminUpdateAddressForm button #}
+			<button type="submit" class="page__button page__button-submit page__button_background-color_safety-orange page__button_color_white" id="admin-update-address-button">
+				Mettre à jour
+			</button>
+			{{ form_end(adminUpdateAddressForm) }}
+			{# END : adminUpdateAddressForm #}
+		</section>
+	</main>
+{% endblock %}
+{# END : admin_address_update #}

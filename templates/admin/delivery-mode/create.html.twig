@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Créer - Mode de Livraison |
+	{{ parent() }}
+{% endblock %}
+
+{# START : admin_delivery_mode_create #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>Créer un Mode de Livraison</h2>
+			{# START :adminCreateDeliveryModeForm #}
+			{{ form_start(adminCreateDeliveryModeForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'admin-create-delivery-mode-form' }}) }}
+			{# picture #}
+			<div class="form-field">
+				{{ form_label(adminCreateDeliveryModeForm, 'Photo', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminCreateDeliveryModeForm.picture, { 'id': 'create-delivery-mode-picture-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-file' }}) }}
+				<p class="error-message error-message_color_red error-message__file-mime-type display-none">
+					Merci de télécharger un fichier au format PDF, PNG, JPEG ou SVG.
+				</p>
+				<p class="error-message error-message_color_red error-message__file-size display-none">
+					Merci de télécharger un fichier de maximum 300 000 bytes.
+				</p>
+				{{ form_errors(adminCreateDeliveryModeForm.picture) }}
+			</div>
+			{# name #}
+			<div class="form-field">
+				{{ form_label(adminCreateDeliveryModeForm, 'Nom', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminCreateDeliveryModeForm.name, { 'id': 'create-delivery-mode-name-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-delivery-mode-name', 'placeholder': 'Nom' }}) }}
+				<p class="error-message error-message_color_red error-message__delivery-mode-name-empty display-none">
+					Merci de saisir un nom de mode de livraison.
+				</p>
+				<p class="error-message error-message_color_red error-message__delivery-mode-name-validity display-none">
+					Merci de saisir un nom de mode de livraison valide valide.
+				</p>
+				{{ form_errors(adminCreateDeliveryModeForm.name) }}
+			</div>
+			{# price #}
+			<div class="form-field">
+				{{ form_label(adminCreateDeliveryModeForm, 'Prix', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminCreateDeliveryModeForm.price, { 'id': 'create-delivery-mode-price-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-delivery-mode-price', 'placeholder': 'Prix en euros' }}) }}
+				<p class="error-message error-message_color_red error-message__delivery-mode-price-empty display-none">
+					Merci de saisir un prix.
+				</p>
+				<p class="error-message error-message_color_red error-message__delivery-mode-price-validity display-none">
+					Merci de saisir un prix en euros.
+				</p>
+				{{ form_errors(adminCreateDeliveryModeForm.price) }}
+			</div>
+			{# minCartAmountForFreeDelivery #}
+			<div class="form-field">
+				{{ form_label(adminCreateDeliveryModeForm, 'Montant minimum d\'achat pour gratuité', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminCreateDeliveryModeForm.minCartAmountForFreeDelivery, { 'id': 'create-delivery-mode-min-purchase-amount-for-free-delivery-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-delivery-mode-min-purchase-amount-for-free-delivery', 'placeholder': 'Montant minimum d\'achat pour gratuité' }}) }}
+				<p class="error-message error-message_color_red error-message__delivery-mode-min-cart-amount-for-free-delivery-empty display-none">Merci de saisir un prix en euros.</p>
+				<p class="error-message error-message_color_red error-message__delivery-mode-min-cart-amount-for-free-delivery-validity display-none">Merci de saisir un prix en euros.</p>
+				{{ form_errors(adminCreateDeliveryModeForm.minCartAmountForFreeDelivery) }}
+			</div>
+			{# description #}
+			<div class="form-field">
+				{{ form_label(adminCreateDeliveryModeForm, 'Description', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(adminCreateDeliveryModeForm.description, { 'id': 'create-delivery-mode-description-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-delivery-mode-description', 'placeholder': 'Description' }}) }}
+				<p class="error-message error-message_color_red error-message__delivery-mode-description-empty display-none">
+					Merci de saisir une description.
+				</p>
+				{{ form_errors(adminCreateDeliveryModeForm.description) }}
+			</div>
+			{# Submit adminCreateDeliveryModeForm button #}
+			<button type="submit" class="page__button page__button-submit page__button-create page__button_background-color_dodger-blue page__button_color_white" id="admin-create-delivery-mode-button">
+				Créer
+			</button>
+			{{ form_end(adminCreateDeliveryModeForm) }}
+			{# END : adminCreateDeliveryModeForm #}
+		</section>
+	</main>
+{% endblock %}
+{# END : admin_delivery_mode_create #}

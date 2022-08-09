@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Inscription |
+	{{ parent() }}
+{% endblock %}
+
+{# START : app_register #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>Inscrpition</h2>
+			{#! Not used for now #1 START #}
+			{% for flashError in app.flashes('verify_email_error') %}
+				<div class="alert alert-danger" role="alert">{{ flashError }}</div>
+			{% endfor %}
+			{#! Not used for now #1 END #}
+			{# START : registrationForm #}
+			{{ form_start(registrationForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'registration-form' }}) }}
+			{# gender #}
+			<div class="form-field">
+				{{ form_widget(registrationForm.civilityTitle) }}
+				<p class="error-message error-message_color_red error-message__user-gender-not-checked display-none">
+					Merci de sélectionnner une valeur.
+				</p>
+				{{ form_errors(registrationForm.civilityTitle) }}
+			</div>
+			{# picture #}
+			<div class="form-field">
+				{{ form_label(registrationForm, 'Photo de profil', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(registrationForm.picture, { 'id': 'user-picture-input', 'attr': {'class': 'form-field__input form-field__input_color_black
+                form-field__input-file' }}) }}
+				<p class="error-message error-message_color_red error-message__file-mime-type display-none">
+					Merci de télécharger un fichier au format PDF, PNG, JPEG ou SVG.
+				</p>
+				<p class="error-message error-message_color_red error-message__file-size display-none">
+					Merci de télécharger un fichier de maximum 300 000 bytes.
+				</p>
+				{{ form_errors(registrationForm.picture) }}
+			</div>
+			{# firstName #}
+			<div class="form-field">
+				{{ form_label(registrationForm, 'Prénom', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(registrationForm.firstName, { 'id': 'user-first-name-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-first-name', 'placeholder': 'Prénom' }}) }}
+
+				<p class="error-message error-message_color_red error-message__empty-first-name display-none">
+					Merci de saisir un prénom.
+				</p>
+				{{ form_errors(registrationForm.firstName) }}
+			</div>
+			{# lastName #}
+			<div class="form-field">
+				{{ form_label(registrationForm, 'Nom', { 'label_attr': { 'class': 'display-none' }}) }}
+
+				{{ form_widget(registrationForm.lastName, { 'id': 'user-last-name-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-last-name', 'placeholder': 'Nom'}}) }}
+
+				<p class="error-message error-message_color_red error-message__empty-last-name display-none">
+					Merci de saisir un nom.
+				</p>
+				{{ form_errors(registrationForm.lastName) }}
+			</div>
+			{# email #}
+			<div class="form-field">
+				{{ form_label(registrationForm, 'E-mail', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(registrationForm.email, { 'id': 'user-registration-email-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-email', 'placeholder': 'E-mail' }}) }}
+				<p class="error-message error-message_color_red error-message__email-empty display-none">
+					Merci de saisir un e-mail.
+				</p>
+				<p class="error-message error-message_color_red error-message__email-validity display-none">
+					Merci de saisir un e-mail valide.
+				</p>
+				{{ form_errors(registrationForm.email) }}
+			</div>
+			{# plainPassword #}
+			<div class="form-field">
+				{{ form_label(registrationForm, 'Mot de passe', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(registrationForm.plainPassword, { 'id': 'user-registration-password-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-password', 'placeholder': 'Mot de passe' }}) }}
+				<p class="error-message error-message_color_red error-message__password-empty display-none">
+					Merci de saisir un mot de passe.
+				</p>
+				<p class="error-message error-message_color_red error-message__password-length display-none">
+					Le mot de passe doit contenir au moins 8 characteres.
+				</p>
+				<p class="error-message error-message_color_red error-message__password-lowercase display-none">
+					Le mot de passe doit contenir au moins une minuscule.
+				</p>
+				<p class="error-message error-message_color_red error-message__password-uppercase display-none">
+					Le mot de passe doit contenir au moins une majuscule.
+				</p>
+				<p class="error-message error-message_color_red error-message__password-number display-none">
+					Le mot de passe doit contenir au moins un chiffre.
+				</p>
+				<p class="error-message error-message_color_red error-message__password-special-character display-none">
+					Le mot de passe doit contenir au moins un caractére spécial.
+				</p>
+				{{ form_errors(registrationForm.plainPassword) }}
+			</div>
+			{# agreeTerms #}
+			<div class="form-field">
+				{{ form_widget(registrationForm.agreeTerms, { 'id': 'user-terms-of-use-input', 'attr': {'class': 'form-field__input-terms-of-use' }}) }}
+				{{ form_label(registrationForm, 'J\'ai lu et j\'accepte les ', { 'label_attr': { 'class': '' }}) }}
+				<a class="page__link page__link_color_blue page__link_text_underline page__link_padding-and-margin_0" id="registration-terms-of-service-link" href="{{ path('terms_of_use') }}">Conditions Générales d'Utilisation</a>.
+				<p class="error-message error-message_color_red         error-message__terms-of-use-not-checked display-none">
+					Merci de confirmer avoir lu et accepter nos Conditions Générales d'Utilisation.
+				</p>
+				{{ form_errors(registrationForm.agreeTerms) }}
+			</div>
+			{# Submit registrationForm button #}
+			<button type="submit" class="page__button page__button-submit page__button_background-color_blue page__button_color_white" id="registration-button">S'inscrire</button>
+			{{ form_end(registrationForm) }}
+			{# END : registrationForm #}
+		</section>
+	</main>
+{% endblock %}
+{# END : app_register #}

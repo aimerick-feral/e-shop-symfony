@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Utilisateur -
+	{{ user.firstName }}
+	{{ user.lastName }}
+	|
+	{{ parent() }}
+{% endblock %}
+
+{# START : admin_user_detail #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>Utilisateur :
+				{{ user.firstName }}
+				{{ user.lastName }}</h2>
+			{# START : card for mobile #}
+			<div class="admin-detail admin-detail_color_blue">
+				<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/'~ user.picture) }}" alt="user-picture"/>
+				<p>{{ user.civilityTitle }}</p>
+				<p>{{ user.firstName }}</p>
+				<p>{{ user.lastName }}</p>
+				<p>{{ user.email }}</p>
+				<p>{{ user.roles|json_encode() }}</p>
+				<p>
+					<a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_address_user_list', {'id': user.id}) }}">Adresses</a>
+				</p>
+				<p>
+					<a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_purchase_user_list', {'id': user.id}) }}">Commandes</a>
+				</p>
+				<p>Crée le
+					{{ user.createdAt|format_datetime('short', 'none', locale='fr') }}</p>
+				<p>Mis à jour le
+					{{ user.updatedAt|format_datetime('short', 'none', locale='fr') }}</p>
+				<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_user_update', {'id': user.id} ) }}">Modifier</a>
+				<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}">Supprimer</a>
+			</div>
+			{# END : card for mobile #}
+			{# START : table for desktop #}
+			<table class="table table_background-color_blue table_color_white table-user">
+				<thead>
+					<tr>
+						<th>Propriétés</th>
+						<th>Valeurs</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Photo</th>
+						<td><img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/'~ user.picture) }}" alt="user-picture"></td>
+					</tr>
+					<tr>
+						<th>Civilité</th>
+						<td>{{ user.civilityTitle }}</td>
+
+					</tr>
+					<tr>
+						<th>Prénom</th>
+						<td>{{ user.firstName }}</td>
+
+					</tr>
+					<tr>
+						<th>Nom</th>
+						<td>{{ user.lastName }}</td>
+					</tr>
+					<tr>
+						<th>E-mail</th>
+						<td>{{ user.email }}</td>
+
+					</tr>
+					<tr>
+						<th>Rôle(s)</th>
+						<td>{{ user.roles|json_encode() }}</td>
+					</tr>
+					<tr>
+						<th>Adresses</th>
+						<td>
+							<a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_address_user_list', {'id': user.id}) }}">Adresses</a>
+						</td>
+					</tr>
+					<tr>
+						<th>Commandes</th>
+						<td>
+							<a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_purchase_user_list', {'id': user.id}) }}">Commandes</a>
+						</td>
+					</tr>
+					<tr>
+						<th>Crée le</th>
+						<td>{{ user.createdAt|format_datetime('short', 'none', locale='fr') }}</td>
+					</tr>
+					<tr>
+						<th>Mis à jour le</th>
+						<td>{{ user.updatedAt|format_datetime('short', 'none', locale='fr') }}</td>
+					</tr>
+					<tr>
+						<th>Actions</th>
+						<td>
+							<a class=" page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_user_update', {'id': user.id} ) }}">Modifier</a>
+							<a class="page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}">Supprimer</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			{# END : table for desktop #}
+		</section>
+	</main>
+{% endblock %}
+{# START : admin_user_detail #}

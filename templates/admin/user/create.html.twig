@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Créer - Utilisateur |
+	{{ parent() }}
+{% endblock %}
+
+{# START : admin_user_create #}
+{% block body %}
+<main>
+	<section class="page">
+		<h2>Créer un Utilisateur</h2>
+		{# START :adminCreateUserForm #}
+		{{ form_start(adminCreateUserForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'admin-create-user-form' }}) }}
+		{# civilityTitle #}
+		<div class="form-field">
+			{{ form_widget(adminCreateUserForm.civilityTitle) }}
+			<p class="error-message error-message_color_red error-message__user-gender-not-checked display-none">
+				Merci de sélectionnner une valeur.
+			</p>
+			{{ form_errors(adminCreateUserForm.civilityTitle) }}
+		</div>
+		{# picture #}
+		<div class="form-field">
+			{{ form_label(adminCreateUserForm, 'Photo de profil', { 'label_attr': { 'class': 'display-none' }}) }}
+			{{ form_widget(adminCreateUserForm.picture, { 'id': 'create-user-picture-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-file' }}) }}
+			<p class="error-message error-message_color_red error-message__file-mime-type display-none">
+				Merci de télécharger un fichier au format PDF, PNG, JPEG ou SVG.
+			</p>
+			<p class="error-message error-message_color_red error-message__file-size display-none">
+				Merci de télécharger un fichier de maximum 300 000 bytes.
+			</p>
+			{{ form_errors(adminCreateUserForm.picture) }}
+		</div>
+		{# firstName #}
+		<div class="form-field">
+			{{ form_label(adminCreateUserForm, 'Prénom', { 'label_attr': { 'class': 'display-none' }}) }}
+			{{ form_widget(adminCreateUserForm.firstName, { 'id': 'create-user-first-name-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-first-name', 'placeholder': 'Prénom' }}) }}
+			<p class="error-message error-message_color_red error-message__empty-first-name display-none">
+				Merci de saisir un prénom.
+			</p>
+			{{ form_errors(adminCreateUserForm.firstName) }}
+		</div>
+		{# lastName #}
+		<div class="form-field">
+			{{ form_label(adminCreateUserForm, 'Nom', { 'label_attr': { 'class': 'display-none' }}) }}
+			{{ form_widget(adminCreateUserForm.lastName, { 'id': 'create-user-last-name-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-user-last-name', 'placeholder': 'Nom' }}) }}
+			<p class="error-message error-message_color_red error-message__empty-last-name display-none">
+				Merci de saisir un nom.
+			</p>
+			{{ form_errors(adminCreateUserForm.lastName) }}
+		</div>
+		{# email #}
+		<div class="form-field">
+			{{ form_label(adminCreateUserForm, 'E-mail', { 'label_attr': { 'class': 'display-none' }}) }}
+			{{ form_widget(adminCreateUserForm.email, { 'id': 'create-user-email-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-user-email', 'placeholder': 'E-mail' }}) }}
+			<p class="error-message error-message_color_red error-message__email-empty display-none">
+				Merci de saisir un e-mail.
+			</p>
+			<p class="error-message error-message_color_red error-message__email-validity display-none">
+				Merci de saisir un e-mail valide.
+			</p>
+			{{ form_errors(adminCreateUserForm.email) }}
+		</div>
+		{# password #}
+		<div class="form-field">
+			{{ form_label(adminCreateUserForm, 'Mot de passe', { 'label_attr': { 'class': 'display-none' }}) }}
+			{{ form_widget(adminCreateUserForm.password, { 'id': 'create-user-password-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-password', 'placeholder': 'Mot de passe' }}) }}
+			<p class="error-message error-message_color_red error-message__password-empty display-none">
+				Merci de saisir un mot de passe.
+			</p>
+			<p class="error-message error-message_color_red error-message__password-length display-none">
+				Le mot de passe doit contenir au moins 8 characteres.
+			</p>
+			<p class="error-message error-message_color_red error-message__password-lowercase display-none">
+				Le mot de passe doit contenir au moins une minuscule.
+			</p>
+			<p class="error-message error-message_color_red error-message__password-uppercase display-none">
+				Le mot de passe doit contenir au moins une majuscule.
+			</p>
+			<p class="error-message error-message_color_red error-message__password-number display-none">
+				Le mot de passe doit contenir au moins un chiffre.
+			</p>
+			<p class="error-message error-message_color_red error-message__password-special-character display-none">
+				Le mot de passe doit contenir au moins un caractére spécial.
+			</p>
+			{{ form_errors(adminCreateUserForm.password) }}
+		</div>
+		{# roles #}
+		<div class="form-field">
+			{{ form_label(adminCreateUserForm, 'Merci de selectionner le ou les potentiels rôles de l\'utilisateur :', { 'label_attr': { 'class': '' }}) }}
+		       	{{ form_widget(adminCreateUserForm.roles) }}
+			    	<p class="error-message error-message_color_red error-message__user-roles-not-checked display-none">
+				   		Merci de sélectionnner une valeur.
+			    	</p>
+		        {{ form_errors(adminCreateUserForm.roles) }}
+       		</div>
+			{# Submit adminCreateUserForm button #}
+			<button type="submit" class="page__button page__button-submit
+			page__button-create page__button_background-color_dodger-blue page__button_color_white" id="admin-create-user-button">Créer</button>
+    	{{ form_end(adminCreateUserForm) }}
+    	{# END : adminCreateUserForm #}
+	 </section>
+</main>
+{% endblock %}
+{# END : admin_user_create #}

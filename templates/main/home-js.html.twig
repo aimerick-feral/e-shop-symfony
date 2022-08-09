@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Accueil |
+	{{ parent() }}
+{% endblock %}
+
+{# START : home #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>Nos Produits</h2>
+			{# START : searchProductForm #}
+			{{ form_start(searchProductForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'search-product-form' }}
+			) }}
+			<div class="form-field">
+				{{ form_label(searchProductForm, 'Rechercher par nom', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(searchProductForm.name, { 'id': 'search-product-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-search form-field__input-product-name', 'placeholder': '🔍 Rechercher par nom' }}) }}
+				<p class="error-message error-message_color_red error-message__product-name-empty display-none">
+					Merci de saisir un nom de produit.
+				</p>
+				<p class="error-message error-message_color_red error-message__product-name-validity display-none">
+					Merci de saisir un nom de produit valide.
+				</p>
+				{{ form_errors(searchProductForm.name) }}
+			</div>
+			<button type="submit" class="page__button page__button-submit page__button-search page__button_background-color_blue page__button_color_white " id="search-product-button">
+				Rechercher
+			</button>
+			{{ form_end(searchProductForm) }}
+			{# END : searchProductForm #}
+			<div class="list" id="block-products-list"></div>
+		</section>
+	</main>
+{% endblock %}
+{# END : home #}

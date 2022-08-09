@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	404 - Not Found |
+	{{ parent() }}
+{% endblock %}
+
+{# START : 404 #}
+{% block body %}
+	<main>
+		<section class="block-404">
+			<p>404</p>
+			<p>Oups... La page que vous rechercher est introuvable.</p>
+			<a class="page__link page__link_color_maroon block-404__back-home-link" href="{{ path('home') }}">Retour à l'accueil</a>
+		</section>
+	</main>
+{% endblock %}
+{# END : 404 #}

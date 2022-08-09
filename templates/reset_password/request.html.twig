@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Réinitialisation mot de passe |
+	{{ parent() }}
+{% endblock %}
+
+{# START : app_forgot_password_request #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>Réinitialiser votre mot de passe</h2>
+			{% for flashError in app.flashes('reset_password_error') %}
+				<p class="error-message error-message_color_red">{{ flashError }}</p>
+			{% endfor %}
+			{# START : requestForm #}
+			{{ form_start(requestForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'request-password-form' }}) }}
+			{# email #}
+			<div class="form-field">
+				{{ form_label(requestForm, 'E-mail', { 'label_attr': { 'class': 'display-none' }}) }}
+				{{ form_widget(requestForm.email, { 'id': 'request-email-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-email', 'placeholder': 'E-mail' }}) }}
+				<p class="error-message error-message_color_red error-message__email-empty display-none">
+					Merci de saisir un e-mail.
+				</p>
+				<p class="error-message error-message_color_red error-message__email-validity display-none">
+					Merci de saisir un e-mail valide.
+				</p>
+				{{ form_errors(requestForm.email) }}
+			</div>
+			<p>Saisissez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser le mot de passe.</p>
+			{# Submit requestForm button #}
+			<button class="page__button page__button_background-color_blue page__button_color_white page__button-submit" id="request-password-button" type="submit">
+
+				Envoyer
+			</button>
+			{{ form_end(requestForm) }}
+			{# END : requestForm #}
+		</section>
+	</main>
+{% endblock %}
+{# END : app_forgot_password_request #}

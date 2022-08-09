@@ -1,19 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			{% block title %}
+				eShop
+			{% endblock %}
+		</title>
+		{# START : styles CSS #}
+		{% block stylesheets %}
+			<link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}"/>
+			<link
+			rel="stylesheet" href="{{ asset('assets/css/style.css') }}"/>
+			<!-- Google Fonts : Roboto -->
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+			<!-- Google Fonts : Righteous -->
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+		{% endblock %}
+		{# END : styles CSS #}
+	</head>
+	<body>
+		<div
+			class="wrapper">
+			{# START : header #}
+			{% block header %}
+				{% include "layout/header.html.twig" %}
+			{% endblock %}
+			{# END : header #}
+			{# START : mobile navigation #}
+			{% include "partials/_nav-mobile.html.twig" %}
+			{# END : mobile navigation #}
+			{% include "partials/_switch.html.twig" %}
+			{# START : body #}
+			{# START : flash messages #}
+			{% include "partials/_flash.html.twig" %}
+			{# END : flash messages #}
+			{# START : maintenance message or construction message #}
+			{# {% include "partials/_message.html.twig" %} #}
+			{# END : umaintenance message or construction message #}{# START : body #}
+			{% block body %}
+			{% endblock %}
+			{# END : body #}
+			{# START : footer #}
+				{% block footer %}
+			{% include "layout/footer.html.twig" %}
+		{% endblock %}
+			{# END : footer #}
+		</div>
+		{# START : script JS #}
+		{% block javascripts %}
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+			<script type="text/javascript" src="{{ asset('assets/js/app.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('assets/js/modules/tools.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('assets/js/modules/responsive.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('assets/js/modules/nav.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('assets/js/modules/mode.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('assets/js/modules/form.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('assets/js/modules/font.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('assets/js/modules/purchase.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('assets/js/modules/api.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('assets/js/modules/chart.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('assets/js/modules/customerService.js') }}"></script>
+		{% endblock %}
+		{# END : script JS #}
+	</body>
 </html>
