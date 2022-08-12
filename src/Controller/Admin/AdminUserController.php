@@ -6,6 +6,7 @@ use App\Entity\User;
 use App\Entity\UserSearch;
 use App\Form\UserSearchType;
 use App\Form\Admin\AdminUserType;
+use App\Repository\AddressRepository;
 use App\Repository\UserRepository;
 use App\Service\FileUploader;
 use Doctrine\ORM\EntityManagerInterface;
@@ -370,63 +371,69 @@ class AdminUserController extends AbstractController
     #[Route('/admin/utilisateurs/{id}/supprimer', name: 'admin_user_delete', methods: 'GET|POST', requirements: ['id' => '\d+'])]
     public function delete(Request $request, User $user): Response
     {
-        // // We get the CSRF token.
-        // $submittedToken = $request->request->get('token') ?? $request->query->get('token');
-        // // dump($request->request->get('token'));
-        // // dump($request->query->get('token'));
-        // // dump($request->attributes->get('token'));
+        // We get the CSRF token.
+        $submittedToken = $request->request->get('token') ?? $request->query->get('token');
+        // dump($request->request->get('token'));
+        // dump($request->query->get('token'));
+        // dump($request->attributes->get('token'));
 
-        // // If the CSRF token is valid.
-        // if ($this->isCsrfTokenValid('admin-user-delete' . $user->getId(), $submittedToken)) {
-        //     // TODO #7 START : delete user account 30 days after the request.
-        //     dd(42);
+        // If the CSRF token is valid.
+        if ($this->isCsrfTokenValid('admin-user-delete' . $user->getId(), $submittedToken)) {
+            // TODO #7 START : delete user account 30 days after the request.
+            // dd(42);
 
-        //     // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-        //     $this->entityManagerInterface->remove($user);
-        //     // We call the flush() method of the EntityManagerInterface to backup the data in the database.
-        //     $this->entityManagerInterface->flush();
+            // For each $adresse in $user->getAddresses().
+            foreach ($user->getAddresses() as $address) {
+                // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+                $this->entityManagerInterface->remove($address);
+            }
 
-        //     // TODO #7 START : delete user account 30 days after the request.
+            // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+            $this->entityManagerInterface->remove($user);
+            // We call the flush() method of the EntityManagerInterface to backup the data in the database.
+            $this->entityManagerInterface->flush();
 
-        //     // We display a flash message for the user.
-        //     $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' a bien été supprimé.');
+            // TODO #7 START : delete user account 30 days after the request.
 
-        //     // We redirect the user.
-        //     return $this->redirectToRoute(
-        //         'admin_user_list',
-        //         // We set a array of optional data.
-        //         [],
-        //         // We specify the related HTTP response status code.
-        //         301
-        //     );
-        // }
-        // // Else the CSRF token is not valid.
-        // else {
-        //     // We redirect the user to the page 403.
-        //     return new Response(
-        //         'Action interdite',
-        //         // We specify the related HTTP response status code.
-        //         403
-        //     );
-        // }
+            // We display a flash message for the user.
+            $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' a bien été supprimé.');
+
+            // We redirect the user.
+            return $this->redirectToRoute(
+                'admin_user_list',
+                // We set a array of optional data.
+                [],
+                // We specify the related HTTP response status code.
+                301
+            );
+        }
+        // Else the CSRF token is not valid.
+        else {
+            // We redirect the user to the page 403.
+            return new Response(
+                'Action interdite',
+                // We specify the related HTTP response status code.
+                403
+            );
+        }
 
         //! START : if we use the API
-        // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-        $this->entityManagerInterface->remove($user);
-        // We call the flush() method of the EntityManagerInterface to backup the data in the database.
-        $this->entityManagerInterface->flush();
+        // // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+        // $this->entityManagerInterface->remove($user);
+        // // We call the flush() method of the EntityManagerInterface to backup the data in the database.
+        // $this->entityManagerInterface->flush();
 
-        // We display a flash message for the user.
-        $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' a bien été supprimé.');
+        // // We display a flash message for the user.
+        // $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' a bien été supprimé.');
 
-        // We redirect the user.
-        return $this->redirectToRoute(
-            'admin_user_list',
-            // We set a array of optional data.
-            [],
-            // We specify the related HTTP response status code.
-            301
-        );
+        // // We redirect the user.
+        // return $this->redirectToRoute(
+        //     'admin_user_list',
+        //     // We set a array of optional data.
+        //     [],
+        //     // We specify the related HTTP response status code.
+        //     301
+        // );
         //! END : if we use the API
     }
 }

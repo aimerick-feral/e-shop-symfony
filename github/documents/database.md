@@ -36,7 +36,7 @@ Relation entre **User** & **Address** :
 - id
 - name
 - slug
-- category (Many To One)
+- category (Many To One) / Allowed to be null : no, but you say yes  
 - createdAt
 - updatedAt
 
@@ -83,7 +83,7 @@ Relation entre **Category** & **Product** :
 - city
 - country
 - phoneNumber
-- user (ManyToOne)
+- user (ManyToOne) / Allowed to be null : no 
 - createdAt
 - updatedAt
 
@@ -108,8 +108,8 @@ Relations entre **Address** & **User** :
 - total
 - paymentMethod
 - status
-- user (ManyToOne)
-- purchaseItems (OneToMany)
+- user (ManyToOne) / Allowed to be null : yes
+- purchaseItems (OneToMany) / Allowed to be null : no
 - purchaseAt
 - updatedAt
 
@@ -135,8 +135,8 @@ Relation entre **Purchase** & **PurchaseItem** :
 - productPrice
 - quantity
 - total
-- product (ManyToOne)
-- purchase (ManyToOne)
+- product (ManyToOne) / Allowed to be null : yes
+- purchase (ManyToOne) / Allowed to be null : no
 
 Relation entre **PurchaseItem** & **Product** :
 
@@ -167,3 +167,11 @@ Relation entre **PurchaseItem** & **Purchase** :
 
 | Fields | Types | Particularities | Descriptions |
 | ------ | ----- | --------------- | ------------ |
+
+## Delete tests 
+- User ❌ blocked by the purchase constraint
+- Address ✅
+- Product ❌ blocked by the purchase_item constraint
+- Category ✅ 
+- Purchase ✅
+- Delivery Mode ✅

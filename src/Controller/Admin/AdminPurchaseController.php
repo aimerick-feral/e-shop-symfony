@@ -590,59 +590,59 @@ class AdminPurchaseController extends AbstractController
     #[Route('/admin/commandes/{id}/supprimer', name: 'admin_purchase_delete', methods: 'GET|POST', requirements: ['id' => '\d+'])]
     public function delete(Request $request, Purchase $purchase): Response
     {
-        // // We get the CSRF token.
-        // $submittedToken = $request->request->get('token') ?? $request->query->get('token');
+        // We get the CSRF token.
+        $submittedToken = $request->request->get('token') ?? $request->query->get('token');
 
-        // // If the CSRF token is valid.
-        // if ($this->isCsrfTokenValid('admin-purchase-delete' . $purchase->getId(), $submittedToken)) {
-        //     // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-        //     $this->entityManagerInterface->remove($purchase);
-        //     // We call the flush() method of the EntityManagerInterface to backup the data in the database.
-        //     $this->entityManagerInterface->flush();
+        // If the CSRF token is valid.
+        if ($this->isCsrfTokenValid('admin-purchase-delete' . $purchase->getId(), $submittedToken)) {
+            // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+            $this->entityManagerInterface->remove($purchase);
+            // We call the flush() method of the EntityManagerInterface to backup the data in the database.
+            $this->entityManagerInterface->flush();
 
-        //     // We display a flash message for the user.
-        //     $this->addFlash('success', 'La commande ' . $purchase->getReference() . ' a bien été supprimée.');
+            // We display a flash message for the user.
+            $this->addFlash('success', 'La commande ' . $purchase->getReference() . ' a bien été supprimée.');
 
-        //     // We redirect the user.
-        //     return $this->redirectToRoute(
-        //         'admin_purchase_list',
-        //         // We set a array of optional data.
-        //         [
-        //             'user' => $purchase->getUser(),
-        //         ],
-        //         // We specify the related HTTP response status code.
-        //         301
-        //     );
-        // }
-        // // Else the CSRF token is not valid.
-        // else {
-        //     // We redirect the user to the page 403.
-        //     return new Response(
-        //         'Action interdite',
-        //         // We specify the related HTTP response status code.
-        //         403
-        //     );
-        // }
+            // We redirect the user.
+            return $this->redirectToRoute(
+                'admin_purchase_list',
+                // We set a array of optional data.
+                [
+                    'user' => $purchase->getUser(),
+                ],
+                // We specify the related HTTP response status code.
+                301
+            );
+        }
+        // Else the CSRF token is not valid.
+        else {
+            // We redirect the user to the page 403.
+            return new Response(
+                'Action interdite',
+                // We specify the related HTTP response status code.
+                403
+            );
+        }
 
         //! START : if we use the API
-        // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-        $this->entityManagerInterface->remove($purchase);
-        // We call the flush() method of the EntityManagerInterface to backup the data in the database.
-        $this->entityManagerInterface->flush();
+        // // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+        // $this->entityManagerInterface->remove($purchase);
+        // // We call the flush() method of the EntityManagerInterface to backup the data in the database.
+        // $this->entityManagerInterface->flush();
 
-        // We display a flash message for the user.
-        $this->addFlash('success', 'La commande ' . $purchase->getReference() . ' a bien été supprimée.');
+        // // We display a flash message for the user.
+        // $this->addFlash('success', 'La commande ' . $purchase->getReference() . ' a bien été supprimée.');
 
-        // We redirect the user.
-        return $this->redirectToRoute(
-            'admin_purchase_list',
-            // We set a array of optional data.
-            [
-                'user' => $purchase->getUser(),
-            ],
-            // We specify the related HTTP response status code.
-            301
-        );
+        // // We redirect the user.
+        // return $this->redirectToRoute(
+        //     'admin_purchase_list',
+        //     // We set a array of optional data.
+        //     [
+        //         'user' => $purchase->getUser(),
+        //     ],
+        //     // We specify the related HTTP response status code.
+        //     301
+        // );
         //! END : if we use the API
     }
 }

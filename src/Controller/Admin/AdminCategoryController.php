@@ -264,7 +264,7 @@ class AdminCategoryController extends AbstractController
                 'slug' => $slug
             ]
         );
-        
+
         // If we don't find any category.
         if (!$category) {
             // We redirect the user.
@@ -414,56 +414,72 @@ class AdminCategoryController extends AbstractController
     #[Route('/admin/categories/{id}/supprimer', name: 'admin_category_delete', methods: 'GET|POST', requirements: ['id' => '\d+'])]
     public function delete(Request $request, Category $category): Response
     {
-        // // We get the CSRF token.
-        // $submittedToken = $request->request->get('token') ?? $request->query->get('token');
+        // We get the CSRF token.
+        $submittedToken = $request->request->get('token') ?? $request->query->get('token');
 
-        // // If the CSRF token is valid.
-        // if ($this->isCsrfTokenValid('admin-category-delete' . $category->getId(), $submittedToken)) {
-        //     // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-        //     $this->entityManagerInterface->remove($category);
-        //     // We call the flush() method of the EntityManagerInterface to backup the data in the database.
-        //     $this->entityManagerInterface->flush();
+        // If the CSRF token is valid.
+        if ($this->isCsrfTokenValid('admin-category-delete' . $category->getId(), $submittedToken)) {
+            // We don't want to allow the user the possibility of deleted a category who contain one or many products. 
+            // If the number of products in the category is superior than 0.
+            if (count($category->getProducts()) > 0) {
+                // We display a flash message for the user.
+                $this->addFlash('error', 'La catégorie ' . $category->getName() . ' ne peut pas être supprimée, car elle contient ' . count($category->getProducts()) . ' produits. Merci de supprimer les produits au préalable.');
 
-        //     // We display a flash message for the user.
-        //     $this->addFlash('success', 'La catégorie ' . $category->getName() . ' a bien été supprimée.');
+                // We redirect the user.
+                return $this->redirectToRoute(
+                    'admin_category_list',
+                    // We set a array of optional data.
+                    [],
+                    // We specify the related HTTP response status code.
+                    301
+                );
+            }
 
-        //     // We redirect the user.
-        //     return $this->redirectToRoute(
-        //         'admin_category_list',
-        //         // We set a array of optional data.
-        //         [],
-        //         // We specify the related HTTP response status code.
-        //         301
-        //     );
-        // }
-        // // Else the CSRF token is not valid.
-        // else {
-        //     // We redirect the user to the page 403.
-        //     return new Response(
-        //         'Action interdite',
-        //         // We specify the related HTTP response status code.
-        //         403
-        //     );
-        // }
+            // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+            $this->entityManagerInterface->remove($category);
+            // We call the flush() method of the EntityManagerInterface to backup the data in the database.
+            $this->entityManagerInterface->flush();
+
+            // We display a flash message for the user.
+            $this->addFlash('success', 'La catégorie ' . $category->getName() . ' a bien été supprimée.');
+
+            // We redirect the user.
+            return $this->redirectToRoute(
+                'admin_category_list',
+                // We set a array of optional data.
+                [],
+                // We specify the related HTTP response status code.
+                301
+            );
+        }
+        // Else the CSRF token is not valid.
+        else {
+            // We redirect the user to the page 403.
+            return new Response(
+                'Action interdite',
+                // We specify the related HTTP response status code.
+                403
+            );
+        }
 
         //! START : if we use the API
-        // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-        $this->entityManagerInterface->remove($category);
-        // We call the flush() method of the EntityManagerInterface to backup the data in the database.
-        $this->entityManagerInterface->flush();
+        // // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+        // $this->entityManagerInterface->remove($category);
+        // // We call the flush() method of the EntityManagerInterface to backup the data in the database.
+        // $this->entityManagerInterface->flush();
 
 
-        // We display a flash message for the user.
-        $this->addFlash('success', 'La catégorie ' . $category->getName() . ' a bien été supprimée.');
+        // // We display a flash message for the user.
+        // $this->addFlash('success', 'La catégorie ' . $category->getName() . ' a bien été supprimée.');
 
-        // We redirect the user.
-        return $this->redirectToRoute(
-            'admin_category_list',
-            // We set a array of optional data.
-            [],
-            // We specify the related HTTP response status code.
-            301
-        );
+        // // We redirect the user.
+        // return $this->redirectToRoute(
+        //     'admin_category_list',
+        //     // We set a array of optional data.
+        //     [],
+        //     // We specify the related HTTP response status code.
+        //     301
+        // );
         //! END : if we use the API
     }
 }

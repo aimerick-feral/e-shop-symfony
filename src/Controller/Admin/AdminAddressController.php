@@ -243,7 +243,6 @@ class AdminAddressController extends AbstractController
         }
         //! END : if api.js is active this code is not execute and you have to render the file list.html.twig insted of list-js.html.twig insted of list-js.html.twig.  
 
-
         // We display our template.
         return $this->render(
             'admin/address/user-list.html.twig',
@@ -340,16 +339,30 @@ class AdminAddressController extends AbstractController
             // We display a flash message for the user.
             $this->addFlash('success', 'L\' adresse de ' . $user->getFirstName() . ' '  . strtoupper($user->getLastName()) . ' a bien été mise à jour.');
 
-            // We redirect the user.
-            return $this->redirectToRoute(
-                'admin_address_user_list',
-                // We set a array of optional data.
-                [
-                    'id' => $user->getId()
-                ],
-                // We specify the related HTTP response status code.
-                301
-            );
+            // If the query of the request contain the string returnToAdminAddressList.
+            if ($request->query->get('returnToAdminAddressList')) {
+                // We redirect the user.
+                return $this->redirectToRoute(
+                    'admin_address_list',
+                    // We set a array of optional data.
+                    [],
+                    // We specify the related HTTP response status code.
+                    301
+                );
+            }
+            // Else the query of the request doesn't contain any string. 
+            else {
+                // We redirect the user.
+                return $this->redirectToRoute(
+                    'admin_address_user_list',
+                    // We set a array of optional data.
+                    [
+                        'id' => $user->getId()
+                    ],
+                    // We specify the related HTTP response status code.
+                    301
+                );
+            }
         }
 
         // We display our template.
