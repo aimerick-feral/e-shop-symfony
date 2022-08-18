@@ -1940,7 +1940,8 @@ body {
     margin-bottom: 1.5em;
   }
 
-  #delete-my-user-account-link {
+  #delete-my-user-account-link,
+  #reactivate-my-user-account-link {
     width: 56%;
   }
 
@@ -2608,6 +2609,43 @@ body {
   .card-purchase .delivery-mode-price p:nth-child(1),
   .card-purchase .total p:nth-child(1) {
     margin: 0 0 0.5em;
+  }
+
+  /* ============== user_reactivate_account_access ============== */
+  .term__user-email {
+    font-weight: normal;
+  }
+
+   .term__user-email_color_white {
+    color: var(--white);
+  }
+
+  .term__user-email_color_blue {
+    color: var(--blue);
+  }
+
+  .term__user-email_color_green {
+    color: var(--green);
+  }
+
+  .term__user-email_color_red {
+    color: var(--red);
+  }
+
+  .term__user-email_color_safety-orange {
+    color: var(--safety-orange);
+  }
+
+  .term__user-email_color_purple {
+    color: var(--purple);
+  }
+
+  .term__user-email_color_yellow {
+    color: var(--yellow);
+  }
+
+  .term__user-email_color_slimy-green {
+    color: var(--slimy-green);
   }
 
   /* ========================= error404 ========================= */
@@ -3457,6 +3495,7 @@ body {
   }
 
   #delete-my-user-account-link,
+  #reactivate-my-user-account-link,
   #create-user-link,
   #create-product-link,
   #create-category-link,
@@ -3681,7 +3720,8 @@ body {
   /*! None  */
 
   /* ======================= user_profile ======================= */
-  #delete-my-user-account-link {
+  #delete-my-user-account-link,
+  #reactivate-my-user-account-link {
     width: 12%;
   }
 

@@ -30,6 +30,24 @@ class MainController extends AbstractController
         // We remove the cart form the session.
         // $request->getSession()->remove('cart');
 
+        // We get the logged user.
+        /**
+         * @var User
+         */
+        $user = $this->getUser();
+
+        // If we have a logged in user and if this user is not activated. 
+        if ($user && !$user->isIsActivated()) {
+            // We redirect the user.
+            return $this->redirectToRoute(
+                'user_reactivate_account_access',
+                // We set a array of optional data. 
+                [],
+                // We specify the related HTTP response status code.
+                301
+            );
+        }
+
         // We find all the products.
         $products = $productRepository->findAll();
 

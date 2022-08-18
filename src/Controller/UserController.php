@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\UserType;
+use App\Service\Email;
 use App\Service\FileUploader;
 use Doctrine\ORM\EntityManagerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -15,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[IsGranted('ROLE_USER')]
 class UserController extends AbstractController
 {
-    public function __construct(private EntityManagerInterface $entityManagerInterface)
+    public function __construct(private EntityManagerInterface $entityManagerInterface, private Email $email)
     {
     }
 
@@ -130,7 +131,7 @@ class UserController extends AbstractController
     #[Route('/supprimer-ma-photo', name: 'user_delete_picture', methods: 'GET|POST', priority: 4)]
     public function deletePicture(Request $request): Response
     {
-        // We get logged user.
+        // We get the logged user.
         /**
          * @var User
          */
@@ -167,7 +168,7 @@ class UserController extends AbstractController
                 301
             );
         }
-        // Else, the $submittedToken is not valid.
+        // Else the $submittedToken is not valid.
         else {
             // We redirect the user to the page 403.
             return new Response(
@@ -179,14 +180,31 @@ class UserController extends AbstractController
     }
 
     /** 
-     * Metho that delete the logged in user's account 30 days after the request. 
+     * Method that allow a user to delete is account. 
+     * @return Response
+     */
+    #[Route('/demande-supression-compte', name: 'user_delete_account_access', methods: 'GET', priority: 5)]
+    public function deleteAccountAccess(): Response
+    {
+        // We display our template. 
+        return $this->render(
+            'user/delete-account-access.html.twig',
+            // We set a array of optional data.
+            [],
+            // We specify the related HTTP response status code.
+            new Response('', 200)
+        );
+    }
+
+    /** 
+     * Method that deactivate the user. 
      * @param Request $request
      * @return Response
      */
-    #[Route('/supprimer-mon-compte', name: 'user_delete_my-account', methods: 'GET|POST', priority: 5)]
-    public function deleteMyAccount(Request $request): Response
+    #[Route('/supprimer-mon-compte', name: 'user_delete_account', methods: 'GET|POST', priority: 6)]
+    public function deleteAccount(Request $request): Response
     {
-        // We get logged user.
+        // We get the logged user.
         /**
          * @var User
          */
@@ -196,12 +214,45 @@ class UserController extends AbstractController
         $submittedToken = $request->request->get('token') ?? $request->query->get('token');
 
         // If the CSRF token is valid. 
-        if ($this->isCsrfTokenValid('user-delete-my-account' . $user->getId(), $submittedToken)) {
-            // TODO #7 START : delete user account 30 days after the request. 
-            dd(42);
+        if ($this->isCsrfTokenValid('user-delete-account' . $user->getId(), $submittedToken)) {
+            // If the user account is activated. 
+            if ($user->isIsActivated()) {
+                // We set to false the value of the activated property.
+                $user->setIsActivated(false);
 
-            // TODO #7 START : delete user account 30 days after the request.
+                // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
+                $this->entityManagerInterface->flush();
 
+                // We call the informUserOfRequestAccountDeletion() method of the Email service with the data of the user in argument.
+                $this->email->informUserOfRequestAccountDeletion($user);
+
+                // We redirect the user.
+                return $this->redirectToRoute(
+                    'app_logout',
+                    // We set a array of optional data. 
+                    [],
+                    // We specify the related HTTP response status code.
+                    301
+                );
+            }
+            // Else we manage the possible error.
+            else {
+                // We redirect the user to the page 403.
+                return new Response(
+                    'Action interdite',
+                    // We specify the related HTTP response status code.
+                    403
+                );
+            }
+        }
+        // Else the CSRF token is not valid.
+        else {
+            // We redirect the user to the page 403.
+            return new Response(
+                'Action interdite',
+                // We specify the related HTTP response status code.
+                403
+            );
         }
 
         // We redirect the user.
@@ -212,5 +263,86 @@ class UserController extends AbstractController
             // We specify the related HTTP response status code.
             301
         );
+    }
+
+    /** 
+     * Method that allow the user to reactivate is account. 
+     * @param Request $request
+     * @return Response
+     */
+    #[Route('/demande-reactivation-compte', name: 'user_reactivate_account_access', methods: 'GET')]
+    public function reactivateAccountAccess(): Response
+    {
+        // We display our template. 
+        return $this->render(
+            'user/reactivate-user-account-access.html.twig',
+            // We set a array of optional data.
+            [],
+            // We specify the related HTTP response status code.
+            new Response('', 200)
+        );
+    }
+
+    /** 
+     * Metho that reactivate the user account. 
+     * @param Request $request
+     * @return Response
+     */
+    #[Route('/reactivation', name: 'user_reactivate_account', methods: 'GET|POST')]
+    public function reactivateAccount(Request $request): Response
+    {
+        // We get the logged user.
+        /**
+         * @var User
+         */
+        $user = $this->getUser();
+
+        // We get the CSRF token.
+        $submittedToken = $request->request->get('token') ?? $request->query->get('token');
+
+        // If the CSRF token is valid. 
+        if ($this->isCsrfTokenValid('user-reactivate-account' . $user->getId(), $submittedToken)) {
+            // If the user account is not activated. 
+            if (!$user->isIsActivated()) {
+                // We set to false the value of the activated property.
+                $user->setIsActivated(true);
+
+                // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
+                $this->entityManagerInterface->flush();
+
+                // We call the informUserOfRequestAccountDeletion() method of the Email service with the data of the user in argument.
+                $this->email->informUserOfAccountReactivation($user);
+
+                // We display a flash message for the user.
+                $this->addFlash('success', 'Bonjour ' . $user->getFirstName() . ', votre compte a bien été réactivé.');
+
+                // We redirect the user.
+                return $this->redirectToRoute(
+                    'user_profile',
+                    // We set a array of optional data. 
+                    [],
+                    // We specify the related HTTP response status code.
+                    301
+                );
+            }
+            // Else we manage the possible error.
+            else {
+                // We redirect the user to the page 403.
+                return new Response(
+                    'Action interdite',
+                    // We specify the related HTTP response status code.
+                    403
+                );
+            }
+        }
+        // Else the CSRF token is not valid.
+        else {
+            // We redirect the user to the page 403.
+            return new Response(
+                'Action interdite',
+                // We specify the related HTTP response status code.
+                403
+            );
+        }
     }
 }

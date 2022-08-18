@@ -84,7 +84,8 @@
 			</button>
 			{{ form_end(userProfileForm) }}
 			{# END : userProfileForm #}
-				<a class="display-none page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-account-link" href="{{ path('user_delete_my-account', {'token':csrf_token('user-delete-my-account' ~ app.user.id)} ) }}"> Supprimer mon compte
+			<a class=" display-none page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-account-link" href="{{ path('user_delete_account_access' ) }}">
+				Supprimer mon compte
 			</a>
 		</section>
 	</main>

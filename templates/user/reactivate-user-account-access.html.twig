@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Réactiver mon compte -
+	{{ app.user.firstName }}
+	{{ app.user.lastName }}
+	|
+	{{ parent() }}
+{% endblock %}
+
+{# START : user_reactivate_account_access #}
+{% block body %}
+	<main>
+		<section class="page">
+			<h2>Compte désactivé</h2>
+			<div class="list">
+				<div class="term">
+					<p>Bonjour
+						{{ app.user.firstName }},</p>
+					<p>Vous avez récemment demandé la suppression de votre compte associé à l'adresse email
+						<strong class="term__user-email term__user-email_color_blue" id="user-email">{{ app.user.email}}</strong>.</p>
+					<p>Conformément à nos
+						<a class="page__link page__link_color_blue page__link_text_underline page__link_padding-and-margin_0" id="terms-of-service-link" href="{{ path('terms_of_use') }}">Conditions Générales d'Utilisation</a>
+						(CGU) la suppression définitive de votre compte sera effectuée 30 jours après votre demande.</p>
+					<p>Si vous souhaitez de nouveau bénéficier de nos services, nous vous offrons la possibilité de réactiver votre compte.</p>
+				</div>
+			</div>
+			<a class="page__link page__link_text_uppercase page__link_background-color_green page__link_color_black" id="reactivate-my-user-account-link" href="{{ path('user_reactivate_account', {'token':csrf_token('user-reactivate-account' ~ app.user.id)} ) }}">
+				Réactivier mon compte
+			</a>
+		</section>
+	</main>
+{% endblock %}
+{# START : user_reactivate_account_access #}

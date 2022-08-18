@@ -36,7 +36,7 @@ class FileUploader
         // If the form we have in argument is registration_form or the user_profile or the admin_user. 
         if (
             $form->getName() === 'registration_form' ||
-            $form->getName() === 'user_profile' ||
+            $form->getName() === 'user' ||
             $form->getName() === 'admin_user'
         ) {
             // The value of $uploadeFolder is the value of the .env variable USER_PICTURE_UPLOAD_FOLDER_PATH.

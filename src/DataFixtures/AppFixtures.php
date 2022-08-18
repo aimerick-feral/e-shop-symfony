@@ -1430,7 +1430,7 @@ class AppFixtures extends Fixture
       
         // Purchase
 
-        dd($addresses);
+        // dd($addresses);
 
         // We create a array of purchases. 
         $purchases = [];

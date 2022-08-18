@@ -79,6 +79,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Groups(['users', 'purchases', 'addresses'])]
     private $civilityTitle;
 
+    #[ORM\Column]
+    private bool $isActivated = true;
+
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: Address::class)]
     #[Groups(['users', 'purchases'])]
     private $addresses;
@@ -241,6 +244,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setCivilityTitle(string $civilityTitle): self
     {
         $this->civilityTitle = $civilityTitle;
+
+        return $this;
+    }
+
+    public function isIsActivated(): bool
+    {
+        return $this->isActivated;
+    }
+
+    public function setIsActivated(bool $isActivated): self
+    {
+        $this->isActivated = $isActivated;
 
         return $this;
     }

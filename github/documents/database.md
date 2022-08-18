@@ -10,16 +10,17 @@
 - password
 - firstName
 - lastName
-- civilityTitle 
+- civilityTitle
 - picture
+- isActivated or hasbeanDeactivated
 - addresses (OneToMany)
 - purchases (OneToMany)
 - createdAt
 - updatesAt
 
-| id  | email                | roles | password                                  | first_name | last_name | civility_title   | picture      | created_at          | created_at          |
-| --- | -------------------- | ----- | ----------------------------------------- | ---------- | --------- | -------- | ------------ | ------------------- | ------------------- |
-| 1   | clark.kent@email.com | []    | $2y$13$jbioeyqTvwNuJLvClhWeh.n2qBXADEO4rb | Clark      | KENT      | Monsieur | superman.png | 2022-02-09 10:03:11 | 2022-02-09 10:03:11 |
+| id  | email                | roles | password                                  | first_name | last_name | civility_title | picture      | isActivated | created_at          | created_at          |
+| --- | -------------------- | ----- | ----------------------------------------- | ---------- | --------- | -------------- | ------------ | ----------- | ------------------- | ------------------- |
+| 1   | clark.kent@email.com | []    | $2y$13$jbioeyqTvwNuJLvClhWeh.n2qBXADEO4rb | Clark      | KENT      | Monsieur       | superman.png | 1           | 2022-02-09 10:03:11 | 2022-02-09 10:03:11 |
 
 Relation entre **User** & **Purchase** :
 
@@ -36,7 +37,7 @@ Relation entre **User** & **Address** :
 - id
 - name
 - slug
-- category (Many To One) / Allowed to be null : no, but you say yes  
+- category (Many To One) / Allowed to be null : no, but you say yes
 - createdAt
 - updatedAt
 
@@ -83,7 +84,7 @@ Relation entre **Category** & **Product** :
 - city
 - country
 - phoneNumber
-- user (ManyToOne) / Allowed to be null : no 
+- user (ManyToOne) / Allowed to be null : no
 - createdAt
 - updatedAt
 
@@ -168,10 +169,11 @@ Relation entre **PurchaseItem** & **Purchase** :
 | Fields | Types | Particularities | Descriptions |
 | ------ | ----- | --------------- | ------------ |
 
-## Delete tests 
-- User ❌ blocked by the purchase constraint
+## Delete tests
+
+- User ❌ blocked by the Purchase constraint
 - Address ✅
-- Product ❌ blocked by the purchase_item constraint
-- Category ✅ 
+- Product ❌ blocked by the PurchaseItem constraint
+- Category ✅
 - Purchase ✅
 - Delivery Mode ✅

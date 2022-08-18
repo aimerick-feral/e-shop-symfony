@@ -76,4 +76,73 @@ class Email
         // We send the email.
         $this->mailerInterface->send($email);
     }
+
+    /**
+     * Method that send a email to a user to inform of the deletion of is account.
+     * @return void 
+     */
+    public function informUserOfRequestAccountDeletion(User $user)
+    {
+        // We create the email. 
+        $email = new TemplatedEmail();
+
+        // We set our data to the email.
+        $email
+            ->from('noreply@e-shop.fr')
+            ->to(new Address($user->getEmail(), $user->getFirstName() . ' ' . $user->getLastName()))
+            ->subject('Demande de suppression de votre compte')
+            ->htmlTemplate('emails/request-account-deletion.html.twig')
+            ->context([
+                'user' => $user,
+            ]);
+
+        // We send the email.
+        $this->mailerInterface->send($email);
+    }
+
+    /**
+     * Method that send a email to a user to inform him of the reactivation of is account.
+     * @return void 
+     */
+    public function informUserOfAccountReactivation(User $user)
+    {
+        // We create the email. 
+        $email = new TemplatedEmail();
+
+        // We set our data to the email.
+        $email
+            ->from('noreply@e-shop.fr')
+            ->to(new Address($user->getEmail(), $user->getFirstName() . ' ' . $user->getLastName()))
+            ->subject('Réactivation de votre compte')
+            ->htmlTemplate('emails/user-account-reactivation.html.twig')
+            ->context([
+                'user' => $user,
+            ]);
+
+        // We send the email.
+        $this->mailerInterface->send($email);
+    }
+
+    /**
+     * Method that send a email to a user to inform of the deletion of is account.
+     * @return void 
+     */
+    public function informUserOfAccountDeletion(User $user)
+    {
+        // We create the email. 
+        $email = new TemplatedEmail();
+
+        // We set our data to the email.
+        $email
+            ->from('noreply@e-shop.fr')
+            ->to(new Address($user->getEmail(), $user->getFirstName() . ' ' . $user->getLastName()))
+            ->subject('Suppression de votre compte')
+            ->htmlTemplate('emails/user-account-deletion.html.twig')
+            ->context([
+                'user' => $user,
+            ]);
+
+        // We send the email.
+        $this->mailerInterface->send($email);
+    }
 }

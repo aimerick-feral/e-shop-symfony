@@ -39,6 +39,8 @@ const font = {
   errorMessageColorClassNames: [],
   // Customer service questions
   customerServiceQuestionsClassNames: [],
+  // User email
+  userEmailClassNames: [],
   // =================== DOM ELEMENTS ===========================
   colorSwitchs: [],
   fontSwitchs: [],
@@ -99,6 +101,7 @@ const font = {
   detailLinks: [],
   createButtons: [],
   createLinks: [],
+  reactivateUserAccountLink: null,
   purchaseLink: null,
   contactEmailLink: null,
   forgottenPasswordLink: null,
@@ -109,7 +112,7 @@ const font = {
   desktopLoginLink: null,
   desktopLogoutLink: null,
   desktopRegistrationLink: null,
-  registrationTermsOfServiceLink: null,
+  termsOfServiceLink: null,
   errorMessages: [],
   productAviabilityElements: [],
   addressCards: [],
@@ -122,6 +125,7 @@ const font = {
   purchaseTotal: null,
   purchaseTotalReminder: null,
   customerServiceQuestions: [],
+  userEmail: null,
   init: function () {
     console.log("Hello world, I'm font.js 🔵🟢🔴🟠🟣🟡");
 
@@ -494,6 +498,18 @@ const font = {
       "term__question_color_white",
     ];
 
+    // All the user email color class names.
+    font.userEmailClassNames = [
+      "term__user-email_color_blue",
+      "term__user-email_color_green",
+      "term__user-email_color_red",
+      "term__user-email_color_safety-orange",
+      "term__user-email_color_purple",
+      "term__user-email_color_yellow",
+      "term__user-email_color_slimy-green",
+      "term__user-email_color_white",
+    ];
+
     // We get the DOM elements that we need to interacte with.
 
     // All the switchs exept mode.switch.
@@ -596,6 +612,9 @@ const font = {
     font.detailLinks = document.querySelectorAll(".page__link-detail");
     font.createButtons = document.querySelectorAll(".page__button-create");
     font.createLinks = document.querySelectorAll(".page__link-create");
+    font.reactivateUserAccountLink = document.getElementById(
+      "reactivate-my-user-account-link"
+    );
     font.purchaseLink = document.getElementById("purchase-link");
     font.contactEmailLink = document.getElementById("contact-email-link");
     font.forgottenPasswordLink = document.getElementById(
@@ -612,9 +631,7 @@ const font = {
     font.desktopRegistrationLink = document.getElementById(
       "desktop-registration-link"
     );
-    font.registrationTermsOfServiceLink = document.getElementById(
-      "registration-terms-of-service-link"
-    );
+    font.termsOfServiceLink = document.getElementById("terms-of-service-link");
     font.errorMessages = document.querySelectorAll(".error-message");
     font.productAviabilityElements = document.querySelectorAll(".availability");
     font.addressCards = document.querySelectorAll(".card-address");
@@ -630,6 +647,7 @@ const font = {
     );
     font.customerServiceQuestions =
       document.querySelectorAll(".term__question");
+    font.userEmail = document.getElementById("user-email");
 
     // When the app is loaded we load to the page the font.color which is backup in localSatorage.
     font.loadFont();
@@ -1783,6 +1801,24 @@ const font = {
       );
     }
 
+    // If the DOM element exist.
+    if (font.reactivateUserAccountLink) {
+      // For each className of font.linkClassNames.
+      for (let className of font.linkClassNames) {
+        // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+        tools.removeClassesFromElement(
+          font.reactivateUserAccountLink,
+          className
+        );
+      }
+      // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+      tools.addClassesToElement(
+        font.reactivateUserAccountLink,
+        "page__link_background-color_green",
+        "page__link_color_black"
+      );
+    }
+
     // For each link of font.addToCartLinks.
     for (let link of font.addToCartLinks) {
       // For each className of font.linkBackgroundColorClassNames.
@@ -2062,18 +2098,15 @@ const font = {
     }
 
     // If the DOM element exist.
-    if (font.registrationTermsOfServiceLink) {
+    if (font.termsOfServiceLink) {
       // For each className of font.linkColorClassNames.
       for (let className of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
-        tools.removeClassesFromElement(
-          font.registrationTermsOfServiceLink,
-          className
-        );
+        tools.removeClassesFromElement(font.termsOfServiceLink, className);
       }
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.registrationTermsOfServiceLink,
+        font.termsOfServiceLink,
         "page__link_color_" + newColor
       );
     }
@@ -2391,6 +2424,20 @@ const font = {
       }
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(question, "term__question_color_" + newColor);
+    }
+
+    // If the DOM element exist.
+    if (font.userEmail) {
+      // For each className of font.userEmailClassNames.
+      for (let className of font.userEmailClassNames) {
+        // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+        tools.removeClassesFromElement(font.userEmail, className);
+      }
+      // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+      tools.addClassesToElement(
+        font.userEmail,
+        "term__user-email_color_" + newColor
+      );
     }
   },
   /**
@@ -3118,6 +3165,18 @@ const font = {
       }
     }
 
+    // If the DOM element exist.
+    if (font.reactivateUserAccountLink) {
+      // For each className of font.linkClassNames.
+      for (let className of font.linkClassNames) {
+        // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+        tools.removeClassesFromElement(
+          font.reactivateUserAccountLink,
+          className
+        );
+      }
+    }
+
     // For each link of font.addToCartLinks.
     for (let link of font.addToCartLinks) {
       // For each className of font.linkColorClassNames.
@@ -3380,14 +3439,11 @@ const font = {
     }
 
     // If the DOM element exist.
-    if (font.registrationTermsOfServiceLink) {
+    if (font.termsOfServiceLink) {
       // For each className of font.linkColorClassNames.
       for (let className of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
-        tools.removeClassesFromElement(
-          font.registrationTermsOfServiceLink,
-          className
-        );
+        tools.removeClassesFromElement(font.termsOfServiceLink, className);
       }
     }
 
@@ -3523,6 +3579,15 @@ const font = {
       for (let className of font.customerServiceQuestionsClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
         tools.removeClassesFromElement(question, className);
+      }
+    }
+
+    // If the DOM element exist.
+    if (font.userEmail) {
+      // For each className of font.userEmailClassNames.
+      for (let className of font.userEmailClassNames) {
+        // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+        tools.removeClassesFromElement(font.userEmail, className);
       }
     }
   },
@@ -3662,6 +3727,16 @@ const font = {
       tools.addClassesToElement(
         link,
         "page__link_background-color_white",
+        "page__link_color_blue"
+      );
+    }
+
+    // If the DOM element exist.
+    if (font.reactivateUserAccountLink) {
+      // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+      tools.addClassesToElement(
+        font.reactivateUserAccountLink,
+        "page__link_background-color_safety-orange",
         "page__link_color_blue"
       );
     }
@@ -3882,10 +3957,10 @@ const font = {
     }
 
     // If the DOM element exist.
-    if (font.registrationTermsOfServiceLink) {
+    if (font.termsOfServiceLink) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.registrationTermsOfServiceLink,
+        font.termsOfServiceLink,
         "page__link_color_safety-orange"
       );
     }
@@ -4127,6 +4202,16 @@ const font = {
       );
     }
 
+    // If the DOM element exist.
+    if (font.reactivateUserAccountLink) {
+      // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+      tools.addClassesToElement(
+        font.reactivateUserAccountLink,
+        "page__link_background-color_yellow",
+        "page__link_color_purple"
+      );
+    }
+
     // For each link of font.addToCartLinks.
     for (let link of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
@@ -4334,10 +4419,10 @@ const font = {
     }
 
     // If the DOM element exist.
-    if (font.registrationTermsOfServiceLink) {
+    if (font.termsOfServiceLink) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.registrationTermsOfServiceLink,
+        font.termsOfServiceLink,
         "page__link_color_yellow"
       );
     }
@@ -4576,6 +4661,16 @@ const font = {
       );
     }
 
+    // If the DOM element exist.
+    if (font.reactivateUserAccountLink) {
+      // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+      tools.addClassesToElement(
+        font.reactivateUserAccountLink,
+        "page__link_background-color_blue",
+        "page__link_color_red"
+      );
+    }
+
     // For each link of font.addToCartLinks.
     for (let link of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
@@ -4791,10 +4886,10 @@ const font = {
     }
 
     // If the DOM element exist.
-    if (font.registrationTermsOfServiceLink) {
+    if (font.termsOfServiceLink) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.registrationTermsOfServiceLink,
+        font.termsOfServiceLink,
         "page__link_color_blue"
       );
     }
@@ -5041,6 +5136,16 @@ const font = {
       );
     }
 
+    // If the DOM element exist.
+    if (font.reactivateUserAccountLink) {
+      // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+      tools.addClassesToElement(
+        font.reactivateUserAccountLink,
+        "page__link_background-color_yellow",
+        "page__link_color_slimy-green"
+      );
+    }
+
     // For each link of font.addToCartLinks.
     for (let link of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
@@ -5251,10 +5356,10 @@ const font = {
     }
 
     // If the DOM element exist.
-    if (font.registrationTermsOfServiceLink) {
+    if (font.termsOfServiceLink) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.registrationTermsOfServiceLink,
+        font.termsOfServiceLink,
         "page__link_color_yellow"
       );
     }
@@ -5496,6 +5601,16 @@ const font = {
       );
     }
 
+    // If the DOM element exist.
+    if (font.reactivateUserAccountLink) {
+      // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+      tools.addClassesToElement(
+        font.reactivateUserAccountLink,
+        "page__link_background-color_blue",
+        "page__link_color_yellow"
+      );
+    }
+
     // For each link of font.addToCartLinks.
     for (let link of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
@@ -5697,10 +5812,10 @@ const font = {
     }
 
     // If the DOM element exist.
-    if (font.registrationTermsOfServiceLink) {
+    if (font.termsOfServiceLink) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.registrationTermsOfServiceLink,
+        font.termsOfServiceLink,
         "page__link_color_blue"
       );
     }
@@ -5939,6 +6054,16 @@ const font = {
       );
     }
 
+    // If the DOM element exist.
+    if (font.reactivateUserAccountLink) {
+      // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+      tools.addClassesToElement(
+        font.reactivateUserAccountLink,
+        "page__link_background-color_yellow",
+        "page__link_color_red"
+      );
+    }
+
     // For each link of font.addToCartLinks.
     for (let link of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
@@ -6139,10 +6264,10 @@ const font = {
     }
 
     // If the DOM element exist.
-    if (font.registrationTermsOfServiceLink) {
+    if (font.termsOfServiceLink) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.registrationTermsOfServiceLink,
+        font.termsOfServiceLink,
         "page__link_color_yellow"
       );
     }
@@ -6387,6 +6512,16 @@ const font = {
       );
     }
 
+    // If the DOM element exist.
+    if (font.reactivateUserAccountLink) {
+      // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+      tools.addClassesToElement(
+        font.reactivateUserAccountLink,
+        "page__link_background-color_slimy-green",
+        "page__link_color_sepia"
+      );
+    }
+
     // For each link of font.addToCartLinks.
     for (let link of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
@@ -6606,10 +6741,10 @@ const font = {
     }
 
     // If the DOM element exist.
-    if (font.registrationTermsOfServiceLink) {
+    if (font.termsOfServiceLink) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.registrationTermsOfServiceLink,
+        font.termsOfServiceLink,
         "page__link_color_slimy-green"
       );
     }
