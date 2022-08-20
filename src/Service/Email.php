@@ -64,7 +64,7 @@ class Email
             ->from('noreply@e-shop.fr')
             ->to(new Address($user->getEmail(), $user->getFirstName() . ' ' . $user->getLastName()))
             ->subject('Purchase ' . $purchase->getReference())
-            ->htmlTemplate('emails/purchase-confirmation.html.twig')
+            ->htmlTemplate('emails/purchase/confirmation.html.twig')
             ->context([
                 'user' => $user,
                 'purchase' => $purchase,
@@ -91,7 +91,7 @@ class Email
             ->from('noreply@e-shop.fr')
             ->to(new Address($user->getEmail(), $user->getFirstName() . ' ' . $user->getLastName()))
             ->subject('Demande de suppression de votre compte')
-            ->htmlTemplate('emails/request-account-deletion.html.twig')
+            ->htmlTemplate('emails/user/delete-request.html.twig')
             ->context([
                 'user' => $user,
             ]);
@@ -114,7 +114,7 @@ class Email
             ->from('noreply@e-shop.fr')
             ->to(new Address($user->getEmail(), $user->getFirstName() . ' ' . $user->getLastName()))
             ->subject('Réactivation de votre compte')
-            ->htmlTemplate('emails/user-account-reactivation.html.twig')
+            ->htmlTemplate('emails/user/reactivation.html.twig')
             ->context([
                 'user' => $user,
             ]);
@@ -137,7 +137,7 @@ class Email
             ->from('noreply@e-shop.fr')
             ->to(new Address($user->getEmail(), $user->getFirstName() . ' ' . $user->getLastName()))
             ->subject('Suppression de votre compte')
-            ->htmlTemplate('emails/user-account-deletion.html.twig')
+            ->htmlTemplate('emails/user/delete-confirmation.html.twig')
             ->context([
                 'user' => $user,
             ]);

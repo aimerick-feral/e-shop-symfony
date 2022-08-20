@@ -486,7 +486,7 @@ class PurchaseController extends AbstractController
     }
 
 
-    //! Not used for now #7 START : show the e-mail send in stripeSuccess()
+    //! Not used for now #7 START : test of templated email
     // #[Route('/emails/purchase-confirmation', name: 'purchase_confirmation', methods: 'GET')]
     // public function confimPurchaseToUser(): Response
     // {
@@ -509,7 +509,7 @@ class PurchaseController extends AbstractController
 
     //     // We display our template.
     //     return $this->render(
-    //         'emails/purchase-confirmation.html.twig',
+    //         'emails/purchase/confirmation.html.twig',
     //         // We set a array of optional data.
     //         [
     //             'user' => $user,
@@ -522,6 +522,6 @@ class PurchaseController extends AbstractController
     //         new Response('', 200)
     //     );
     // }
-    //! Not used for now #7 END : show the e-mail send in stripeSuccess()
+    //! Not used for now #7 END : test of templated email
 
 }

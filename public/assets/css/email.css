@@ -1,0 +1,40 @@
+/* ================ request-account-deletion =================  */
+.term__user-email {
+  font-weight: normal;
+}
+
+.term__user-email_color_blue {
+  color: #0000ff;
+}
+
+.page__link {
+  user-select: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5em;
+  border-radius: 1.5em;
+  margin-top: 1em;
+  width: 60%;
+}
+
+.page__link_color_blue {
+  color: #0000ff;
+}
+
+.page__link_font-weight_normal {
+  font-weight: normal;
+}
+
+.page__link_text-decoration_underline {
+  text-decoration: underline;
+}
+
+.page__link_padding-and-margin_0 {
+  padding: 0;
+  margin: 0;
+}

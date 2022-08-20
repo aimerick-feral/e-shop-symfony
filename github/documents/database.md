@@ -142,7 +142,7 @@ Relation entre **Purchase** & **PurchaseItem** :
 Relation entre **PurchaseItem** & **Product** :
 
 - Un **PurchaseItem** est lié à combien de **Product** au minimum ? -> 1
-- Un **PurchaseItem** est lié à combien de **Product** au maximum ? -> 1
+- Un **PurchaseItem** est lié à combien de **Product** au maximum ? -> N
 
 Relation entre **PurchaseItem** & **Purchase** :
 
@@ -171,9 +171,9 @@ Relation entre **PurchaseItem** & **Purchase** :
 
 ## Delete tests
 
-- User ❌ blocked by the Purchase constraint
+- User ❌ blocked by the Purchase constraint. Can't delete a user when he has purchases. We need to conserve the purchase even if the user is delated.
 - Address ✅
-- Product ❌ blocked by the PurchaseItem constraint
+- Product ❌ blocked by the PurchaseItem constraint. Can't delete a product when he had been purchaset.
 - Category ✅
 - Purchase ✅
 - Delivery Mode ✅

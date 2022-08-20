@@ -32,7 +32,7 @@
 				</p>
 				{{ form_errors(purchaseForm.deliveryAddress) }}
 			</div>
-			<a class="page__link page__link_text_normal page__purchase-step page__link_color_blue page__link_padding-and-margin_0" id="add-new-address-link" href="{{ path('address_create') }}?returnToPurchase=true">
+			<a class="page__link page__link_font-weight_normal page__purchase-step page__link_color_blue page__link_padding-and-margin_0" id="add-new-address-link" href="{{ path('address_create') }}?returnToPurchase=true">
 				+ Ajouter une nouvelle adresse.</a>
 			<button type="button" class="page__purchase-step page__button page__button_background-color_blue page__button_color_white" id="purchase-confirm-address-button">
 				Continuer
@@ -71,7 +71,7 @@
 			<div class="form-field form-field-purchase-terms-of-sale display-none">
 				{{ form_widget(purchaseForm.agreeTerms, { 'id': 'purchase-terms-of-sale-input', 'attr': {'class': 'form-field__input-terms-of-sale' }}) }}
 				{{ form_label(purchaseForm, 'J\'ai lu et j\'accepte les ', { 'label_attr': { 'class': '' }}) }}
-				<a class="page__link page__link_color_blue page__link_text_underline page__link_padding-and-margin_0" id="terms-of-service-link" href="{{ path('terms_of_sales') }}">Conditions Générales de Vente</a>.
+				<a class="page__link page__link_color_blue page__link_text-decoration_underline page__link_font-weight_normal page__link_padding-and-margin_0" id="terms-of-service-link" href="{{ path('terms_of_sales') }}">Conditions Générales de Vente</a>.
 				<p class="error-message error-message_color_red         error-message__terms-of-sale-not-checked display-none">
 					Merci de confirmer avoir lu et accepter nos Conditions Générales de Vente.
 				</p>

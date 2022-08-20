@@ -3,6 +3,9 @@ twig:
   globals:
     cart: '@App\Service\Cart\Cart'
     paypalCheckout: '@App\Service\Checkout\PaypalCheckout'
+  paths:
+    # point this wherever your css files live
+    "%kernel.project_dir%/public/assets/css": styles
 
 when@test:
   twig:

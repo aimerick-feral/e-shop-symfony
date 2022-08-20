@@ -299,6 +299,7 @@ body {
   .flash-error p,
   .flash-warning p {
     margin: 0;
+    text-align: center;
   }
 
   .flash-success {
@@ -776,7 +777,7 @@ body {
   }
 
   .page__link_color_green {
-    color: #00ff00;
+    color: var(--green);
   }
 
   .page__link_color_red {
@@ -807,11 +808,11 @@ body {
     text-transform: uppercase;
   }
 
-  .page__link_text_underline {
+  .page__link_text-decoration_underline {
     text-decoration: underline;
   }
 
-  .page__link_text_normal {
+  .page__link_font-weight_normal {
     font-weight: normal;
   }
 
@@ -822,6 +823,10 @@ body {
 
   .page__link_margin-bottom_1em {
     margin-bottom: 1em;
+  }
+
+  .page__link.card__link {
+    width: 100%;
   }
 
   /* ============================================================ */
@@ -1941,7 +1946,7 @@ body {
   }
 
   #delete-my-user-account-link,
-  #reactivate-my-user-account-link {
+  .page__link.page__link-reactivate-account {
     width: 56%;
   }
 
@@ -2611,12 +2616,12 @@ body {
     margin: 0 0 0.5em;
   }
 
-  /* ============== user_reactivate_account_access ============== */
+  /* ============== user_reactivate_access ============== */
   .term__user-email {
     font-weight: normal;
   }
 
-   .term__user-email_color_white {
+  .term__user-email_color_white {
     color: var(--white);
   }
 
@@ -3495,7 +3500,7 @@ body {
   }
 
   #delete-my-user-account-link,
-  #reactivate-my-user-account-link,
+  .page__link.page__link-reactivate-account,
   #create-user-link,
   #create-product-link,
   #create-category-link,
@@ -3721,7 +3726,7 @@ body {
 
   /* ======================= user_profile ======================= */
   #delete-my-user-account-link,
-  #reactivate-my-user-account-link {
+  #reactivate-user-account-link {
     width: 12%;
   }
 
@@ -3943,7 +3948,7 @@ body {
     font-size: 0.8em;
   }
 
-  .table .page__link_text_normal {
+  .table .page__link_font-weight_normal {
     font-size: 1em;
   }
 

@@ -16,18 +16,20 @@
 						<a class="page__link page__link_text_uppercase page__link_padding-and-margin_0 card__link page__link_color_blue" href="{{ path('admin_user_list') }}">Utilisateurs</a>
 					</h3>
 					<p>
-						{{ numberTotalOfUser }}
+						{{ numberOfUsers }}
+
 						Utilisateurs
 					</p>
-					<p>
-						{{ users }}
-						Utilisateurs avec un ["ROLE_USER"]
-					</p>
-					<p>
-						{{ admins }}
-						Utilisateurs avec un ["ROLE_ADMIN","ROLE_USER"]
-					</p>
-					<a class="page__link page__link_text_normal page__link_padding-and-margin_0 card__link page__link_color_blue" href="{{ path('admin_user_statistics') }}">Statistiques 📊</a>
+					{# <p>
+											{{ users }}
+											Utilisateurs avec un rôle Utilisateur
+										</p>
+										<p>
+											{{ admins }}
+											Utilisateur avec un rôle Administrateur
+										</p>
+										<a class="page__link page__link_font-weight_normal card__link page__link_color_blue" href="#">Utilisateurs désactivés</a> #}
+					<a class="page__link page__link_font-weight_normal page__link_padding-and-margin_0 card__link page__link_color_blue" href="{{ path('admin_user_statistics') }}">Statistiques 📊</a>
 				</div>
 				<div class="card card_color_blue">
 					<h3>

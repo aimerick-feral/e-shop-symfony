@@ -46,7 +46,7 @@
 				</p>
 				{{ form_errors(adminCreatePurchaseForm.deliveryAddress) }}
 			</div>
-			<a class="page__link page__link_text_normal page__link_color_blue page__link_padding-and-margin_0" id="add-new-address-link" href="{{ path('admin_address_create', {'id': user.id}) }}?returnToAdminPurchaseCreate=true">+ Ajouter une nouvelle adresse.</a>
+			<a class="page__link page__link_font-weight_normal page__link_color_blue page__link_padding-and-margin_0" id="add-new-address-link" href="{{ path('admin_address_create', {'id': user.id}) }}?returnToAdminPurchaseCreate=true">+ Ajouter une nouvelle adresse.</a>
 			{# deliveryMode #}
 			<div class="form-field form-field-purchase-delivery-mode" data-folderpath={{ deliveryModePictureUploadFolderPath }} data-pictures={{ deliveryModePictures|json_encode }}>
 				{{ form_label(adminCreatePurchaseForm, 'Mode de livraison :', { 'label_attr': { 'class': 'form-field__label' }}) }}

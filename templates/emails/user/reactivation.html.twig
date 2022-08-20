@@ -1,0 +1,14 @@
+{% apply inline_css(source('@styles/email.css')) %}
+<div class="term">
+	<p>Bonjour
+		{{ user.firstName }},</p>
+	<p>Nous vous confirmons que le compte associé à l'adresse email
+		<strong class="term__user-email term__user-email_color_blue">{{ app.user.email}}</strong>
+		a bien été réactivé.</p>
+	<p>
+		Vous pouvez vous y connecter
+		<a class="page__link page__link_color_blue page__link_font-weight_normal page__link_text-decoration_underline page__link_padding-and-margin_0" href"#">ici</a>.</p>
+	<p>Cordialement.</p>
+	<p>La Team e-shop</p>
+</div>
+{% endapply %}

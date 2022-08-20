@@ -183,7 +183,7 @@ class UserController extends AbstractController
      * Method that allow a user to delete is account. 
      * @return Response
      */
-    #[Route('/demande-supression-compte', name: 'user_delete_account_access', methods: 'GET', priority: 5)]
+    #[Route('/demande-supression-compte', name: 'user_delete_access', methods: 'GET', priority: 5)]
     public function deleteAccountAccess(): Response
     {
         // We display our template. 
@@ -201,8 +201,8 @@ class UserController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    #[Route('/supprimer-mon-compte', name: 'user_delete_account', methods: 'GET|POST', priority: 6)]
-    public function deleteAccount(Request $request): Response
+    #[Route('/supprimer-mon-compte', name: 'user_delete', methods: 'GET|POST', priority: 6)]
+    public function delete(Request $request): Response
     {
         // We get the logged user.
         /**
@@ -214,7 +214,7 @@ class UserController extends AbstractController
         $submittedToken = $request->request->get('token') ?? $request->query->get('token');
 
         // If the CSRF token is valid. 
-        if ($this->isCsrfTokenValid('user-delete-account' . $user->getId(), $submittedToken)) {
+        if ($this->isCsrfTokenValid('user-delete' . $user->getId(), $submittedToken)) {
             // If the user account is activated. 
             if ($user->isIsActivated()) {
                 // We set to false the value of the activated property.
@@ -244,6 +244,34 @@ class UserController extends AbstractController
                     403
                 );
             }
+
+            // TODO #1 START : run SQL script to delete a user 30 day after the request.
+            // // For each $adresse in $user->getAddresses().
+            // foreach ($user->getAddresses() as $address) {
+            //     // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+            //     $this->entityManagerInterface->remove($address);
+            // }
+
+            // // For each $purchase in $user->getPurchases().
+            // foreach ($user->getPurchases() as $purchase) {
+            //     // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+            //     $this->entityManagerInterface->remove($purchase);
+            // }
+
+            // // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+            // $this->entityManagerInterface->remove($user);
+            // // We call the flush() method of the EntityManagerInterface to backup the data in the database.
+            // $this->entityManagerInterface->flush();
+
+            // // We redirect the user.
+            // return $this->redirectToRoute(
+            //     'app_logout',
+            //     // We set a array of optional data.
+            //     [],
+            //     // We specify the related HTTP response status code.
+            //     301
+            // );
+            // TODO #1 END : run SQL script to delete a user 30 day after the request.
         }
         // Else the CSRF token is not valid.
         else {
@@ -254,15 +282,6 @@ class UserController extends AbstractController
                 403
             );
         }
-
-        // We redirect the user.
-        return $this->redirectToRoute(
-            'home',
-            // We set a array of optional data. 
-            [],
-            // We specify the related HTTP response status code.
-            301
-        );
     }
 
     /** 
@@ -270,7 +289,7 @@ class UserController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    #[Route('/demande-reactivation-compte', name: 'user_reactivate_account_access', methods: 'GET')]
+    #[Route('/demande-reactivation-compte', name: 'user_reactivate_access', methods: 'GET')]
     public function reactivateAccountAccess(): Response
     {
         // We display our template. 
@@ -288,8 +307,8 @@ class UserController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    #[Route('/reactivation', name: 'user_reactivate_account', methods: 'GET|POST')]
-    public function reactivateAccount(Request $request): Response
+    #[Route('/reactivation', name: 'user_reactivate', methods: 'GET|POST')]
+    public function reactivate(Request $request): Response
     {
         // We get the logged user.
         /**
@@ -301,7 +320,7 @@ class UserController extends AbstractController
         $submittedToken = $request->request->get('token') ?? $request->query->get('token');
 
         // If the CSRF token is valid. 
-        if ($this->isCsrfTokenValid('user-reactivate-account' . $user->getId(), $submittedToken)) {
+        if ($this->isCsrfTokenValid('user-reactivate' . $user->getId(), $submittedToken)) {
             // If the user account is not activated. 
             if (!$user->isIsActivated()) {
                 // We set to false the value of the activated property.
@@ -345,4 +364,32 @@ class UserController extends AbstractController
             );
         }
     }
+
+    //! Not used for now #7 START : test of templated email
+    // /**
+    //  * Method that display the secure_payment page. 
+    //  * @return Response
+    //  */
+    // #[Route('/toto', name: 'toto', methods: 'GET')]
+    // public function toto(): Response
+    // {
+    //     // We get the logged user.
+    //     /**
+    //      * @var User
+    //      */
+    //     $user = $this->getUser();
+
+    //     // We display our template. 
+    //     return $this->render(
+    //         'emails/user/delete-confirmation.html.twig',
+    //         // We set a array of optional data.
+    //         [
+    //             'user' => $user,
+    //         ],
+    //         // We specify the related HTTP response status code.
+    //         new Response('', 200)
+    //     );
+    // }
+    //! Not used for now #7 END : test of templated email
+
 }

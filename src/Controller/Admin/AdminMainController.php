@@ -30,9 +30,9 @@ class AdminMainController extends AbstractController
             'admin/main/dashboard.html.twig',
             // We set a array of optional data.
             [
-                'numberTotalOfUser' => count($userRepository->findAll()),
-                'users' => count($userRepository->findUsersByRoles("[]")),
-                'admins' => count($userRepository->findUsersByRoles(User::ROLE_ADMIN)),
+                'numberOfUsers' => count($userRepository->findAll()),
+                // 'users' => count($userRepository->findUsersByRoles("[]")),
+                // 'admins' => count($userRepository->findUsersByRoles(User::ROLE_ADMIN)),
                 'addresses' => count($addressRepository->findAll()),
                 'categories' => count($categoryRepository->findAll()),
                 'products' => count($productRepository->findAll()),

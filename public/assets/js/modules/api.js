@@ -716,10 +716,10 @@ const api = {
       			<p>${user.lastName}</p>
       			<p>${user.email}</p>
       			<p>${JSON.stringify(user.roles)}</p>
-      			<a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
+      			<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
               api.adminUserHref + user.id + "/adresses"
             }">Adresses</a>
-      			<a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
+      			<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
               api.adminUserHref + user.id + "/commandes"
             }">Commandes</a>
       			<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
@@ -780,12 +780,12 @@ const api = {
                 <td>${user.email}</td>
                 <td>${JSON.stringify(user.roles)}</td>
                 <td>
-                    <a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
+                    <a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
                       api.adminUserHref + user.id + "/adresses"
                     }">Adresses</a>
                 </td>
                 <td>
-                    <a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
+                    <a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
                       api.adminUserHref + user.id + "/commandes"
                     }">Commandes</a>
                 </td>
@@ -1293,7 +1293,7 @@ const api = {
           // We set HTML elements in the <div>.
           div.innerHTML = `
             <p>${category.name}</p>
-						  <a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
+						  <a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
                 adminCategoryHref + category.slug + "/produits"
               }">Liste  des
 							${category.name}s</a>
@@ -1342,7 +1342,7 @@ const api = {
             <tr>
 							<td>${category.name}</td>
 							<td>
-								<a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
+								<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
                   adminCategoryHref + category.slug + "/produits"
                 }">Liste des
 								${category.name}s</a>
@@ -1809,7 +1809,7 @@ const api = {
 							<td>${tools.toAmount(purchase.total)}</td>
 			        <td class="${api.purchaseStatusClassName}">${purchase.status}</td>
 							<td>
-								<a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
+								<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
 									Facture PDF</a>
 							</td>
 							<td>
@@ -1912,7 +1912,7 @@ const api = {
 							<td>${tools.toAmount(purchase.total)}</td>
 			        <td class="${api.purchaseStatusClassName}">${purchase.status}</td>
 							<td>
-								<a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
+								<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
 									Facture PDF</a>
 							</td>
 							<td>
@@ -2018,7 +2018,7 @@ const api = {
 							<td>${tools.toAmount(purchase.total)}</td>
 			        <td class="${api.purchaseStatusClassName}">${purchase.status}</td>
 							<td>
-								<a class="page__link page__link_text page__link_text_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
+								<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
 									Facture PDF</a>
 							</td>
 							<td>

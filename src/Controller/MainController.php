@@ -40,7 +40,7 @@ class MainController extends AbstractController
         if ($user && !$user->isIsActivated()) {
             // We redirect the user.
             return $this->redirectToRoute(
-                'user_reactivate_account_access',
+                'user_reactivate_access',
                 // We set a array of optional data. 
                 [],
                 // We specify the related HTTP response status code.

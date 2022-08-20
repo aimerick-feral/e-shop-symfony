@@ -1438,7 +1438,7 @@ class AppFixtures extends Fixture
         // For each user in users.
         foreach ($users as $user) {
             // We start a counter at 0 and we run some code untill he reach 50.
-            for ($count = 0; $count < 25; $count++) {
+            for ($count = 0; $count < 2; $count++) {
                 // We create a new Purchase. 
                 $purchase = new Purchase();
                 $purchase

@@ -101,7 +101,7 @@ const font = {
   detailLinks: [],
   createButtons: [],
   createLinks: [],
-  reactivateUserAccountLink: null,
+  reactivateUserAccountLinks: [],
   purchaseLink: null,
   contactEmailLink: null,
   forgottenPasswordLink: null,
@@ -544,7 +544,9 @@ const font = {
       "::before"
     );
     font.marioSwitch = document.getElementById("mario-switch-input");
-    font.marioSwitchSlider = document.querySelector(".switch__slider-mario");
+    font.marioSwitchSlider = document.querySelector(
+      ".switch__slider-spider-man"
+    );
     font.marioSwitchBefore = window.getComputedStyle(
       font.marioSwitchSlider,
       "::before"
@@ -612,8 +614,8 @@ const font = {
     font.detailLinks = document.querySelectorAll(".page__link-detail");
     font.createButtons = document.querySelectorAll(".page__button-create");
     font.createLinks = document.querySelectorAll(".page__link-create");
-    font.reactivateUserAccountLink = document.getElementById(
-      "reactivate-my-user-account-link"
+    font.reactivateUserAccountLinks = document.querySelectorAll(
+      ".page__link-reactivate-account"
     );
     font.purchaseLink = document.getElementById("purchase-link");
     font.contactEmailLink = document.getElementById("contact-email-link");
@@ -1801,19 +1803,16 @@ const font = {
       );
     }
 
-    // If the DOM element exist.
-    if (font.reactivateUserAccountLink) {
+    // For each link of font.reactivateUserAccountLinks.
+    for (let link of font.reactivateUserAccountLinks) {
       // For each className of font.linkClassNames.
       for (let className of font.linkClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
-        tools.removeClassesFromElement(
-          font.reactivateUserAccountLink,
-          className
-        );
+        tools.removeClassesFromElement(link, className);
       }
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.reactivateUserAccountLink,
+        link,
         "page__link_background-color_green",
         "page__link_color_black"
       );
@@ -3165,15 +3164,12 @@ const font = {
       }
     }
 
-    // If the DOM element exist.
-    if (font.reactivateUserAccountLink) {
+    // For each link of font.reactivateUserAccountLinks.
+    for (let link of font.reactivateUserAccountLinks) {
       // For each className of font.linkClassNames.
       for (let className of font.linkClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
-        tools.removeClassesFromElement(
-          font.reactivateUserAccountLink,
-          className
-        );
+        tools.removeClassesFromElement(link, className);
       }
     }
 
@@ -3741,6 +3737,16 @@ const font = {
       );
     }
 
+    // For each link of font.reactivateUserAccountLinks.
+    for (let link of font.reactivateUserAccountLinks) {
+      // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+      tools.addClassesToElement(
+        link,
+        "page__link_background-color_safety-orange",
+        "page__link_color_blue"
+      );
+    }
+
     // For each link of font.addToCartLinks.
     for (let link of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
@@ -4202,11 +4208,11 @@ const font = {
       );
     }
 
-    // If the DOM element exist.
-    if (font.reactivateUserAccountLink) {
+    // For each link of font.reactivateUserAccountLinks.
+    for (let link of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.reactivateUserAccountLink,
+        link,
         "page__link_background-color_yellow",
         "page__link_color_purple"
       );
@@ -4661,11 +4667,11 @@ const font = {
       );
     }
 
-    // If the DOM element exist.
-    if (font.reactivateUserAccountLink) {
+    // For each link of font.reactivateUserAccountLinks.
+    for (let link of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.reactivateUserAccountLink,
+        link,
         "page__link_background-color_blue",
         "page__link_color_red"
       );
@@ -5136,11 +5142,11 @@ const font = {
       );
     }
 
-    // If the DOM element exist.
-    if (font.reactivateUserAccountLink) {
+    // For each link of font.reactivateUserAccountLinks.
+    for (let link of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.reactivateUserAccountLink,
+        link,
         "page__link_background-color_yellow",
         "page__link_color_slimy-green"
       );
@@ -5601,11 +5607,11 @@ const font = {
       );
     }
 
-    // If the DOM element exist.
-    if (font.reactivateUserAccountLink) {
+    // For each link of font.reactivateUserAccountLinks.
+    for (let link of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.reactivateUserAccountLink,
+        link,
         "page__link_background-color_blue",
         "page__link_color_yellow"
       );
@@ -6054,11 +6060,11 @@ const font = {
       );
     }
 
-    // If the DOM element exist.
-    if (font.reactivateUserAccountLink) {
+    // For each link of font.reactivateUserAccountLinks.
+    for (let link of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.reactivateUserAccountLink,
+        link,
         "page__link_background-color_yellow",
         "page__link_color_red"
       );
@@ -6512,11 +6518,11 @@ const font = {
       );
     }
 
-    // If the DOM element exist.
-    if (font.reactivateUserAccountLink) {
+    // For each link of font.reactivateUserAccountLinks.
+    for (let link of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.reactivateUserAccountLink,
+        link,
         "page__link_background-color_slimy-green",
         "page__link_color_sepia"
       );

@@ -1,0 +1,13 @@
+{% apply inline_css(source('@styles/email.css')) %}
+<div class="term">
+	<p>Bonjour
+		{{ user.firstName }},</p>
+	<p>Vous avez récemment demandé la suppression de votre compte associé à l'adresse email
+		<strong class="term__user-email term__user-email_color_blue">{{ app.user.email}}</strong>.</p>
+	<p>Conformément à nos
+		<a class="page__link page__link_color_blue page__link_font-weight_normal page__link_text-decoration_underline page__link_padding-and-margin_0" href" #">Conditions Générales d'Utilisation</a>
+		nous vous informons que votre compte a bien été supprimé.</p>
+	<p>Cordialement.</p>
+	<p>La Team e-shop</p>
+</div>
+{% endapply %}
