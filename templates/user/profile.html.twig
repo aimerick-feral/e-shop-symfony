@@ -18,7 +18,8 @@
 			{{ form_start(userProfileForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'user-profile-form' }}
 			) }}
 			{# picture #}
-			<div class="form-field-user-picture">
+			<div
+				class="form-field-user-picture">
 				<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/' ~ app.user.picture) }}" alt="image {{ app.user.firstName }}"/>
 			</div>
 			{# upload #}

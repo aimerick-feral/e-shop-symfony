@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\RegistrationFormType;
 use App\Security\EmailVerifier;
+use App\Service\Api\MultiAvatarAPI;
 use App\Service\FileUploader;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
@@ -18,22 +19,20 @@ use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
 
 class RegistrationController extends AbstractController
 {
-    private EmailVerifier $emailVerifier;
 
-    public function __construct(EmailVerifier $emailVerifier)
+    public function __construct(private EmailVerifier $emailVerifier)
     {
         $this->emailVerifier = $emailVerifier;
     }
 
     #[Route('/inscription', name: 'app_register')]
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager, FileUploader $fileUploader): Response
+    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager, FileUploader $fileUploader, MultiAvatarAPI $multiAvatarAPI): Response
     {
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
             // dump($form->getData());
             // dump($user->getCivilityTitle());
             // dump($user->getFirstName());
@@ -50,27 +49,48 @@ class RegistrationController extends AbstractController
                 )
             );
 
-            // We call the uploadFile() method of the FileUploader service is order to upload the picture submit by the user. 
+            // We call the uploadFile() method of the FileUploader service is order to upload the picture submited by the user. 
             $picture = $fileUploader->uploadFile($form, 'picture');
 
+            //! START : profile picture by default with API.
             // If we have a picture to upload. 
             if ($picture) {
                 // We set to the picture property the value of $picture.
                 $user->setPicture($picture);
             }
-            // Else the user not submit any picture so we set a picture by default depending on is gender.
+            // Else the user not submit any picture so we set a picture by default.
             else {
-                // If the user is a User::MAN_CIVILITY_TITLE. 
-                if ($user->getcivilityTitle() === User::MAN_CIVILITY_TITLE) {
-                    // We set to the picture property the value of User::MAN_PICTURE.
-                    $user->setPicture(User::MAN_PICTURE);
-                }
-                // Else if the user is a User::WOMAN_CIVILITY_TITLE.
-                else if ($user->getcivilityTitle() === User::WOMAN_CIVILITY_TITLE) {
-                    // We set to the picture property the value of User::WOMAN_PICTURE.
-                    $user->setPicture(User::WOMAN_PICTURE);
-                }
+                // We call the fetch() method of the MultiAvatarAPI service to get the URL of the user avatar from the user first name.  
+                $url = $multiAvatarAPI->fetch($user->getFirstName());
+
+                // We call the donwloadAvatar() method of the MultiAvatarAPI service to donwload the avatar from the URL. 
+                $avatar = $multiAvatarAPI->donwloadAvatar($url);
+
+                // We set to the picture property the file name of the avatar. 
+                $user->setPicture($avatar);
             }
+            //! END : profile picture by default with API.
+
+            //! START : profile picture by default without API.
+            // // If we have a picture to upload. 
+            // if ($picture) {
+            //     // We set to the picture property the value of $picture.
+            //     $user->setPicture($picture);
+            // }
+            // // Else the user not submit any picture so we set a picture by default depending on is gender.
+            // else {
+            //     // If the user is a User::MAN_CIVILITY_TITLE. 
+            //     if ($user->getcivilityTitle() === User::MAN_CIVILITY_TITLE) {
+            //         // We set to the picture property the value of User::MAN_PICTURE.
+            //         $user->setPicture(User::MAN_PICTURE);
+            //     }
+            //     // Else if the user is a User::WOMAN_CIVILITY_TITLE.
+            //     else if ($user->getcivilityTitle() === User::WOMAN_CIVILITY_TITLE) {
+            //         // We set to the picture property the value of User::WOMAN_PICTURE.
+            //         $user->setPicture(User::WOMAN_PICTURE);
+            //     }
+            // }
+            //! END : profile picture by default without API.
 
             $entityManager->persist($user);
             $entityManager->flush();

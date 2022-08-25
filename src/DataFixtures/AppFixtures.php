@@ -9,6 +9,7 @@ use App\Entity\Product;
 use App\Entity\Purchase;
 use App\Entity\PurchaseItem;
 use App\Entity\User;
+use App\Service\Api\MultiAvatarAPI;
 use App\Service\PurchaseAddress;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -16,7 +17,7 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AppFixtures extends Fixture
 {
-    public function __construct(private UserPasswordHasherInterface $userPasswordHasherInterface, private PurchaseAddress $purchaseAddress)
+    public function __construct(private UserPasswordHasherInterface $userPasswordHasherInterface, private PurchaseAddress $purchaseAddress, private MultiAvatarAPI $multiAvatarAPI)
     {
     }
 
@@ -37,7 +38,8 @@ class AppFixtures extends Fixture
             ->setLastName(strtoupper('Kent'))
             ->setEmail('clark.kent@email.com')
             ->setPassword($this->userPasswordHasherInterface->hashPassword($userAdmin, '2CBb4cb73201f86563893241A@'))
-            ->setPicture(User::MAN_PICTURE);
+            // ->setPicture(User::MAN_PICTURE);
+            ->setPicture($this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Clark')));
 
         // We the userAdmin in the array of users.
         $users[] = $userAdmin;
@@ -50,7 +52,8 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Lang',
                 'E-mail' => 'lana.lang@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::WOMAN_PICTURE,
+                // 'Picture' => User::WOMAN_PICTURE,
+                'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Lana')),
             ],
             1 => [
                 'Civility Title' => User::WOMAN_CIVILITY_TITLE,
@@ -58,39 +61,44 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Sullivan',
                 'E-mail' => 'chloe.sullivan@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::WOMAN_PICTURE,
+                // 'Picture' => User::WOMAN_PICTURE,
+                'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Chloe')),
             ],
             2 => [
+                'Civility Title' => User::WOMAN_CIVILITY_TITLE,
+                'First Name' => 'Lois',
+                'Last Name' => 'Lane',
+                'E-mail' => 'lois.lane@email.com',
+                'Password' => '2CBb4cb73201f86563893241A@',
+                // 'Picture' => User::WOMAN_PICTURE,
+                'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Lois')),
+            ],
+            3 => [
                 'Civility Title' => User::MAN_CIVILITY_TITLE,
                 'First Name' => 'Pete',
                 'Last Name' => 'Ross',
                 'E-mail' => 'pete.ross@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
+                // 'Picture' => User::MAN_PICTURE,
+                'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Pete')),
             ],
-            3 => [
+            4 => [
                 'Civility Title' => User::MAN_CIVILITY_TITLE,
                 'First Name' => 'Jonathan',
                 'Last Name' => 'Kent',
                 'E-mail' => 'jonathan.kent@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
                 'Picture' => User::MAN_PICTURE,
+                // 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Jonathan')),
             ],
-            4 => [
+            5 => [
                 'Civility Title' => User::WOMAN_CIVILITY_TITLE,
                 'First Name' => 'Martha',
                 'Last Name' => 'Kent',
                 'E-mail' => 'martha.kent@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
                 'Picture' => User::WOMAN_PICTURE,
-            ],
-            5 => [
-                'Civility Title' => User::WOMAN_CIVILITY_TITLE,
-                'First Name' => 'Lois',
-                'Last Name' => 'Lane',
-                'E-mail' => 'lois.lane@email.com',
-                'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::WOMAN_PICTURE,
+                // 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Martha')),
             ],
             6 => [
                 'Civility Title' => User::WOMAN_CIVILITY_TITLE,
@@ -99,56 +107,36 @@ class AppFixtures extends Fixture
                 'E-mail' => 'kara.kent@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
                 'Picture' => User::WOMAN_PICTURE,
+                // 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Kara')),
             ],
             7 => [
-                'Civility Title' => User::MAN_CIVILITY_TITLE,
-                'First Name' => 'Bart',
-                'Last Name' => 'Allen',
-                'E-mail' => 'bart.allen@email.com',
-                'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
-            ],
-            8 => [
-                'Civility Title' => User::MAN_CIVILITY_TITLE,
-                'First Name' => 'Oliver',
-                'Last Name' => 'Queen',
-                'E-mail' => 'oliver.queen@email.com',
-                'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
-            ],
-            9 => [
-                'Civility Title' => User::MAN_CIVILITY_TITLE,
-                'First Name' => 'Arthur',
-                'Last Name' => 'Curry',
-                'E-mail' => 'arthur.curry@email.com',
-                'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
-            ],
-            10 => [
-                'Civility Title' => User::MAN_CIVILITY_TITLE,
-                'First Name' => 'Victor',
-                'Last Name' => 'Stone',
-                'E-mail' => 'victor.stone@email.com',
-                'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
-            ],
-            11 => [
                 'Civility Title' => User::MAN_CIVILITY_TITLE,
                 'First Name' => 'Lex',
                 'Last Name' => 'Luthor',
                 'E-mail' => 'lex.luthor@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
                 'Picture' => User::MAN_PICTURE,
+                // 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Lex')),
             ],
-            12 => [
+            8 => [
                 'Civility Title' => User::MAN_CIVILITY_TITLE,
                 'First Name' => 'Lionel',
                 'Last Name' => 'Luthor',
                 'E-mail' => 'lionel.luthor@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
                 'Picture' => User::MAN_PICTURE,
+                // 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Lionel')),
             ],
-            13 => [
+            9 => [
+                'Civility Title' => User::WOMAN_CIVILITY_TITLE,
+                'First Name' => 'Tess',
+                'Last Name' => 'Mercer',
+                'E-mail' => 'tess.mercer@email.com',
+                'Password' => '2CBb4cb73201f86563893241A@',
+                'Picture' => User::WOMAN_PICTURE,
+                // 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Tess')),
+            ],
+            10 => [
                 'Civility Title' => User::MAN_CIVILITY_TITLE,
                 'First Name' => 'Jimmy',
                 'Last Name' => 'Olson',
@@ -156,13 +144,37 @@ class AppFixtures extends Fixture
                 'Password' => '2CBb4cb73201f86563893241A@',
                 'Picture' => User::MAN_PICTURE,
             ],
-            14 => [
-                'Civility Title' => User::WOMAN_CIVILITY_TITLE,
-                'First Name' => 'Tess',
-                'Last Name' => 'Mercer',
-                'E-mail' => 'tess.mercer@email.com',
+            11 => [
+                'Civility Title' => User::MAN_CIVILITY_TITLE,
+                'First Name' => 'Bart',
+                'Last Name' => 'Allen',
+                'E-mail' => 'bart.allen@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::WOMAN_PICTURE,
+                'Picture' => User::MAN_PICTURE,
+            ],
+            12 => [
+                'Civility Title' => User::MAN_CIVILITY_TITLE,
+                'First Name' => 'Oliver',
+                'Last Name' => 'Queen',
+                'E-mail' => 'oliver.queen@email.com',
+                'Password' => '2CBb4cb73201f86563893241A@',
+                'Picture' => User::MAN_PICTURE,
+            ],
+            13 => [
+                'Civility Title' => User::MAN_CIVILITY_TITLE,
+                'First Name' => 'Arthur',
+                'Last Name' => 'Curry',
+                'E-mail' => 'arthur.curry@email.com',
+                'Password' => '2CBb4cb73201f86563893241A@',
+                'Picture' => User::MAN_PICTURE,
+            ],
+            14 => [
+                'Civility Title' => User::MAN_CIVILITY_TITLE,
+                'First Name' => 'Victor',
+                'Last Name' => 'Stone',
+                'E-mail' => 'victor.stone@email.com',
+                'Password' => '2CBb4cb73201f86563893241A@',
+                'Picture' => User::MAN_PICTURE,
             ],
         ];
 
@@ -202,17 +214,6 @@ class AppFixtures extends Fixture
             'Phone Number' => '0642424242',
         ];
 
-        $metropolisAddress = [
-            'First Name' => '',
-            'Last Name' => '',
-            'Street Number' => '710',
-            'Street Name' => 'Superman Street',
-            'Zip Code' => '11105',
-            'City' => 'Metropolis',
-            'Country' => 'Kansas - USA',
-            'Phone Number' => '0642424242',
-        ];
-
         $talonAddress = [
             'First Name' => '',
             'Last Name' => '',
@@ -235,6 +236,17 @@ class AppFixtures extends Fixture
             'Phone Number' => '0642424242',
         ];
 
+        $watchtowerAddress = [
+            'First Name' => '',
+            'Last Name' => '',
+            'Street Number' => '710',
+            'Street Name' => 'Watchtower Street',
+            'Zip Code' => '11105',
+            'City' => 'Metropolis',
+            'Country' => 'Kansas - USA',
+            'Phone Number' => '0642424242',
+        ];
+
         $centralCityAddress = [
             'First Name' => '',
             'Last Name' => '',
@@ -243,17 +255,6 @@ class AppFixtures extends Fixture
             'Zip Code' => '22205',
             'City' => 'Central City',
             'Country' => 'Illinois - USA',
-            'Phone Number' => '0642424242',
-        ];
-
-        $tempestKeyAddress = [
-            'First Name' => '',
-            'Last Name' => '',
-            'Street Number' => '710',
-            'Street Name' => 'Aquaman Street',
-            'Zip Code' => '33305',
-            'City' => 'Tempest Key',
-            'Country' => 'Florida - USA',
             'Phone Number' => '0642424242',
         ];
 
@@ -268,142 +269,52 @@ class AppFixtures extends Fixture
             'Phone Number' => '0642424242',
         ];
 
-        $gatewayCityAddress = [
+        $tempestKeyAddress = [
             'First Name' => '',
             'Last Name' => '',
             'Street Number' => '710',
-            'Street Name' => 'Wonder Woman Street',
-            'Zip Code' => '55505',
-            'City' => 'Gateway City',
-            'Country' => 'California - USA',
+            'Street Name' => 'Aquaman Street',
+            'Zip Code' => '33305',
+            'City' => 'Tempest Key',
+            'Country' => 'Florida - USA',
             'Phone Number' => '0642424242',
         ];
 
-        $gothamCityAddress = [
-            'First Name' => '',
-            'Last Name' => '',
-            'Street Number' => '710',
-            'Street Name' => 'Batman Street',
-            'Zip Code' => '77705',
-            'City' => 'Gotham City',
-            'Country' => 'Illinois - USA',
-            'Phone Number' => '0642424242',
-        ];
+        // $gatewayCityAddress = [
+        //     'First Name' => '',
+        //     'Last Name' => '',
+        //     'Street Number' => '710',
+        //     'Street Name' => 'Wonder Woman Street',
+        //     'Zip Code' => '55505',
+        //     'City' => 'Gateway City',
+        //     'Country' => 'California - USA',
+        //     'Phone Number' => '0642424242',
+        // ];
+
+        // $gothamCityAddress = [
+        //     'First Name' => '',
+        //     'Last Name' => '',
+        //     'Street Number' => '710',
+        //     'Street Name' => 'Batman Street',
+        //     'Zip Code' => '77705',
+        //     'City' => 'Gotham City',
+        //     'Country' => 'Illinois - USA',
+        //     'Phone Number' => '0642424242',
+        // ];
 
         // We create a array of addresses. 
         $addresses = [];
 
         // For each user in users.
         foreach ($users as $user) {
-            // If the last name of the user is identical to the give last names. 
+            // If the last name of the user is identical to the given last names. 
             if (
                 $user->getLastName() === 'KENT' ||
-                $user->getLastName() === 'LANE'
-            ) {
-                // We create a new Address.
-                $firstAddress = new Address();
-                $firstAddress
-                    ->setUser($user)
-                    ->setFirstName($user->getFirstName())
-                    ->setLastName($user->getLastName())
-                    ->setStreetNumber($kentFarmAddress['Street Number'])
-                    ->setStreetName($kentFarmAddress['Street Name'])
-                    ->setZipCode($kentFarmAddress['Zip Code'])
-                    ->setCity($kentFarmAddress['City'])
-                    ->setCountry($kentFarmAddress['Country'])
-                    ->setPhoneNumber($kentFarmAddress['Phone Number']);
-
-                // We push the address in the array of addresses.
-                $addresses[] = $firstAddress;
-
-                // We create a new Address.
-                $secondAddress = new Address();
-                $secondAddress
-                    ->setUser($user)
-                    ->setFirstName($user->getFirstName())
-                    ->setLastName($user->getLastName())
-                    ->setStreetNumber($metropolisAddress['Street Number'])
-                    ->setStreetName($metropolisAddress['Street Name'])
-                    ->setZipCode($metropolisAddress['Zip Code'])
-                    ->setCity($metropolisAddress['City'])
-                    ->setCountry($metropolisAddress['Country'])
-                    ->setPhoneNumber($metropolisAddress['Phone Number']);
-
-                // We push the address in the array of addresses.
-                $addresses[] = $secondAddress;
-
-                // For each address in addresses. 
-                foreach ($addresses as $address) {
-                    // We call the persit() method of the ObjectManager to put on hold the data.
-                    $objectManager->persist($address);
-                }
-            }
-            // Else if the last name of the user is identical to the give last names.  
-            else if (
                 $user->getLastName() === 'LANG' ||
-                $user->getLastName() === 'SULLIVAN'
-            ) {
-                // We create a new Address.
-                $firstAddress = new Address();
-                $firstAddress
-                    ->setUser($user)
-                    ->setFirstName($user->getFirstName())
-                    ->setLastName($user->getLastName())
-                    ->setStreetNumber($talonAddress['Street Number'])
-                    ->setStreetName($talonAddress['Street Name'])
-                    ->setZipCode($talonAddress['Zip Code'])
-                    ->setCity($talonAddress['City'])
-                    ->setCountry($talonAddress['Country'])
-                    ->setPhoneNumber($talonAddress['Phone Number']);
-
-                // We push the address in the array of addresses.
-                $addresses[] = $firstAddress;
-
-                // We create a new Address.
-                $secondAddress = new Address();
-                $secondAddress
-                    ->setUser($user)
-                    ->setFirstName($user->getFirstName())
-                    ->setLastName($user->getLastName())
-                    ->setStreetNumber($gatewayCityAddress['Street Number'])
-                    ->setStreetName($gatewayCityAddress['Street Name'])
-                    ->setZipCode($gatewayCityAddress['Zip Code'])
-                    ->setCity($gatewayCityAddress['City'])
-                    ->setCountry($gatewayCityAddress['Country'])
-                    ->setPhoneNumber($gatewayCityAddress['Phone Number']);
-
-                // We push the address in the array of addresses.
-                $addresses[] = $secondAddress;
-
-                // For each address in addresses. 
-                foreach ($addresses as $address) {
-                    // We call the persit() method of the ObjectManager to put on hold the data.
-                    $objectManager->persist($address);
-                }
-            }
-            // Else if the last name of the user is identical to the give last name. 
-            else if ($user->getLastName() === 'ROSS') {
-                // We create a new Address.
-                $address = new Address();
-                $address
-                    ->setUser($user)
-                    ->setFirstName($user->getFirstName())
-                    ->setLastName($user->getLastName())
-                    ->setStreetNumber($talonAddress['Street Number'])
-                    ->setStreetName($talonAddress['Street Name'])
-                    ->setZipCode($talonAddress['Zip Code'])
-                    ->setCity($talonAddress['City'])
-                    ->setCountry($talonAddress['Country'])
-                    ->setPhoneNumber($talonAddress['Phone Number']);
-
-                // We push the address in the array of addresses.
-                $addresses[] = $address;
-
-                // We call the persit() method of the ObjectManager to put on hold the data.
-                $objectManager->persist($address);
-            }
-            // Else if the last name of the user is identical to the given last names. 
-            else if (
+                $user->getLastName() === 'SULLIVAN' ||
+                $user->getLastName() === 'LANE' ||
+                $user->getLastName() === 'ROSS' ||
+                $user->getLastName() === 'OLSON' ||
                 $user->getLastName() === 'ALLEN' ||
                 $user->getLastName() === 'QUEEN' ||
                 $user->getLastName() === 'CURRY' ||
@@ -415,12 +326,12 @@ class AppFixtures extends Fixture
                     ->setUser($user)
                     ->setFirstName($user->getFirstName())
                     ->setLastName($user->getLastName())
-                    ->setStreetNumber($metropolisAddress['Street Number'])
-                    ->setStreetName($metropolisAddress['Street Name'])
-                    ->setZipCode($metropolisAddress['Zip Code'])
-                    ->setCity($metropolisAddress['City'])
-                    ->setCountry($metropolisAddress['Country'])
-                    ->setPhoneNumber($metropolisAddress['Phone Number']);
+                    ->setStreetNumber($watchtowerAddress['Street Number'])
+                    ->setStreetName($watchtowerAddress['Street Name'])
+                    ->setZipCode($watchtowerAddress['Zip Code'])
+                    ->setCity($watchtowerAddress['City'])
+                    ->setCountry($watchtowerAddress['Country'])
+                    ->setPhoneNumber($watchtowerAddress['Phone Number']);
 
                 // We push the address in the array of addresses.
                 $addresses[] = $address;
@@ -429,67 +340,129 @@ class AppFixtures extends Fixture
                 $objectManager->persist($address);
 
                 // If the last name of the user is identical to the give last name. 
-                if ($user->getLastName() === 'ALLEN') {
+                if (
+                    $user->getLastName() === 'KENT' ||
+                    $user->getLastName() === 'LANG' ||
+                    $user->getLastName() === 'SULLIVAN' ||
+                    $user->getLastName() === 'LANE' ||
+                    $user->getLastName() === 'ROSS' ||
+                    $user->getLastName() === 'OLSON'
+                ) {
                     // We create a new Address.
                     $address = new Address();
                     $address
                         ->setUser($user)
                         ->setFirstName($user->getFirstName())
                         ->setLastName($user->getLastName())
-                        ->setStreetNumber($centralCityAddress['Street Number'])
-                        ->setStreetName($centralCityAddress['Street Name'])
-                        ->setZipCode($centralCityAddress['Zip Code'])
-                        ->setCity($centralCityAddress['City'])
-                        ->setCountry($centralCityAddress['Country'])
-                        ->setPhoneNumber($centralCityAddress['Phone Number']);
+                        ->setStreetNumber($talonAddress['Street Number'])
+                        ->setStreetName($talonAddress['Street Name'])
+                        ->setZipCode($talonAddress['Zip Code'])
+                        ->setCity($talonAddress['City'])
+                        ->setCountry($talonAddress['Country'])
+                        ->setPhoneNumber($talonAddress['Phone Number']);
 
                     // We push the address in the array of addresses.
                     $addresses[] = $address;
 
                     // We call the persit() method of the ObjectManager to put on hold the data.
                     $objectManager->persist($address);
+
+                    // If the last name of the user is identical to the give last name. 
+                    if (
+                        $user->getLastName() === 'KENT' ||
+                        $user->getLastName() === 'LANE'
+                    ) {
+                        // We create a new Address.
+                        $address = new Address();
+                        $address
+                            ->setUser($user)
+                            ->setFirstName($user->getFirstName())
+                            ->setLastName($user->getLastName())
+                            ->setStreetNumber($kentFarmAddress['Street Number'])
+                            ->setStreetName($kentFarmAddress['Street Name'])
+                            ->setZipCode($kentFarmAddress['Zip Code'])
+                            ->setCity($kentFarmAddress['City'])
+                            ->setCountry($kentFarmAddress['Country'])
+                            ->setPhoneNumber($kentFarmAddress['Phone Number']);
+
+                        // We push the address in the array of addresses.
+                        $addresses[] = $address;
+
+                        // We call the persit() method of the ObjectManager to put on hold the data.
+                        $objectManager->persist($address);
+                    }
                 }
-                // Else if the last name of the user is identical to the give last name. 
-                else if ($user->getLastName() === 'QUEEN') {
-                    // We create a new Address.
-                    $address = new Address();
-                    $address
-                        ->setUser($user)
-                        ->setFirstName($user->getFirstName())
-                        ->setLastName($user->getLastName())
-                        ->setStreetNumber($starCityAddress['Street Number'])
-                        ->setStreetName($starCityAddress['Street Name'])
-                        ->setZipCode($starCityAddress['Zip Code'])
-                        ->setCity($starCityAddress['City'])
-                        ->setCountry($starCityAddress['Country'])
-                        ->setPhoneNumber($starCityAddress['Phone Number']);
+                // Else if the last name of the user is identical to the given last names. 
+                else if (
+                    $user->getLastName() === 'ALLEN' ||
+                    $user->getLastName() === 'QUEEN' ||
+                    $user->getLastName() === 'CURRY' ||
+                    $user->getLastName() === 'STONE'
+                ) {
 
-                    // We push the address in the array of addresses.
-                    $addresses[] = $address;
+                    // If the last name of the user is identical to the give last name. 
+                    if ($user->getLastName() === 'ALLEN') {
+                        // We create a new Address.
+                        $address = new Address();
+                        $address
+                            ->setUser($user)
+                            ->setFirstName($user->getFirstName())
+                            ->setLastName($user->getLastName())
+                            ->setStreetNumber($centralCityAddress['Street Number'])
+                            ->setStreetName($centralCityAddress['Street Name'])
+                            ->setZipCode($centralCityAddress['Zip Code'])
+                            ->setCity($centralCityAddress['City'])
+                            ->setCountry($centralCityAddress['Country'])
+                            ->setPhoneNumber($centralCityAddress['Phone Number']);
 
-                    // We call the persit() method of the ObjectManager to put on hold the data.
-                    $objectManager->persist($address);
-                }
-                // Else if the last name of the user is identical to the give last name. 
-                else if ($user->getLastName() === 'CURRY') {
-                    // We create a new Address.
-                    $address = new Address();
-                    $address
-                        ->setUser($user)
-                        ->setFirstName($user->getFirstName())
-                        ->setLastName($user->getLastName())
-                        ->setStreetNumber($tempestKeyAddress['Street Number'])
-                        ->setStreetName($tempestKeyAddress['Street Name'])
-                        ->setZipCode($tempestKeyAddress['Zip Code'])
-                        ->setCity($tempestKeyAddress['City'])
-                        ->setCountry($tempestKeyAddress['Country'])
-                        ->setPhoneNumber($tempestKeyAddress['Phone Number']);
+                        // We push the address in the array of addresses.
+                        $addresses[] = $address;
 
-                    // We push the address in the array of addresses.
-                    $addresses[] = $address;
+                        // We call the persit() method of the ObjectManager to put on hold the data.
+                        $objectManager->persist($address);
+                    }
+                    // Else if the last name of the user is identical to the give last name. 
+                    else if ($user->getLastName() === 'QUEEN') {
+                        // We create a new Address.
+                        $address = new Address();
+                        $address
+                            ->setUser($user)
+                            ->setFirstName($user->getFirstName())
+                            ->setLastName($user->getLastName())
+                            ->setStreetNumber($starCityAddress['Street Number'])
+                            ->setStreetName($starCityAddress['Street Name'])
+                            ->setZipCode($starCityAddress['Zip Code'])
+                            ->setCity($starCityAddress['City'])
+                            ->setCountry($starCityAddress['Country'])
+                            ->setPhoneNumber($starCityAddress['Phone Number']);
 
-                    // We call the persit() method of the ObjectManager to put on hold the data.
-                    $objectManager->persist($address);
+                        // We push the address in the array of addresses.
+                        $addresses[] = $address;
+
+                        // We call the persit() method of the ObjectManager to put on hold the data.
+                        $objectManager->persist($address);
+                    }
+                    // Else if the last name of the user is identical to the give last name. 
+                    else if ($user->getLastName() === 'CURRY') {
+                        // We create a new Address.
+                        $address = new Address();
+                        $address
+                            ->setUser($user)
+                            ->setFirstName($user->getFirstName())
+                            ->setLastName($user->getLastName())
+                            ->setStreetNumber($tempestKeyAddress['Street Number'])
+                            ->setStreetName($tempestKeyAddress['Street Name'])
+                            ->setZipCode($tempestKeyAddress['Zip Code'])
+                            ->setCity($tempestKeyAddress['City'])
+                            ->setCountry($tempestKeyAddress['Country'])
+                            ->setPhoneNumber($tempestKeyAddress['Phone Number']);
+
+                        // We push the address in the array of addresses.
+                        $addresses[] = $address;
+
+                        // We call the persit() method of the ObjectManager to put on hold the data.
+                        $objectManager->persist($address);
+                    }
                 }
             }
             // Else if the last name of the user is identical to the give last name. 
@@ -509,27 +482,6 @@ class AppFixtures extends Fixture
                     ->setCity($luthorMansionAddress['City'])
                     ->setCountry($luthorMansionAddress['Country'])
                     ->setPhoneNumber($luthorMansionAddress['Phone Number']);
-
-                // We push the address in the array of addresses.
-                $addresses[] = $address;
-
-                // We call the persit() method of the ObjectManager to put on hold the data.
-                $objectManager->persist($address);
-            }
-            // Else if the last name of the user is identical to the give last name. 
-            else if ($user->getLastName() === 'OLSON') {
-                // We create a new Address.
-                $address = new Address();
-                $address
-                    ->setUser($user)
-                    ->setFirstName($user->getFirstName())
-                    ->setLastName($user->getLastName())
-                    ->setStreetNumber($talonAddress['Street Number'])
-                    ->setStreetName($talonAddress['Street Name'])
-                    ->setZipCode($talonAddress['Zip Code'])
-                    ->setCity($talonAddress['City'])
-                    ->setCountry($talonAddress['Country'])
-                    ->setPhoneNumber($talonAddress['Phone Number']);
 
                 // We push the address in the array of addresses.
                 $addresses[] = $address;
@@ -1427,7 +1379,7 @@ class AppFixtures extends Fixture
             $objectManager->persist($deliveryMode);
         }
 
-      
+
         // Purchase
 
         // dd($addresses);

@@ -34,7 +34,8 @@
 			<div class="list">
 				{% for user in users %}
 					{# START : card for mobile #}
-					<div class="admin-preview admin-preview_color_blue">
+					<div
+						class="admin-preview admin-preview_color_blue">
 						<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/'~ user.picture) }}" alt="image {{ user.firstName }}"/>
 						<p>{{ user.civilityTitle }}</p>
 						<p>{{ user.firstName }}</p>

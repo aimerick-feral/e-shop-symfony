@@ -4,6 +4,7 @@ namespace App\Service;
 
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 
@@ -14,11 +15,11 @@ class FileUploader
     }
 
     /**
-     * Method that upload the profile picture of the user. 
+     * Method that upload a file picture. 
      * @param Form $form
-     * @param string $pictureFieldName
+     * @param string $fieldName
      * @param string $uploadedFolder
-     * @return string $fileName  
+     * @return string $safeFileName  
      */
     public function uploadFile(Form $form, string $fieldName, string $uploadFolder = null)
     {

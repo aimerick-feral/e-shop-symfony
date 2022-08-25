@@ -37,7 +37,9 @@
 			<li class="nav__item">
 				<a class="page__link_color_red" id="desktop-logout-link" href="{{ path('app_logout') }}">Déconnexion</a>
 			</li>
-			<a class="header__link_background-color_blue" href="{{ path('user_profile') }}"><img class="header__icon" id="profile-picture-nav-desktop" src="{{ asset('assets/uploads/pictures/users/' ~ app.user.picture) }}" alt="image {{ app.user.firstName }}"/>
+			<a
+				class="header__link_background-color_blue" href="{{ path('user_profile') }}">
+				<img class="header__icon" id="profile-picture-nav-desktop" src="{{ asset('assets/uploads/pictures/users/' ~ app.user.picture) }}" alt="image {{ app.user.firstName }}"/>
 			</a>
 		{% else %}
 			<li class="nav__item">

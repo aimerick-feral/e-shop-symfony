@@ -16,8 +16,9 @@
 				{{ user.firstName }}
 				{{ user.lastName }}</h2>
 			{# START : card for mobile #}
-			<div class="admin-detail admin-detail_color_blue">
-				<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/'~ user.picture) }}" alt="user-picture"/>
+			<div
+				class="admin-detail admin-detail_color_blue">
+				<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/'~ user.picture) }}" alt="image {{ user.firstName }}"/>
 				<p>{{ user.civilityTitle }}</p>
 				<p>{{ user.firstName }}</p>
 				<p>{{ user.lastName }}</p>
@@ -55,7 +56,9 @@
 				<tbody>
 					<tr>
 						<th>Photo</th>
-						<td><img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/'~ user.picture) }}" alt="user-picture"></td>
+						<td>
+							<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/'~ user.picture) }}" alt="image {{ user.firstName }}">
+						</td>
 					</tr>
 					<tr>
 						<th>Civilité</th>

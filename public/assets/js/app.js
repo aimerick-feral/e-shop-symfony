@@ -3,7 +3,7 @@ const app = {
   init: function () {
     console.log("Hello world, I'm app.js 👑");
 
-    // The url of the app.
+    // The URL of the app.
     app.url = "http://localhost:8080/";
 
     // We load the module tools.js.

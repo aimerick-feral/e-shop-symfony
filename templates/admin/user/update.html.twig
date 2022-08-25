@@ -18,8 +18,9 @@
 		{# START :adminUpdateUserForm #}
 		{{ form_start(adminUpdateUserForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'admin-update-user-form' }}) }}
 		{# picture #}
-		<div class="form-field-user-picture">
-			<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/' ~ user.picture) }}" alt="user-picture"/>
+		<div
+			class="form-field-user-picture">
+			<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/' ~ user.picture) }}" alt="{{ user.firstName }}"/>
 		</div>
 		{# delete picture #}
 		<a class="page__link page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-user-picture-button" href="{{ path('admin_user_delete_picture', {'id':user.id, 'token':csrf_token('delete-user-picture' ~ user.id)} ) }}">Supprimer la photo</a>
