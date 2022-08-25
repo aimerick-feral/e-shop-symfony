@@ -27,18 +27,6 @@
 				</p>
 				{{ form_errors(adminUpdateCategoryForm.name) }}
 			</div>
-			{# products #}
-			{#! Not used for now #5 START : productCategoryInputs #}
-			{# <div class="form-field">
-										{{ form_label(adminUpdateCategoryForm, 'Si vous le souhaitez vous pouvez selectionner le ou les produits liés à la catégorie :', { 'label_attr': { 'class': '' }}) }}
-										{{ form_widget(adminUpdateCategoryForm.products) }}
-										<p class="error-message error-message_color_red error-message__product-category-not-checked display-none">
-											Merci de sélectionnner au mimimum un produit.
-										</p>
-										{{ form_errors(adminUpdateCategoryForm.products) }}
-									</div> #}
-			{#! Not used for now #5 END : productCategoryInputs #}
-
 			{# Submit adminUpdateCategoryForm button #}
 				<button type="submit" class="page__button page__button-submit page__button_background-color_safety-orange page__button_color_white" id="admin-update-category-button"> Mettre à jour
 			</button>

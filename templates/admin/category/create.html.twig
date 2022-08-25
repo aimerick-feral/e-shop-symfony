@@ -24,18 +24,6 @@
 				</p>
 				{{ form_errors(adminCreateCategoryForm.name) }}
 			</div>
-			{# products #}
-			{#! Not used for now #5 START : productCategoryInputs #}
-			{# <div class="form-field">
-										{{ form_label(adminCreateCategoryForm, 'Si vous le souhaitez vous pouvez selectionner le ou les produits liés à la catégorie :', { 'label_attr': { 'class': '' }}) }}
-										{{ form_widget(adminCreateCategoryForm.products) }}
-										<p class="error-message error-message_color_red error-message__product-category-not-checked display-none">
-											Merci de sélectionnner au mimimum un produit.
-										</p>
-										{{ form_errors(adminCreateCategoryForm.products) }}
-									</div> #}
-			{#! Not used for now #5 END : productCategoryInputs #}
-
 			{# Submit adminCreateCategoryForm button #}
 				<button type="submit" class="page__button page__button-submit page__button-create page__button_background-color_dodger-blue page__button_color_white" id="admin-create-category-button"> Créer
 			</button>

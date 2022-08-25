@@ -518,19 +518,19 @@ body {
     left: 70%;
   }
 
-  .switch__slider-theme_background-color_red-mario {
+  .switch__slider-theme_background-color_red-spider-man {
     background-color: var(--red);
   }
 
-  .switch__slider-theme_background-color_blue-mario-2 {
+  .switch__slider-theme_background-color_blue-spider-man-2 {
     background-color: var(--blue);
   }
 
-  input:checked + .switch__slider-theme_background-color_blue-mario {
+  input:checked + .switch__slider-theme_background-color_blue-spider-man {
     background-color: var(--blue);
   }
 
-  .switch__slider-theme_background-color_blue-mario::before {
+  .switch__slider-theme_background-color_blue-spider-man::before {
     background-color: var(--before, var(--blue));
   }
 
@@ -802,6 +802,7 @@ body {
 
   .page__link_color_sepia {
     color: var(--sepia);
+    padding: 0;
   }
 
   .page__link_text_uppercase {

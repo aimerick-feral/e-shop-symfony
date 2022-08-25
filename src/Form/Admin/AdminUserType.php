@@ -69,7 +69,7 @@ class AdminUserType extends AbstractType
     }
 
     /**
-     * Method that modify the form and display the password field only if we are in case of user creation so we don't dislay the password field on user update.
+     * Method that modify the form and display somes fields only if we are in case of user creation so we don't dislay the password field on user update.
      * @param FormEvent $event
      * @return void
      */

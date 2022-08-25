@@ -37,7 +37,7 @@ class UserController extends AbstractController
         $user = $this->getUser();
 
         // TODO #2 START : solve issue on switch civilityTitle.  
-        // dump($user->getCivilityTitle());
+        // dd($user->getCivilityTitle());
         // TODO #2 END : solve issue on switch civilityTitle.   
 
         // We create the form.
@@ -48,8 +48,8 @@ class UserController extends AbstractController
         // If the form is submitted and valid. 
         if ($form->isSubmitted() && $form->isValid()) {
             // TODO #2 END : solve issue on switch civilityTitle.   
-            // dump($user->getCivilityTitle());
-            // dd(42);
+            dump($user->getCivilityTitle());
+            dd(42);
             // TODO #2 END : solve issue on switch civilityTitle.
 
             // We call the uploadFile() method of the FileUploader service is order to upload the picture submit by the user. 
@@ -109,12 +109,12 @@ class UserController extends AbstractController
             //         }
             //     }
 
-            //     // TODO #2 START : solve issue.  
-            //     // the civility title doesn't switch normaly like all the other properties.
-            //     // If we use onPreSubmit() in UserType.php : the civility title switch correctly to the new one. 
-            //     // If don't use onPreSubmit() in UserType.php : the civility title doesn't switch, he keep is hold value.
-            //     // Why we have to use onPreSubmit() so that the civility title switch correctly ? 
-            //     // TODO #2 END : solve issue.  
+            // TODO #2 START : solve issue on switch civilityTitle.  
+            // The civility title doesn't switch normaly like all the other properties.
+            // If we use onPreSubmit() in UserType.php : the civility title switch correctly to the new one. 
+            // If don't use onPreSubmit() in UserType.php : the civility title doesn't switch, he keep is hold value.
+            // Why we have to use onPreSubmit() so that the civility title switch correctly ? 
+            // TODO #2 END : solve issue on switch civilityTitle.    
             // }
             //! END : profile picture by default without API.
 

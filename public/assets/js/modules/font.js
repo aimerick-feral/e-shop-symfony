@@ -57,9 +57,9 @@ const font = {
   lakersSwitch: null,
   lakersSwitchSlider: null,
   lakersSwitchBefore: null,
-  marioSwitch: null,
-  marioSwitchSlider: null,
-  marioSwitchBefore: null,
+  spiderManSwitch: null,
+  spiderManSwitchSlider: null,
+  spiderManSwitchBefore: null,
   jamaicaSwitch: null,
   jamaicaSwitchSlider: null,
   jamaicaSwitchBefore: null,
@@ -543,12 +543,12 @@ const font = {
       font.lakersSwitchSlider,
       "::before"
     );
-    font.marioSwitch = document.getElementById("mario-switch-input");
-    font.marioSwitchSlider = document.querySelector(
+    font.spiderManSwitch = document.getElementById("mario-switch-input");
+    font.spiderManSwitchSlider = document.querySelector(
       ".switch__slider-spider-man"
     );
-    font.marioSwitchBefore = window.getComputedStyle(
-      font.marioSwitchSlider,
+    font.spiderManSwitchBefore = window.getComputedStyle(
+      font.spiderManSwitchSlider,
       "::before"
     );
     font.jamaicaSwitch = document.getElementById("jamaica-switch-input");
@@ -842,9 +842,9 @@ const font = {
       // Else if the font item in localStorage have the mario value.
       if (font.color === "mario") {
         // We call tools.checkInputs() to check the input.
-        tools.checkInputs(font.marioSwitch);
+        tools.checkInputs(font.spiderManSwitch);
         // We call tools.setDisabledAttribute() to set the disabled attribute to the elements.
-        tools.setDisabledAttribute(font.marioSwitch);
+        tools.setDisabledAttribute(font.spiderManSwitch);
         // We call tools.addClassesToElement() in order to add one or many classNames to the element.
         tools.addClassesToElement(
           font.flashSwitchSlider,
@@ -856,7 +856,7 @@ const font = {
       // Else the font item in localStorage is not mario.
       else {
         // We call tools.uncheckInputs() to uncheck the switch.
-        tools.uncheckInputs(font.marioSwitch);
+        tools.uncheckInputs(font.spiderManSwitch);
       }
 
       // Else if the font item in localStorage have the jamaica value.
@@ -893,11 +893,11 @@ const font = {
         tools.setDisabledAttribute(font.flashSwitch);
         // We call tools.addClassesToElement() in order to add one or many classNames to the element.
         tools.addClassesToElement(
-          font.marioSwitchSlider,
-          "switch__slider-theme_background-color_blue-mario-2"
+          font.spiderManSwitchSlider,
+          "switch__slider-theme_background-color_blue-spider-man-2"
         );
         // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
-        tools.setColorToBeforeProperty(font.marioSwitchSlider, "#ff0000");
+        tools.setColorToBeforeProperty(font.spiderManSwitchSlider, "#ff0000");
       }
       // Else the font item in localStorage is not flash.
       else {
@@ -978,7 +978,7 @@ const font = {
             else if (font.color === "mario") {
               // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
               tools.setColorToBeforeProperty(
-                font.marioSwitchSlider,
+                font.spiderManSwitchSlider,
                 font.color.blue
               );
             }
@@ -1027,12 +1027,12 @@ const font = {
         if (clickedSwitch === themeSwitch || clickedSwitch === fontSwitch) {
           // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
           tools.removeClassesFromElement(
-            font.marioSwitchSlider,
-            "switch__slider-theme_background-color_blue-mario-2"
+            font.spiderManSwitchSlider,
+            "switch__slider-theme_background-color_blue-spider-man-2"
           );
           // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
           tools.setColorToBeforeProperty(
-            font.marioSwitchSlider,
+            font.spiderManSwitchSlider,
             font.colors.blue
           );
           // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
@@ -1078,7 +1078,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch
@@ -1092,7 +1092,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1119,7 +1119,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1134,7 +1134,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1161,7 +1161,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1176,7 +1176,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1203,7 +1203,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1218,7 +1218,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1245,7 +1245,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1260,7 +1260,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1287,7 +1287,7 @@ const font = {
         font.purpleSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1302,7 +1302,7 @@ const font = {
         font.purpleSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1327,7 +1327,7 @@ const font = {
         font.purpleSwitch,
         font.yellowSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1342,7 +1342,7 @@ const font = {
         font.purpleSwitch,
         font.yellowSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1350,7 +1350,7 @@ const font = {
       );
       // We call tools.setColorToBeforeProperty() to set a new color for the before property on the elements.
       tools.setColorToBeforeProperty(font.lakersSwitchSlider, "#fbbc05");
-      tools.setColorToBeforeProperty(font.marioSwitchSlider, "#0000ff");
+      tools.setColorToBeforeProperty(font.spiderManSwitchSlider, "#0000ff");
       tools.setColorToBeforeProperty(font.jamaicaSwitchSlider, "#fbbc05");
       tools.setColorToBeforeProperty(
         font.goldenStateWarriorsSwitchSlider,
@@ -1377,7 +1377,7 @@ const font = {
         font.purpleSwitch,
         font.yellowSwitch,
         font.knickSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1392,7 +1392,7 @@ const font = {
         font.purpleSwitch,
         font.yellowSwitch,
         font.knickSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
@@ -1400,7 +1400,7 @@ const font = {
       );
       // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
       tools.setColorToBeforeProperty(font.knickSwitchSlider, "#ff6600");
-      tools.setColorToBeforeProperty(font.marioSwitchSlider, "#0000ff");
+      tools.setColorToBeforeProperty(font.spiderManSwitchSlider, "#0000ff");
       tools.setColorToBeforeProperty(font.jamaicaSwitchSlider, "#fbbc05");
       tools.setColorToBeforeProperty(
         font.goldenStateWarriorsSwitchSlider,
@@ -1416,8 +1416,8 @@ const font = {
       font.switchToLakersTheme();
     }
 
-    // If the clickedSwitch is font.marioSwitch.
-    if (clickedSwitch === font.marioSwitch) {
+    // If the clickedSwitch is font.spiderManSwitch.
+    if (clickedSwitch === font.spiderManSwitch) {
       // We call tools.removeDisabledAttribute() to remove the disabled attribute from the elements.
       tools.removeDisabledAttribute(
         font.blueSwitch,
@@ -1483,7 +1483,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
         font.forestSwitch
@@ -1498,7 +1498,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.goldenStateWarriorsSwitch,
         font.flashSwitch,
         font.forestSwitch
@@ -1506,7 +1506,7 @@ const font = {
       // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
       tools.setColorToBeforeProperty(font.knickSwitchSlider, "#ff6600");
       tools.setColorToBeforeProperty(font.lakersSwitchSlider, "#fbbc05");
-      tools.setColorToBeforeProperty(font.marioSwitchSlider, "#0000ff");
+      tools.setColorToBeforeProperty(font.spiderManSwitchSlider, "#0000ff");
       tools.setColorToBeforeProperty(
         font.goldenStateWarriorsSwitchSlider,
         "#0000ff"
@@ -1533,7 +1533,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.flashSwitch,
         font.forestSwitch
@@ -1548,7 +1548,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.flashSwitch,
         font.forestSwitch
@@ -1556,7 +1556,7 @@ const font = {
       // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
       tools.setColorToBeforeProperty(font.knickSwitchSlider, "#ff6600");
       tools.setColorToBeforeProperty(font.lakersSwitchSlider, "#fbbc05");
-      tools.setColorToBeforeProperty(font.marioSwitchSlider, "#0000ff");
+      tools.setColorToBeforeProperty(font.spiderManSwitchSlider, "#0000ff");
       tools.setColorToBeforeProperty(font.jamaicaSwitchSlider, "#fbbc05");
       tools.setColorToBeforeProperty(font.flashSwitchSlider, "#fbbc05");
       tools.setColorToBeforeProperty(font.forestSwitchSlider, "#009933");
@@ -1580,7 +1580,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.forestSwitch
@@ -1595,20 +1595,20 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.jamaicaSwitch,
         font.goldenStateWarriorsSwitch,
         font.forestSwitch
       );
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
-        font.marioSwitchSlider,
-        "switch__slider-theme_background-color_blue-mario-2"
+        font.spiderManSwitchSlider,
+        "switch__slider-theme_background-color_blue-spider-man-2"
       );
       // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
       tools.setColorToBeforeProperty(font.knickSwitchSlider, "#ff6600");
       tools.setColorToBeforeProperty(font.lakersSwitchSlider, "#fbbc05");
-      tools.setColorToBeforeProperty(font.marioSwitchSlider, "#ff0000");
+      tools.setColorToBeforeProperty(font.spiderManSwitchSlider, "#ff0000");
       tools.setColorToBeforeProperty(font.jamaicaSwitchSlider, "#fbbc05");
       tools.setColorToBeforeProperty(
         font.goldenStateWarriorsSwitchSlider,
@@ -1635,7 +1635,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.goldenStateWarriorsSwitch,
         font.jamaicaSwitch,
         font.flashSwitch
@@ -1650,7 +1650,7 @@ const font = {
         font.yellowSwitch,
         font.knickSwitch,
         font.lakersSwitch,
-        font.marioSwitch,
+        font.spiderManSwitch,
         font.goldenStateWarriorsSwitch,
         font.jamaicaSwitch,
         font.flashSwitch
@@ -1658,7 +1658,7 @@ const font = {
       // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
       tools.setColorToBeforeProperty(font.knickSwitchSlider, "#ff6600");
       tools.setColorToBeforeProperty(font.lakersSwitchSlider, "#fbbc05");
-      tools.setColorToBeforeProperty(font.marioSwitchSlider, "#0000ff");
+      tools.setColorToBeforeProperty(font.spiderManSwitchSlider, "#0000ff");
       tools.setColorToBeforeProperty(
         font.goldenStateWarriorsSwitchSlider,
         "#0000ff"
@@ -4567,7 +4567,7 @@ const font = {
     tools.addClassesToElement(mode.body, "mario");
 
     // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
-    tools.setColorToBeforeProperty(font.marioSwitchSlider, font.colors.red);
+    tools.setColorToBeforeProperty(font.spiderManSwitchSlider, font.colors.red);
 
     // We call font.removeClassesFromElements() in order to remove multiple classNames from all the elements.
     font.removeClassesFromElements();
