@@ -38,6 +38,7 @@ class AppFixtures extends Fixture
             ->setLastName(strtoupper('Kent'))
             ->setEmail('clark.kent@email.com')
             ->setPassword($this->userPasswordHasherInterface->hashPassword($userAdmin, '2CBb4cb73201f86563893241A@'))
+            // ->setPicture(User::PICTURE);
             // ->setPicture(User::MAN_PICTURE);
             ->setPicture($this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Clark')));
 
@@ -52,6 +53,7 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Lang',
                 'E-mail' => 'lana.lang@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
+                // 'Picture' => User::PICTURE,
                 // 'Picture' => User::WOMAN_PICTURE,
                 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Lana')),
             ],
@@ -61,6 +63,7 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Sullivan',
                 'E-mail' => 'chloe.sullivan@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
+                // 'Picture' => User::PICTURE,
                 // 'Picture' => User::WOMAN_PICTURE,
                 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Chloe')),
             ],
@@ -70,6 +73,7 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Lane',
                 'E-mail' => 'lois.lane@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
+                // 'Picture' => User::PICTURE,
                 // 'Picture' => User::WOMAN_PICTURE,
                 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Lois')),
             ],
@@ -88,7 +92,8 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Kent',
                 'E-mail' => 'jonathan.kent@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
+                'Picture' => User::PICTURE,
+                // 'Picture' => User::MAN_PICTURE,
                 // 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Jonathan')),
             ],
             5 => [
@@ -97,7 +102,8 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Kent',
                 'E-mail' => 'martha.kent@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::WOMAN_PICTURE,
+                'Picture' => User::PICTURE,
+                // 'Picture' => User::WOMAN_PICTURE,
                 // 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Martha')),
             ],
             6 => [
@@ -106,7 +112,8 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Kent',
                 'E-mail' => 'kara.kent@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::WOMAN_PICTURE,
+                'Picture' => User::PICTURE,
+                // 'Picture' => User::WOMAN_PICTURE,
                 // 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Kara')),
             ],
             7 => [
@@ -115,7 +122,8 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Luthor',
                 'E-mail' => 'lex.luthor@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
+                'Picture' => User::PICTURE,
+                // 'Picture' => User::MAN_PICTURE,
                 // 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Lex')),
             ],
             8 => [
@@ -124,7 +132,8 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Luthor',
                 'E-mail' => 'lionel.luthor@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
+                'Picture' => User::PICTURE,
+                // 'Picture' => User::MAN_PICTURE,
                 // 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Lionel')),
             ],
             9 => [
@@ -133,7 +142,8 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Mercer',
                 'E-mail' => 'tess.mercer@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::WOMAN_PICTURE,
+                'Picture' => User::PICTURE,
+                // 'Picture' => User::WOMAN_PICTURE,
                 // 'Picture' => $this->multiAvatarAPI->donwloadAvatar($this->multiAvatarAPI->fetch('Tess')),
             ],
             10 => [
@@ -142,7 +152,8 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Olson',
                 'E-mail' => 'jimmy.olson@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
+                'Picture' => User::PICTURE,
+                // 'Picture' => User::MAN_PICTURE,
             ],
             11 => [
                 'Civility Title' => User::MAN_CIVILITY_TITLE,
@@ -150,7 +161,8 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Allen',
                 'E-mail' => 'bart.allen@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
+                'Picture' => User::PICTURE,
+                // 'Picture' => User::MAN_PICTURE,
             ],
             12 => [
                 'Civility Title' => User::MAN_CIVILITY_TITLE,
@@ -158,7 +170,8 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Queen',
                 'E-mail' => 'oliver.queen@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
+                'Picture' => User::PICTURE,
+                // 'Picture' => User::MAN_PICTURE,
             ],
             13 => [
                 'Civility Title' => User::MAN_CIVILITY_TITLE,
@@ -166,7 +179,8 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Curry',
                 'E-mail' => 'arthur.curry@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
+                'Picture' => User::PICTURE,
+                // 'Picture' => User::MAN_PICTURE,
             ],
             14 => [
                 'Civility Title' => User::MAN_CIVILITY_TITLE,
@@ -174,7 +188,8 @@ class AppFixtures extends Fixture
                 'Last Name' => 'Stone',
                 'E-mail' => 'victor.stone@email.com',
                 'Password' => '2CBb4cb73201f86563893241A@',
-                'Picture' => User::MAN_PICTURE,
+                'Picture' => User::PICTURE,
+                // 'Picture' => User::MAN_PICTURE,
             ],
         ];
 

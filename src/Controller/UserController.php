@@ -48,12 +48,84 @@ class UserController extends AbstractController
         // If the form is submitted and valid. 
         if ($form->isSubmitted() && $form->isValid()) {
             // TODO #2 END : solve issue on switch civilityTitle.   
-            dump($user->getCivilityTitle());
-            dd(42);
+            // dump($user->getCivilityTitle());
+            // dd(42);
             // TODO #2 END : solve issue on switch civilityTitle.
 
             // We call the uploadFile() method of the FileUploader service is order to upload the picture submit by the user. 
             $picture = $fileUploader->uploadFile($form, 'upload');
+
+            //! START : profile picture by default without API.
+            // // If we have a picture to upload.
+            // if ($picture) {
+            //     // We get the current picture of the user that will be his previous picture after the switch. 
+            //     $previousPicture = $user->getPicture();
+
+            //     // We set the picture to the user.
+            //     $user->setPicture($picture);
+
+            //     // If the previous picture of the user is different than User::PICTURE. 
+            //     if ($previousPicture !== User::PICTURE) {
+            //         // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
+            //         unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+            //     }
+            // }
+            // // Else the user not submit any picture so we set a picture by default.
+            // else {
+            //     // We set the value of the initial user picture to the user.
+            //     $user->setPicture($user->getPicture());
+            // }
+            //! END : profile picture by default without API.
+
+            //! START : profile picture by default according to user civility title without API.
+            // // If we have a picture to upload.
+            // if ($picture) {
+            //     // We get the current picture of the user that will be his previous picture after the switch. 
+            //     $previousPicture = $user->getPicture();
+
+            //     // We set the picture to the user.
+            //     $user->setPicture($picture);
+
+            //     // If the previous picture of the user is different than User::MAN_PICTURE and than User::WOMAN_PICTURE.
+            //     if (
+            //         $previousPicture !== User::MAN_PICTURE &&
+            //         $previousPicture !== User::WOMAN_PICTURE
+            //     ) {
+            //         // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
+            //         unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+            //     }
+            // }
+            // // Else the user not submit any picture so we set a picture by default depending on his gender.
+            // else {
+            //     // If the user's gender is diffent than User::MAN_CIVILITY_TITLE or than User::WOMAN_CIVILITY_TITLE.
+            //     if (
+            //         $user->getCivilityTitle() !== User::MAN_CIVILITY_TITLE || $user->getCivilityTitle() !== User::WOMAN_CIVILITY_TITLE
+            //     ) {
+            //         // If the user picture is different than User::MAN_PICTURE and than User::WOMAN_PICTURE.
+            //         if (
+            //             $user->getPicture() !== User::MAN_PICTURE &&
+            //             $user->getPicture() !== User::WOMAN_PICTURE
+            //         ) {
+            //             // We don't want to change the picture that the user have already set for himself.
+            //             // We set the value of the initial user picture to the user.
+            //             $user->setPicture($user->getPicture());
+            //         }
+            //         // Else the user's picture is one of our picture by default.
+            //         else {
+            //             // If the civility title of the user is User::MAN_CIVILITY_TITLE.
+            //             if ($user->getCivilityTitle() === User::MAN_CIVILITY_TITLE) {
+            //                 // We set the User::MAN_PICTURE to the user.
+            //                 $user->setPicture(User::MAN_PICTURE);
+            //             }
+            //             // Else if the civility title of the user is User::WOMAN_CIVILITY_TITLE.
+            //             elseif ($user->getCivilityTitle() === User::WOMAN_CIVILITY_TITLE) {
+            //                 // We set the User::WOMAN_PICTURE to the user.
+            //                 $user->setPicture(User::WOMAN_PICTURE);
+            //             }
+            //         }
+            //     }
+            // }
+            //! END : profile picture by default according to user civility title without API.
 
             //! START : profile picture by default with API.
             // If we have a picture to upload. 
@@ -64,8 +136,11 @@ class UserController extends AbstractController
                 // We set to the picture property the value of $picture.
                 $user->setPicture($picture);
 
-                // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
-                unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+                // If the previous picture of the user is different than User::PICTURE. 
+                if ($previousPicture !== User::PICTURE) {
+                    // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
+                    unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+                }
             }
             // Else the user not submit any picture so we set a picture by default 
             else {
@@ -75,40 +150,6 @@ class UserController extends AbstractController
             }
             //! END : profile picture by default with API.
 
-            //! START : profile picture by default without API.
-            // // If we have a picture to upload. 
-            // if ($picture) {
-            //     // We set to the picture property the value of $picture.
-            //     $user->setPicture($picture);
-            // }
-            // // Else the user not submit any picture so we set a picture by default depending on his gender.
-            // else {
-            //     // If the user picture is different than User::MAN_PICTURE and than User::WOMAN_PICTURE. 
-            //     if (
-            //         $user->getCivilityTitle() !== User::MAN_CIVILITY_TITLE || $user->getCivilityTitle() !== User::WOMAN_CIVILITY_TITLE
-            //     ) {
-            //         // If the user picture is different than User::MAN_PICTURE and than User::WOMAN_PICTURE 
-            //         if ($user->getPicture() !== User::MAN_PICTURE && 
-            //             $user->getPicture() !== User::WOMAN_PICTURE) {
-            //             // We don't want to change the picture that the user have already set for himself. 
-            //             // We set to the picture property the value of the initial user picture.
-            //             $user->setPicture($user->getPicture());
-            //         }
-            //         // Else the user's picture is one of our picture by default. 
-            //         else {
-            //             // If the user is a User::MAN_CIVILITY_TITLE. 
-            //             if ($user->getCivilityTitle() === User::MAN_CIVILITY_TITLE) {
-            //                 // We set to the picture property the value of User::MAN_PICTURE.
-            //                 $user->setPicture(User::MAN_PICTURE);
-            //             }
-            //             // Else if the user is a User::WOMAN_CIVILITY_TITLE.
-            //             else if ($user->getCivilityTitle() === User::WOMAN_CIVILITY_TITLE) {
-            //                 // We set to the picture property the value of User::WOMAN_PICTURE.
-            //                 $user->setPicture(User::WOMAN_PICTURE);
-            //             }
-            //         }
-            //     }
-
             // TODO #2 START : solve issue on switch civilityTitle.  
             // The civility title doesn't switch normaly like all the other properties.
             // If we use onPreSubmit() in UserType.php : the civility title switch correctly to the new one. 
@@ -116,7 +157,6 @@ class UserController extends AbstractController
             // Why we have to use onPreSubmit() so that the civility title switch correctly ? 
             // TODO #2 END : solve issue on switch civilityTitle.    
             // }
-            //! END : profile picture by default without API.
 
             // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
             $this->entityManagerInterface->flush();
@@ -167,6 +207,45 @@ class UserController extends AbstractController
 
         // If the $submittedToken is valid.
         if ($this->isCsrfTokenValid('delete-my-user-picture' . $user->getId(), $submittedToken)) {
+            //! START : profile picture by default without API.
+            // // / We get the current picture of the user that will be his previous picture after the switch. 
+            // $previousPicture = $user->getPicture();
+
+            // // We set the User::PICTURE to the user.
+            // $user->setPicture(User::PICTURE);
+
+            // // If the previous picture of the user is different than User::PICTURE. 
+            // if ($previousPicture !== User::PICTURE) {
+            //     // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
+            //     unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+            // }
+            //! END : profile picture by default without API.
+
+            //! START : profile picture by default according to user civility title without API.
+            // // We get the current picture of the user that will be his previous picture after the switch. 
+            // $previousPicture = $user->getPicture();
+
+            // // If the civility title of the user is User::MAN_CIVILITY_TITLE.
+            // if ($user->getCivilityTitle() === User::MAN_CIVILITY_TITLE) {
+            //     // We set the User::MAN_PICTURE to the user.
+            //     $user->setPicture(User::MAN_PICTURE);
+            // }
+            // // Else if the civility title of the user is User::WOMAN_CIVILITY_TITLE.
+            // elseif ($user->getCivilityTitle() === User::WOMAN_CIVILITY_TITLE) {
+            //     // We set the User::WOMAN_PICTURE to the user.
+            //     $user->setPicture(User::WOMAN_PICTURE);
+            // }
+
+            // // If the previous picture of the user is different than User::MAN_PICTURE and than User::WOMAN_PICTURE.
+            // if (
+            //     $previousPicture !== User::MAN_PICTURE &&
+            //     $previousPicture !== User::WOMAN_PICTURE
+            // ) {
+            //     // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
+            //     unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+            // }
+            //! END : profile picture by default according to user civility title without API.
+
             //! START : profile picture by default with API.
             // We get the current picture of the user that will be his previous picture after the switch. 
             $previousPicture = $user->getPicture();
@@ -180,22 +259,12 @@ class UserController extends AbstractController
             // We set to the picture property the file name of the avatar. 
             $user->setPicture($avatar);
 
-            // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
-            unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+            // If the previous picture of the user is different than User::PICTURE. 
+            if ($previousPicture !== User::PICTURE) {
+                // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
+                unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+            }
             //! END : profile picture by default with API.
-
-            //! START : profile picture by default without API.
-            // // If the user is a man. 
-            // if ($user->getCivilityTitle() === User::MAN_CIVILITY_TITLE) {
-            //     // We set to the picture property the value of User::MAN_PICTURE.
-            //     $user->setPicture(User::MAN_PICTURE);
-            // }
-            // // Else if the user is a woman.
-            // else if ($user->getCivilityTitle() === User::WOMAN_CIVILITY_TITLE) {
-            //     // We set to the picture property the value of User::WOMAN_PICTURE.
-            //     $user->setPicture(User::WOMAN_PICTURE);
-            // }
-            //! END : profile picture by default without API.
 
             // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
             $this->entityManagerInterface->flush();

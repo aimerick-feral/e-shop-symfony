@@ -53,10 +53,10 @@ class MultiAvatarAPI
             // We use the PHP function rename() with, in first argument, the location (the path) of the current file returned by the PHP dirname() function + the name of the file and, in second argument, the location of the directory where we want to move the file. 
 
             // If user action. 
-            // rename($fileName, $uploadFolder . "/" . $fileName);
+            rename($fileName, $uploadFolder . "/" . $fileName);
 
             // If fixtures. 
-            rename(dirname($fileName) . "/" . $fileName, "public/" . $uploadFolder . "/" . $fileName);
+            // rename(dirname($fileName) . "/" . $fileName, "public/" . $uploadFolder . "/" . $fileName);
 
             // We return the name of the donwloaded file just in case we need it.
             return $fileName;

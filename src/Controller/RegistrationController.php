@@ -52,6 +52,40 @@ class RegistrationController extends AbstractController
             // We call the uploadFile() method of the FileUploader service is order to upload the picture submited by the user. 
             $picture = $fileUploader->uploadFile($form, 'picture');
 
+            //! START : profile picture by default without API.
+            // // If we have a picture to upload.
+            // if ($picture) {
+            //     // We set the picture to the user.
+            //     $user->setPicture($picture);
+            // }
+            // // Else the user not submit any picture so we set a picture by default.
+            // else {
+            //     // We set the User::PICTURE to the user.
+            //     $user->setPicture(User::PICTURE);
+            // }
+            //! END : profile picture by default without API.
+
+            //! START : profile picture by default according to user civility title without API.
+            // If we have a picture to upload. 
+            // if ($picture) {
+            //     // We set to the picture property the value of $picture.
+            //     $user->setPicture($picture);
+            // }
+            // // Else the user not submit any picture so we set a picture by default depending on is gender.
+            // else {
+            //     // If the user is a User::MAN_CIVILITY_TITLE. 
+            //     if ($user->getcivilityTitle() === User::MAN_CIVILITY_TITLE) {
+            //         // We set to the picture property the value of User::MAN_PICTURE.
+            //         $user->setPicture(User::MAN_PICTURE);
+            //     }
+            //     // Else if the user is a User::WOMAN_CIVILITY_TITLE.
+            //     else if ($user->getcivilityTitle() === User::WOMAN_CIVILITY_TITLE) {
+            //         // We set to the picture property the value of User::WOMAN_PICTURE.
+            //         $user->setPicture(User::WOMAN_PICTURE);
+            //     }
+            // }
+            //! END : profile picture by default according to user civility title without API.
+
             //! START : profile picture by default with API.
             // If we have a picture to upload. 
             if ($picture) {
@@ -70,27 +104,6 @@ class RegistrationController extends AbstractController
                 $user->setPicture($avatar);
             }
             //! END : profile picture by default with API.
-
-            //! START : profile picture by default without API.
-            // // If we have a picture to upload. 
-            // if ($picture) {
-            //     // We set to the picture property the value of $picture.
-            //     $user->setPicture($picture);
-            // }
-            // // Else the user not submit any picture so we set a picture by default depending on is gender.
-            // else {
-            //     // If the user is a User::MAN_CIVILITY_TITLE. 
-            //     if ($user->getcivilityTitle() === User::MAN_CIVILITY_TITLE) {
-            //         // We set to the picture property the value of User::MAN_PICTURE.
-            //         $user->setPicture(User::MAN_PICTURE);
-            //     }
-            //     // Else if the user is a User::WOMAN_CIVILITY_TITLE.
-            //     else if ($user->getcivilityTitle() === User::WOMAN_CIVILITY_TITLE) {
-            //         // We set to the picture property the value of User::WOMAN_PICTURE.
-            //         $user->setPicture(User::WOMAN_PICTURE);
-            //     }
-            // }
-            //! END : profile picture by default without API.
 
             $entityManager->persist($user);
             $entityManager->flush();
