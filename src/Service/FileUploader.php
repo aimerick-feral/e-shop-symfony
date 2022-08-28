@@ -2,6 +2,9 @@
 
 namespace App\Service;
 
+use App\Entity\DeliveryMode;
+use App\Entity\Product;
+use App\Entity\User;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -40,18 +43,27 @@ class FileUploader
             $form->getName() === 'user' ||
             $form->getName() === 'admin_user'
         ) {
-            // The value of $uploadeFolder is the value of the .env variable USER_PICTURE_UPLOAD_FOLDER_PATH.
-            $uploadFolder = $_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'];
+            // // The value of $uploadeFolder is the value of the .env variable USER_PICTURE_UPLOAD_FOLDER_PATH.
+            // $uploadFolder = $_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'];
+
+            // The value of $uploadeFolder is the value of the PHP constant User::USER_PICTURE_UPLOAD_FOLDER_PATH 
+            $uploadFolder = User::USER_PICTURE_UPLOAD_FOLDER_PATH;
         }
         // Else if the form we have in argument is product.
         else if ($form->getName() === 'admin_product') {
-            // The value of $uploadeFolder is the value of the .env variable PRODUCT_PICTURE_UPLOAD_FOLDER_PATH.
-            $uploadFolder = $_ENV['PRODUCT_PICTURE_UPLOAD_FOLDER_PATH'];
+            // // The value of $uploadeFolder is the value of the .env variable PRODUCT_PICTURE_UPLOAD_FOLDER_PATH.
+            // $uploadFolder = $_ENV['PRODUCT_PICTURE_UPLOAD_FOLDER_PATH'];
+
+            // The value of $uploadeFolder is the value of the PHP constant Product::PRODUCT_PICTURE_UPLOAD_FOLDER_PATH.  
+            $uploadFolder = Product::PRODUCT_PICTURE_UPLOAD_FOLDER_PATH;
         }
         // Else if the form we have in argument is delivery_mode.
         else if ($form->getName() === 'admin_delivery_mode') {
-            // The value of $uploadeFolder is the value of the .env variable DELIVERY_MODE_PICTURE_UPLOAD_FOLDER_PATH.
-            $uploadFolder = $_ENV['DELIVERY_MODE_PICTURE_UPLOAD_FOLDER_PATH'];
+            // // The value of $uploadeFolder is the value of the .env variable DELIVERY_MODE_PICTURE_UPLOAD_FOLDER_PATH.
+            // $uploadFolder = $_ENV['DELIVERY_MODE_PICTURE_UPLOAD_FOLDER_PATH'];
+
+            // The value of $uploadeFolder is the value of the PHP constant DeliveryMode::DELIVERY_MODE_PICTURE_UPLOAD_FOLDER_PATH.  
+            $uploadFolder = DeliveryMode::DELIVERY_MODE_PICTURE_UPLOAD_FOLDER_PATH;
         }
 
         // The $originalFileName is the $uploadedFile name witch is the name that the client give him and his path.

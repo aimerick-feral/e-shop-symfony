@@ -16,6 +16,8 @@
 :root {
   --black: #000000;
   --white: #ffffff;
+  --jet: #333333;
+  --light-gray: #cccccc;
   --blue: #0000ff;
   --green: #00ff00;
   --red: #ff0000;
@@ -1654,7 +1656,6 @@ body {
   .form-field__input-search::placeholder {
     font-size: 1em;
     font-family: "Courier New", Courier, monospace;
-    /* color: #333333; */
   }
 
   .form-field__input:focus::placeholder,
@@ -1665,7 +1666,7 @@ body {
   /* If mode = dark */
   .form-field__input_color_white,
   .form-field__input-search_color_white {
-    background-color: #333333;
+    background-color: var(--jet);
     color: var(--white);
   }
 
@@ -1677,7 +1678,7 @@ body {
   /* If mode = light */
   .form-field__input_color_black,
   .form-field__input-search_color_black {
-    background-color: #cccccc;
+    background-color: var(--light-gray);
     color: var(--black);
   }
 

@@ -13,6 +13,9 @@ use Symfony\Component\Validator\Constraints as Assert;
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
 class Product
 {
+    // The path to the folder of the product picture. 
+    const PRODUCT_PICTURE_UPLOAD_FOLDER_PATH = 'assets/uploads/pictures/products';
+
     // Constance for the availability of the product. 
     const AVAILABLE = 'Disponible';
     const UNAVAILABLE = 'Indisponible';

@@ -58,7 +58,7 @@ class UserController extends AbstractController
             //! START : profile picture by default without API.
             // // If we have a picture to upload.
             // if ($picture) {
-            //     // We get the current picture of the user that will be his previous picture after the switch. 
+            //     // We get the current picture of the user that will be his previous picture after the update. 
             //     $previousPicture = $user->getPicture();
 
             //     // We set the picture to the user.
@@ -66,8 +66,8 @@ class UserController extends AbstractController
 
             //     // If the previous picture of the user is different than User::PICTURE. 
             //     if ($previousPicture !== User::PICTURE) {
-            //         // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
-            //         unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+            //         // We use the PHP function unlink() to delete, from our folder, the previous picture of the user. 
+            //         unlink(User::USER_PICTURE_UPLOAD_FOLDER_PATH . '/' . $previousPicture);
             //     }
             // }
             // // Else the user not submit any picture so we set a picture by default.
@@ -80,7 +80,7 @@ class UserController extends AbstractController
             //! START : profile picture by default according to user civility title without API.
             // // If we have a picture to upload.
             // if ($picture) {
-            //     // We get the current picture of the user that will be his previous picture after the switch. 
+            //     // We get the current picture of the user that will be his previous picture after the update. 
             //     $previousPicture = $user->getPicture();
 
             //     // We set the picture to the user.
@@ -91,8 +91,8 @@ class UserController extends AbstractController
             //         $previousPicture !== User::MAN_PICTURE &&
             //         $previousPicture !== User::WOMAN_PICTURE
             //     ) {
-            //         // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
-            //         unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+            //         // We use the PHP function unlink() to delete, from our folder, the previous picture of the user. 
+            //         unlink(User::USER_PICTURE_UPLOAD_FOLDER_PATH . '/' . $previousPicture);
             //     }
             // }
             // // Else the user not submit any picture so we set a picture by default depending on his gender.
@@ -130,7 +130,7 @@ class UserController extends AbstractController
             //! START : profile picture by default with API.
             // If we have a picture to upload. 
             if ($picture) {
-                // We get the current picture of the user that will be his previous picture after the switch. 
+                // We get the current picture of the user that will be his previous picture after the update. 
                 $previousPicture = $user->getPicture();
 
                 // We set to the picture property the value of $picture.
@@ -138,8 +138,8 @@ class UserController extends AbstractController
 
                 // If the previous picture of the user is different than User::PICTURE. 
                 if ($previousPicture !== User::PICTURE) {
-                    // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
-                    unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+                    // We use the PHP function unlink() to delete, from our folder, the previous picture of the user. 
+                    unlink(User::USER_PICTURE_UPLOAD_FOLDER_PATH . '/' . $previousPicture);
                 }
             }
             // Else the user not submit any picture so we set a picture by default 
@@ -208,7 +208,7 @@ class UserController extends AbstractController
         // If the $submittedToken is valid.
         if ($this->isCsrfTokenValid('delete-my-user-picture' . $user->getId(), $submittedToken)) {
             //! START : profile picture by default without API.
-            // // / We get the current picture of the user that will be his previous picture after the switch. 
+            // // / We get the current picture of the user that will be his previous picture after the update. 
             // $previousPicture = $user->getPicture();
 
             // // We set the User::PICTURE to the user.
@@ -216,13 +216,13 @@ class UserController extends AbstractController
 
             // // If the previous picture of the user is different than User::PICTURE. 
             // if ($previousPicture !== User::PICTURE) {
-            //     // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
-            //     unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+            //     // We use the PHP function unlink() to delete, from our folder, the previous picture of the user. 
+            //     unlink(User::USER_PICTURE_UPLOAD_FOLDER_PATH . '/' . $previousPicture);
             // }
             //! END : profile picture by default without API.
 
             //! START : profile picture by default according to user civility title without API.
-            // // We get the current picture of the user that will be his previous picture after the switch. 
+            // // We get the current picture of the user that will be his previous picture after the update. 
             // $previousPicture = $user->getPicture();
 
             // // If the civility title of the user is User::MAN_CIVILITY_TITLE.
@@ -241,13 +241,13 @@ class UserController extends AbstractController
             //     $previousPicture !== User::MAN_PICTURE &&
             //     $previousPicture !== User::WOMAN_PICTURE
             // ) {
-            //     // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
-            //     unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+            //     // We use the PHP function unlink() to delete, from our folder, the previous picture of the user. 
+            //     unlink(User::USER_PICTURE_UPLOAD_FOLDER_PATH . '/' . $previousPicture);
             // }
             //! END : profile picture by default according to user civility title without API.
 
             //! START : profile picture by default with API.
-            // We get the current picture of the user that will be his previous picture after the switch. 
+            // We get the current picture of the user that will be his previous picture after the update. 
             $previousPicture = $user->getPicture();
 
             // We call the fetch() method of the MultiAvatarAPI service to get the URL of the user avatar from the user first name.  
@@ -261,8 +261,8 @@ class UserController extends AbstractController
 
             // If the previous picture of the user is different than User::PICTURE. 
             if ($previousPicture !== User::PICTURE) {
-                // We use the PHP function unlink() to delete, from our directory, the previous picture of the user. 
-                unlink($_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'] . '/' . $previousPicture);
+                // We use the PHP function unlink() to delete, from our folder, the previous picture of the user. 
+                unlink(User::USER_PICTURE_UPLOAD_FOLDER_PATH . '/' . $previousPicture);
             }
             //! END : profile picture by default with API.
 

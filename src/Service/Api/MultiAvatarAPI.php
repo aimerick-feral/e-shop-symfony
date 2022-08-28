@@ -2,6 +2,7 @@
 
 namespace App\Service\Api;
 
+use App\Entity\User;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class MultiAvatarAPI
@@ -35,9 +36,9 @@ class MultiAvatarAPI
      */
     public function donwloadAvatar(string $url, string $uploadFolder = null)
     {
-        // The value of $uploadeFolder is the value of the .env variable USER_PICTURE_UPLOAD_FOLDER_PATH.
-        $uploadFolder = $_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'];
-        // assets/uploads/pictures/users
+        // // The value of $uploadeFolder is the value of the .env variable USER_PICTURE_UPLOAD_FOLDER_PATH.
+        // $uploadFolder = $_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'];
+        // // assets/uploads/pictures/users
 
         // We use the PHP function basename() to get the trailing name the component of the path. 
         // Exemple : "from https://api.multiavatar.com/toto-46d7d6702041b84dcdf0a3c6.png" we get "toto-46d7d6702041b84dcdf0a3c6.png". 
@@ -53,10 +54,10 @@ class MultiAvatarAPI
             // We use the PHP function rename() with, in first argument, the location (the path) of the current file returned by the PHP dirname() function + the name of the file and, in second argument, the location of the directory where we want to move the file. 
 
             // If user action. 
-            rename($fileName, $uploadFolder . "/" . $fileName);
+            rename($fileName, User::USER_PICTURE_UPLOAD_FOLDER_PATH . "/" . $fileName);
 
             // If fixtures. 
-            // rename(dirname($fileName) . "/" . $fileName, "public/" . $uploadFolder . "/" . $fileName);
+            // rename(dirname($fileName) . "/" . $fileName, "public/" . User::USER_PICTURE_UPLOAD_FOLDER_PATH . "/" . $fileName);
 
             // We return the name of the donwloaded file just in case we need it.
             return $fileName;

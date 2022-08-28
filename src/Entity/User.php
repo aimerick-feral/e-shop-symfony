@@ -19,13 +19,15 @@ use Symfony\Component\Validator\Constraints as Assert;
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
+    // The path to the folder of the user picture. 
+    const USER_PICTURE_UPLOAD_FOLDER_PATH = 'assets/uploads/pictures/users';
+
     // The value of the profile picture by default.
     const PICTURE = 'user.svg';
     // The value of the profile picture by default for the man.
     const MAN_PICTURE = 'superman.png';
     // The value of the profile picture by default for the woman.
     const WOMAN_PICTURE = 'wonderwoman.png';
-
 
     // The value of the man civilityTitle.
     const MAN_CIVILITY_TITLE = 'Monsieur';

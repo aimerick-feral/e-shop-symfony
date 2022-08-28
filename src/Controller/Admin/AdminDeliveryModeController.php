@@ -186,8 +186,17 @@ class AdminDeliveryModeController extends AbstractController
             $picture = $fileUploader->uploadFile($form, 'upload');
             // If we have a picture to upload.
             if ($picture) {
-                // We set to the picture property the value of $picture.
+                // We get the current picture of the delivery mode that will be his previous picture after the update. 
+                $previousPicture = $deliveryMode->getPicture();
+
+                // We set the picture to the delivery mode.
                 $deliveryMode->setPicture($picture);
+
+                // If the previous picture of the delivery mode is different than the uploaded picture. 
+                if ($previousPicture !== $picture) {
+                    // We use the PHP function unlink() to delete, from our folder, the previous picture of the delivery mode. 
+                    unlink(DeliveryMode::DELIVERY_MODE_PICTURE_UPLOAD_FOLDER_PATH . '/' . $previousPicture);
+                }
             }
 
             // We call the flush() method of the EntityManagerInterface to backup the data in the database.
