@@ -3,7 +3,7 @@ const nav = {
   // =================== DOM ELEMENTS =========================== //
   links: [],
   init: function () {
-    console.log("Hello world, I'm nav.js");
+    console.log("Hello world, I'm nav.js 🗺");
 
     // We get the DOM elements that we need to interacte with.
 

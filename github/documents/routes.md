@@ -5,12 +5,12 @@
 | /a-propos                                                         | about                         | GET          | MainController          | about()           | ✅     |
 | /conditions-generales-d-utilisation                               | terms_of_services             | GET          | MainController          | termsOfServices() | ✅     |
 | /conditions-generales-de-ventes                                   | terms_of_sales                | GET          | MainController          | termsOfSales()    | ✅     |
+| /inscription                                                      | app_register                  | GET, POST    | RegistrationController  | register()        | ✅     |
 | /connexion                                                        | app_login                     | GET, POST    | SecurityController      | login()           | ❌     |
 | /deconnexion                                                      | app_logout                    | GET, POST    | SecurityController      | logout()          | ❌     |
 | /reinitialisation-mot-de-passe/demande                            | app_forgot_password_request   | GET, POST    | ResetPasswordController | request()         | ❌     |
 | /reinitialisation-mot-de-passe/verification-e-mail                | app_check_email               | GET          | ResetPasswordController | checkEmail()      | ❌     |
 | /reinitialisation-mot-de-passe/reset/{token}                      | app_reset_password            | GET          | ResetPasswordController | reset()           | ❌     |
-| /inscription                                                      | app_register                  | GET, POST    | RegistrationController  | register()        | ✅     |
 | /admin                                                            | admin_dashboard               | GET          | AdminMainController     | dashboard()       | ✅     |
 | /admin/utilisateurs/creer                                         | admin_user_create             | GET, POST    | AdminUserController     | create()          | ✅     |
 | /admin/utilisateurs                                               | admin_user_list               | GET          | AdminUserController     | list()            | ✅     |

@@ -148,7 +148,9 @@ class MainController extends AbstractController
         return $this->render(
             'main/contact.html.twig',
             // We set a array of optional data.
-            ['contactForm' => $form->createView()],
+            [
+                'contactForm' => $form->createView()
+            ],
             // We specify the related HTTP response status code.
             new Response('', 200)
         );
