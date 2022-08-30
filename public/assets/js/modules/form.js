@@ -100,7 +100,7 @@ const form = {
   deliveryModeMinPurchaseAmountForFreeDelivery: null,
   deliveryModeDescriptionInput: null,
   // =========================== REGEX ==========================
-  // User.
+  // User
   regexMatchEmail: null,
   regexMatchAtLeastHeightCharacters: null,
   regexMatchAtLeastTweleCharacters: null,
@@ -375,7 +375,7 @@ const form = {
     // User, Product and Contact
     form.fileInput = document.querySelector(".form-field__input-file");
 
-    // User.
+    // User
     form.userEmailInput = document.querySelector(
       ".form-field__input-user-email"
     );

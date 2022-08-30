@@ -10,7 +10,7 @@
 	<main>
 		<section class="page">
 			<h2>Nos Catégories</h2>
-			{# START : searchProductForm #}
+			{# START : searchCategoryForm #}
 			{{ form_start(searchCategoryForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'search-category-form' }}
 			) }}
 			<div class="form-field">
@@ -28,7 +28,7 @@
 				Rechercher
 			</button>
 			{{ form_end(searchCategoryForm) }}
-			{# END : searchProductForm #}
+			{# END : searchCategoryForm #}
 			<div class="list">
 				{% for category in categories %}
 					<div class="card card_color_blue">

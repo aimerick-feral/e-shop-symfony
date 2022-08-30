@@ -20,17 +20,20 @@
   --light-gray: #cccccc;
   --blue: #0000ff;
   --green: #00ff00;
-  --red: #ff0000;
-  --safety-orange: #ff6600;
   --purple: #cc00ff;
   --yellow: #fbbc05;
   --slimy-green: #009933;
   --sepia: #663300;
+  --dodger-blue: #0092f2;
+  /* flash-success */
   --ao-english: #00802b;
   --mint-green: #b3ffb3;
+  /* flash-error */
   --salmon-pink: #ff9999;
+  --red: #ff0000;
+  /* flash-warning */
   --peach-crayola: #ffc299;
-  --dodger-blue: #0092f2;
+  --safety-orange: #ff6600;
 }
 
 body {
@@ -1799,10 +1802,6 @@ body {
     margin-left: 2em;
   }
 
-  /* ====================== terms_of_sales ====================== */
-  /*! None */
-
-  /* =============== delivery_and_customer_service ============== */
   .term h4 {
     text-align: left;
     margin: 2em 0 1em;
@@ -1816,6 +1815,11 @@ body {
   .term h3:nth-child(1) {
     margin: 0 0 1em;
   }
+
+  /* ====================== terms_of_sales ====================== */
+  /*! None */
+
+  /* =============== delivery_and_customer_service ============== */
 
   .term-customer-service h4 {
     font-size: 1em;
@@ -3007,6 +3011,9 @@ body {
   /* ======================= category_list ====================== */
   /*! None */
 
+  /* ======================= category_list ====================== */
+  /*! None */
+
   /* ====================== admin_dashboard ===================== */
   /*! None */
 
@@ -3323,7 +3330,7 @@ body {
   /* ======================= category_list ====================== */
   .card {
     width: 45%;
-    height: 30em;
+    /* height: 30em; */
   }
 
   /* ====================== admin_dashboard ===================== */
@@ -3778,9 +3785,9 @@ body {
   }
 
   /* ======================= category_list ====================== */
-
   .card {
     width: 30%;
+    height: 30em;
   }
 
   /* ====================== admin_dashboard ===================== */

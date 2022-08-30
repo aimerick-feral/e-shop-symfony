@@ -12,7 +12,7 @@
 - lastName
 - civilityTitle
 - picture
-- isActivated or hasbeanDeactivated
+- isActivated 
 - addresses (OneToMany)
 - purchases (OneToMany)
 - createdAt

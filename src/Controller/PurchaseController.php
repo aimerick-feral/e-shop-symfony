@@ -233,7 +233,7 @@ class PurchaseController extends AbstractController
                 'cartItems' => $cartItems,
                 'subtotal' => $subtotal,
                 'deliveryModePrice' => $deliveryModePrice,
-                'deliveryModePictureUploadFolderPath' => $_ENV['DELIVERY_MODE_PICTURE_UPLOAD_FOLDER_PATH'],
+                'deliveryModePictureUploadFolderPath' => DeliveryMode::DELIVERY_MODE_PICTURE_UPLOAD_FOLDER_PATH,
                 'deliveryModePictures' => $deliveryModePictures,
                 'total' => $total,
                 'deliveryPriceFree' => DeliveryMode::DELIVERY_PRICE_FREE,
