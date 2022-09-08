@@ -20,22 +20,22 @@ use Symfony\Component\Validator\Constraints as Assert;
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     // The path to the folder of the user picture. 
-    const USER_PICTURE_UPLOAD_FOLDER_PATH = 'assets/uploads/pictures/users';
+    public const USER_PICTURE_UPLOAD_FOLDER_PATH = 'assets/uploads/pictures/users';
 
     // The value of the profile picture by default.
-    const PICTURE = 'user.svg';
+    public const PICTURE = 'user.svg';
     // The value of the profile picture by default for the man.
-    const MAN_PICTURE = 'superman.png';
+    public const MAN_PICTURE = 'superman.png';
     // The value of the profile picture by default for the woman.
-    const WOMAN_PICTURE = 'wonderwoman.png';
+    public const WOMAN_PICTURE = 'wonderwoman.png';
 
     // The value of the man civilityTitle.
-    const MAN_CIVILITY_TITLE = 'Monsieur';
+    public const MAN_CIVILITY_TITLE = 'Monsieur';
     // The value of the woman civilityTitle.
-    const WOMAN_CIVILITY_TITLE = 'Madame';
+    public const WOMAN_CIVILITY_TITLE = 'Madame';
 
     // The value of admin's role.
-    const ROLE_ADMIN = 'ROLE_ADMIN';
+    public const ROLE_ADMIN = 'ROLE_ADMIN';
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -212,7 +212,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function setLastName(string $lastName): self
     {
-        $this->lastName = $lastName;
+        // $this->lastName = $lastName;
+        $this->lastName = strtoupper($lastName);
 
         return $this;
     }

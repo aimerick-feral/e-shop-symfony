@@ -35,7 +35,7 @@ class AppFixtures extends Fixture
             ->setRoles(['ROLE_ADMIN'])
             ->setCivilityTitle(User::MAN_CIVILITY_TITLE)
             ->setFirstName('Clark')
-            ->setLastName(strtoupper('Kent'))
+            ->setLastName('Kent')
             ->setEmail('clark.kent@email.com')
             ->setPassword($this->userPasswordHasherInterface->hashPassword($userAdmin, '2CBb4cb73201f86563893241A@'))
             // ->setPicture(User::PICTURE);
@@ -200,7 +200,7 @@ class AppFixtures extends Fixture
             $user
                 ->setCivilityTitle($userToCreate['Civility Title'])
                 ->setFirstName($userToCreate['First Name'])
-                ->setLastName(strtoupper($userToCreate['Last Name']))
+                ->setLastName($userToCreate['Last Name'])
                 ->setEmail(strtolower($userToCreate['First Name']) . '.' . strtolower($userToCreate['Last Name']) . '@email.com')
                 ->setPassword($this->userPasswordHasherInterface->hashPassword($user, $userToCreate['Password']))
                 ->setPicture($userToCreate['Picture']);

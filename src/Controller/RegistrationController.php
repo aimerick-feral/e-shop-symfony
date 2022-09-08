@@ -115,7 +115,7 @@ class RegistrationController extends AbstractController
                 (new TemplatedEmail())
                     ->from(new Address('noreply@e-shop.fr', 'eShop'))
                     ->to($user->getEmail())
-                    ->subject('Activation de votre compte eShop')
+                    ->subject('Activation de votre compte e-shop')
                     ->htmlTemplate('registration/confirmation_email.html.twig')
             );
 
@@ -143,7 +143,6 @@ class RegistrationController extends AbstractController
             return $this->redirectToRoute('app_register');
         }
 
-        // @TODO Change the redirect on success and handle or remove the flash message in your templates
         $this->addFlash('success', 'Votre adresse e-mail a été vérifiée.');
 
         return $this->redirectToRoute('home');

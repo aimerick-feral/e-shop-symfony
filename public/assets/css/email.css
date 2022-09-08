@@ -1,4 +1,4 @@
-/* ================ request-account-deletion =================  */
+/* ================== delete-account-request ================== */
 .term__user-email {
   font-weight: normal;
 }
@@ -17,9 +17,9 @@
   font-weight: bold;
   text-align: center;
   padding: 0.5em;
-  border-radius: 1.5em;
-  margin-top: 1em;
+  margin: 1em 0 0;
   width: 60%;
+  border-radius: 1.5em;
 }
 
 .page__link_color_blue {

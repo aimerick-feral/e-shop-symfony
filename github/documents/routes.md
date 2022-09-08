@@ -1,3 +1,5 @@
+# App Route
+
 | URLs                                                              | Route names                   | Methods HTTP | Controllers             | methods()                    | Status |
 | ----------------------------------------------------------------- | ----------------------------- | ------------ | ----------------------- | ---------------------------- | ------ |
 | /                                                                 | home                          | GET          | MainController          | home()                       | ✅     |
@@ -8,8 +10,13 @@
 | /livraison-et-service-apres-vente                                 | delivery_and_customer_service | GET          | MainController          | deliveryAndCustomerService() | ✅     |
 | /paiement-securise                                                | secure_payment                | GET          | MainController          | securePayment()              | ✅     |
 | /inscription                                                      | app_register                  | GET, POST    | RegistrationController  | register()                   | ✅     |
-| /connexion                                                        | app_login                     | GET, POST    | SecurityController      | login()                      | ❌     |
-| /deconnexion                                                      | app_logout                    | GET, POST    | SecurityController      | logout()                     | ❌     |
+| /connexion                                                        | app_login                     | GET, POST    | SecurityController      | login()                      | ✅     |
+| /deconnexion                                                      | app_logout                    | GET, POST    | SecurityController      | logout()                     | ✅     |
+| /profil                                                           | user_profile                  | GET, POST    | UserController          | profile()                    | ✅     |
+| /demande-supression-compte                                        | user_delete_request           | GET          | UserController          | deleteRequest()              | ✅     |
+| /supprimer-mon-compte                                             | user_delete_my-account        | GET, POST    | UserController          | delete()                     | ✅     |
+| /demande-reactivation-compte                                      | user_reactivate_request       | GET          | UserController          | reactivateRequest()          | ✅     |
+| /reactivation                                                     | user_reactivate               | GET, POST    | UserController          | reactivate()                 | ✅     |
 | /reinitialisation-mot-de-passe/demande                            | app_forgot_password_request   | GET, POST    | ResetPasswordController | request()                    | ❌     |
 | /reinitialisation-mot-de-passe/verification-e-mail                | app_check_email               | GET          | ResetPasswordController | checkEmail()                 | ❌     |
 | /reinitialisation-mot-de-passe/reset/{token}                      | app_reset_password            | GET          | ResetPasswordController | reset()                      | ❌     |
@@ -19,7 +26,7 @@
 | /admin/utilisateurs/{id}                                          | admin_user_detail             | GET          | AdminUserController     | detail()                     | ✅     |
 | /admin/utilisateurs/{id}/mettre-a-jour                            | admin_user_update             | GET, POST    | AdminUserController     | update()                     | ✅     |
 | /admin/utilisateurs/{id}/supprimer-photo                          | admin_user_delete_picture     | GET, POST    | AdminUserController     | deletePicture()              | ✅     |
-| /admin/utilisateurs/{id}/supprimer                                | admin_user_delete             | GET, POST    | AdminUserController     | delete()                     | ❌     |
+| /admin/utilisateurs/{id}/supprimer                                | admin_user_delete             | GET, POST    | AdminUserController     | delete()                     | ✅     |
 | /admin/produits/creer                                             | admin_product_create          | GET, POST    | AdminProductController  | create()                     | ✅     |
 | /admin/produits                                                   | admin_product_list            | GET          | AdminProductController  | list()                       | ✅     |
 | /admin/produits/{slug}                                            | admin_product_detail          | GET          | AdminProductController  | detail()                     | ✅     |
@@ -44,9 +51,6 @@
 | /admin/utilisateurs/{userId}/commandes/{purchaseId}               | admin_purchase_user_detail    | GET          | AdminPurchaseController | userDetail()                 | ✅     |
 | /admin/utilisateurs/{userId}/commandes/{purchaseId}/mettre-a-jour | admin_purchase_update         | GET, POST    | AdminPurchaseController | userDetail()                 | ✅     |
 | /admin/purchase/{id}/supprimer                                    | admin_purchase_delete         | GET, POST    | AdminPurchaseController | delete()                     | ✅     |
-| /profile                                                          | user_profile                  | GET, POST    | UserController          | profile()                    | ✅     |
-| /supprimer-ma-photo                                               | user_delete_picture           | GET, POST    | UserController          | deletePicture()              | ✅     |
-| /supprimer-mon-compte                                             | user_delete_my-account        | GET, POST    | UserController          | deleteMyAccount()            | ❌     |
 | /produits                                                         | product_list                  | GET          | ProductController       | list()                       | ✅     |
 | /produits/{slug}                                                  | product_detail                | GET          | ProductController       | detail()                     | ✅     |
 | /categories                                                       | category_list                 | GET          | CategoryController      | list()                       | ✅     |

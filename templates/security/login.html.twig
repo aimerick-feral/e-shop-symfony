@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Connexion -
+	Connexion |
 	{{ parent() }}
 {% endblock %}
 
@@ -62,7 +62,7 @@
 				<input
 				type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 				{# Submit loginForm button #}
-				<button class="page__button page__button-submit page__button_background-color_blue page__button_color_white" id="login-button" type="submit">
+				<button class="page__button page__button-login page__button-submit page__button_background-color_blue page__button_color_white" id="login-button" type="submit">
 					Se connecter</button>
 			</form>
 			{# END : loginForm #}

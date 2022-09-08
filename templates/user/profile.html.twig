@@ -18,8 +18,7 @@
 			{{ form_start(userProfileForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'user-profile-form' }}
 			) }}
 			{# picture #}
-			<div
-				class="form-field-user-picture">
+			<div class="form-field-user-picture">
 				<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/' ~ app.user.picture) }}" alt="image {{ app.user.firstName }}"/>
 			</div>
 			{# upload #}
@@ -35,7 +34,8 @@
 				{{ form_errors(userProfileForm.upload) }}
 			</div>
 			{# delete picture #}
-			<a class="display-none page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-picture-button" href="{{ path('user_delete_picture', {token:csrf_token('delete-my-user-picture' ~ app.user.id)} ) }}">Supprimer ma photo</a>
+			<a class="page__link-delete display-none page__link page__link-delete-user-picture page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-picture-button" href="{{ path('user_delete_picture', {token:csrf_token('delete-my-user-picture' ~ app.user.id)} ) }}">Supprimer ma photo</a>
+
 			{# civilityTitle #}
 			<div class="form-field">
 				{{ form_widget(userProfileForm.civilityTitle) }}
@@ -85,7 +85,7 @@
 			</button>
 			{{ form_end(userProfileForm) }}
 			{# END : userProfileForm #}
-			<a class=" display-none page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-account-link" href="{{ path('user_delete_access' ) }}">
+			<a class="page__link-delete display-none page__link  page__link-delete-my-user-account page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-account-link" href="{{ path('user_delete_request' ) }}">
 				Supprimer mon compte
 			</a>
 		</section>

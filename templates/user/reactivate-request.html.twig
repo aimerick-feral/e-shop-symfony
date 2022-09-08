@@ -8,7 +8,7 @@
 	{{ parent() }}
 {% endblock %}
 
-{# START : user_reactivate_access #}
+{# START : user_reactivate_request #}
 {% block body %}
 	<main>
 		<section class="page">
@@ -20,15 +20,15 @@
 					<p>Vous avez récemment demandé la suppression de votre compte associé à l'adresse email
 						<strong class="term__user-email term__user-email_color_blue" id="user-email">{{ app.user.email}}</strong>.</p>
 					<p>Conformément à nos
-						<a class="page__link page__link_color_blue page__link_text-decoration_underline page__link_padding-and-margin_0" id="terms-of-service-link" href="{{ path('terms_of_use') }}">Conditions Générales d'Utilisation</a>
+						<a class="page__link  page__link_text-decoration_underline page__link_padding-and-margin_0 page__link_font-weight_normal page__link_color_blue" id="terms-of-service-link" href="{{ path('terms_of_use') }}">Conditions Générales d'Utilisation</a>
 						(CGU) la suppression définitive de votre compte sera effectuée 30 jours après votre demande.</p>
-					<p>Si vous souhaitez de nouveau bénéficier de nos services, nous vous offrons la possibilité de réactiver votre compte.</p>
+					<p>Afin d'empêcher cette suppression, nous vous offrons la possibilité de réactiver votre compte.</p>
 				</div>
 			</div>
 			<a class="page__link page__link-reactivate-account page__link_text_uppercase page__link_background-color_green page__link_color_black" id="reactivate-user-account-link" href="{{ path('user_reactivate', {'token':csrf_token('user-reactivate' ~ app.user.id)} ) }}">
-				Réactivier mon compte
+				Réactiver mon compte
 			</a>
 		</section>
 	</main>
 {% endblock %}
-{# START : user_reactivate_access #}
+{# START : user_reactivate_request #}

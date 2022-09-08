@@ -139,7 +139,7 @@ body {
 
 /* Product availability */
 .availability__avialable_color_green {
-  color: #00ff00;
+  color: var(--green);
 }
 
 .availability__unavailable_color_red {
@@ -180,7 +180,7 @@ body {
 }
 
 .status__paid_color_green {
-  color: #00ff00;
+  color: var(--green);
 }
 
 .status__paid_color_safety-orange {
@@ -196,7 +196,7 @@ body {
 }
 
 .status__paid_color_slimy-green {
-  color: #00ff00;
+  color: var(--green);
 }
 
 .status__in-progress_color_safety-orange {
@@ -436,7 +436,7 @@ body {
   }
 
   .switch__slider-font-color_background-color_green::before {
-    background-color: #00ff00;
+    background-color: var(--green);
   }
 
   #red-switch {
@@ -629,13 +629,13 @@ body {
     cursor: pointer;
     border: none;
     outline: none;
-    padding: 0.5em;
     font-size: 1em;
     font-weight: bold;
     text-transform: uppercase;
-    border-radius: 1.5em;
-    margin-top: 1em;
+    padding: 0.5em;
+    margin: 1em 0 0;
     width: 60%;
+    border-radius: 1.5em;
   }
 
   .page__button_background-color_blue {
@@ -643,7 +643,7 @@ body {
   }
 
   .page__button_background-color_green {
-    background-color: #00ff00;
+    background-color: var(--green);
   }
 
   .page__button_background-color_red {
@@ -719,9 +719,9 @@ body {
     font-weight: bold;
     text-align: center;
     padding: 0.5em;
-    border-radius: 1.5em;
-    margin-top: 1em;
+    margin: 1em 0 0;
     width: 60%;
+    border-radius: 1.5em;
   }
 
   /* .page__link-disabled {
@@ -739,7 +739,7 @@ body {
   }
 
   .page__link_background-color_green {
-    background-color: #00ff00;
+    background-color: var(--green);
   }
 
   .page__link_background-color_red {
@@ -968,7 +968,7 @@ body {
   }
 
   .header_background-color_green {
-    background-color: #00ff00;
+    background-color: var(--green);
   }
 
   .header_background-color_red {
@@ -1102,7 +1102,7 @@ body {
   }
 
   .burger-menu_background-color_green {
-    background-color: #00ff00;
+    background-color: var(--green);
   }
 
   .burger-menu_background-color_red {
@@ -1162,7 +1162,7 @@ body {
   }
 
   .circle_background-color_green {
-    background-color: #00ff00;
+    background-color: var(--green);
   }
 
   .circle_background-color_red {
@@ -1202,7 +1202,7 @@ body {
   }
 
   .circle_color_green {
-    color: #00ff00;
+    color: var(--green);
   }
 
   .circle_color_red {
@@ -1291,11 +1291,11 @@ body {
   }
 
   .nav-mobile__item_color_green {
-    border-top: solid 0.1em #00ff00;
+    border-top: solid 0.1em var(--green);
   }
 
   .nav-mobile__item_color_green:last-child {
-    border-bottom: solid 0.1em #00ff00;
+    border-bottom: solid 0.1em var(--green);
   }
 
   .nav-mobile__item_color_red {
@@ -1345,8 +1345,12 @@ body {
     text-transform: uppercase;
   }
 
-  .header__icon.nav-mobile__profile-picture {
+  .header__icon.nav-mobile__profile-picture,
+  .nav-desktop__profile-picture {
     border-radius: 50%;
+  }
+
+  .header__icon.nav-mobile__profile-picture {
     width: 1.5em;
     vertical-align: bottom;
   }
@@ -1379,7 +1383,7 @@ body {
   }
 
   .footer_background-color_green {
-    background-color: #00ff00;
+    background-color: var(--green);
   }
 
   .footer_background-color_red {
@@ -1924,15 +1928,14 @@ body {
   }
 
   #registration-button,
-  #login-button,
   #submit-delivery-mode-button,
   #submit-order-button {
     margin-top: 2em;
   }
 
   /* ========================= app_login ======================== */
-  #login-button {
-    margin-bottom: 0.5em;
+  .page__button-login {
+    margin: 2em 0 0.5em 0;
   }
 
   /* ================ app_forgot_password_request =============== */
@@ -1948,11 +1951,11 @@ body {
   /*! None */
 
   /* ======================= user_profile ======================= */
-  #delete-my-user-picture-button {
-    margin-bottom: 1.5em;
+  .page__link.page__link-delete-user-picture {
+    margin: 1em 0 1.5em 0;
   }
 
-  #delete-my-user-account-link,
+  .page__link.page__link-delete-my-user-account,
   .page__link.page__link-reactivate-account {
     width: 56%;
   }
@@ -1978,15 +1981,52 @@ body {
     border-radius: none;
   } */
 
+  /* ===================== user_delete_request =================== */
+  /*! None */
+
+  /* =================== user_reactivate_request ================= */
+  .term__user-email {
+    font-weight: normal;
+  }
+
+  .term__user-email_color_white {
+    color: var(--white);
+  }
+
+  .term__user-email_color_blue {
+    color: var(--blue);
+  }
+
+  .term__user-email_color_green {
+    color: var(--green);
+  }
+
+  .term__user-email_color_red {
+    color: var(--red);
+  }
+
+  .term__user-email_color_safety-orange {
+    color: var(--safety-orange);
+  }
+
+  .term__user-email_color_purple {
+    color: var(--purple);
+  }
+
+  .term__user-email_color_yellow {
+    color: var(--yellow);
+  }
+
+  .term__user-email_color_slimy-green {
+    color: var(--slimy-green);
+  }
+
   /* ======================== cart_detail ======================= */
   .product {
     display: flex;
     margin-top: 2em;
     width: 100%;
     height: 15em;
-    /* height: 10em; */
-    /* height: 100%; */
-    /* background-color: #00ff00; */
   }
 
   .product-image {
@@ -2084,7 +2124,7 @@ body {
   }
 
   .total_border-color_green {
-    border-top: solid 0.1em #00ff00;
+    border-top: solid 0.1em var(--green);
   }
 
   .total_border-color_red {
@@ -2142,7 +2182,7 @@ body {
   .product-detail p.availability__avialable_color_green,
   .admin-preview p.availability__avialable_color_green,
   .admin-detail p.availability__avialable_color_green {
-    color: #00ff00;
+    color: var(--green);
   }
 
   .product-detail p.availability__unavailable_color_red,
@@ -2245,7 +2285,7 @@ body {
   .admin-detail_color_green,
   .card-address_color_green,
   .card-purchase_color_green {
-    border: solid 0.1em #00ff00;
+    border: solid 0.1em var(--green);
   }
 
   .card_color_red,
@@ -2290,7 +2330,7 @@ body {
 
   .admin-preview p.availability__avialable_color_green,
   .admin-detail p.availability__avialable_color_green {
-    color: #00ff00;
+    color: var(--green);
   }
 
   .admin-preview p.availability__unavailable_color_red,
@@ -2365,7 +2405,7 @@ body {
   /* =================== admin_address_create =================== */
   /*! None */
 
-  /* ===================== admin_address_user_list =================== */
+  /* =================== admin_address_user_list ================= */
   /*! None */
 
   /* ================== admin_address_detail ==================== */
@@ -2406,7 +2446,7 @@ body {
   }
 
   .purchase-total_border-color_green {
-    border-top: solid 0.1em #00ff00;
+    border-top: solid 0.1em var(--green);
   }
 
   .purchase-total_border-color_red {
@@ -2436,7 +2476,7 @@ body {
 
   /* ================= admin_purchase_user_list ================= */
   .card-purchase p.status__paid_color_green {
-    color: #00ff00;
+    color: var(--green);
   }
 
   /* =================== admin_purchase_detail ================== */
@@ -2623,43 +2663,6 @@ body {
     margin: 0 0 0.5em;
   }
 
-  /* ============== user_reactivate_access ============== */
-  .term__user-email {
-    font-weight: normal;
-  }
-
-  .term__user-email_color_white {
-    color: var(--white);
-  }
-
-  .term__user-email_color_blue {
-    color: var(--blue);
-  }
-
-  .term__user-email_color_green {
-    color: var(--green);
-  }
-
-  .term__user-email_color_red {
-    color: var(--red);
-  }
-
-  .term__user-email_color_safety-orange {
-    color: var(--safety-orange);
-  }
-
-  .term__user-email_color_purple {
-    color: var(--purple);
-  }
-
-  .term__user-email_color_yellow {
-    color: var(--yellow);
-  }
-
-  .term__user-email_color_slimy-green {
-    color: var(--slimy-green);
-  }
-
   /* ========================= error404 ========================= */
   .block-404 {
     display: flex;
@@ -2674,8 +2677,11 @@ body {
 
   .block-404 p:first-child {
     font-size: 4em;
-    color: var(--red);
     margin: 0;
+  }
+
+  .block-404__p-404_color_red  {
+    color: var(--red);
   }
 
   .block-404 .block-404__back-home-link {
@@ -2782,6 +2788,12 @@ body {
   /* ======================= user_profile ======================= */
   /*! None */
 
+  /* ===================== user_delete_request =================== */
+  /*! None */
+
+  /* =================== user_reactivate_request ================= */
+  /*! None */
+
   /* ======================== cart_detail ======================= */
   .product-property h2 {
     font-size: 1.6em;
@@ -2843,7 +2855,7 @@ body {
   /* =================== admin_address_create =================== */
   /*! None */
 
-  /* ===================== admin_address_user_list =================== */
+  /* =================== admin_address_user_list ================ */
   /*! None */
 
   /* ================== admin_address_detail ==================== */
@@ -2899,16 +2911,12 @@ body {
   /* ============================================================ */
   /* ========================= BUTTONS ========================== */
   /* ============================================================ */
-  #delete-my-user-account-button {
-    width: 55%;
-  }
+  /*! None */
 
   /* ============================================================ */
   /* ========================== LINKS =========================== */
   /* ============================================================ */
-  #delete-my-user-account-button {
-    width: 55%;
-  }
+  /*! None */
 
   /* ============================================================ */
   /* ========================== IMAGES ========================== */
@@ -2997,6 +3005,12 @@ body {
   /* ======================= user_profile ======================= */
   /*! None */
 
+  /* ===================== user_delete_request =================== */
+  /*! None */
+
+  /* =================== user_reactivate_request ================= */
+  /*! None */
+
   /* ======================== cart_detail ======================= */
   .product-property h2 {
     font-size: 1.4em;
@@ -3059,7 +3073,7 @@ body {
   /* =================== admin_address_create =================== */
   /*! None */
 
-  /* ===================== admin_address_user_list =================== */
+  /* =================== admin_address_user_list ================ */
   /*! None */
 
   /* ================== admin_address_detail ==================== */
@@ -3107,12 +3121,7 @@ body {
   /*! None */
 
   /* ========================= error404 ========================= */
-  #error-404 {
-    font-size: 4.2em;
-  }
-  #back-home-404-link {
-    font-size: 1.2em;
-  }
+  /*! None */
 }
 
 /* ============================================================ */
@@ -3129,10 +3138,6 @@ body {
   .burger-menu-opening-button,
   .burger-menu-closing-button {
     margin-left: 1.5em;
-  }
-
-  #delete-my-user-account-button {
-    width: 45%;
   }
 
   /* ============================================================ */
@@ -3157,6 +3162,10 @@ body {
   #create-purchase-link,
   #create-delivery-mode-link {
     width: 22%;
+  }
+
+  .page__link.page__link-delete-my-user-account {
+    width: 30%;
   }
 
   /* ============================================================ */
@@ -3290,6 +3299,12 @@ body {
   /* ======================= user_profile ======================= */
   /*! None */
 
+  /* ===================== user_delete_request =================== */
+  /*! None */
+
+  /* =================== user_reactivate_request ================= */
+  /*! None */
+
   /* ======================== cart_detail ======================= */
   .product-property h2 {
     font-size: 1.4em;
@@ -3409,7 +3424,7 @@ body {
   /* =================== admin_address_create =================== */
   /*! None */
 
-  /* ===================== admin_address_user_list =================== */
+  /* =================== admin_address_user_list ================ */
   /*! None */
 
   /* ================== admin_address_detail ==================== */
@@ -3485,11 +3500,7 @@ body {
   /*! None */
 
   /* ========================= error404 ========================= */
-  /* #error-404 {
-    font-size: 4.4em;
-  } */
-
-  .block-404 p:first-child {
+  .block-404__p-404 {
     font-size: 4.4em;
   }
 
@@ -3509,7 +3520,7 @@ body {
     width: 35%;
   }
 
-  #delete-my-user-account-link,
+  .page__link.page__link-delete-my-user-account,
   .page__link.page__link-reactivate-account,
   #create-user-link,
   #create-product-link,
@@ -3539,6 +3550,10 @@ body {
   /* ============================================================ */
   .page__icon {
     width: 2em;
+  }
+
+  .page__picture-entity {
+    width: 6em;
   }
 
   /* ============================================================ */
@@ -3591,10 +3606,6 @@ body {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-  }
-
-  #profile-picture-nav-desktop {
-    border-radius: 50%;
   }
 
   /* ============================================================ */
@@ -3718,10 +3729,6 @@ body {
     width: 10%;
   }
 
-  .page__picture-entity {
-    width: 6em;
-  }
-
   /* ========================= app_login ======================== */
   /*! None */
 
@@ -3735,8 +3742,8 @@ body {
   /*! None */
 
   /* ======================= user_profile ======================= */
-  #delete-my-user-account-link,
-  #reactivate-user-account-link {
+  .page__link.page__link-delete-my-user-account,
+  .page__link.page__link-reactivate-account {
     width: 12%;
   }
 
@@ -3744,10 +3751,11 @@ body {
     width: 8em;
   }
 
-  /* #delete-my-user-account-button {
-    font-size: 1.2em;
-    width: 16%;
-  } */
+  /* ===================== user_delete_request =================== */
+  /*! None */
+
+  /* =================== user_reactivate_request ================= */
+  /*! None */
 
   /* ======================== cart_detail ======================= */
   .product {
@@ -3877,16 +3885,16 @@ body {
   }
 
   .table_background-color_green thead tr {
-    background-color: #00ff00;
+    background-color: var(--green);
   }
 
   .table_background-color_green th,
   .table_background-color_green td {
-    border: solid 0.1em #00ff00;
+    border: solid 0.1em var(--green);
   }
 
   .table_background-color_green tbody tr {
-    border: solid 0.1em #00ff00;
+    border: solid 0.1em var(--green);
   }
 
   .table_background-color_red thead tr {
@@ -4016,7 +4024,7 @@ body {
   /* =================== admin_address_create =================== */
   /*! None */
 
-  /* ===================== admin_address_user_list =================== */
+  /* =================== admin_address_user_list ================ */
   /*! None */
 
   /* ================== admin_address_detail ==================== */

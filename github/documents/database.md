@@ -12,7 +12,7 @@
 - lastName
 - civilityTitle
 - picture
-- isActivated 
+- isActivated
 - addresses (OneToMany)
 - purchases (OneToMany)
 - createdAt
@@ -38,12 +38,14 @@ Relation entre **User** & **Address** :
 - name
 - slug
 - category (Many To One) / Allowed to be null : no, but you say yes
+- price
+- description
 - createdAt
 - updatedAt
 
-| id  | name          | slug          | category | createdAt           | createdAt           |
-| --- | ------------- | ------------- | -------- | ------------------- | ------------------- |
-| 1   | Air Force One | air-force-one | shoes    | 2022-02-09 10:03:11 | 2022-02-09 10:03:11 |
+| id  | name          | slug          | category | price | description | createdAt           | createdAt           |
+| --- | ------------- | ------------- | -------- | ----- | ----------- | ------------------- | ------------------- |
+| 1   | T Shirt Rouge | t-shirt-rouge | t-shirt  | 9999  | Lorem...    | 2022-02-09 10:03:11 | 2022-02-09 10:03:11 |
 
 Relation entre **Product** & **Category** :
 
@@ -64,9 +66,9 @@ Relation entre **Product** & **PurchaseItem** :
 - createdAt
 - updatedAt
 
-| id  | name | slug | createdAt           | createdAt           |
-| --- | ---- | ---- | ------------------- | ------------------- |
-| 1   | Shoe | shoe | 2022-02-09 10:03:11 | 2022-02-09 10:03:11 |
+| id  | name    | slug    | createdAt           | createdAt           |
+| --- | ------- | ------- | ------------------- | ------------------- |
+| 1   | T Shirt | t-shirt | 2022-02-09 10:03:11 | 2022-02-09 10:03:11 |
 
 Relation entre **Category** & **Product** :
 
@@ -128,7 +130,7 @@ Relation entre **Purchase** & **PurchaseItem** :
 - Une **Purchase** est liée à de **PurchaseItem** au minimum -> 1 ;
 - Une **Purchase** est liée à de **PurchaseItem** au maximum -> N ;
 
-### **purchase_item**
+### **PurchaseItem**
 
 - id
 - productName
@@ -149,7 +151,7 @@ Relation entre **PurchaseItem** & **Purchase** :
 - Un **PurchaseItem** est lié à combien de **Purchase** au minimum -> 1
 - Un **PurchaseItem** est lié à combien de **Purchase** au maximum -> 1
 
-### **delivery_mode**
+### **DeliveryMode**
 
 - id
 - name

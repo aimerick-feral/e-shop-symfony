@@ -40,7 +40,7 @@ class MainController extends AbstractController
         if ($user && !$user->isIsActivated()) {
             // We redirect the user.
             return $this->redirectToRoute(
-                'user_reactivate_access',
+                'user_reactivate_request',
                 // We set a array of optional data. 
                 [],
                 // We specify the related HTTP response status code.
@@ -240,4 +240,63 @@ class MainController extends AbstractController
             new Response('', 200)
         );
     }
+
+    //! START : test of templated email
+    // /**
+    //  * ...
+    //  * @return Response
+    //  */
+    // #[Route('/toto', name: 'toto', methods: 'GET')]
+    // public function toto(): Response
+    // {
+    //     // We get the logged user.
+    //     /**
+    //      * @var User
+    //      */
+    //     $user = $this->getUser();
+
+    //     // We display our template. 
+    //     return $this->render(
+    //         'emails/contact.html.twig',
+    //         // We set a array of optional data.
+    //         [
+    //             'civilityTitle' => 'Monsieur',
+    //             'firstName' => 'Clark',
+    //             'lastName' => 'KENT',
+    //             'userEmail' => 'clark.kent@email.com',
+    //             'phoneNumber' => '0658748452',
+    //             'message' => 'Le message',
+    //         ],
+    //         // We specify the related HTTP response status code.
+    //         new Response('', 200)
+    //     );
+    // }
+
+    // /**
+    //  * ...
+    //  * @return Response
+    //  */
+    // #[Route('/toto', name: 'toto', methods: 'GET')]
+    // public function toto(): Response
+    // {
+    //     // We get the logged user.
+    //     /**
+    //      * @var User
+    //      */
+    //     $user = $this->getUser();
+
+    //     // We display our template. 
+    //     return $this->render(
+    //         'emails/user/delete-request.html.twig',
+    //         // 'emails/user/delete.html.twig',
+    //         // 'emails/user/reactivation.html.twig',
+    //         // We set a array of optional data.
+    //         [
+    //             'user' => $user,
+    //         ],
+    //         // We specify the related HTTP response status code.
+    //         new Response('', 200)
+    //     );
+    // }
+    //! END : test of templated email
 }

@@ -137,7 +137,7 @@ class Email
             ->from('noreply@e-shop.fr')
             ->to(new Address($user->getEmail(), $user->getFirstName() . ' ' . $user->getLastName()))
             ->subject('Suppression de votre compte')
-            ->htmlTemplate('emails/user/delete-confirmation.html.twig')
+            ->htmlTemplate('emails/user/delete.html.twig')
             ->context([
                 'user' => $user,
             ]);

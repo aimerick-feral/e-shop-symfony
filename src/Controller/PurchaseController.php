@@ -171,7 +171,7 @@ class PurchaseController extends AbstractController
                 $this->entityManagerInterface->persist($purchaseItem);
             }
 
-            //! Not used for now #2 START : comment this code if no checkout. 
+            //! START : comment this code if no checkout. 
             //! START : Stripe checkout.
             // If the payment method chosen by the user have the value of the PHP constant CHECKOUT_METHOD_CREDIT_CARD we start a Stripe checkout. 
             if ($form->get('checkoutMethod')->getData() === Purchase::CHECKOUT_METHOD_CREDIT_CARD) {
@@ -205,9 +205,9 @@ class PurchaseController extends AbstractController
                 $paypalCheckout->showUserInterface();
             }
             // TODO #3 END : Paypal checkout
-            //! Not used for now #2 END : comment this code if no checkout. 
+            //! END : comment this code if no checkout. 
 
-            //! Not used for now #2 START : decomment this code if no checkout. 
+            //! START : decomment this code if no checkout. 
             // // We call the flush() method of the EntityManagerInterface to backup the data in the database.
             // $this->entityManagerInterface->flush();
 
@@ -221,7 +221,7 @@ class PurchaseController extends AbstractController
             //     // We specify the related HTTP response status code.
             //     301
             // );
-            //! Not used for now #2 END : decomment this code if no checkout. 
+            //! END : decomment this code if no checkout. 
         }
 
         // We display our template.
@@ -261,13 +261,13 @@ class PurchaseController extends AbstractController
         $purchases = [];
         // For each $purchase in $user->getPurchases().
         foreach ($user->getPurchases() as $purchase) {
-            //! Not used for now #4 START : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT.
+            //! START : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT.
             // // if the status of the purchase status is identical to the value of the PHP constant STATUS_ABANDONNED_CHECKOUT.
             // if ($purchase->getStatus() === Purchase::STATUS_ABANDONNED_CHECKOUT) {
             //     // We begin the next iteration of the loop so we don't put the purchase in the purchases array. 
             //     continue;
             // }
-            //! Not used for now #4 END : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT.
+            //! END : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT.
 
             // We push each $address in the array.
             $purchases[] = $purchase;

@@ -20,7 +20,7 @@ class UserType extends AbstractType
     {
         $builder
             // We use the addEventlistener method on PRE_SUBMIT to check the data of some fields, before submitting the data to the form.
-            // ->addEventListener(FormEvents::PRE_SUBMIT, [$this, 'onPreSubmit'])
+            ->addEventListener(FormEvents::PRE_SUBMIT, [$this, 'onPreSubmit'])
             ->add('civilityTitle', ChoiceType::class, [
                 'choices' => [
                     User::MAN_CIVILITY_TITLE => User::MAN_CIVILITY_TITLE,
@@ -94,7 +94,7 @@ class UserType extends AbstractType
                 'data' => $user['civilityTitle'],
                 'expanded' => true,
             ]);
-        // TODO #2 END : solve issue on switch civilityTitle.   
+        // TODO #2 END : solve issue on switch civilityTitle.  
 
         // We set the data of the event with the new data of the user.
         $event->setData($user);

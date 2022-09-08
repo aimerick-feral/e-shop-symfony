@@ -191,8 +191,8 @@ class AdminUserType extends AbstractType
             return;
         }
 
-        // We set in uppercase the lastName of the user. 
-        $user['lastName'] = strtoupper($user['lastName']);
+        // // We set in uppercase the last name of the user.
+        // $user['lastName'] = strtoupper($user['lastName']);
 
         // We set the data of the event with the new data of the user.
         $event->setData($user);

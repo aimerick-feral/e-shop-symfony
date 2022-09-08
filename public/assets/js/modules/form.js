@@ -45,9 +45,9 @@ const form = {
   // ========================== INPUTS ==========================
   // User, Product and Contact
   inputs: [],
-  userCivilityTitleProfileInputs: [],
   fileInput: null,
   // User
+  userCivilityTitleProfileInputs: [],
   userEmailInput: null,
   userPasswordInput: null,
   userCivilityTitleInputs: [],
@@ -112,13 +112,13 @@ const form = {
   // Contact
   regexMatchStartBy06Or07: null,
   // Category
-  //! Not used for now #3 START : regex
+  //! START : regex not used
   regexMatchAlphabeticalCharactersWithOrWithoutDiacriticalMarks: null,
   regexMatchAccentedAlphabeticalCharacters: null,
   regexMatchAlphabeticalCharacters: null,
   regexMatchAlphabeticalCharactersAndSpace: null,
   regexMatchAlphabeticalCharactersWithHyphen: null,
-  //! Not used for now #3 END : regex
+  //! END : regex not used
   // Product
   regexMatchNumber: null,
   // Address
@@ -375,6 +375,20 @@ const form = {
     // User, Product and Contact
     form.fileInput = document.querySelector(".form-field__input-file");
 
+    // Contact
+    form.contactSubjectInputs = document.querySelectorAll(
+      ".form-field__input-contact-subject"
+    );
+    // If the DOM elements exist.
+    if (form.contactSubjectInputs) {
+      // We call the form.createDivForEachInputAndLabelOfCheckField() to create a div with a form-field class for each pair of input and label.
+      form.createDivForEachInputAndLabelOfCheckField(form.contactSubjectInputs);
+    }
+    form.phoneNumberInput = document.querySelector(
+      ".form-field__input-phone-number"
+    );
+    form.messageInput = document.querySelector(".form-field__input-message");
+
     // User
     form.userEmailInput = document.querySelector(
       ".form-field__input-user-email"
@@ -426,20 +440,6 @@ const form = {
       label = form.userTermsOfUseInput.nextElementSibling;
       label.setAttribute("for", "user-terms-of-use-input");
     }
-
-    // Contact
-    form.contactSubjectInputs = document.querySelectorAll(
-      ".form-field__input-contact-subject"
-    );
-    // If the DOM elements exist.
-    if (form.contactSubjectInputs) {
-      // We call the form.createDivForEachInputAndLabelOfCheckField() to create a div with a form-field class for each pair of input and label.
-      form.createDivForEachInputAndLabelOfCheckField(form.contactSubjectInputs);
-    }
-    form.phoneNumberInput = document.querySelector(
-      ".form-field__input-phone-number"
-    );
-    form.messageInput = document.querySelector(".form-field__input-message");
 
     // Category
     form.categoryNameInput = document.querySelector(
@@ -724,7 +724,7 @@ const form = {
     form.regexMatchTenNumericCharacters = /^\d{10}$/;
     // Regex that match only value that start with the numeric value 06 or 07.
     form.regexMatchStartBy06Or07 = /^((06)|(07))[0-9]{8}$/;
-    //! Not used for now #3 START : regex
+    //! START : regex not used
     // Regex that match only alphabetical characters with or without diacritical marks.
     regexMatchAlphabeticalCharactersWithOrWithoutDiacriticalMarks =
       /^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$/;
@@ -736,7 +736,7 @@ const form = {
     form.regexMatchAlphabeticalCharactersWithHyphen = /^[A-Za-z-]+$/;
     // Regex that match alphabetical characters in uppercase and lowercase with accentend characters for uppercase and lowercase.
     form.regexMatchAccentedAlphabeticalCharacters = /[A-Za-zÀ-Ÿa-ÿ]/;
-    //! Not used for now #3 END : regex
+    //! END : regex not used
     // The regex accepting only value that contain a digit number.
     form.regexMatchNumber = /\d+/;
     // Regex that match only value who contain 5 numeric characters.
@@ -1313,8 +1313,6 @@ const form = {
           form.fileInput,
           form.errorMessageFileMimeType
         );
-        // We call form.checkUploadedFileSize() to check the size of the uploded file.
-        form.checkUploadedFileSize(form.fileInput, form.errorMessageFileSize);
       }
     }
 
@@ -1331,8 +1329,6 @@ const form = {
           form.fileInput,
           form.errorMessageFileMimeType
         );
-        // We call form.checkUploadedFileSize() to check the size of the uploded file.
-        form.checkUploadedFileSize(form.fileInput, form.errorMessageFileSize);
       }
     }
     if (
@@ -1508,8 +1504,6 @@ const form = {
         form.fileInput,
         form.errorMessageFileMimeType
       );
-      // We call form.checkUploadedFileSize() to check the size of the uploded file.
-      form.checkUploadedFileSize(form.fileInput, form.errorMessageFileSize);
       // We call form.submitFormIfNoError() with form.adminCreateProductForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.adminCreateProductForm);
     }
@@ -1523,8 +1517,6 @@ const form = {
           form.fileInput,
           form.errorMessageFileMimeType
         );
-        // We call form.checkUploadedFileSize() to check the size of the uploded file.
-        form.checkUploadedFileSize(form.fileInput, form.errorMessageFileSize);
       }
       // We call form.submitFormIfNoError() with form.adminUpdateProductForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.adminUpdateProductForm);
@@ -1749,8 +1741,6 @@ const form = {
         form.fileInput,
         form.errorMessageFileMimeType
       );
-      // We call form.checkUploadedFileSize() to check the size of the uploded file.
-      form.checkUploadedFileSize(form.fileInput, form.errorMessageFileSize);
       // We call form.submitFormIfNoError() with form.adminCreateDeliveryModeForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.adminCreateDeliveryModeForm);
     }
@@ -1764,8 +1754,6 @@ const form = {
           form.fileInput,
           form.errorMessageFileMimeType
         );
-        // We call form.checkUploadedFileSize() to check the size of the uploded file.
-        form.checkUploadedFileSize(form.fileInput, form.errorMessageFileSize);
       }
       // We call form.submitFormIfNoError() with form.adminUpdateDeliveryModeForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.adminUpdateDeliveryModeForm);
@@ -1847,23 +1835,6 @@ const form = {
       // We call tools.addDisplayNone() in order to add the display-none class to errorsMessageEmpty.
       tools.addDisplayNone(errorMessageEmpty);
 
-      // If input contain at leat 8 characters.
-      if (form.regexMatchAtLeastHeightCharacters.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
-        form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageLength.
-        tools.addDisplayNone(errorMessageLength);
-      }
-      // Else input is empty.
-      else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
-        form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageLength.
-        tools.removeDisplayNone(errorMessageLength);
-        // We add a error to form.numberOfErrors.
-        form.numberOfErrors++;
-      }
-
       // If input contain at leat 1 lowercase alphabetical character.
       if (form.regexMatchAtLeastOneLowercase.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
@@ -1928,6 +1899,23 @@ const form = {
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageSpecialCharacter.
         tools.removeDisplayNone(errorMessageSpecialCharacter);
+        // We add a error to form.numberOfErrors.
+        form.numberOfErrors++;
+      }
+
+      // If input contain at leat 8 characters.
+      if (form.regexMatchAtLeastHeightCharacters.test(input.value)) {
+        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        form.switchInputOutlineColor(input, form.colors.green);
+        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageLength.
+        tools.addDisplayNone(errorMessageLength);
+      }
+      // Else input is empty.
+      else {
+        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        form.switchInputOutlineColor(input, form.colors.red);
+        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageLength.
+        tools.removeDisplayNone(errorMessageLength);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
       }
@@ -2080,6 +2068,8 @@ const form = {
           tools.addDisplayNone(errorMessageFileMimeType);
           // We confirm that a authorizedMimeTypes is authorized.
           isAuthorized = true;
+          // We call form.checkUploadedFileSize() to check the size of the uploded file.
+          form.checkUploadedFileSize(input, form.errorMessageFileSize);
           // We leave checkUploadedFileMimeType();
           return;
         }
@@ -2860,7 +2850,7 @@ const form = {
     // We get the labels content in purchaseConfirmPayementMethod.
     const labels = purchaseConfirmPayementMethod.getElementsByTagName("label");
 
-    //! Not used for now #6 START : create img tag with loop
+    //! START : create img tag with loop
     // // We set the number of img tag we need for the credit card payement method.
     // let numberOfNeededImgTagForCreditCardPaymentMethod = 3;
     // // We start a counter at 0 and we incremente it until it reach numberOfNeededImgTagForCreditCardPaymentMethod.
@@ -2876,7 +2866,7 @@ const form = {
     //   // We insert the <img> after the label.
     //   labels[0].insertAdjacentElement("afterend", imgTag);
     // }
-    //! Not used for now #6 END : create img tag with loop
+    //! END : create img tag with loop
 
     // We create a empty array for the img tags.
     let imgTags = [];

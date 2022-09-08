@@ -205,7 +205,7 @@ class UserController extends AbstractController
         // We catch the csrfToken that the user submit after his click on the delete my picture button.
         $submittedToken = $request->query->get('token');
 
-        // If the $submittedToken is valid.
+        // If the submitted token is valid.
         if ($this->isCsrfTokenValid('delete-my-user-picture' . $user->getId(), $submittedToken)) {
             //! START : profile picture by default without API.
             // // / We get the current picture of the user that will be his previous picture after the update. 
@@ -281,7 +281,7 @@ class UserController extends AbstractController
                 301
             );
         }
-        // Else the $submittedToken is not valid.
+        // Else the submitted token is not valid.
         else {
             // We redirect the user to the page 403.
             return new Response(
@@ -296,12 +296,12 @@ class UserController extends AbstractController
      * Method that allow a user to delete is account. 
      * @return Response
      */
-    #[Route('/demande-supression-compte', name: 'user_delete_access', methods: 'GET', priority: 5)]
-    public function deleteAccountAccess(): Response
+    #[Route('/demande-supression-compte', name: 'user_delete_request', methods: 'GET', priority: 5)]
+    public function deleteRequest(): Response
     {
         // We display our template. 
         return $this->render(
-            'user/delete-account-access.html.twig',
+            'user/delete-request.html.twig',
             // We set a array of optional data.
             [],
             // We specify the related HTTP response status code.
@@ -402,12 +402,12 @@ class UserController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    #[Route('/demande-reactivation-compte', name: 'user_reactivate_access', methods: 'GET')]
-    public function reactivateAccountAccess(): Response
+    #[Route('/demande-reactivation-compte', name: 'user_reactivate_request', methods: 'GET')]
+    public function reactivateRequest(): Response
     {
         // We display our template. 
         return $this->render(
-            'user/reactivate-user-account-access.html.twig',
+            'user/reactivate-request.html.twig',
             // We set a array of optional data.
             [],
             // We specify the related HTTP response status code.
@@ -477,32 +477,4 @@ class UserController extends AbstractController
             );
         }
     }
-
-    //! Not used for now #7 START : test of templated email
-    // /**
-    //  * Method that display the secure_payment page. 
-    //  * @return Response
-    //  */
-    // #[Route('/toto', name: 'toto', methods: 'GET')]
-    // public function toto(): Response
-    // {
-    //     // We get the logged user.
-    //     /**
-    //      * @var User
-    //      */
-    //     $user = $this->getUser();
-
-    //     // We display our template. 
-    //     return $this->render(
-    //         'emails/user/delete-confirmation.html.twig',
-    //         // We set a array of optional data.
-    //         [
-    //             'user' => $user,
-    //         ],
-    //         // We specify the related HTTP response status code.
-    //         new Response('', 200)
-    //     );
-    // }
-    //! Not used for now #7 END : test of templated email
-
 }

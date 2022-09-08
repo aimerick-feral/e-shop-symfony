@@ -543,7 +543,7 @@ const font = {
       font.lakersSwitchSlider,
       "::before"
     );
-    font.spiderManSwitch = document.getElementById("mario-switch-input");
+    font.spiderManSwitch = document.getElementById("spider-man-switch-input");
     font.spiderManSwitchSlider = document.querySelector(
       ".switch__slider-spider-man"
     );
