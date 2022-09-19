@@ -8,7 +8,6 @@
 				e-shop
 			{% endblock %}
 		</title>
-		{# START : styles CSS #}
 		{% block stylesheets %}
 			<link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}"/>
 			<link
@@ -23,37 +22,23 @@
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 		{% endblock %}
-		{# END : styles CSS #}
 	</head>
 	<body>
 		<div
 			class="wrapper">
-			{# START : header #}
 			{% block header %}
 				{% include "layout/header.html.twig" %}
 			{% endblock %}
-			{# END : header #}
-			{# START : mobile navigation #}
 			{% include "partials/_nav-mobile.html.twig" %}
-			{# END : mobile navigation #}
 			{% include "partials/_switch.html.twig" %}
-			{# START : body #}
-			{# START : flash messages #}
 			{% include "partials/_flash.html.twig" %}
-			{# END : flash messages #}
-			{# START : maintenance message or construction message #}
 			{# {% include "partials/_message.html.twig" %} #}
-			{# END : umaintenance message or construction message #}{# START : body #}
 			{% block body %}
 			{% endblock %}
-			{# END : body #}
-			{# START : footer #}
-				{% block footer %}
+			{% block footer %}
 			{% include "layout/footer.html.twig" %}
-		{% endblock %}
-			{# END : footer #}
+			{% endblock %}
 		</div>
-		{# START : script JS #}
 		{% block javascripts %}
 			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
@@ -69,6 +54,5 @@
 			<script type="text/javascript" src="{{ asset('assets/js/modules/chart.js') }}"></script>
 			<script type="text/javascript" src="{{ asset('assets/js/modules/customerService.js') }}"></script>
 		{% endblock %}
-		{# END : script JS #}
 	</body>
 </html>

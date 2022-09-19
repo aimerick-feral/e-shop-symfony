@@ -56,7 +56,7 @@ const mode = {
     mode.loadMode();
 
     // When the app is loaded we check or uncheck the switch according to the localStorage data.
-    mode.handleCheckedSwitch();
+    mode.checkRightColorSwitchsOnLoad();
   },
   /**
    * Method that get the backgroundColor which is back up in localStorage and call the switchBackgroundColor() method to change the color with the value of backgroundColor.
@@ -91,8 +91,8 @@ const mode = {
    * Method that check or uncheck the switch according to the localStorage data.
    * @return {void}
    */
-  handleCheckedSwitch: function () {
-    // console.log("mode.handleCheckedSwitch()");
+  checkRightColorSwitchsOnLoad: function () {
+    // console.log("mode.checkRightColorSwitchsOnLoad()");
 
     // If this the value of mode is light.
     if (mode.backgroundColor === "light") {

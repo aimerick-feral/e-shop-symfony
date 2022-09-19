@@ -517,7 +517,10 @@ const font = {
     // For each colorSwitch of font.colorSwitchs.
     for (let colorSwitch of font.colorSwitchs) {
       // We add a listener and a handler on the click event.
-      colorSwitch.addEventListener("click", font.handleSelectColorSwitch);
+      colorSwitch.addEventListener(
+        "click",
+        font.handleColorSwitchsAccordingToCheckedColorSwitch
+      );
     }
 
     // All the font color switchs.
@@ -655,7 +658,7 @@ const font = {
     font.loadFont();
 
     // When the app is loaded we check or uncheck the switch according to the localStorage data.
-    font.handleCheckedSwitch();
+    font.checkRightColorSwitchsOnLoad();
 
     // We call font.switchColorForContrast() to change the color of some elements according to the value of font.color.
     font.switchColorForContrast();
@@ -727,8 +730,8 @@ const font = {
    * Method that check or uncheck the switch according to the localStorage data.
    * @return {void}
    */
-  handleCheckedSwitch: function () {
-    // console.log("font.handleCheckedSwitch()");
+  checkRightColorSwitchsOnLoad: function () {
+    // console.log("font.checkRightColorSwitchsOnLoad()");
 
     // We get the value backup in localStorage.
     font.color = localStorage.getItem("font");
@@ -933,8 +936,8 @@ const font = {
    * @param {Event} event
    * @return {void}
    */
-  handleSelectColorSwitch: function (event) {
-    // console.log("font.handleSelectColorSwitch()");
+  handleColorSwitchsAccordingToCheckedColorSwitch: function (event) {
+    // console.log("font.handleColorSwitchsAccordingToCheckedColorSwitch()");
 
     // We load the module api.js.
     api.init();
@@ -957,7 +960,7 @@ const font = {
             // When the app is loaded we load to the page the mode.backgroundColor which is backup in localSatorage.
             mode.loadMode();
             // When the app is loaded we check or uncheck the switch according to the localStorage data.
-            mode.handleCheckedSwitch();
+            mode.checkRightColorSwitchsOnLoad();
             // If font.color is knick.
             if (font.color === "knick") {
               // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
@@ -1054,7 +1057,7 @@ const font = {
             // When the app is loaded we load to the page the mode.backgroundColor which is backup in localSatorage.
             mode.loadMode();
             // When the app is loaded we check or uncheck the switch according to the localStorage data.
-            mode.handleCheckedSwitch();
+            mode.checkRightColorSwitchsOnLoad();
           }
           // Else if the selected switch is one of the fontSwitch.
           else if (clickedSwitch === fontSwitch) {
