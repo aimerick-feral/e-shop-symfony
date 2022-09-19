@@ -1,6 +1,6 @@
-# E-Shop 🛒
+# E-Shop-Symfony 🛒
 
-The [e-shop](https://oclock.io/) project is demo of a e-commerce application that I develop in order to practice the web developement langagues and increse my knowledge.
+The **E-Shop-Symfony** project is demo of a e-commerce application that I develop in order to practice the web developement langagues and increse my knowledge.
 
 ## :toolbox: **Stack**
 
@@ -29,18 +29,18 @@ The [e-shop](https://oclock.io/) project is demo of a e-commerce application tha
 
 ## ⚙️ Database Set Up
 
-The e-shop project use the **MariaDB** Relational Database Management System in its verion 10.7.3.  
+The E-Shop-Symfony project use the **MariaDB** Relational Database Management System in its verion 10.7.3.  
  The structure of the database is the following :
 
 ![](github/images/database.png)
 
 ## 👀 Glimpse 
 
-▶️ e-shop  - Desktop tour with a administrator role :  
+▶️ E-Shop-Symfony  - Desktop tour with a administrator role :  
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/3DFKYjMYD3o/0.jpg)](https://www.youtube.com/watch?v=3DFKYjMYD3o&t=182s)    
 
 
-▶️ e-shop  - Mobile tour with a administrator role :   
+▶️ E-Shop-Symfony  - Mobile tour with a administrator role :   
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/mQNfD4YjoVY/0.jpg)](https://www.youtube.com/watch?v=mQNfD4YjoVY&t=62s)  
 
 
