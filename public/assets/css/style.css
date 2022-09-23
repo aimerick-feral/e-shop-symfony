@@ -25,6 +25,7 @@
   --slimy-green: #009933;
   --sepia: #663300;
   --dodger-blue: #0092f2;
+  /* --cornflower-blue: #7799e5; */
   /* flash-success */
   --ao-english: #00802b;
   --mint-green: #b3ffb3;
@@ -832,8 +833,16 @@ body {
     margin-bottom: 1em;
   }
 
+  .page__link-create {
+    width: 55%;
+  }
+
   .page__link.card__link {
     width: 100%;
+  }
+
+  .page__link-delete-user-picture {
+    margin: 1em 0 1.5em 0;
   }
 
   /* ============================================================ */
@@ -1951,10 +1960,6 @@ body {
   /*! None */
 
   /* ======================= user_profile ======================= */
-  .page__link.page__link-delete-user-picture {
-    margin: 1em 0 1.5em 0;
-  }
-
   .page__link.page__link-delete-my-user-account,
   .page__link.page__link-reactivate-account {
     width: 56%;
@@ -2245,7 +2250,6 @@ body {
     width: 100%;
   }
 
-  #create-user-link,
   #create-category-link,
   #create-product-link,
   #create-address-link,
@@ -2266,6 +2270,11 @@ body {
 
   .admin-preview p {
     text-align: center;
+  }
+
+  .admin-preview p:first-child,
+  .admin-detail p:first-child {
+    margin-top: 1em;
   }
 
   .admin-preview .page__link-text:nth-child(1) {
@@ -2338,11 +2347,6 @@ body {
     color: var(--red);
   }
 
-  .admin-preview p:first-child,
-  .admin-detail p:first-child {
-    margin-top: 1em;
-  }
-
   /* ===================== admin_user_detail ==================== */
   .admin-detail {
     display: flex;
@@ -2362,9 +2366,7 @@ body {
   /*! None */
 
   /* ===================== admin_user_update ==================== */
-  #delete-user-picture-button {
-    margin-bottom: 1.5em;
-  }
+  /*! None */
 
   /* =================== admin_user_statistics ================== */
   .block-chart {
@@ -2680,7 +2682,7 @@ body {
     margin: 0;
   }
 
-  .block-404__p-404_color_red  {
+  .block-404__p-404_color_red {
     color: var(--red);
   }
 
@@ -3151,11 +3153,14 @@ body {
     width: 90%;
   }
 
+  .page__link-create {
+    width: 22%;
+  }
+
   #purchase-link {
     width: 30%;
   }
 
-  #create-user-link,
   #create-category-link,
   #create-product-link,
   #create-address-link,
@@ -3522,7 +3527,6 @@ body {
 
   .page__link.page__link-delete-my-user-account,
   .page__link.page__link-reactivate-account,
-  #create-user-link,
   #create-product-link,
   #create-category-link,
   #create-address-link,
@@ -3536,6 +3540,10 @@ body {
   /* ============================================================ */
   .page__link {
     width: 35%;
+  }
+
+  .page__link-create {
+    width: 12%;
   }
 
   #desktop-login-link,

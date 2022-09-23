@@ -113,7 +113,8 @@ class AdminUserController extends AbstractController
             $this->entityManagerInterface->flush();
 
             // We display a flash message for the user.
-            $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' a bien été créé.');
+            // $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' a bien été créé.'); 
+            $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . $user->getLastName() . ' a bien été créé.');
 
             // We redirect the user.
             return $this->redirectToRoute(
@@ -345,7 +346,7 @@ class AdminUserController extends AbstractController
             $this->entityManagerInterface->flush();
 
             // We display a flash message for the user.
-            $this->addFlash('success', 'Le profil de ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' a bien été mis à jour.');
+            $this->addFlash('success', 'Le profil de ' . $user->getFirstName() . ' ' . $user->getLastName() . ' a bien été mis à jour.');
 
             // We redirect the user.
             return $this->redirectToRoute(
@@ -447,7 +448,7 @@ class AdminUserController extends AbstractController
             $this->entityManagerInterface->flush();
 
             // We display a flash message for the user.
-            $this->addFlash('success', 'La photo de profil de ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' a bien été supprimée. Une photo de profil par défaut a été mise en place.');
+            $this->addFlash('success', 'La photo de profil de ' . $user->getFirstName() . ' ' . $user->getLastName() . ' a bien été supprimée. Une photo de profil par défaut a été mise en place.');
 
             // We redirect the user.
             return $this->redirectToRoute(
@@ -526,69 +527,71 @@ class AdminUserController extends AbstractController
 
         // If the CSRF token is valid.
         if ($this->isCsrfTokenValid('admin-user-delete' . $user->getId(), $submittedToken)) {
-            // If the user account is activated. 
-            if ($user->isIsActivated()) {
-                // We set to false the value of the activated property.
-                $user->setIsActivated(false);
-
-                // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
-                $this->entityManagerInterface->flush();
-
-                // We call the informUserOfRequestAccountDeletion() method of the Email service with the data of the user in argument.
-                $this->email->informUserOfRequestAccountDeletion($user);
-
-                // We display a flash message for the user.
-                $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' a bien été désactivé. Il sera suprimé dans 30 jours.');
-
-                // We redirect the user.
-                return $this->redirectToRoute(
-                    'admin_user_list',
-                    // We set a array of optional data.
-                    [],
-                    // We specify the related HTTP response status code.
-                    301
-                );
-            }
-            // Else we manage the possible error.
-            else {
-                // We redirect the user to the page 403.
-                return new Response(
-                    'Action interdite',
-                    // We specify the related HTTP response status code.
-                    403
-                );
-            }
-
             // TODO #1 START : run SQL script to delete a user 30 day after the request.
-            // // For each $adresse in $user->getAddresses().
-            // foreach ($user->getAddresses() as $address) {
-            //     // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-            //     $this->entityManagerInterface->remove($address);
-            // }
+            // For each $adresse in $user->getAddresses().
+            foreach ($user->getAddresses() as $address) {
+                // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+                $this->entityManagerInterface->remove($address);
+            }
 
-            // // // For each $purchase in $user->getPurchases().
-            // // foreach ($user->getPurchases() as $purchase) {
-            // //     // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-            // //     $this->entityManagerInterface->remove($purchase);
-            // // }
+            // For each $purchase in $user->getPurchases().
+            foreach ($user->getPurchases() as $purchase) {
+                // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+                $this->entityManagerInterface->remove($purchase);
+            }
 
-            // // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-            // $this->entityManagerInterface->remove($user);
-            // // We call the flush() method of the EntityManagerInterface to backup the data in the database.
-            // $this->entityManagerInterface->flush();
+            // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+            $this->entityManagerInterface->remove($user);
+            // We call the flush() method of the EntityManagerInterface to backup the data in the database.
+            $this->entityManagerInterface->flush();
 
-            // // We display a flash message for the user.
-            // $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' a bien été supprimé.');
+            // We display a flash message for the user.
+            $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . $user->getLastName() . ' a bien été supprimé.');
 
-            // // We redirect the user.
-            // return $this->redirectToRoute(
-            //     'admin_user_list',
-            //     // We set a array of optional data.
-            //     [],
-            //     // We specify the related HTTP response status code.
-            //     301
-            // );
+            // We redirect the user.
+            return $this->redirectToRoute(
+                'admin_user_list',
+                // We set a array of optional data.
+                [],
+                // We specify the related HTTP response status code.
+                301
+            );
             // TODO #1 end : run SQL script to delete a user 30 day after the request.
+
+            //! START : user account deactivation
+            // // If the user account is activated. 
+            // if ($user->isIsActivated()) {
+            //     // We set to false the value of the activated property.
+            //     $user->setIsActivated(false);
+
+            //     // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
+            //     $this->entityManagerInterface->flush();
+
+            //     // We call the informUserOfRequestAccountDeletion() method of the Email service with the data of the user in argument.
+            //     $this->email->informUserOfRequestAccountDeletion($user);
+
+            //     // We display a flash message for the user.
+            //     $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . $user->getLastName() . ' a bien été désactivé. Il sera suprimé dans 30 jours.');
+
+            //     // We redirect the user.
+            //     return $this->redirectToRoute(
+            //         'admin_user_list',
+            //         // We set a array of optional data.
+            //         [],
+            //         // We specify the related HTTP response status code.
+            //         301
+            //     );
+            // }
+            // // Else we manage the possible error.
+            // else {
+            //     // We redirect the user to the page 403.
+            //     return new Response(
+            //         'Action interdite',
+            //         // We specify the related HTTP response status code.
+            //         403
+            //     );
+            // }
+            //! END : user account deactivation
         }
         // Else the CSRF token is not valid.
         else {
@@ -607,7 +610,7 @@ class AdminUserController extends AbstractController
         // $this->entityManagerInterface->flush();
 
         // // We display a flash message for the user.
-        // $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' a bien été supprimé.');
+        // $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . $user->getLastName() . ' a bien été supprimé.');
 
         // // We redirect the user.
         // return $this->redirectToRoute(
@@ -620,60 +623,62 @@ class AdminUserController extends AbstractController
         //! END : if we use the API
     }
 
-    /** 
-     * Metho that reactivate the user account. 
-     * @param Request $request
-     * @return Response
-     */
-    #[Route('/admin/utilisateurs/{id}/reactivation', name: 'admin_user_reactivate', methods: 'GET|POST', requirements: ['id' => '\d+'])]
-    public function reactivate(Request $request, User $user): Response
-    {
-        // We get the CSRF token.
-        $submittedToken = $request->request->get('token') ?? $request->query->get('token');
+    //! START : user account deactivation
+    // /** 
+    //  * Metho that reactivate the user account. 
+    //  * @param Request $request
+    //  * @return Response
+    //  */
+    // #[Route('/admin/utilisateurs/{id}/reactivation', name: 'admin_user_reactivate', methods: 'GET|POST', requirements: ['id' => '\d+'])]
+    // public function reactivate(Request $request, User $user): Response
+    // {
+    //     // We get the CSRF token.
+    //     $submittedToken = $request->request->get('token') ?? $request->query->get('token');
 
-        // If the CSRF token is valid. 
-        if ($this->isCsrfTokenValid('admin-user-reactivate' . $user->getId(), $submittedToken)) {
-            // If the user account is not activated. 
-            if (!$user->isIsActivated()) {
-                // We set to false the value of the activated property.
-                $user->setIsActivated(true);
+    //     // If the CSRF token is valid. 
+    //     if ($this->isCsrfTokenValid('admin-user-reactivate' . $user->getId(), $submittedToken)) {
+    //         // If the user account is not activated. 
+    //         if (!$user->isIsActivated()) {
+    //             // We set to false the value of the activated property.
+    //             $user->setIsActivated(true);
 
-                // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
-                $this->entityManagerInterface->flush();
+    //             // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
+    //             $this->entityManagerInterface->flush();
 
-                // We call the informUserOfRequestAccountDeletion() method of the Email service with the data of the user in argument.
-                $this->email->informUserOfAccountReactivation($user);
+    //             // We call the informUserOfRequestAccountDeletion() method of the Email service with the data of the user in argument.
+    //             $this->email->informUserOfAccountReactivation($user);
 
-                // We display a flash message for the user.
-                $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' a bien été réactivé.');
+    //             // We display a flash message for the user.
+    //             $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . $user->getLastName() . ' a bien été réactivé.');
 
-                // We redirect the user.
-                return $this->redirectToRoute(
-                    'admin_user_list',
-                    // We set a array of optional data. 
-                    [],
-                    // We specify the related HTTP response status code.
-                    301
-                );
-            }
-            // Else we manage the possible error.
-            else {
-                // We redirect the user to the page 403.
-                return new Response(
-                    'Action interdite',
-                    // We specify the related HTTP response status code.
-                    403
-                );
-            }
-        }
-        // Else the CSRF token is not valid.
-        else {
-            // We redirect the user to the page 403.
-            return new Response(
-                'Action interdite',
-                // We specify the related HTTP response status code.
-                403
-            );
-        }
-    }
+    //             // We redirect the user.
+    //             return $this->redirectToRoute(
+    //                 'admin_user_list',
+    //                 // We set a array of optional data. 
+    //                 [],
+    //                 // We specify the related HTTP response status code.
+    //                 301
+    //             );
+    //         }
+    //         // Else we manage the possible error.
+    //         else {
+    //             // We redirect the user to the page 403.
+    //             return new Response(
+    //                 'Action interdite',
+    //                 // We specify the related HTTP response status code.
+    //                 403
+    //             );
+    //         }
+    //     }
+    //     // Else the CSRF token is not valid.
+    //     else {
+    //         // We redirect the user to the page 403.
+    //         return new Response(
+    //             'Action interdite',
+    //             // We specify the related HTTP response status code.
+    //             403
+    //         );
+    //     }
+    // }
+    //! END : user account deactivation
 }

@@ -18,19 +18,8 @@
 		{# START :adminUpdateUserForm #}
 		{{ form_start(adminUpdateUserForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'admin-update-user-form' }}) }}
 		{# picture #}
-		<div
-			class="form-field-user-picture">
+		<div class="form-field-user-picture">
 			<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/users/' ~ user.picture) }}" alt="{{ user.firstName }}"/>
-		</div>
-		{# delete picture #}
-		<a class="page__link page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-user-picture-button" href="{{ path('admin_user_delete_picture', {'id':user.id, 'token':csrf_token('delete-user-picture' ~ user.id)} ) }}">Supprimer la photo</a>
-		{# civilityTitle #}
-		<div class="form-field">
-			{{ form_widget(adminUpdateUserForm.civilityTitle) }}
-			<p class="error-message error-message_color_red error-message__user-gender-not-checked display-none">
-				Merci de sélectionnner une valeur.
-			</p>
-			{{ form_errors(adminUpdateUserForm.civilityTitle) }}
 		</div>
 		{# upload #}
 		<div class="form-field">
@@ -43,6 +32,16 @@
 				Merci de télécharger un fichier de maximum 300 000 bytes.
 			</p>
 			{{ form_errors(adminUpdateUserForm.upload) }}
+		</div>
+		{# delete picture #}
+		<a class="page__link page__link-delete-user-picture page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-user-picture-link" href="{{ path('admin_user_delete_picture', {'id':user.id, 'token':csrf_token('delete-user-picture' ~ user.id)} ) }}">Supprimer la photo</a>
+		{# civilityTitle #}
+		<div class="form-field">
+			{{ form_widget(adminUpdateUserForm.civilityTitle) }}
+			<p class="error-message error-message_color_red error-message__user-gender-not-checked display-none">
+				Merci de sélectionnner une valeur.
+			</p>
+			{{ form_errors(adminUpdateUserForm.civilityTitle) }}
 		</div>
 		{# firstName #}
 		<div class="form-field">

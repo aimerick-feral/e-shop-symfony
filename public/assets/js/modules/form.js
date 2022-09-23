@@ -193,9 +193,7 @@ const form = {
   registrationButton: null,
   loginButton: null,
   modifyMyUserProfileButton: null,
-  deleteMyUserPictureButton: null,
   updateMyUserProfileButton: null,
-  deleteMyUserAccountButton: null,
   searchUserButton: null,
   adminCreateUserButton: null,
   adminUpdateUserButton: null,
@@ -229,6 +227,10 @@ const form = {
   adminUpdateDeliveryModeButton: null,
   searchDeliveryModeButton: null,
   // =========================== LINKS ==========================
+  // User
+  deleteMyUserPictureLink: null,
+  deleteMyUserAccountLink: null,
+  // Address
   createAddressLink: null,
   addNewAddressLink: null,
   // ====================== PURCHASE STEPS ======================
@@ -327,7 +329,7 @@ const form = {
       "search-delivery-mode-form"
     );
 
-    // ==================== FIELDS ==================== //
+    // ==================== FIELDS ====================
 
     form.uploadFileField = document.querySelector(".form-field-upload-file");
     form.purchaseBillingAddressField = document.querySelector(
@@ -346,9 +348,9 @@ const form = {
       ".form-field-purchase-terms-of-sale"
     );
 
-    // ==================== INPUTS ==================== //
+    // ==================== INPUTS ====================
 
-    // All the form's input.
+    // All the form's inputs.
     form.inputs = Array.from(document.querySelectorAll(".form-field__input"));
     // Foreach input of form.inputs.
     for (let input of form.inputs) {
@@ -358,7 +360,7 @@ const form = {
       input.addEventListener("blur", form.handleRemoveInputsFocusWithin);
     }
 
-    // All the input type of radio or checkbox.
+    // All the inputs type of radio related to the user civility title on the profile page.
     form.userCivilityTitleProfileInputs = document.querySelectorAll(
       ".form-field__input-user-civility-title-profile"
     );
@@ -369,8 +371,6 @@ const form = {
       // We call form.displayNoneInputNotChecked with the elements in argument.
       form.displayNoneInputNotChecked(input, label);
     }
-
-    // Each inputs elements
 
     // User, Product and Contact
     form.fileInput = document.querySelector(".form-field__input-file");
@@ -700,7 +700,7 @@ const form = {
         form.purchasePendingCheckoutInput.nextElementSibling
       );
     }
-    // ==================== REGEX ==================== //
+    // ==================== REGEX ====================
 
     // The $ means : ????
     // The +$ means : ????
@@ -742,12 +742,12 @@ const form = {
     // Regex that match only value who contain 5 numeric characters.
     form.regexMatchFiveNumericCharacters = /^\d{5}$/;
 
-    // ==================== ERRORS ==================== //
+    // ==================== ERRORS ====================
 
     // We initialize a error counter.
     form.numberOfErrors = 0;
 
-    // ==================== ERROR MESSAGES ==================== //
+    // ==================== ERROR MESSAGES ====================
 
     // User, Product and Contact
 
@@ -972,7 +972,7 @@ const form = {
       ".error-message__delivery-mode-description-empty"
     );
 
-    // ==================== BUTTONS ==================== //
+    // ==================== BUTTONS ====================
 
     // All the submit buttons.
     form.submitButtons = document.querySelectorAll(".page__button-submit");
@@ -1001,16 +1001,9 @@ const form = {
         form.handleUserProfileUpdate
       );
     }
-    form.deleteMyUserPictureButton = document.getElementById(
-      "delete-my-user-picture-button"
-    );
     form.updateMyUserProfileButton = document.getElementById(
       "update-my-user-profile-button"
     );
-    form.deleteMyUserAccountButton = document.getElementById(
-      "delete-my-user-account-link"
-    );
-
     form.searchUserButton = document.getElementById("search-user-button");
     form.adminCreateUserButton = document.getElementById(
       "admin-create-user-button"
@@ -1095,12 +1088,21 @@ const form = {
       ".error-message__terms-of-sale-not-checked"
     );
 
-    // ==================== LINKS ==================== //
+    // ==================== LINKS ====================
 
+    // User
+    form.deleteMyUserPictureLink = document.getElementById(
+      "delete-my-user-picture-link"
+    );
+    form.deleteMyUserAccountLink = document.getElementById(
+      "delete-my-user-account-link"
+    );
+
+    // Address
     form.createAddressLink = document.getElementById("create-address-link");
     form.addNewAddressLink = document.getElementById("add-new-address-link");
 
-    // ==================== PURCHASE STEPS ==================== //
+    // ==================== PURCHASE STEPS ====================
 
     // All the purchase steps.
     form.purchaseSteps = document.querySelectorAll(".page__purchase-step");
@@ -1391,7 +1393,7 @@ const form = {
 
     // If clickedButton is form.adminUpdateUserButton.
     if (clickedButton == form.adminUpdateUserButton) {
-      // We call form.submitFormIfNoError() with form.adminCreateUserForm in argument to check if the form contain some errors and submit him if not.
+      // We call form.submitFormIfNoError() with form.adminUpdateUserForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.adminUpdateUserForm);
     }
 
@@ -2424,9 +2426,9 @@ const form = {
       // We call tools.removeDisplayNone() in order in order to remove the display-none class from the elements.
       tools.removeDisplayNone(
         form.uploadFileField,
-        form.deleteMyUserPictureButton,
+        form.deleteMyUserPictureLink,
         form.updateMyUserProfileButton,
-        form.deleteMyUserAccountButton,
+        form.deleteMyUserAccountLink,
         form.userCivilityTitleManInput,
         form.userGenderManLabel,
         form.userCivilityTitleWomanInput,
@@ -2438,8 +2440,8 @@ const form = {
       // We call tools.addDisplayNone() in order in order to add the display-none class to the elements.
       tools.addDisplayNone(
         form.modifyMyUserProfileButton,
-        form.deleteMyUserPictureButton,
-        form.deleteMyUserAccountButton
+        form.deleteMyUserPictureLink,
+        form.deleteMyUserAccountLink
       );
     }
   },

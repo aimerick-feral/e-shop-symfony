@@ -292,22 +292,24 @@ class UserController extends AbstractController
         }
     }
 
-    /** 
-     * Method that allow a user to delete is account. 
-     * @return Response
-     */
-    #[Route('/demande-supression-compte', name: 'user_delete_request', methods: 'GET', priority: 5)]
-    public function deleteRequest(): Response
-    {
-        // We display our template. 
-        return $this->render(
-            'user/delete-request.html.twig',
-            // We set a array of optional data.
-            [],
-            // We specify the related HTTP response status code.
-            new Response('', 200)
-        );
-    }
+    //! START : user account deactivation
+    // /** 
+    //  * Method that allow a user to delete is account. 
+    //  * @return Response
+    //  */
+    // #[Route('/demande-supression-compte', name: 'user_delete_request', methods: 'GET', priority: 5)]
+    // public function deleteRequest(): Response
+    // {
+    //     // We display our template. 
+    //     return $this->render(
+    //         'user/delete-request.html.twig',
+    //         // We set a array of optional data.
+    //         [],
+    //         // We specify the related HTTP response status code.
+    //         new Response('', 200)
+    //     );
+    // }
+    //! END : user account deactivation
 
     /** 
      * Method that deactivate the user. 
@@ -328,63 +330,65 @@ class UserController extends AbstractController
 
         // If the CSRF token is valid. 
         if ($this->isCsrfTokenValid('user-delete' . $user->getId(), $submittedToken)) {
-            // If the user account is activated. 
-            if ($user->isIsActivated()) {
-                // We set to false the value of the activated property.
-                $user->setIsActivated(false);
-
-                // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
-                $this->entityManagerInterface->flush();
-
-                // We call the informUserOfRequestAccountDeletion() method of the Email service with the data of the user in argument.
-                $this->email->informUserOfRequestAccountDeletion($user);
-
-                // We redirect the user.
-                return $this->redirectToRoute(
-                    'app_logout',
-                    // We set a array of optional data. 
-                    [],
-                    // We specify the related HTTP response status code.
-                    301
-                );
-            }
-            // Else we manage the possible error.
-            else {
-                // We redirect the user to the page 403.
-                return new Response(
-                    'Action interdite',
-                    // We specify the related HTTP response status code.
-                    403
-                );
-            }
-
             // TODO #1 START : run SQL script to delete a user 30 day after the request.
-            // // For each $adresse in $user->getAddresses().
-            // foreach ($user->getAddresses() as $address) {
-            //     // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-            //     $this->entityManagerInterface->remove($address);
-            // }
+            // For each $adresse in $user->getAddresses().
+            foreach ($user->getAddresses() as $address) {
+                // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+                $this->entityManagerInterface->remove($address);
+            }
 
-            // // For each $purchase in $user->getPurchases().
-            // foreach ($user->getPurchases() as $purchase) {
-            //     // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-            //     $this->entityManagerInterface->remove($purchase);
-            // }
+            // For each $purchase in $user->getPurchases().
+            foreach ($user->getPurchases() as $purchase) {
+                // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+                $this->entityManagerInterface->remove($purchase);
+            }
 
-            // // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-            // $this->entityManagerInterface->remove($user);
-            // // We call the flush() method of the EntityManagerInterface to backup the data in the database.
-            // $this->entityManagerInterface->flush();
+            // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+            $this->entityManagerInterface->remove($user);
+            // We call the flush() method of the EntityManagerInterface to backup the data in the database.
+            $this->entityManagerInterface->flush();
 
-            // // We redirect the user.
-            // return $this->redirectToRoute(
-            //     'app_logout',
-            //     // We set a array of optional data.
-            //     [],
-            //     // We specify the related HTTP response status code.
-            //     301
-            // );
+            // We redirect the user.
+            return $this->redirectToRoute(
+                'app_logout',
+                // We set a array of optional data.
+                [],
+                // We specify the related HTTP response status code.
+                301
+            );
             // TODO #1 END : run SQL script to delete a user 30 day after the request.
+
+            //! START : user account deactivation
+            // // If the user account is activated. 
+            // if ($user->isIsActivated()) {
+            //     // We set to false the value of the activated property.
+            //     $user->setIsActivated(false);
+
+            //     // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
+            //     $this->entityManagerInterface->flush();
+
+            //     // We call the informUserOfRequestAccountDeletion() method of the Email service with the data of the user in argument.
+            //     $this->email->informUserOfRequestAccountDeletion($user);
+
+            //     // We redirect the user.
+            //     return $this->redirectToRoute(
+            //         'app_logout',
+            //         // We set a array of optional data. 
+            //         [],
+            //         // We specify the related HTTP response status code.
+            //         301
+            //     );
+            // }
+            // // Else we manage the possible error.
+            // else {
+            //     // We redirect the user to the page 403.
+            //     return new Response(
+            //         'Action interdite',
+            //         // We specify the related HTTP response status code.
+            //         403
+            //     );
+            // }
+            //! END : user account deactivation
         }
         // Else the CSRF token is not valid.
         else {
@@ -397,84 +401,86 @@ class UserController extends AbstractController
         }
     }
 
-    /** 
-     * Method that allow the user to reactivate is account. 
-     * @param Request $request
-     * @return Response
-     */
-    #[Route('/demande-reactivation-compte', name: 'user_reactivate_request', methods: 'GET')]
-    public function reactivateRequest(): Response
-    {
-        // We display our template. 
-        return $this->render(
-            'user/reactivate-request.html.twig',
-            // We set a array of optional data.
-            [],
-            // We specify the related HTTP response status code.
-            new Response('', 200)
-        );
-    }
+    //! START : user account deactivation
+    // /** 
+    //  * Method that allow the user to reactivate is account. 
+    //  * @param Request $request
+    //  * @return Response
+    //  */
+    // #[Route('/demande-reactivation-compte', name: 'user_reactivate_request', methods: 'GET')]
+    // public function reactivateRequest(): Response
+    // {
+    //     // We display our template. 
+    //     return $this->render(
+    //         'user/reactivate-request.html.twig',
+    //         // We set a array of optional data.
+    //         [],
+    //         // We specify the related HTTP response status code.
+    //         new Response('', 200)
+    //     );
+    // }
 
-    /** 
-     * Metho that reactivate the user account. 
-     * @param Request $request
-     * @return Response
-     */
-    #[Route('/reactivation', name: 'user_reactivate', methods: 'GET|POST')]
-    public function reactivate(Request $request): Response
-    {
-        // We get the logged user.
-        /**
-         * @var User
-         */
-        $user = $this->getUser();
+    // /** 
+    //  * Metho that reactivate the user account. 
+    //  * @param Request $request
+    //  * @return Response
+    //  */
+    // #[Route('/reactivation', name: 'user_reactivate', methods: 'GET|POST')]
+    // public function reactivate(Request $request): Response
+    // {
+    //     // We get the logged user.
+    //     /**
+    //      * @var User
+    //      */
+    //     $user = $this->getUser();
 
-        // We get the CSRF token.
-        $submittedToken = $request->request->get('token') ?? $request->query->get('token');
+    //     // We get the CSRF token.
+    //     $submittedToken = $request->request->get('token') ?? $request->query->get('token');
 
-        // If the CSRF token is valid. 
-        if ($this->isCsrfTokenValid('user-reactivate' . $user->getId(), $submittedToken)) {
-            // If the user account is not activated. 
-            if (!$user->isIsActivated()) {
-                // We set to false the value of the activated property.
-                $user->setIsActivated(true);
+    //     // If the CSRF token is valid. 
+    //     if ($this->isCsrfTokenValid('user-reactivate' . $user->getId(), $submittedToken)) {
+    //         // If the user account is not activated. 
+    //         if (!$user->isIsActivated()) {
+    //             // We set to false the value of the activated property.
+    //             $user->setIsActivated(true);
 
-                // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
-                $this->entityManagerInterface->flush();
+    //             // We call the flush() method of the EntityManagerInterface to backup the data in the database. 
+    //             $this->entityManagerInterface->flush();
 
-                // We call the informUserOfRequestAccountDeletion() method of the Email service with the data of the user in argument.
-                $this->email->informUserOfAccountReactivation($user);
+    //             // We call the informUserOfRequestAccountDeletion() method of the Email service with the data of the user in argument.
+    //             $this->email->informUserOfAccountReactivation($user);
 
-                // We display a flash message for the user.
-                $this->addFlash('success', 'Bonjour ' . $user->getFirstName() . ', votre compte a bien été réactivé.');
+    //             // We display a flash message for the user.
+    //             $this->addFlash('success', 'Bonjour ' . $user->getFirstName() . ', votre compte a bien été réactivé.');
 
-                // We redirect the user.
-                return $this->redirectToRoute(
-                    'user_profile',
-                    // We set a array of optional data. 
-                    [],
-                    // We specify the related HTTP response status code.
-                    301
-                );
-            }
-            // Else we manage the possible error.
-            else {
-                // We redirect the user to the page 403.
-                return new Response(
-                    'Action interdite',
-                    // We specify the related HTTP response status code.
-                    403
-                );
-            }
-        }
-        // Else the CSRF token is not valid.
-        else {
-            // We redirect the user to the page 403.
-            return new Response(
-                'Action interdite',
-                // We specify the related HTTP response status code.
-                403
-            );
-        }
-    }
+    //             // We redirect the user.
+    //             return $this->redirectToRoute(
+    //                 'user_profile',
+    //                 // We set a array of optional data. 
+    //                 [],
+    //                 // We specify the related HTTP response status code.
+    //                 301
+    //             );
+    //         }
+    //         // Else we manage the possible error.
+    //         else {
+    //             // We redirect the user to the page 403.
+    //             return new Response(
+    //                 'Action interdite',
+    //                 // We specify the related HTTP response status code.
+    //                 403
+    //             );
+    //         }
+    //     }
+    //     // Else the CSRF token is not valid.
+    //     else {
+    //         // We redirect the user to the page 403.
+    //         return new Response(
+    //             'Action interdite',
+    //             // We specify the related HTTP response status code.
+    //             403
+    //         );
+    //     }
+    // }
+    //! END : user account deactivation
 }

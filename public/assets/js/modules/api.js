@@ -32,7 +32,7 @@ const api = {
   // Address
   blockAddressesList: null,
   searchAddressInput: null,
-  // We create a counter to count the number of times that we call the methodes that create HTML elements so we don't duplicate the elements when font.handleColorSwitchsAccordingToCheckedColorSwitch() is call.
+  // We create a counter to count the number of times that we call the methodes that create HTML elements so we don't duplicate the elements when font.handleColorsSwtich() is call.
   counter: null,
   init: function () {
     console.log("Hello world, I'm api.js 🕸️");

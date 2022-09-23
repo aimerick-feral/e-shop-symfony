@@ -517,10 +517,7 @@ const font = {
     // For each colorSwitch of font.colorSwitchs.
     for (let colorSwitch of font.colorSwitchs) {
       // We add a listener and a handler on the click event.
-      colorSwitch.addEventListener(
-        "click",
-        font.handleColorSwitchsAccordingToCheckedColorSwitch
-      );
+      colorSwitch.addEventListener("click", font.handleColorsSwtich);
     }
 
     // All the font color switchs.
@@ -936,13 +933,13 @@ const font = {
    * @param {Event} event
    * @return {void}
    */
-  handleColorSwitchsAccordingToCheckedColorSwitch: function (event) {
-    // console.log("font.handleColorSwitchsAccordingToCheckedColorSwitch()");
+  handleColorsSwtich: function (event) {
+    // console.log("font.handleColorsSwtich()");
 
     // We load the module api.js.
     api.init();
 
-    // We get the DOM element from which the event occured.
+    // We get the DOM element from which the event occured.````````
     let clickedSwitch = event.currentTarget;
 
     // For each fontSwitch of font.fontSwitchs.
