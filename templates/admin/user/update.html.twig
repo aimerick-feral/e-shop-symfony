@@ -34,7 +34,7 @@
 			{{ form_errors(adminUpdateUserForm.upload) }}
 		</div>
 		{# delete picture #}
-		<a class="page__link page__link-delete-user-picture page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-user-picture-link" href="{{ path('admin_user_delete_picture', {'id':user.id, 'token':csrf_token('delete-user-picture' ~ user.id)} ) }}">Supprimer la photo</a>
+		<a class="page__link page__link-delete-user-picture page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" id="delete-user-picture-link" href="{{ path('admin_user_delete_picture', {'id':user.id, 'token':csrf_token('delete-user-picture' ~ user.id)} ) }}">Supprimer la photo</a>
 		{# civilityTitle #}
 		<div class="form-field">
 			{{ form_widget(adminUpdateUserForm.civilityTitle) }}

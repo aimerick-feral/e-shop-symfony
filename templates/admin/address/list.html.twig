@@ -55,10 +55,10 @@
 						<p>
 							{{ address.phoneNumber }}
 						</p>
-						<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_user_detail', {'id': address.user.id}) }}">{{ address.user.email}}</a>
-						<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('admin_address_detail', {'userId': address.user.id, 'addressId': address.id}) }}">Détails</a>
-						<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_address_update', {'userId': address.user.id, 'addressId': address.id}) }}?returnToAdminAddressList=true">Modifier</a>
-						<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_address_delete', {'userId': address.user.id, 'addressId': address.id, 'token':csrf_token('admin-address-delete' ~ address.id)} ) }}">Supprimer</a>
+						<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_user_detail', {'id': address.user.id}) }}">{{ address.user.email}}</a>
+						<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('admin_address_detail', {'userId': address.user.id, 'addressId': address.id}) }}">Détails</a>
+						<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_address_update', {'userId': address.user.id, 'addressId': address.id}) }}?returnToAdminAddressList=true">Modifier</a>
+						<a class="page__link page__link-delete page__link-delete-address page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_address_delete', {'userId': address.user.id, 'addressId': address.id, 'token':csrf_token('admin-address-delete' ~ address.id)} ) }}" data-userfirstname="{{ address.user.firstName }}" data-userlastname="{{ address.user.lastName }}">Supprimer</a>
 					</div>
 				{% endfor %}
 				{# END : card for mobile #}
@@ -90,13 +90,13 @@
 								<td>{{ address.country}}</td>
 								<td>{{ address.phoneNumber}}</td>
 								<td>
-									<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_user_detail', {'id': address.user.id}) }}">{{ address.user.email}}</a>
+									<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_user_detail', {'id': address.user.id}) }}">{{ address.user.email}}</a>
 								</td>
 								<td>
-									<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('admin_address_detail', {'userId': address.user.id, 'addressId': address.id}) }}">Détails</a>
-									<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_address_update', {'userId': address.user.id, 'addressId': address.id}) }}?returnToAdminAddressList=true">
+									<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('admin_address_detail', {'userId': address.user.id, 'addressId': address.id}) }}">Détails</a>
+									<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_address_update', {'userId': address.user.id, 'addressId': address.id}) }}?returnToAdminAddressList=true">
 										Modifier</a>
-									<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_address_delete', {'userId': address.user.id, 'addressId': address.id, 'token':csrf_token('admin-address-delete' ~ address.id)} ) }}">Supprimer</a>
+									<a class="page__link page__link-delete page__link-delete-address page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_address_delete', {'userId': address.user.id, 'addressId': address.id, 'token':csrf_token('admin-address-delete' ~ address.id)} ) }}" data-userfirstname="{{ address.user.firstName }}" data-userlastname="{{ address.user.lastName }}">Supprimer</a>
 								</td>
 							</tr>
 						</tbody>

@@ -640,7 +640,7 @@ const font = {
     font.checkedIcons = document.querySelectorAll(".page__icon-checked");
     font.deleteLinks = document.querySelectorAll(".page__link-delete");
     font.pursueShoppingLink = document.getElementById("pursue-shooping-link");
-    font.textLinks = document.querySelectorAll(".page__link_text");
+    font.textLinks = document.querySelectorAll(".page__link-text ");
     font.purchaseCards = document.querySelectorAll(".card-purchase");
     font.purchaseStatusElements = document.querySelectorAll(".status");
     font.purchaseTotal = document.querySelector(".purchase-total");
@@ -939,7 +939,7 @@ const font = {
     // We load the module api.js.
     api.init();
 
-    // We get the DOM element from which the event occured.````````
+    // We get the DOM element from which the event occured.
     let clickedSwitch = event.currentTarget;
 
     // For each fontSwitch of font.fontSwitchs.

@@ -34,7 +34,7 @@
 				{{ form_errors(userProfileForm.upload) }}
 			</div>
 			{# delete picture #}
-			<a class="page__link-delete display-none page__link page__link-delete-user-picture page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-picture-link" href="{{ path('user_delete_picture', {token:csrf_token('delete-my-user-picture' ~ app.user.id)} ) }}">Supprimer ma photo</a>
+			<a class="page__link-delete display-none page__link page__link-delete-user-picture page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-picture-link" href="{{ path('user_delete_picture', {token:csrf_token('delete-my-user-picture' ~ app.user.id)} ) }}">Supprimer ma photo</a>
 			{# civilityTitle #}
 			<div class="form-field">
 				{{ form_widget(userProfileForm.civilityTitle) }}
@@ -85,11 +85,10 @@
 			{{ form_end(userProfileForm) }}
 			{# END : userProfileForm #}
 			{#! START : user account deactivation #}
-			{# <a class="page__link-delete display-none page__link  page__link-delete-my-user-account page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-account-link" href="{{ path('user_delete_request' ) }}"> Supprimer mon compte
-			</a> #}
+			{# <a class="page__link-delete display-none page__link  page__link-delete-my-user-account page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-account-link" href="{{ path('user_delete_request' ) }}"> Supprimer mon compte
+						</a> #}
 			{#! END : user account deactivation #}
-			<a class="display-none page__link page__link-delete-my-user-account page__link_text_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-account-link" href="{{ path('user_delete', {'id':app.user.id, 'token':csrf_token('user-delete' ~ app.user.id)} ) }}">
-				Supprimer mon compte
+				<a class="display-none page__link page__link-delete-my-user-account page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" id="delete-my-user-account-link" href="{{ path('user_delete', {'id':app.user.id, 'token':csrf_token('user-delete' ~ app.user.id)} ) }}"> Supprimer mon compte
 			</a>
 		</section>
 	</main>

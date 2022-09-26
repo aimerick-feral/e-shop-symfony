@@ -21,6 +21,9 @@ const app = {
     // We load the module form.js.
     form.init();
 
+    // We load the module delete.js.
+    confirmDelete.init();
+
     // We load the module font.js.
     font.init();
 

@@ -1,0 +1,208 @@
+const confirmDelete = {
+  // Proprietes availables in the object.
+  // =================== DOM ELEMENTS =========================== //
+  deleteUserLinks: [],
+  deleteAddressLinks: [],
+  deleteProductLinks: [],
+  deleteCategoryLinks: [],
+  deleteDeliveyModeLinks: [],
+  init: function () {
+    console.log("Hello world, I'm deletion.js 🗑");
+
+    // We get the DOM elements that we need to interacte with.
+
+    // User
+    confirmDelete.deleteUserLinks = document.querySelectorAll(
+      ".page__link-delete-user"
+    );
+    // For each link of form.deleteUserLinks.
+    for (let link of confirmDelete.deleteUserLinks) {
+      // We add a listener and a handler on the click event.
+      link.addEventListener("click", confirmDelete.handleDeleteUserLinks);
+    }
+
+    // Address
+    confirmDelete.deleteAddressLinks = document.querySelectorAll(
+      ".page__link-delete-address"
+    );
+    // For each link of form.deleteAddressLinks.
+    for (let link of confirmDelete.deleteAddressLinks) {
+      // We add a listener and a handler on the click event.
+      link.addEventListener("click", confirmDelete.handleDeleteAddressLinks);
+    }
+
+    // Product
+    confirmDelete.deleteProductLinks = document.querySelectorAll(
+      ".page__link-delete-product"
+    );
+    // For each link of form.deleteProductLinks.
+    for (let link of confirmDelete.deleteProductLinks) {
+      // We add a listener and a handler on the click event.
+      link.addEventListener("click", confirmDelete.handleDeleteProductLinks);
+    }
+
+    // Category
+    confirmDelete.deleteCategoryLinks = document.querySelectorAll(
+      ".page__link-delete-category"
+    );
+    // For each link of form.deleteCategoryLinks.
+    for (let link of confirmDelete.deleteCategoryLinks) {
+      // We add a listener and a handler on the click event.
+      link.addEventListener("click", confirmDelete.handleDeleteCategoryLinks);
+    }
+
+    // DeliveryMode
+    confirmDelete.deleteDeliveyModeLinks = document.querySelectorAll(
+      ".page__link-delete-delivery-mode"
+    );
+    // For each link of form.deleteDeliveyModeLinks.
+    for (let link of confirmDelete.deleteDeliveyModeLinks) {
+      // We add a listener and a handler on the click event.
+      link.addEventListener(
+        "click",
+        confirmDelete.handleDeleteDeliveryModeLinks
+      );
+    }
+  },
+  /**
+   * Method that instructs the browser to display a dialog with an optional message specific to the concerned user, and to wait until the user either confirms or cancels the dialog.
+   * @param {Event} event
+   * @return {void}
+   */
+  handleDeleteUserLinks: function (event) {
+    console.log("confirmDelete.handleDeleteUserLinks()");
+
+    // We get the DOM element form which the event occured.
+    let clickedLink = event.currentTarget;
+    console.log(event.currentTarget);
+
+    // The data of the user first name and last name are backup is in a HTML dataset attribut.
+    let firstName = clickedLink.dataset.userfirstname;
+    let lastName = clickedLink.dataset.userlastname;
+
+    // We display a dialog box with a message to te browser.
+    let answer = window.confirm(
+      "Confirmez-vous la suppression du compte de " +
+        firstName +
+        " " +
+        lastName +
+        " ?"
+    );
+
+    confirmDelete.checkUserAnswer(event, answer);
+  },
+  /**
+   * Method that instructs the browser to display a dialog with an optional message specific to the concerned address, and to wait until the user either confirms or cancels the dialog.
+   * @param {Event} event
+   * @return {void}
+   */
+  handleDeleteAddressLinks: function (event) {
+    console.log("confirmDelete.handleDeleteAddressLinks()");
+
+    // We get the DOM element form which the event occured.
+    let clickedLink = event.currentTarget;
+    console.log(event.currentTarget);
+
+    // The data of the user first name and last name are backup is in a HTML dataset attribut.
+    let firstName = clickedLink.dataset.userfirstname;
+    let lastName = clickedLink.dataset.userlastname;
+
+    // We display a dialog box with a message to te browser.
+    let answer = window.confirm(
+      "Confirmez-vous la suppression de l'adresse de " +
+        firstName +
+        " " +
+        lastName +
+        " ?"
+    );
+
+    confirmDelete.checkUserAnswer(event, answer);
+  },
+  /**
+   * Method that instructs the browser to display a dialog with an optional message specific to the concerned product, and to wait until the user either confirms or cancels the dialog.
+   * @param {Event} event
+   * @return {void}
+   */
+  handleDeleteProductLinks: function (event) {
+    console.log("confirmDelete.handleDeleteProductLinks()");
+
+    // We get the DOM element form which the event occured.
+    let clickedLink = event.currentTarget;
+    console.log(event.currentTarget);
+
+    // The data of the user first name and last name are backup is in a HTML dataset attribut.
+    let productName = clickedLink.dataset.productname;
+
+    // We display a dialog box with a message to te browser.
+    let answer = window.confirm(
+      "Confirmez-vous la suppression du produit " + productName + " ?"
+    );
+
+    confirmDelete.checkUserAnswer(event, answer);
+  },
+  /**
+   * Method that instructs the browser to display a dialog with an optional message specific to the concerned category, and to wait until the user either confirms or cancels the dialog.
+   * @param {Event} event
+   * @return {void}
+   */
+  handleDeleteCategoryLinks: function (event) {
+    console.log("confirmDelete.handleDeleteCategoryLinks()");
+
+    // We get the DOM element form which the event occured.
+    let clickedLink = event.currentTarget;
+    console.log(event.currentTarget);
+
+    // The data of the user first name and last name are backup is in a HTML dataset attribut.
+    let categoryName = clickedLink.dataset.categoryname;
+
+    // We display a dialog box with a message to te browser.
+    let answer = window.confirm(
+      "Confirmez-vous la suppression de la catégorie " + categoryName + " ?"
+    );
+
+    confirmDelete.checkUserAnswer(event, answer);
+  },
+
+  /**
+   * Method that instructs the browser to display a dialog with an optional message specific to the concerned delivery mode, and to wait until the user either confirms or cancels the dialog.
+   * @param {Event} event
+   * @return {void}
+   */
+  handleDeleteDeliveryModeLinks: function (event) {
+    console.log("confirmDelete.handleDeleteDeliveryModeLinks()");
+
+    // We get the DOM element form which the event occured.
+    let clickedLink = event.currentTarget;
+    console.log(event.currentTarget);
+
+    // The data of the user first name and last name are backup is in a HTML dataset attribut.
+    let deliveryModeName = clickedLink.dataset.deliverymodename;
+
+    // We display a dialog box with a message to te browser.
+    let answer = window.confirm(
+      "Confirmez-vous la suppression de la " +
+        deliveryModeName +
+        " ?"
+    );
+
+    confirmDelete.checkUserAnswer(event, answer);
+  },
+  /**
+   * Method that check the user answer to the window.confirm() dialog box.
+   * @param {Event} event
+   * @param {boolean} answer
+   * @return {void}
+   */
+  checkUserAnswer: function (event, answer) {
+    console.log("confirmDelete.checkUserAnswer()");
+
+    // If the user click on "Cancel"
+    if (!answer) {
+      console.log(answer);
+      // the user don't want to delete the user so we stop the default action.
+      event.preventDefault();
+      // We leave form.handleDeleteUserLinks().
+      return;
+    }
+  },
+};

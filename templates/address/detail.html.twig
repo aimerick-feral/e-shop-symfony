@@ -39,8 +39,8 @@
 					<p>
 						{{ address.phoneNumber }}
 					</p>
-					<a class=" page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('address_update', {'id': address.id}) }}">Modifier</a>
-					<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('address_delete', {'id': address.id, 'token':csrf_token('address-delete' ~ address.id)} ) }}">Supprimer</a>
+					<a class=" page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('address_update', {'id': address.id}) }}">Modifier</a>
+					<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('address_delete', {'id': address.id, 'token':csrf_token('address-delete' ~ address.id)} ) }}">Supprimer</a>
 				</div>
 				{# END : card for mobile #}
 				{# START : table for desktop #}
@@ -89,8 +89,8 @@
 						<tr>
 							<th>Actions</th>
 							<td>
-								<a class=" page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('address_update', {'id': address.id}) }}">Modifier</a>
-								<a class="page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" href="{{ path('address_delete', {'id': address.id, 'token':csrf_token('address-delete' ~ address.id)} ) }}">Supprimer</a>
+								<a class=" page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('address_update', {'id': address.id}) }}">Modifier</a>
+								<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('address_delete', {'id': address.id, 'token':csrf_token('address-delete' ~ address.id)} ) }}">Supprimer</a>
 							</td>
 						</tr>
 					</tbody>

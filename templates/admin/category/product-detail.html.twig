@@ -47,9 +47,8 @@
 					Mis à jour le :
 					{{ product.updatedAt|format_datetime('short', 'none', locale='fr') }}
 				</p>
-				<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_product_update', {'slug': product.slug}) }}?returnToAdminCategoryProductList=true">Modifier</a>
-				<a class="page__link page__link-delete page__link_margin-bottom_1em page__link_background-color_red page__link_color_white page__link_text_uppercase" href="{{ path('admin_product_delete', {'id':product.id, 'token':csrf_token('admin-product-delete' ~ product.id)} ) }}">Supprimer</a>
-
+				<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_product_update', {'slug': product.slug}) }}?returnToAdminCategoryProductList=true">Modifier</a>
+				<a class="page__link page__link-delete page__link-delete-product page__link_margin-bottom_1em page__link_background-color_red page__link_color_white page__link_text-transform_uppercase" href="{{ path('admin_product_delete', {'id':product.id, 'token':csrf_token('admin-product-delete' ~ product.id)} ) }}" data-productname="{{ product.name }}">Supprimer</a>
 			</div>
 			{# END : card for mobile #}
 			{# START : table for desktop #}
@@ -106,9 +105,8 @@
 					<tr>
 						<th>Actions</th>
 						<td>
-							<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_product_update', {'slug': product.slug}) }}?returnToAdminCategoryProductList=true">Modifier</a>
-							<a class="page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_product_delete', {'id':product.id, 'token':csrf_token('admin-product-delete' ~ product.id)} ) }}">Supprimer</a>
-
+							<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_product_update', {'slug': product.slug}) }}?returnToAdminCategoryProductList=true">Modifier</a>
+							<a class="page__link page__link-delete page__link-delete-product page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_product_delete', {'id':product.id, 'token':csrf_token('admin-product-delete' ~ product.id)} ) }}" data-productname="{{ product.name }}">Supprimer</a>
 						</td>
 					</tr>
 				</tbody>

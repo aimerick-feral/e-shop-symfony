@@ -11,9 +11,11 @@
 {% block body %}
 	<main>
 		<section class="page">
-			<h2>Mode de Livraison : {{ deliveryMode.name }}</h2>
+			<h2>Mode de Livraison :
+				{{ deliveryMode.name }}</h2>
 			{# START : card for mobile #}
-				<div class=" admin-detail admin-detail_color_blue"> <img class="page__picture-entity page__picture-delivery-mode" src="{{ asset('assets/uploads/pictures/delivery-modes/'~ deliveryMode.picture) }}" alt="image {{ deliveryMode.name }}"/>
+			<div class=" admin-detail admin-detail_color_blue">
+				<img class="page__picture-entity page__picture-delivery-mode" src="{{ asset('assets/uploads/pictures/delivery-modes/'~ deliveryMode.picture) }}" alt="image {{ deliveryMode.name }}"/>
 				<p>{{ deliveryMode.name }}</p>
 				<p>{{ deliveryMode.description }}</p>
 				<p>{{ deliveryMode.price|amount }}</p>
@@ -28,8 +30,8 @@
 					Mise à jour le
 					{{ deliveryMode.updatedAt|format_datetime('short', 'none', locale='fr') }}
 				</p>
-				<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_delivery_mode_update', {'id': deliveryMode.id}) }}">Modifier</a>
-				<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_delivery_mode_delete', {'id':deliveryMode.id, 'token':csrf_token('admin-delivery-mode-delete' ~ deliveryMode.id)} ) }}">Supprimer</a>
+				<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_delivery_mode_update', {'id': deliveryMode.id}) }}">Modifier</a>
+				<a class="page__link page__link-delete page__link-delete-delivery-mode page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_delivery_mode_delete', {'id':deliveryMode.id, 'token':csrf_token('admin-delivery-mode-delete' ~ deliveryMode.id)} ) }}" data-deliverymodename="{{ deliveryMode.name }}">Supprimer</a>
 			</div>
 			{# END : card for mobile #}
 			{# START : table for desktop #}
@@ -75,8 +77,8 @@
 					<tr>
 						<th>Actions</th>
 						<td>
-							<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_delivery_mode_update', {'id': deliveryMode.id}) }}">Modifier</a>
-							<a class=" page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_delivery_mode_delete', {'id':deliveryMode.id, 'token':csrf_token('admin-delivery-mode-delete' ~ deliveryMode.id)} ) }}">Supprimer</a>
+							<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_delivery_mode_update', {'id': deliveryMode.id}) }}">Modifier</a>
+							<a class=" page__link page__link-delete page__link-delete-delivery-mode page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_delivery_mode_delete', {'id':deliveryMode.id, 'token':csrf_token('admin-delivery-mode-delete' ~ deliveryMode.id)} ) }}" data-deliverymodename="{{ deliveryMode.name }}">Supprimer</a>
 						</td>
 					</tr>
 				</tbody>

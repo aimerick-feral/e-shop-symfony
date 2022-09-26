@@ -66,7 +66,7 @@
 								{{ purchase.status }}
 							</p>
 						{% endif %}
-						<a class="page__link page__link-detail page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_blue page__link_color_white" href="{{ path('purchase_detail', {'reference': purchase.reference}) }}">Détails</a>
+						<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_blue page__link_color_white" href="{{ path('purchase_detail', {'reference': purchase.reference}) }}">Détails</a>
 
 					</div>
 				{% endfor %}
@@ -111,11 +111,11 @@
 									</td>
 								{% endif %}
 								<td>
-									<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
+									<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
 										Facture PDF</a>
 								</td>
 								<td>
-									<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('purchase_detail', {'reference': purchase.reference}) }}">Détails</a>
+									<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('purchase_detail', {'reference': purchase.reference}) }}">Détails</a>
 								</td>
 							</tr>
 						</tbody>

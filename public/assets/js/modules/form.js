@@ -31,7 +31,7 @@ const form = {
   adminUpdatePurchaseForm: null,
   searchPurchaseForm: null,
   purchaseForm: null,
-  // Delivery Mode
+  // DeliveryMode
   adminCreateDeliveryModeForm: null,
   adminUpdateDeliveryModeForm: null,
   searchDeliveryModeForm: null,
@@ -94,7 +94,7 @@ const form = {
   purchaseCheckoutMethodInputs: [],
   termsOfSaleInput: null,
   purchasePendingCheckoutInput: null,
-  // Delivery Mode
+  // DeliveryMode
   deliveryModeNameInput: null,
   deliveryModePriceInput: null,
   deliveryModeMinPurchaseAmountForFreeDelivery: null,
@@ -178,7 +178,7 @@ const form = {
   errorMessagePurchaseDeliveryAddressNotChecked: null,
   errorMessagePurchasePaymentMethodNotChecked: null,
   errorMessagePurchaseDeliveryModeNotChecked: null,
-  // Delivery Mode
+  // DeliveryMode
   errorMessageDeliveryModeNameEmpty: null,
   errorMessageDeliveryModeNameValidity: null,
   errorMessageDeliveryModePriceEmpty: null,
@@ -222,7 +222,7 @@ const form = {
   purchaseConfirmAddressesButton: null,
   purchaseConfirmDeliveryModeButton: null,
   purchaseConfirmButton: null,
-  // Delivery Mode
+  // DeliveryMode
   adminCreateDeliveryModeButton: null,
   adminUpdateDeliveryModeButton: null,
   searchDeliveryModeButton: null,
@@ -318,7 +318,7 @@ const form = {
     );
     form.purchaseForm = document.getElementById("purchase-form");
 
-    // Delivery Mode
+    // DeliveryMode
     form.adminCreateDeliveryModeForm = document.getElementById(
       "admin-create-delivery-mode-form"
     );
@@ -668,7 +668,7 @@ const form = {
       form.createImgTagForPaymentMethodPicture();
     }
 
-    // Delivery Mode
+    // DeliveryMode
     form.deliveryModeNameInput = document.querySelector(
       ".form-field__input-delivery-mode-name"
     );
@@ -940,7 +940,7 @@ const form = {
       ".error-message__purchase-payment-method-not-checked"
     );
 
-    // Delivery Mode
+    // DeliveryMode
 
     // Error message name
     form.errorMessageDeliveryModeNameEmpty = document.querySelector(
@@ -1074,7 +1074,7 @@ const form = {
       "purchase-confirm-button"
     );
 
-    // Delivery Mode
+    // DeliveryMode
     form.adminCreateDeliveryModeButton = document.getElementById(
       "admin-create-delivery-mode-button"
     );
@@ -2956,9 +2956,9 @@ const form = {
    * @return {void}
    */
   submitFormIfNoError: function (formToSubmit) {
-    // console.log("form.submitFormIfNoError()");
+    console.log("form.submitFormIfNoError()");
 
-    // console.log(formToSubmit);
+    console.log(formToSubmit);
 
     // If form.numberOfErrors is supperior to 0.
     if (form.numberOfErrors > 0) {

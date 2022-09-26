@@ -24,8 +24,7 @@
 		{% endblock %}
 	</head>
 	<body>
-		<div
-			class="wrapper">
+		<div class="wrapper">
 			{% block header %}
 				{% include "layout/header.html.twig" %}
 			{% endblock %}
@@ -33,10 +32,9 @@
 			{% include "partials/_switch.html.twig" %}
 			{% include "partials/_flash.html.twig" %}
 			{# {% include "partials/_message.html.twig" %} #}
-			{% block body %}
-			{% endblock %}
+			{% block body %}{% endblock %}
 			{% block footer %}
-			{% include "layout/footer.html.twig" %}
+				{% include "layout/footer.html.twig" %}
 			{% endblock %}
 		</div>
 		{% block javascripts %}
@@ -48,6 +46,7 @@
 			<script type="text/javascript" src="{{ asset('assets/js/modules/nav.js') }}"></script>
 			<script type="text/javascript" src="{{ asset('assets/js/modules/mode.js') }}"></script>
 			<script type="text/javascript" src="{{ asset('assets/js/modules/form.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('assets/js/modules/confirmDelete.js') }}"></script>
 			<script type="text/javascript" src="{{ asset('assets/js/modules/font.js') }}"></script>
 			<script type="text/javascript" src="{{ asset('assets/js/modules/purchase.js') }}"></script>
 			<script type="text/javascript" src="{{ asset('assets/js/modules/api.js') }}"></script>

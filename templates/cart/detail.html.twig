@@ -38,7 +38,7 @@
 				</div>
 			{% endfor %}
 			<div class="pursue-shopping">
-				<a class="page__link  page__link_text_uppercase page__link_text-decoration_underline page__link_color_blue" id="pursue-shooping-link" href="{{ path('product_list') }}">Continuer mes achats</a>
+				<a class="page__link  page__link_text-transform_uppercase page__link_text-decoration_underline page__link_color_blue" id="pursue-shooping-link" href="{{ path('product_list') }}">Continuer mes achats</a>
 			</div>
 			<div class="total-card">
 				<p>Sous-total :</p>
@@ -52,7 +52,7 @@
 				<p>TOTAL :</p>
 				<p>{{ total|amount }}</p>
 			</div>
-			<a class="page__link page__link_text_uppercase page__link_background-color_blue page__link_color_white" id="purchase-link" href="{{ path('purchase') }}">Commander</a>
+			<a class="page__link page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" id="purchase-link" href="{{ path('purchase') }}">Commander</a>
 		</section>
 	</main>
 {% endblock %}

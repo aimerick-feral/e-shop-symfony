@@ -716,19 +716,19 @@ const api = {
       			<p>${user.lastName}</p>
       			<p>${user.email}</p>
       			<p>${JSON.stringify(user.roles)}</p>
-      			<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
+      			<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
               api.adminUserHref + user.id + "/adresses"
             }">Adresses</a>
-      			<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
+      			<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
               api.adminUserHref + user.id + "/commandes"
             }">Commandes</a>
-      			<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
+      			<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="${
               api.adminUserHref + user.id
             }">Détails</a>
-      			<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+      			<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
               api.adminUserHref + user.id + "/mettre-a-jour"
             }">Modifier</a>
-      			<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+      			<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
               api.adminUserHref + user.id + "/supprimer"
             }">Supprimer</a>
         `;
@@ -780,23 +780,23 @@ const api = {
                 <td>${user.email}</td>
                 <td>${JSON.stringify(user.roles)}</td>
                 <td>
-                    <a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
+                    <a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
                       api.adminUserHref + user.id + "/adresses"
                     }">Adresses</a>
                 </td>
                 <td>
-                    <a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
+                    <a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
                       api.adminUserHref + user.id + "/commandes"
                     }">Commandes</a>
                 </td>
                 <td>
-                    <a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
+                    <a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="${
                       api.adminUserHref + user.id
                     }">Détails</a>
-                    <a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+                    <a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                       api.adminUserHref + user.id + "/mettre-a-jour"
                     }">Modifier</a>
-                    <a class="page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" href="${
+                    <a class="page__link page__link-delete page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="${
                       api.adminUserHref + user.id + "/supprimer"
                     }">Supprimer</a>
                 </td>
@@ -867,13 +867,13 @@ const api = {
            <p class="${api.productAvailabilityClassName}">${
             api.productAvailability
           }</p>
-      			  <a class="page__link page__link-detail page__link_text_uppercase  page__link_background-color_blue page__link_color_white" href="${
+      			  <a class="page__link page__link-detail page__link_text-transform_uppercase  page__link_background-color_blue page__link_color_white" href="${
                 adminProductHref + product.slug
               }">Détails</a>
-      			  <a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+      			  <a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                 adminProductHref + product.slug + "/mettre-a-jour"
               }">Modifier</a>
-      		  	<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+      		  	<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
                 adminProductHref + product.id + "/supprimer"
               }">Supprimer</a>
           `;
@@ -944,13 +944,13 @@ const api = {
             api.productAvailability
           }</td>
 						  <td>
-							  <a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
+							  <a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="${
                   adminProductHref + product.slug
                 }">Détails</a>
-							  <a class="page__link page__link_text_uppercase    page__link_background-color_safety-orange page__link_color_white" href="${
+							  <a class="page__link page__link_text-transform_uppercase    page__link_background-color_safety-orange page__link_color_white" href="${
                   adminProductHref + product.slug + "/mettre-a-jour"
                 }?returnToAdminProductList=true">Modifier</a>
-							  <a class="page__link page__link-delete page__link_text_uppercase  page__link_background-color_red page__link_color_white" href="${
+							  <a class="page__link page__link-delete page__link_text-transform_uppercase  page__link_background-color_red page__link_color_white" href="${
                   adminProductHref + product.id + "/supprimer"
                 }">Supprimer</a>
 						  </td>
@@ -1003,15 +1003,15 @@ const api = {
            <p class="${api.productAvailabilityClassName}">${
             api.productAvailability
           }</p>
-      			  <a class="page__link page__link-detail page__link_text_uppercase  page__link_background-color_blue page__link_color_white" href="/admin/categories/${
+      			  <a class="page__link page__link-detail page__link_text-transform_uppercase  page__link_background-color_blue page__link_color_white" href="/admin/categories/${
                 product.category.slug
               }/produits/${product.slug}">Détails</a>
-      			  <a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+      			  <a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                 adminProductHref +
                 product.slug +
                 "/mettre-a-jour?returnToAdminCategoryProductList=true"
               }">Modifier</a>
-      		  	<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+      		  	<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
                 adminProductHref + product.id + "/supprimer"
               }">Supprimer</a>
           `;
@@ -1082,15 +1082,15 @@ const api = {
             api.productAvailability
           }</td>
 						  <td>
-							  <a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="/admin/categories/${
+							  <a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="/admin/categories/${
                   product.category.slug
                 }/produits/${product.slug}">Détails</a>
-							  <a class="page__link page__link_text_uppercase    page__link_background-color_safety-orange page__link_color_white" href="${
+							  <a class="page__link page__link_text-transform_uppercase    page__link_background-color_safety-orange page__link_color_white" href="${
                   adminProductHref +
                   product.slug +
                   "/mettre-a-jour?returnToAdminCategoryProductList=true"
                 }">Modifier</a>
-							  <a class="page__link page__link-delete page__link_text_uppercase  page__link_background-color_red page__link_color_white" href="${
+							  <a class="page__link page__link-delete page__link_text-transform_uppercase  page__link_background-color_red page__link_color_white" href="${
                   adminProductHref + product.id + "/supprimer"
                 }">Supprimer</a>
 						  </td>
@@ -1293,17 +1293,17 @@ const api = {
           // We set HTML elements in the <div>.
           div.innerHTML = `
             <p>${category.name}</p>
-						  <a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
+						  <a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
                 adminCategoryHref + category.slug + "/produits"
               }">Liste  des
 							${category.name}s</a>
-						  <a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
+						  <a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="${
                 adminCategoryHref + category.slug
               }">Détails</a>
-						  <a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+						  <a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                 adminCategoryHref + category.slug + "/mettre-a-jour"
               }">Modifier</a>
-						  <a class=" page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+						  <a class=" page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
                 adminCategoryHref + category.id + "/supprimer"
               }">Supprimer</a>
           `;
@@ -1342,19 +1342,19 @@ const api = {
             <tr>
 							<td>${category.name}</td>
 							<td>
-								<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
+								<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="${
                   adminCategoryHref + category.slug + "/produits"
                 }">Liste des
 								${category.name}s</a>
 							</td>
 							<td>
-								<a class="page__link page__link-detail page__link_text_uppercase  page__link_background-color_blue page__link_color_white" href="${
+								<a class="page__link page__link-detail page__link_text-transform_uppercase  page__link_background-color_blue page__link_color_white" href="${
                   adminCategoryHref + category.slug
                 }">Détails</a>
-								<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+								<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                   adminCategoryHref + category.slug + "/mettre-a-jour"
                 }">Modifier</a>
-								<a class="page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" href="${
+								<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="${
                   adminCategoryHref + category.id + "/supprimer"
                 }">
 								Supprimer</a>
@@ -1377,7 +1377,7 @@ const api = {
         // We set HTML elements in the <div>.
         div.innerHTML = `
           <h3>
-						<a class="page__link page__link_text_uppercase card__link page__link_color_blue" href="${
+						<a class="page__link page__link_text-transform_uppercase card__link page__link_color_blue" href="${
               userCategoryHref + category.slug + "/produits"
             }">${category.name}</a>
 					</h3>
@@ -1426,13 +1426,13 @@ const api = {
 						<p>Offert à partit de ${tools.toAmount(
               delieveryMode.minCartAmountForFreeDelivery
             )}</p>
-						  <a class="page__link page__link_text_uppercase page__link-detail page__link_background-color_blue page__link_color_white" href="${
+						  <a class="page__link page__link_text-transform_uppercase page__link-detail page__link_background-color_blue page__link_color_white" href="${
                 adminDeliveryModeHref + delieveryMode.id
               }">Détails</a>
-						  <a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+						  <a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                 adminDeliveryModeHref + delieveryMode.id + "/mettre-a-jour"
               }">Modifier</a>
-						  <a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+						  <a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
                 adminDeliveryModeHref + delieveryMode.id + "/supprimer"
               }">Supprimer</a>
           `;
@@ -1482,13 +1482,13 @@ const api = {
 						<td>${tools.toAmount(delieveryMode.price)}</td>
 						<td>${tools.toAmount(delieveryMode.minCartAmountForFreeDelivery)}</td>
 						<td>
-							<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
+							<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="${
                 adminDeliveryModeHref + delieveryMode.id
               }">Détails</a>
-							<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+							<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                 adminDeliveryModeHref + delieveryMode.id + "/mettre-a-jour"
               }">Modifier</a>
-							<a class="page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" href="${
+							<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="${
                 adminDeliveryModeHref + delieveryMode.id + "/supprimer"
               }">Supprimer</a>
 						</td>
@@ -1571,17 +1571,17 @@ const api = {
             <p>${tools.formatDateTime(purchase.createdAt)}</p>
             <p>${tools.toAmount(purchase.total)}</p>
             <p class="${api.purchaseStatusClassName}">${purchase.status}</p>
-              <a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
+              <a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="${
                 "/admin/commandes/" + purchase.reference
               }">Détails</a>
-						  <a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+						  <a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                 api.adminuserhref +
                 purchase.user.id +
                 "/commandes/" +
                 purchase.reference +
                 "/mettre-a-jour"
               }?returnToAdminPurchaseList=true">Modifier</a>
-						  <a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+						  <a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
                 "/admin/commandes/" + purchase.id + "/supprimer"
               }">Supprimer</a>
           `;
@@ -1644,20 +1644,20 @@ const api = {
             <p>${tools.formatDateTime(purchase.createdAt)}</p>
             <p>${tools.toAmount(purchase.total)}</p>
             <p class="${api.purchaseStatusClassName}">${purchase.status}</p>
-              <a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
+              <a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="${
                 api.adminuserhref +
                 purchase.user.id +
                 "/commandes/" +
                 purchase.reference
               }">Détails</a>
-						  <a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+						  <a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                 api.adminuserhref +
                 purchase.user.id +
                 "/commandes/" +
                 purchase.reference +
                 "/mettre-a-jour"
               }?returnToAdminPurchaseList=true">Modifier</a>
-						  <a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+						  <a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
                 "/admin/commandes/" + purchase.id + "/supprimer"
               }">Supprimer</a>
           `;
@@ -1720,7 +1720,7 @@ const api = {
             <p>${tools.formatDateTime(purchase.createdAt)}</p>
             <p>${tools.toAmount(purchase.total)}</p>
             <p class="${api.purchaseStatusClassName}">${purchase.status}</p>
-              <a class="page__link page__link-detail page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_blue page__link_color_white" href="${
+              <a class="page__link page__link-detail page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_blue page__link_color_white" href="${
                 "/commandes/" + purchase.reference
               }">Détails</a>
           `;
@@ -1809,14 +1809,14 @@ const api = {
 							<td>${tools.toAmount(purchase.total)}</td>
 			        <td class="${api.purchaseStatusClassName}">${purchase.status}</td>
 							<td>
-								<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
+								<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
 									Facture PDF</a>
 							</td>
 							<td>
-								<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
+								<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="${
                   "/admin/commandes/" + purchase.reference
                 }">Détails</a>
-								<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+								<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                   api.adminuserhref +
                   purchase.user.id +
                   "/commandes/" +
@@ -1824,7 +1824,7 @@ const api = {
                   "/mettre-a-jour"
                 }?returnToAdminPurchaseList=true">
 									Modifier</a>
-								<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+								<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
                   "/admin/commandes/" + purchase.id + "/supprimer"
                 }">Supprimer</a>
 							</td>
@@ -1912,17 +1912,17 @@ const api = {
 							<td>${tools.toAmount(purchase.total)}</td>
 			        <td class="${api.purchaseStatusClassName}">${purchase.status}</td>
 							<td>
-								<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
+								<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
 									Facture PDF</a>
 							</td>
 							<td>
-								<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
+								<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="${
                   api.adminuserhref +
                   purchase.user.id +
                   "/commandes/" +
                   purchase.reference
                 }">Détails</a>
-								<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+								<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                   api.adminuserhref +
                   purchase.user.id +
                   "/commandes/" +
@@ -1930,7 +1930,7 @@ const api = {
                   "/mettre-a-jour"
                 }?returnToAdminPurchaseList=true">
 									Modifier</a>
-								<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+								<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
                   "/admin/commandes/" + purchase.id + "/supprimer"
                 }">Supprimer</a>
 							</td>
@@ -2018,11 +2018,11 @@ const api = {
 							<td>${tools.toAmount(purchase.total)}</td>
 			        <td class="${api.purchaseStatusClassName}">${purchase.status}</td>
 							<td>
-								<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
+								<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="#">
 									Facture PDF</a>
 							</td>
 							<td>
-								<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
+								<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="${
                   "/commandes/" + purchase.reference
                 }">Détails</a>
 							</td>
@@ -2068,20 +2068,20 @@ const api = {
           	<p>${addresse.zipCode} - ${addresse.city}</p>
           	<p>${addresse.country}</p>
           	<p>${addresse.phoneNumber}</p>
-						<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
+						<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="${
               api.adminUserHref +
               addresse.user.id +
               userAddressHref +
               addresse.id
             }">Détails</a>
-						<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+						<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
               api.adminUserHref +
               addresse.user.id +
               userAddressHref +
               addresse.id +
               "/mettre-a-jour"
             }">Modifier</a>
-						<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+						<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
               api.adminUserHref +
               addresse.user.id +
               userAddressHref +
@@ -2108,13 +2108,13 @@ const api = {
           	<p>${addresse.zipCode} - ${addresse.city}</p>
           	<p>${addresse.country}</p>
           	<p>${addresse.phoneNumber}</p>
-						<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="${
+						<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="${
               userAddressHref + addresse.id
             }">Détails</a>
-						<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+						<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
               userAddressHref + addresse.id
             }/mettre-a-jour">Modifier</a>
-						<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+						<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
               userAddressHref + addresse.id
             }/supprimer">Supprimer</a>
           `;
@@ -2169,20 +2169,20 @@ const api = {
 							<td>${addresse.country}</td>
 							<td>${addresse.phoneNumber}</td>
 							<td>
-                <a class="page__link page__link-detail page__link_text_uppercase  page__link_background-color_blue page__link_color_white" href="${
+                <a class="page__link page__link-detail page__link_text-transform_uppercase  page__link_background-color_blue page__link_color_white" href="${
                   api.adminUserHref +
                   addresse.user.id +
                   userAddressHref +
                   addresse.id
                 }">Détails</a>
-							  <a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+							  <a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                   api.adminUserHref +
                   addresse.user.id +
                   userAddressHref +
                   addresse.id +
                   "/mettre-a-jour"
                 }">Modifier</a>
-							  <a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+							  <a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
                   api.adminUserHref +
                   addresse.user.id +
                   userAddressHref +
@@ -2240,13 +2240,13 @@ const api = {
 							<td>${addresse.country}</td>
 							<td>${addresse.phoneNumber}</td>
 							<td>
-                <a class="page__link page__link-detail page__link_text_uppercase  page__link_background-color_blue page__link_color_white" href="${
+                <a class="page__link page__link-detail page__link_text-transform_uppercase  page__link_background-color_blue page__link_color_white" href="${
                   userAddressHref + addresse.id
                 }">Détails</a>
-							  <a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
+							  <a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="${
                   userAddressHref + addresse.id
                 }">Modifier</a>
-							  <a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
+							  <a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="${
                   userAddressHref + addresse.id
                 }/supprimer">Supprimer</a>
               </td>

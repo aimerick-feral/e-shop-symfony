@@ -812,7 +812,7 @@ body {
     padding: 0;
   }
 
-  .page__link_text_uppercase {
+  .page__link_text-transform_uppercase {
     text-transform: uppercase;
   }
 

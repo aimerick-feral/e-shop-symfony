@@ -31,7 +31,7 @@
 			</button>
 			{{ form_end(searchDeliveryModeForm) }}
 			{# END : searchProductForm #}
-			<a class="page__link page__link_text_uppercase page__link-create page__link_background-color_dodger-blue page__link_color_white" href="{{ path('admin_delivery_mode_create') }}" id="create-delivery-mode-link">Créer</a>
+			<a class="page__link page__link_text-transform_uppercase page__link-create page__link_background-color_dodger-blue page__link_color_white" href="{{ path('admin_delivery_mode_create') }}" id="create-delivery-mode-link">Créer</a>
 			<div class="list">
 				{% for deliveryMode in deliveryModes %}
 					{# START : card for mobile #}
@@ -42,9 +42,9 @@
 						<p>{{ deliveryMode.price|amount }}</p>
 						<p>Offert à partir de
 							{{ deliveryMode.minCartAmountForFreeDelivery|amount }}</p>
-						<a class="page__link page__link_text_uppercase page__link-detail page__link_background-color_blue page__link_color_white" href="{{ path('admin_delivery_mode_detail', {'id': deliveryMode.id}) }}">Détails</a>
-						<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_delivery_mode_update', {'id': deliveryMode.id}) }}">Modifier</a>
-						<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_delivery_mode_delete', {'id':deliveryMode.id, 'token':csrf_token('admin-delivery-mode-delete' ~ deliveryMode.id)} ) }}">Supprimer</a>
+						<a class="page__link page__link_text-transform_uppercase page__link-detail page__link_background-color_blue page__link_color_white" href="{{ path('admin_delivery_mode_detail', {'id': deliveryMode.id}) }}">Détails</a>
+						<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_delivery_mode_update', {'id': deliveryMode.id}) }}">Modifier</a>
+						<a class="page__link page__link-delete page__link-delete-delivery-mode page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_delivery_mode_delete', {'id':deliveryMode.id, 'token':csrf_token('admin-delivery-mode-delete' ~ deliveryMode.id)} ) }}" data-deliverymodename="{{ deliveryMode.name }}">Supprimer</a>
 					</div>
 				{% endfor %}
 				{# END : card for mobile #}
@@ -72,9 +72,9 @@
 								<td>{{ deliveryMode.minCartAmountForFreeDelivery|amount }}</td>
 
 								<td>
-									<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('admin_delivery_mode_detail', {'id': deliveryMode.id}) }}">Détails</a>
-									<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_delivery_mode_update', {'id': deliveryMode.id}) }}">Modifier</a>
-									<a class="page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_delivery_mode_delete', {'id':deliveryMode.id, 'token':csrf_token('admin-delivery-mode-delete' ~ deliveryMode.id)} ) }}">Supprimer</a>
+									<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('admin_delivery_mode_detail', {'id': deliveryMode.id}) }}">Détails</a>
+									<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_delivery_mode_update', {'id': deliveryMode.id}) }}">Modifier</a>
+									<a class="page__link page__link-delete page__link-delete-delivery-mode page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_delivery_mode_delete', {'id':deliveryMode.id, 'token':csrf_token('admin-delivery-mode-delete' ~ deliveryMode.id)} ) }}" data-deliverymodename="{{ deliveryMode.name }}">Supprimer</a>
 								</td>
 							</tr>
 						</tbody>

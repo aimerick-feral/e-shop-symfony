@@ -33,7 +33,7 @@
 				{% for category in categories %}
 					<div class="card card_color_blue">
 						<h3>
-							<a class="page__link page__link_text_uppercase card__link page__link_color_blue" href="{{ path('category_product_list', {'slug': category.slug}) }}">{{ category.name }}</a>
+							<a class="page__link page__link_text-transform_uppercase card__link page__link_color_blue" href="{{ path('category_product_list', {'slug': category.slug}) }}">{{ category.name }}</a>
 						</h3>
 					</div>
 				{% endfor %}

@@ -30,7 +30,7 @@
 			</button>
 			{{ form_end(searchUserForm) }}
 			{# END : searchUserForm #}
-			<a class="page__link page__link-create page__link_text_uppercase page__link_background-color_dodger-blue page__link_color_white" href="{{ path('admin_user_create') }}" id="create-user-link">Créer</a>
+			<a class="page__link page__link-create page__link_text-transform_uppercase page__link_background-color_dodger-blue page__link_color_white" href="{{ path('admin_user_create') }}" id="create-user-link">Créer</a>
 			<div class="list">
 				{% for user in users %}
 					{# START : card for mobile #}
@@ -40,25 +40,24 @@
 						<p>{{ user.firstName }}</p>
 						<p>{{ user.lastName }}</p>
 						<p>
-							<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" id="" href="mailto:{{ user.email }}">{{ user.email }}</a>
+							<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" id="" href="mailto:{{ user.email }}">{{ user.email }}</a>
 						</p>
 						<p>{{ user.roles|json_encode() }}</p>
-						<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_address_user_list', {'id': user.id}) }}">Adresses</a>
-						<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_purchase_user_list', {'id': user.id}) }}">Commandes</a>
-						<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('admin_user_detail', {'id': user.id}) }}">Détails</a>
-						<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_user_update', {'id': user.id}) }}">Modifier</a>
+						<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_address_user_list', {'id': user.id}) }}">Adresses</a>
+						<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_purchase_user_list', {'id': user.id}) }}">Commandes</a>
+						<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('admin_user_detail', {'id': user.id}) }}">Détails</a>
+						<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_user_update', {'id': user.id}) }}">Modifier</a>
 						{#! START : user account deactivation #}
 						{# {% if user.isIsActivated %}
-							<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}">
-								Supprimer</a>
-						{% else %}
-							<a class="page__link page__link-reactivate-account page__link page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_green page__link_color_black" href="{{ path('admin_user_reactivate', {'id':user.id, 'token':csrf_token('admin-user-reactivate' ~ user.id)} ) }}">
-								Réactivier
-							</a>
-						{% endif %} #}
+													<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}">
+														Supprimer</a>
+												{% else %}
+													<a class="page__link page__link-reactivate-account page__link page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_green page__link_color_black" href="{{ path('admin_user_reactivate', {'id':user.id, 'token':csrf_token('admin-user-reactivate' ~ user.id)} ) }}">
+														Réactivier
+													</a>
+												{% endif %} #}
 						{#! END : user account deactivation #}
-						<a class="page__link page__link-delete page__link_text_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}">
-							Supprimer</a>
+							<a class="page__link page__link-delete page__link-delete-user page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}" data-userfirstname="{{ user.firstName }}" data-userlastname="{{ user.lastName }}"> Supprimer</a>
 					</div>
 				{% endfor %}
 				{# END : card for mobile #}
@@ -87,30 +86,29 @@
 								<td>{{ user.firstName }}</td>
 								<td>{{ user.lastName }}</td>
 								<td>
-									<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" id="" href="mailto:{{ user.email }}">{{ user.email }}</a>
+									<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" id="" href="mailto:{{ user.email }}">{{ user.email }}</a>
 								</td>
 								<td>{{ user.roles|json_encode() }}</td>
 								<td>
-									<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_address_user_list', {'id': user.id}) }}">Adresses</a>
+									<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_address_user_list', {'id': user.id}) }}">Adresses</a>
 								</td>
 								<td>
-									<a class="page__link page__link_text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_purchase_user_list', {'id': user.id}) }}">Commandes</a>
+									<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_purchase_user_list', {'id': user.id}) }}">Commandes</a>
 								</td>
 								<td>
-									<a class="page__link page__link-detail page__link_text_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('admin_user_detail', {'id': user.id}) }}">Détails</a>
-									<a class="page__link page__link_text_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_user_update', {'id': user.id}) }}">Modifier</a>
+									<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('admin_user_detail', {'id': user.id}) }}">Détails</a>
+									<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_user_update', {'id': user.id}) }}">Modifier</a>
 									{#! START : user account deactivation #}
 									{# {% if user.isIsActivated %}
-										<a class="page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}">
-											Supprimer</a>
-									{% else %}
-										<a class="page__link page__link-reactivate-account page__link page__link_text_uppercase page__link_background-color_green page__link_color_black" href="{{ path('admin_user_reactivate', {'id':user.id, 'token':csrf_token('admin-user-reactivate' ~ user.id)} ) }}">
-											Réactivier
-										</a>
-									{% endif %} #}
+																			<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}">
+																				Supprimer</a>
+																		{% else %}
+																			<a class="page__link page__link-reactivate-account page__link page__link_text-transform_uppercase page__link_background-color_green page__link_color_black" href="{{ path('admin_user_reactivate', {'id':user.id, 'token':csrf_token('admin-user-reactivate' ~ user.id)} ) }}">
+																				Réactivier
+																			</a>
+																		{% endif %} #}
 									{#! END : user account deactivation #}
-									<a class="page__link page__link-delete page__link_text_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}">
-										Supprimer</a>
+										<a class="page__link page__link-delete page__link-delete-user page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}" data-userfirstname="{{ user.firstName }}" data-userlastname="{{ user.lastName }}">Supprimer</a>
 								</td>
 							</tr>
 						</tbody>

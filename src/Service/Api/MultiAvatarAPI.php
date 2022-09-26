@@ -31,10 +31,9 @@ class MultiAvatarAPI
     /**
      * Method that donwload the avatar from the API with the URL. 
      * @param string $url
-     * @param string $uploadedFolder
      * @return string $fileName  
      */
-    public function donwloadAvatar(string $url, string $uploadFolder = null)
+    public function donwloadAvatar(string $url)
     {
         // // The value of $uploadeFolder is the value of the .env variable USER_PICTURE_UPLOAD_FOLDER_PATH.
         // $uploadFolder = $_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'];
@@ -54,10 +53,10 @@ class MultiAvatarAPI
             // We use the PHP function rename() with, in first argument, the location (the path) of the current file returned by the PHP dirname() function + the name of the file and, in second argument, the location of the directory where we want to move the file. 
 
             // If user action. 
-            rename($fileName, User::USER_PICTURE_UPLOAD_FOLDER_PATH . "/" . $fileName);
+            // rename($fileName, User::USER_PICTURE_UPLOAD_FOLDER_PATH . "/" . $fileName);
 
             // If fixtures. 
-            // rename(dirname($fileName) . "/" . $fileName, "public/" . User::USER_PICTURE_UPLOAD_FOLDER_PATH . "/" . $fileName);
+            rename(dirname($fileName) . "/" . $fileName, "public/" . User::USER_PICTURE_UPLOAD_FOLDER_PATH . "/" . $fileName);
 
             // We return the name of the donwloaded file just in case we need it.
             return $fileName;
