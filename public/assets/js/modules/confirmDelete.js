@@ -7,7 +7,7 @@ const confirmDelete = {
   deleteCategoryLinks: [],
   deleteDeliveyModeLinks: [],
   init: function () {
-    console.log("Hello world, I'm deletion.js 🗑");
+    console.log("Hello world, I'm confirmDeletion.js 🗑");
 
     // We get the DOM elements that we need to interacte with.
 
@@ -76,7 +76,7 @@ const confirmDelete = {
     let clickedLink = event.currentTarget;
     console.log(event.currentTarget);
 
-    // The data of the user first name and last name are backup is in a HTML dataset attribut.
+    // The data of the user first name and last name are backup is in a HTML dataset attribute.
     let firstName = clickedLink.dataset.userfirstname;
     let lastName = clickedLink.dataset.userlastname;
 
@@ -101,9 +101,8 @@ const confirmDelete = {
 
     // We get the DOM element form which the event occured.
     let clickedLink = event.currentTarget;
-    console.log(event.currentTarget);
 
-    // The data of the user first name and last name are backup is in a HTML dataset attribut.
+    // The data of the user first name and last name are backup is in a HTML dataset attribute.
     let firstName = clickedLink.dataset.userfirstname;
     let lastName = clickedLink.dataset.userlastname;
 
@@ -128,9 +127,8 @@ const confirmDelete = {
 
     // We get the DOM element form which the event occured.
     let clickedLink = event.currentTarget;
-    console.log(event.currentTarget);
 
-    // The data of the user first name and last name are backup is in a HTML dataset attribut.
+    // The data of the user first name and last name are backup is in a HTML dataset attribute.
     let productName = clickedLink.dataset.productname;
 
     // We display a dialog box with a message to te browser.
@@ -150,9 +148,8 @@ const confirmDelete = {
 
     // We get the DOM element form which the event occured.
     let clickedLink = event.currentTarget;
-    console.log(event.currentTarget);
 
-    // The data of the user first name and last name are backup is in a HTML dataset attribut.
+    // The data of the user first name and last name are backup is in a HTML dataset attribute.
     let categoryName = clickedLink.dataset.categoryname;
 
     // We display a dialog box with a message to te browser.
@@ -173,16 +170,13 @@ const confirmDelete = {
 
     // We get the DOM element form which the event occured.
     let clickedLink = event.currentTarget;
-    console.log(event.currentTarget);
 
-    // The data of the user first name and last name are backup is in a HTML dataset attribut.
+    // The data of the user first name and last name are backup is in a HTML dataset attribute.
     let deliveryModeName = clickedLink.dataset.deliverymodename;
 
     // We display a dialog box with a message to te browser.
     let answer = window.confirm(
-      "Confirmez-vous la suppression de la " +
-        deliveryModeName +
-        " ?"
+      "Confirmez-vous la suppression de la " + deliveryModeName + " ?"
     );
 
     confirmDelete.checkUserAnswer(event, answer);
@@ -196,12 +190,14 @@ const confirmDelete = {
   checkUserAnswer: function (event, answer) {
     console.log("confirmDelete.checkUserAnswer()");
 
-    // If the user click on "Cancel"
+    console.log(answer);
+
+    // When the window.confirm() dialog box is open if the user click on "Cancel" the return value of window.confirm() will be false.
+    // If the answer is false
     if (!answer) {
-      console.log(answer);
-      // the user don't want to delete the user so we stop the default action.
+      // the user don't want to delete the entity so we stop the default action.
       event.preventDefault();
-      // We leave form.handleDeleteUserLinks().
+      // We leave confirmDelete.handleDeleteUserLinks().
       return;
     }
   },
