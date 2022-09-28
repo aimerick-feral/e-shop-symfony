@@ -25,8 +25,6 @@ class AdminUserType extends AbstractType
         $builder
             // We use the addEventlistener method on PPRE_SET_DATA to modify the form depending on the pre-populated data.
             ->addEventListener(FormEvents::PRE_SET_DATA, [$this, 'onPreSetData'])
-            // We use the addEventlistener method on PRE_SUBMIT to check the data of some fields, before submitting the data to the form.
-            ->addEventListener(FormEvents::PRE_SUBMIT, [$this, 'onPreSubmit'])
             ->add('picture', HiddenType::class, [])
             ->add('civilityTitle', ChoiceType::class, [
                 'choices' => [
@@ -170,32 +168,6 @@ class AdminUserType extends AbstractType
                     ]
                 ]);
         }
-    }
-
-    /**
-     * Method that set in uppercase the lastName property of the User.
-     * @param FormEvent
-     * @return void
-     */
-    public function onPreSubmit(FormEvent $event)
-    {
-        // We get the form. 
-        $form = $event->getForm();
-
-        // We get the data of the user.
-        $user = $event->getData();
-
-        // If the submit contain a user. 
-        if ($user) {
-            // We leave onPreSubmit().
-            return;
-        }
-
-        // // We set in uppercase the last name of the user.
-        // $user['lastName'] = strtoupper($user['lastName']);
-
-        // We set the data of the event with the new data of the user.
-        $event->setData($user);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

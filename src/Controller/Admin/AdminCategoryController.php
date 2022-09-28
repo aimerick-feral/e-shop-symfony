@@ -96,7 +96,7 @@ class AdminCategoryController extends AbstractController
             );
         }
 
-        // We create a new user search.
+        // We create a new category search.
         $search = new CategorySearch();
         // We create the form.
         $form = $this->createForm(CategorySearchType::class, $search);
@@ -180,7 +180,7 @@ class AdminCategoryController extends AbstractController
         // If we don't find any product.
         if (!$products) {
             // We display a flash message for the user.
-            $this->addFlash('error', 'La catégorie ' . $category->getName() .  ' ne possède aucun produit.');
+            $this->addFlash('error', 'La catégorie ' . $category->getName() .  ' ne contient aucun produit.');
 
             // We redirect the user.
             return $this->redirectToRoute(
@@ -192,7 +192,7 @@ class AdminCategoryController extends AbstractController
             );
         }
 
-        // We create a new user search.
+        // We create a new product search.
         $search = new ProductSearch();
         // We create the form.
         $form = $this->createForm(ProductSearchType::class, $search);
@@ -206,7 +206,7 @@ class AdminCategoryController extends AbstractController
 
             // For each $product in $products .
             foreach ($products as $index => $product) {
-                // If the category of the purchase is not identical to the category.
+                // If the category of the product is not identical to the category.
                 if ($product->getCategory() !== $category) {
                     // We use the PHP method unset() to remove the product from the products array so that he is can't be display to the user.
                     unset($products[$index]);
@@ -218,7 +218,7 @@ class AdminCategoryController extends AbstractController
                 // // We display a flash message for the user.
                 // $this->addFlash('error', 'Le produit ' . $form->get('name')->getData() . ' n\'appartient pas à la catégorie ' . $category->getName() . ' mais à la catégorie ' . $product->getCategory()->getName() . '.');
                 // We display a flash message for the user.
-                $this->addFlash('error', 'Aucun résultat. Le produit ' . $form->get('name')->getData() . ' n\'existe pas ou ne fait pas partie de la catégorie ' . $category->getName() . '.');
+                $this->addFlash('error', 'Le produit ' . $form->get('name')->getData() . ' n\'existe pas ou ne fait pas partie de la catégorie ' . $category->getName() . '.');
 
                 // We redirect the user.
                 return $this->redirectToRoute(
@@ -240,8 +240,8 @@ class AdminCategoryController extends AbstractController
             // We set a array of optional data.
             [
                 'category' => $category,
-                'searchProductForm' => $form->createView(),
                 'products' => $products,
+                'searchProductForm' => $form->createView(),
                 'available' => Product::AVAILABLE,
                 'unavailable' => Product::UNAVAILABLE,
             ],
@@ -305,6 +305,7 @@ class AdminCategoryController extends AbstractController
                 'slug' => $categorySlug
             ]
         );
+
         // We find the product by its slug.
         $product = $this->productRepository->findOneBy(
             [

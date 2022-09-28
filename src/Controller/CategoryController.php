@@ -129,7 +129,7 @@ class CategoryController extends AbstractController
         // If we don't find any product. 
         if (!$products) {
             // We display a flash message for the user. 
-            $this->addFlash('error', 'La catégorie ' . $category->getName() .  ' ne possède aucun produit.');
+            $this->addFlash('error', 'La catégorie ' . $category->getName() .  ' ne contient aucun produit.');
 
             // We redirect the user.
             return $this->redirectToRoute(

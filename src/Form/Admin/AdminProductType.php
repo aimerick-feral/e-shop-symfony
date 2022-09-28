@@ -157,17 +157,14 @@ class AdminProductType extends AbstractType
         // We get the data of the product.
         $product = $event->getData();
 
-        // If the submit contain a product.
-        if ($product) {
-            // We leave onPreSubmit().
-            return;
-        }
-
         // We set the slug with the value of the product's name slugged.
         $product['slug'] = strtolower($this->sluggerInterface->slug($product['name']));
 
-        // We set the reference of the product.
-        $product['reference'] = strtoupper(substr(str_replace(' ', '', $product['name']), 0, 4) . bin2hex(random_bytes(4)));
+        // If the submit doesn't contain a product with a reference.
+        if (!$product['reference']) {
+            // We set the reference of the product.
+            $product['reference'] = strtoupper(substr(str_replace(' ', '', $product['name']), 0, 4) . bin2hex(random_bytes(4)));
+        }
 
         // We set the data of the event with the new data of the product.
         $event->setData($product);

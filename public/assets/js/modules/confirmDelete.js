@@ -159,7 +159,6 @@ const confirmDelete = {
 
     confirmDelete.checkUserAnswer(event, answer);
   },
-
   /**
    * Method that instructs the browser to display a dialog with an optional message specific to the concerned delivery mode, and to wait until the user either confirms or cancels the dialog.
    * @param {Event} event

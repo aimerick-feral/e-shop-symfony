@@ -3,8 +3,6 @@
 namespace App\Form\Admin;
 
 use App\Entity\Category;
-use App\Entity\Product;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -42,12 +40,6 @@ class AdminCategoryType extends AbstractType
 
         // We get the data of the category.
         $category = $event->getData();
-
-        // If the submit contain a category. 
-        if ($category) {
-            // We leave onPreSubmit().
-            return;
-        }
 
         // We set the reference of the category. 
         $category['slug'] = strtolower($this->sluggerInterface->slug($category['name']));

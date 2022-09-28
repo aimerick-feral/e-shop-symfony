@@ -102,7 +102,7 @@ class AdminProductController extends AbstractController
             );
         }
 
-        // We create a new user search.
+        // We create a new product search.
         $search = new ProductSearch();
         // We create the form.
         $form = $this->createForm(ProductSearchType::class, $search);
@@ -315,10 +315,19 @@ class AdminProductController extends AbstractController
 
         // If the CSRF token is valid.
         if ($this->isCsrfTokenValid('admin-product-delete' . $product->getId(), $submittedToken)) {
+            // We get the picture of the product. 
+            $picture = $product->getPicture();
+
             // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
             $this->entityManagerInterface->remove($product);
             // We call the flush() method of the EntityManagerInterface to backup the data in the database.
             $this->entityManagerInterface->flush();
+
+            // If the picture of the product is different than Product::PICTURE_BY_DEFAULT. 
+            if ($picture !== Product::PICTURE_BY_DEFAULT) {
+                // We use the PHP function unlink() to delete, from our folder, the picture of the product. 
+                unlink(Product::PRODUCT_PICTURE_UPLOAD_FOLDER_PATH . '/' . $picture);
+            }
 
             // We display a flash message for the user.
             $this->addFlash('success', 'Le produit ' . $product->getName() . ' a bien été supprimé.');

@@ -528,6 +528,9 @@ class AdminUserController extends AbstractController
         // If the CSRF token is valid.
         if ($this->isCsrfTokenValid('admin-user-delete' . $user->getId(), $submittedToken)) {
             // TODO #1 START : run SQL script to delete a user 30 day after the request.
+            // We get the picture of the user. 
+            $picture = $user->getPicture();
+
             // For each $adresse in $user->getAddresses().
             foreach ($user->getAddresses() as $address) {
                 // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
@@ -544,6 +547,12 @@ class AdminUserController extends AbstractController
             $this->entityManagerInterface->remove($user);
             // We call the flush() method of the EntityManagerInterface to backup the data in the database.
             $this->entityManagerInterface->flush();
+
+            // If the picture of the user is different than User::PICTURE. 
+            if ($picture !== User::PICTURE) {
+                // We use the PHP function unlink() to delete, from our folder, the picture of the user. 
+                unlink(User::USER_PICTURE_UPLOAD_FOLDER_PATH . '/' . $picture);
+            }
 
             // We display a flash message for the user.
             $this->addFlash('success', 'Le compte de ' . $user->getFirstName() . ' ' . $user->getLastName() . ' a bien été supprimé.');
