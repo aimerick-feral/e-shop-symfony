@@ -386,17 +386,17 @@ class AdminUserController extends AbstractController
         // If the CSRF token is valid.
         if ($this->isCsrfTokenValid('delete-user-picture' . $user->getId(), $submittedToken)) {
             //! START : profile picture by default without API.
-            // / We get the current picture of the user that will be his previous picture after the update. 
-            $previousPicture = $user->getPicture();
+            // // / We get the current picture of the user that will be his previous picture after the update. 
+            // $previousPicture = $user->getPicture();
 
-            // We set the User::PICTURE to the user.
-            $user->setPicture(User::PICTURE);
+            // // We set the User::PICTURE to the user.
+            // $user->setPicture(User::PICTURE);
 
-            // If the previous picture of the user is different than User::PICTURE. 
-            if ($previousPicture !== User::PICTURE) {
-                // We use the PHP function unlink() to delete, from our folder, the previous picture of the user. 
-                unlink(User::USER_PICTURE_UPLOAD_FOLDER_PATH . '/' . $previousPicture);
-            }
+            // // If the previous picture of the user is different than User::PICTURE. 
+            // if ($previousPicture !== User::PICTURE) {
+            //     // We use the PHP function unlink() to delete, from our folder, the previous picture of the user. 
+            //     unlink(User::USER_PICTURE_UPLOAD_FOLDER_PATH . '/' . $previousPicture);
+            // }
             //! END : profile picture by default without API.
 
             //! START : profile picture by default according to user civility title without API.

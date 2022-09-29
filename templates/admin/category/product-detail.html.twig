@@ -22,6 +22,9 @@
 					{{ product.name }}
 				</p>
 				<p>
+					{{ product.category }}
+				</p>
+				<p>
 					Référence :
 					{{ product.reference }}
 				</p>
@@ -30,9 +33,6 @@
 				</p>
 				<p>
 					{{ product.description }}
-				</p>
-				<p>
-					{{ product.category }}
 				</p>
 				{% if product.availability == available %}
 					<p class="availability available availability__avialable_color_green">Disponible</p>
@@ -67,6 +67,10 @@
 					<tr>
 						<th>Nom</th>
 						<td>{{ product.name }}</td>
+					<tr>
+						<th>Catégorie</th>
+						<td>{{ product.category }}</td>
+					</tr>
 					</tr>
 					<tr>
 						<th>Référence</th>
@@ -81,10 +85,6 @@
 						<th>Description</th>
 						<td>{{ product.description }}</td>
 
-					</tr>
-					<tr>
-						<th>Catégorie</th>
-						<td>{{ product.category }}</td>
 					</tr>
 					<tr>
 						<th>Disponibilité</th>

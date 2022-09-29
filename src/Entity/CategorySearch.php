@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 class CategorySearch
 {
     // Proprietes availables in the object.
-    #[Assert\NotBlank(message: 'Merci de saisir un nom de catégorie.')]
+    #[Assert\NotBlank(message: 'Merci de saisir un nom.')]
     // #[Assert\Regex(
     //     pattern: '/^[a-zA-Z\s]*$/',
     //     message: 'Merci de saisir un nom de catégorie valide.',

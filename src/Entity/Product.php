@@ -21,7 +21,7 @@ class Product
     const UNAVAILABLE = 'Indisponible';
 
     // Product picture by default.
-    const PICTURE_BY_DEFAULT = 'aqua.png'; 
+    const PICTURE_BY_DEFAULT = 'aqua.png';
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -30,7 +30,7 @@ class Product
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Assert\NotBlank(message: 'Merci de saisir un nom de produit.')]
+    #[Assert\NotBlank(message: 'Merci de saisir un nom.')]
     #[Groups(['products', 'categories'])]
     private $name;
 
@@ -40,7 +40,7 @@ class Product
 
     #[ORM\Column(type: 'string', length: 255)]
     // #[Assert\NotBlank(message: 'Merci de saisir une référence.')]
-     #[Groups(['products', 'categories'])]
+    #[Groups(['products', 'categories'])]
     private $reference;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
@@ -116,7 +116,7 @@ class Product
         return $this->slug;
     }
 
-    public function setSlug(string $slug): self
+    public function setSlug(?string $slug): self
     {
         $this->slug = $slug;
 
@@ -135,7 +135,7 @@ class Product
         return $this;
     }
 
-    public function getPicture(): string|null
+    public function getPicture(): ?string
     {
         return $this->picture;
     }
@@ -152,7 +152,7 @@ class Product
         return $this->price;
     }
 
-    public function setPrice(int $price): self
+    public function setPrice(?int $price): self
     {
         $this->price = $price;
 
@@ -164,7 +164,7 @@ class Product
         return $this->description;
     }
 
-    public function setDescription(string $description): self
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
 
@@ -176,14 +176,14 @@ class Product
         return $this->availability;
     }
 
-    public function setAvailability(string $availability): self
+    public function setAvailability(?string $availability): self
     {
         $this->availability = $availability;
 
         return $this;
     }
 
-    public function getCategory(): Category|null
+    public function getCategory(): ?Category
     {
         return $this->category;
     }

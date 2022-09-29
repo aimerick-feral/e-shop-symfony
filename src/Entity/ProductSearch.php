@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 class ProductSearch
 {
     // Proprietes availables in the object.
-    #[Assert\NotBlank(message: 'Merci de saisir un nom de produit.')]
+    #[Assert\NotBlank(message: 'Merci de saisir un nom.')]
     public $name;
 
     public function __toString()

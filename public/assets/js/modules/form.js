@@ -460,7 +460,7 @@ const form = {
       ".form-field__input-product-category"
     );
     // If the DOM elements exist.
-    if (form.productCategoryInputs) {
+    if (form.productCategoryInputs.length > 0) {
       // We call the form.createDivForEachInputAndLabelOfCheckField() to create a div with a form-field class for each pair of input and label.
       form.createDivForEachInputAndLabelOfCheckField(
         form.productCategoryInputs
@@ -862,7 +862,7 @@ const form = {
       ".error-message__product-description-empty"
     );
 
-    // Error message descrption
+    // Error message avaibility
     form.errorMessageProductAvailabilityNotChecked = document.querySelector(
       ".error-message__product-availability-not-checked"
     );

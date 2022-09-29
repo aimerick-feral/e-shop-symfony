@@ -1793,10 +1793,9 @@ body {
     color: var(--red);
   }
 
-  #contact-message-input,
-  #create-product-description-input,
-  #update-product-description-input,
-  #create-delivery-mode-description-input {
+  .form-field__input-contact-message,
+  .form-field__input-product-description,
+  .form-field__input-delivery-mode-description {
     height: 8em;
   }
 
@@ -2361,6 +2360,7 @@ body {
 
   .admin-detail p {
     margin: 0 0 0.5em 0.5em;
+    text-align: center;
   }
 
   /* ===================== admin_user_create ==================== */
@@ -3657,10 +3657,6 @@ body {
     width: 80%;
   }
 
-  .product-detail-from-tablet {
-    width: 70%;
-  }
-
   .product-preview {
     width: 22.5%;
   }
@@ -3799,6 +3795,10 @@ body {
 
   .product-detail-property:first-child {
     align-items: center;
+  }
+
+  .product-detail-from-tablet {
+    width: 70%;
   }
 
   /* ======================= category_list ====================== */
@@ -3989,7 +3989,6 @@ body {
   }
 
   /* ===================== admin_user_detail ==================== */
-
   .admin-detail {
     display: none;
   }

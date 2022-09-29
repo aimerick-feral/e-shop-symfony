@@ -20,7 +20,7 @@ class Category
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Assert\NotBlank(message: 'Merci de saisir un nom de catégorie.')]
+    #[Assert\NotBlank(message: 'Merci de saisir un nom.')]
     #[Groups(['products', 'categories'])]
     private $name;
 

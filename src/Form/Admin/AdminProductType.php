@@ -89,7 +89,7 @@ class AdminProductType extends AbstractType
                     "required" => true,
                     'constraints' => [
                         new NotBlank([
-                            'message' => 'Merci de télécharger un fichier.'
+                            'message' => 'Merci de télécharger un fichier au format PDF, PNG, JPEG ou SVG.'
                         ]),
                         new File([
                             'maxSize' => '300k',
