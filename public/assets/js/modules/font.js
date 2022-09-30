@@ -665,7 +665,7 @@ const font = {
    * @return {void}
    */
   loadFont: function () {
-    // console.log("font.loadFont()");
+    console.log("font.loadFont()");
 
     // We get the value backup in localStorage.
     font.color = localStorage.getItem("font");
@@ -728,7 +728,7 @@ const font = {
    * @return {void}
    */
   checkRightColorSwitchsOnLoad: function () {
-    // console.log("font.checkRightColorSwitchsOnLoad()");
+    console.log("font.checkRightColorSwitchsOnLoad()");
 
     // We get the value backup in localStorage.
     font.color = localStorage.getItem("font");
@@ -934,7 +934,7 @@ const font = {
    * @return {void}
    */
   handleColorsSwtich: function (event) {
-    // console.log("font.handleColorsSwtich()");
+    console.log("font.handleColorsSwtich()");
 
     // We load the module api.js.
     api.init();
@@ -1688,7 +1688,7 @@ const font = {
    * @return {void}
    */
   switchColor: function (newColor) {
-    // console.log("font.switchColor()");
+    console.log("font.switchColor()");
 
     // For each className of font.headerBackgroundColorClassNames.
     for (let className of font.headerBackgroundColorClassNames) {
@@ -2444,7 +2444,7 @@ const font = {
    * @return {void}
    */
   removeClassesFromElementsForContrast: function () {
-    // console.log("font.removeClassesFromElementsForContrast()");
+    console.log("font.removeClassesFromElementsForContrast()");
 
     // For each className of font.headerTitleColorClassNames.
     for (let className of font.headerTitleColorClassNames) {
@@ -2669,7 +2669,7 @@ const font = {
    * @return {void}
    */
   switchColorForContrast: function () {
-    // console.log("font.switchColorForContrast()");
+    console.log("font.switchColorForContrast()");
 
     // For each themeSwitch of font.themeSwitchs.
     for (let themeSwitch of font.themeSwitchs) {
@@ -3003,7 +3003,7 @@ const font = {
    * @return {void}
    */
   removeClassesFromElements: function () {
-    // console.log("font.removeClassesFromElements()");
+    console.log("font.removeClassesFromElements()");
 
     // For each className of font.headerBackgroundColorClassNames.
     for (let className of font.headerBackgroundColorClassNames) {
@@ -3592,7 +3592,7 @@ const font = {
    * @return {void}
    */
   removeAllClassesFromBody: function () {
-    // console.log("font.removeAllClassesFromBody()");
+    console.log("font.removeAllClassesFromBody()");
 
     // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
     tools.removeClassesFromElement(
@@ -3613,7 +3613,7 @@ const font = {
    * @return {void}
    */
   switchToKnickTheme: function () {
-    // console.log("font.switchToKnickTheme()");
+    console.log("font.switchToKnickTheme()");
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
@@ -4100,7 +4100,7 @@ const font = {
    * @return {void}
    */
   switchToLakersTheme: function () {
-    // console.log("font.switchToLakersTheme()");
+    console.log("font.switchToLakersTheme()");
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
@@ -4559,7 +4559,7 @@ const font = {
    * @return {void}
    */
   switchToMarioTheme: function () {
-    // console.log("font.switchToMarioTheme()");
+    console.log("font.switchToMarioTheme()");
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
@@ -5025,7 +5025,7 @@ const font = {
    * @return {void}
    */
   switchToJamaicaTheme: function () {
-    // console.log("font.switchToJamaicaTheme()");
+    console.log("font.switchToJamaicaTheme()");
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
@@ -5496,7 +5496,7 @@ const font = {
    * @return {void}
    */
   switchToGoldenStateWarriorsTheme: function () {
-    // console.log("font.switchToGoldenStateWarriorsTheme()");
+    console.log("font.switchToGoldenStateWarriorsTheme()");
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
@@ -5952,7 +5952,7 @@ const font = {
    * @return {void}
    */
   switchToFlashTheme: function () {
-    // console.log("font.switchToFlashTheme()");
+    console.log("font.switchToFlashTheme()");
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
@@ -6404,7 +6404,7 @@ const font = {
    * @return {void}
    */
   switchToForestTheme: function () {
-    // console.log("font.switchToForestTheme()");
+    console.log("font.switchToForestTheme()");
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();

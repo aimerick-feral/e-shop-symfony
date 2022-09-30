@@ -40,7 +40,7 @@
 			<div class="form-field">
 				{{ form_label(contactForm, 'Prénom', { 'label_attr': { 'class': 'display-none' }}) }}
 				{{ form_widget(contactForm.firstName, { 'id': 'contact-first-name-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-first-name', 'placeholder': 'Prénom' }}) }}
-				<p class="error-message error-message_color_red error-message__empty-first-name display-none">
+				<p class="error-message error-message_color_red error-message__user-first-name-empty display-none">
 					Merci de saisir un prénom.
 				</p>
 				{{ form_errors(contactForm.firstName) }}
@@ -49,7 +49,7 @@
 			<div class="form-field">
 				{{ form_label(contactForm, 'Nom', { 'label_attr': { 'class': 'display-none' }}) }}
 				{{ form_widget(contactForm.lastName, { 'id': 'contact-last-name-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-last-name', 'placeholder': 'Nom'}}) }}
-				<p class="error-message error-message_color_red error-message__empty-last-name display-none">
+				<p class="error-message error-message_color_red error-message__user-last-name-empty display-none">
 					Merci de saisir un nom.
 				</p>
 				{{ form_errors(contactForm.lastName) }}
@@ -59,10 +59,10 @@
 				{{ form_label(contactForm, 'E-mail', { 'label_attr': { 'class': 'display-none' }}) }}
 				{{ form_widget(contactForm.email, { 'id': 'contact-email-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-email', 'placeholder': 'E-mail' }}) }}
 
-				<p class="error-message error-message_color_red error-message__email-empty error-message__email-empty display-none ">
+				<p class="error-message error-message_color_red error-message__user-email-empty error-message__user-email-empty display-none ">
 					Merci de saisir un e-mail.
 				</p>
-				<p class="error-message error-message_color_red error-message__email-validity display-none">
+				<p class="error-message error-message_color_red error-message__user-email-validity display-none">
 					Merci de saisir un e-mail valide.
 				</p>
 				{{ form_errors(contactForm.email) }}

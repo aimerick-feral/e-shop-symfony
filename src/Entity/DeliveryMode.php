@@ -24,7 +24,7 @@ class DeliveryMode
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Assert\NotBlank(message: 'Merci de saisir un nom de mode de livraison.')]
+    #[Assert\NotBlank(message: 'Merci de saisir un nom.')]
     #[Groups(['delivery-modes'])]
     private $name;
 

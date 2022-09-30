@@ -14,9 +14,7 @@ class UserSearchType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('email', EmailType::class, []);
-        // ->add('string', TextType::class, []);
-
+            ->add('lastName', null, []);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

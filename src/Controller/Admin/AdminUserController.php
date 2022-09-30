@@ -174,13 +174,13 @@ class AdminUserController extends AbstractController
         //! START : if api.js is active this code is not execute and you have to render the file list.html.twig insted of list-js.html.twig.  
         // If the form is submitted and valid.
         if ($form->isSubmitted() && $form->isValid()) {
-            // We find the user by its e-mail.
-            $users = $this->userRepository->findUserBySearch($search);
+            // We find the user by its last name.
+            $users = $this->userRepository->findUserByLastName($search);
 
-            // If we don't find a user with the submitted e-mail.
+            // If we don't find a user with the submitted last name.
             if (!$users) {
                 // We display a flash message for the user.
-                $this->addFlash('error', 'L\'adresse e-mail ' . $form->get('email')->getData() . ' ne correspond à aucun utilisateur.');
+                $this->addFlash('error', 'Le nom ' . strtoupper($form->get('lastName')->getData()) . ' ne correspond à aucun utilisateur.');
 
                 // We redirect the user.
                 return $this->redirectToRoute(

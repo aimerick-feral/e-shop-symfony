@@ -22,9 +22,11 @@
 				<p class="error-message error-message_color_red error-message__category-name-empty display-none">
 					Merci de saisir un nom.
 				</p>
-				<p class="error-message error-message_color_red error-message__category-name-validity display-none">
+				{#! START : category validity not used #}
+				{# <p class="error-message error-message_color_red error-message__category-name-validity display-none">
 					Merci de saisir un nom de catégorie valide.
-				</p>
+				</p> #}
+				{#! END : category validity not used #}
 				{{ form_errors(adminUpdateCategoryForm.name) }}
 			</div>
 			{# Submit adminUpdateCategoryForm button #}

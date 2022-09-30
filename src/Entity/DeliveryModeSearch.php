@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 class DeliveryModeSearch
 {
     // Proprietes availables in the object.
-    #[Assert\NotBlank(message: 'Merci de saisir un nom de mode de livraison.')]
+    #[Assert\NotBlank(message: 'Merci de saisir un nom.')]
     public $name;
 
     public function __toString()

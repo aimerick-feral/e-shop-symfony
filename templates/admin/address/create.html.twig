@@ -21,7 +21,7 @@
 			<div class="form-field">
 				{{ form_label(adminCreateAddressForm, 'Prénom', { 'label_attr': { 'class': 'display-none' }}) }}
 				{{ form_widget(adminCreateAddressForm.firstName, { 'id': 'admin-create-address-first-name-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-user-first-name', 'placeholder': 'Prénom' }}) }}
-				<p class="error-message error-message_color_red error-message__empty-first-name display-none">
+				<p class="error-message error-message_color_red error-message__user-first-name-empty display-none">
 					Merci de saisir un prénom.
 				</p>
 				<p class="error-message error-message_color_red error-message__validity-first-name display-none">
@@ -33,7 +33,7 @@
 			<div class="form-field">
 				{{ form_label(adminCreateAddressForm, 'Nom', { 'label_attr': { 'class': 'display-none' }}) }}
 				{{ form_widget(adminCreateAddressForm.lastName, { 'id': 'admin-create-address-last-name-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-user-last-name', 'placeholder': 'Nom' }}) }}
-				<p class="error-message error-message_color_red error-message__empty-last-name display-none">
+				<p class="error-message error-message_color_red error-message__user-last-name-empty display-none">
 					Merci de saisir un nom.
 				</p>
 				<p class="error-message error-message_color_red error-message__validity-last-name display-none">

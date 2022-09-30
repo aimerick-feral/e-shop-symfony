@@ -17,10 +17,10 @@
 				{{ form_label(searchUserForm, 'E-mail', { 'label_attr': { 'class': 'display-none' }}) }}
 				{{ form_widget(searchUserForm.email, { 'id': 'search-user-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-search form-field__input-user-email', 'placeholder': '🔍 Rechercher par e-mail' }}
 				) }}
-				<p class="error-message error-message_color_red error-message__email-empty display-none">
+				<p class="error-message error-message_color_red error-message__user-email-empty display-none">
 					Merci de saisir un e-mail.
 				</p>
-				<p class="error-message error-message_color_red error-message__email-validity display-none">
+				<p class="error-message error-message_color_red error-message__user-email-validity display-none">
 					Merci de saisir un e-mail valide.
 				</p>
 				{{ form_errors(searchUserForm.email) }}

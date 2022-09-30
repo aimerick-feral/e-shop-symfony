@@ -15,15 +15,12 @@
 			) }}
 			<div class="form-field">
 				{{ form_label(searchUserForm, 'E-mail', { 'label_attr': { 'class': 'display-none' }}) }}
-				{{ form_widget(searchUserForm.email, { 'id': '', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-search form-field__input-user-email', 'placeholder': '🔍 Rechercher par e-mail' }}
+				{{ form_widget(searchUserForm.lastName, { 'id': '', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-search form-field__input-user-last-name', 'placeholder': '🔍 Rechercher par nom' }}
 				) }}
-				<p class="error-message error-message_color_red error-message__email-empty display-none">
-					Merci de saisir un e-mail.
+				<p class="error-message error-message_color_red error-message__user-last-name-empty display-none">
+					Merci de saisir un nom.
 				</p>
-				<p class="error-message error-message_color_red error-message__email-validity display-none">
-					Merci de saisir un e-mail valide.
-				</p>
-				{{ form_errors(searchUserForm.email) }}
+				{{ form_errors(searchUserForm.lastName) }}
 			</div>
 			<button type="submit" class="page__button page__button-submit page__button-search page__button_background-color_blue page__button_color_white" id="search-user-button">
 				Rechercher
@@ -49,18 +46,17 @@
 						<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_user_update', {'id': user.id}) }}">Modifier</a>
 						{#! START : user account deactivation #}
 						{# {% if user.isIsActivated %}
-							<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}">
-								Supprimer</a>
-						{% else %}
-							<a class="page__link page__link-reactivate-account page__link page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_green page__link_color_black" href="{{ path('admin_user_reactivate', {'id':user.id, 'token':csrf_token('admin-user-reactivate' ~ user.id)} ) }}">
-								Réactivier
-							</a>
-						{% endif %}
+																			<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}">
+																				Supprimer</a>
+																		{% else %}
+																			<a class="page__link page__link-reactivate-account page__link page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_green page__link_color_black" href="{{ path('admin_user_reactivate', {'id':user.id, 'token':csrf_token('admin-user-reactivate' ~ user.id)} ) }}">
+																				Réactivier
+																			</a>
+																		{% endif %} #}
 						{#! END : user account deactivation #}
-						<a class="page__link page__link-delete page__link-delete-user page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}" data-userfirstname="{{ user.firstName }}" data-userlastname="{{ user.lastName }}">
-							Supprimer</a>
+							<a class="page__link page__link-delete page__link-delete-user page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}" data-userfirstname="{{ user.firstName }}" data-userlastname="{{ user.lastName }}"> Supprimer</a>
 					</div>
-				{% endfor %} 
+				{% endfor %}
 				{# END : card for mobile #}
 				{# START : table for desktop #}
 				<table class="table table_background-color_blue table_color_white table-user">
@@ -101,16 +97,15 @@
 									<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_user_update', {'id': user.id}) }}">Modifier</a>
 									{#! START : user account deactivation #}
 									{# {% if user.isIsActivated %}
-										<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}">
-											Supprimer</a>
-									{% else %}
-										<a class="page__link page__link-reactivate-account page__link page__link_text-transform_uppercase page__link_background-color_green page__link_color_black" href="{{ path('admin_user_reactivate', {'id':user.id, 'token':csrf_token('admin-user-reactivate' ~ user.id)} ) }}">
-											Réactivier
-										</a>
-									{% endif %} #}
+																												<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}">
+																													Supprimer</a>
+																											{% else %}
+																												<a class="page__link page__link-reactivate-account page__link page__link_text-transform_uppercase page__link_background-color_green page__link_color_black" href="{{ path('admin_user_reactivate', {'id':user.id, 'token':csrf_token('admin-user-reactivate' ~ user.id)} ) }}">
+																													Réactivier
+																												</a>
+																											{% endif %} #}
 									{#! END : user account deactivation #}
-									<a class="page__link page__link-delete page__link-delete-user page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}" data-userfirstname="{{ user.firstName }}" data-userlastname="{{ user.lastName }}">
-										Supprimer</a>
+										<a class="page__link page__link-delete page__link-delete-user page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_user_delete', {'id':user.id, 'token':csrf_token('admin-user-delete' ~ user.id)} ) }}" data-userfirstname="{{ user.firstName }}" data-userlastname="{{ user.lastName }}"> Supprimer</a>
 								</td>
 							</tr>
 						</tbody>

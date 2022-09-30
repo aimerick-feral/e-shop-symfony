@@ -74,7 +74,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
      * @param string $roles
      * @return array
      */
-    public function findUsersByRoles(string $roles) : array
+    public function findUsersByRoles(string $roles): array
     {
         // We instanciate the QueryBuilder and we refers to the User Entity.
         $queryBuilder = $this->createQueryBuilder('user');
@@ -87,19 +87,36 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
     }
 
     /**
-     * Method to find a User by his email.
+     * Method to find a User by his last name.
      * @param UserSearch $userSearch
      * @return array
      */
-    public function findUserBySearch(UserSearch $userSearch): array
+    public function findUserByLastName(UserSearch $userSearch): array
     {
         // We instanciate the QueryBuilder and we refers to the User Entity.
         $queryBuilder = $this->createQueryBuilder('user');
-        // We say that the :email is egual to the email property of the User Entity. 
-        $queryBuilder->where('user.email LIKE :email');
+        // We say that the :email is egual to the last name property of the User Entity. 
+        $queryBuilder->where('user.lastName LIKE :lastName');
         // We secure the query by setting a parameter to avoid the SQL injections. 
-        $queryBuilder->setParameter(':email', "%$userSearch%");
+        $queryBuilder->setParameter(':lastName', "%$userSearch%");
         // We return the result of the query. 
         return $queryBuilder->getQuery()->getResult();
     }
+
+    // /**
+    //  * Method to find a User by his email.
+    //  * @param UserSearch $userSearch
+    //  * @return array
+    //  */
+    // public function findUserByEmail(UserSearch $userSearch): array
+    // {
+    //     // We instanciate the QueryBuilder and we refers to the User Entity.
+    //     $queryBuilder = $this->createQueryBuilder('user');
+    //     // We say that the :email is egual to the email property of the User Entity. 
+    //     $queryBuilder->where('user.email LIKE :email');
+    //     // We secure the query by setting a parameter to avoid the SQL injections. 
+    //     $queryBuilder->setParameter(':email', "%$userSearch%");
+    //     // We return the result of the query. 
+    //     return $queryBuilder->getQuery()->getResult();
+    // }
 }

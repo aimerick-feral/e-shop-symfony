@@ -126,21 +126,24 @@ const form = {
   // ======================= ERROR NUMBER =======================
   numberOfErrors: null,
   // ====================== ERROR MESSAGES ======================
-  // User
-  errorMessageEmailEmpty: null,
-  errorMessageEmailValidity: null,
-  errorMessagePasswordEmpty: null,
-  errorMessagePasswordLength: null,
-  errorMessagePasswordLowercase: null,
-  errorMessagePasswordUppercase: null,
-  errorMessagePasswordNumber: null,
-  errorMessagePasswordSpecialCharacter: null,
-  errorMessageGenderNotChecked: null,
+  errorMessageTermsOfSaleNotChecked: null,
+  // Registration
+  errorMessageTermsOfUseNotChecked: null,
+  // User, Product and Contact
   errorMessageFileMimeType: null,
   errorMessageFileSize: null,
-  errorMessageFirstNameEmpty: null,
-  errorMessageLastNameEmpty: null,
-  errorMessageTermsOfUseNotChecked: null,
+  // User
+  errorMessageUserEmailEmpty: null,
+  errorMessageUserEmailValidity: null,
+  errorMessageUserPasswordEmpty: null,
+  errorMessageUserPasswordLength: null,
+  errorMessageUserPasswordLowercase: null,
+  errorMessageUserPasswordUppercase: null,
+  errorMessageUserPasswordNumber: null,
+  errorMessageUserPasswordSpecialCharacter: null,
+  errorMessageUserGenderNotChecked: null,
+  errorMessageUserFirstNameEmpty: null,
+  errorMessageUserLastNameEmpty: null,
   // Contact
   errorMessageContactSubjectNotChecked: null,
   errorMessagePhoneNumberEmpty: null,
@@ -159,20 +162,20 @@ const form = {
   errorMessageProductDescriptionEmpty: null,
   errorMessageProductAvailabilityNotChecked: null,
   // Address
-  errorMessageStreetNumberEmpty: null,
-  errorMessageStreetNumberValidity: null,
-  errorMessageStreetNameEmpty: null,
-  errorMessageStreetNameValidity: null,
-  errorMessageZipCodeEmpty: null,
-  errorMessageZipCodeValidity: null,
-  errorMessageCityEmpty: null,
-  errorMessageCityValidity: null,
-  errorMessageCountryEmpty: null,
-  errorMessageCountryValidity: null,
+  errorMessageAddressStreetNumberEmpty: null,
+  errorMessageAddressStreetNumberValidity: null,
+  errorMessageAddressStreetNameEmpty: null,
+  errorMessageAddressStreetNameValidity: null,
+  errorMessageAddressZipCodeEmpty: null,
+  errorMessageAddressZipCodeValidity: null,
+  errorMessageAddressCityEmpty: null,
+  errorMessageAddressCityValidity: null,
+  errorMessageAddressCountryEmpty: null,
+  errorMessageAddressCountryValidity: null,
   // Purchase
   errorMessagePurchaseProductsNotChecked: null,
-  errorMessageReferenceEmpty: null,
-  errorMessageReferenceValidity: null,
+  errorMessagePurchaseReferenceEmpty: null,
+  errorMessagePurchaseReferenceValidity: null,
   errorMessagePurchaseStatusNotChecked: null,
   errorMessagePurchaseBillingAddressNotChecked: null,
   errorMessagePurchaseDeliveryAddressNotChecked: null,
@@ -186,7 +189,6 @@ const form = {
   errorMessageDeliveryModeMinCartAmountForFreeDeliveryEmpty: null,
   errorMessageDeliveryModeMinCartAmountForFreeDeliveryValidity: null,
   errorMessageDeliveryModeDescriptionEmpty: null,
-  errorMessagePurchaseTermsOfSaleNotChecked: null,
   // ========================== BUTTONS =========================
   submitButtons: [],
   // User
@@ -749,6 +751,17 @@ const form = {
 
     // ==================== ERROR MESSAGES ====================
 
+    form.errorMessageTermsOfSaleNotChecked = document.querySelector(
+      ".error-message__terms-of-sale-not-checked"
+    );
+
+    // Registration
+
+    // Error message terms of service.
+    form.errorMessageTermsOfUseNotChecked = document.querySelector(
+      ".error-message__terms-of-use-not-checked"
+    );
+
     // User, Product and Contact
 
     // Error message file
@@ -762,51 +775,46 @@ const form = {
     // User
 
     // Error message e-mail
-    form.errorMessageEmailEmpty = document.querySelector(
-      ".error-message__email-empty"
+    form.errorMessageUserEmailEmpty = document.querySelector(
+      ".error-message__user-email-empty"
     );
-    form.errorMessageEmailValidity = document.querySelector(
-      ".error-message__email-validity"
+    form.errorMessageUserEmailValidity = document.querySelector(
+      ".error-message__user-email-validity"
     );
 
     // Error message passoword
-    form.errorMessagePasswordEmpty = document.querySelector(
-      ".error-message__password-empty"
+    form.errorMessageUserPasswordEmpty = document.querySelector(
+      ".error-message__user-password-empty"
     );
-    form.errorMessagePasswordLength = document.querySelector(
-      ".error-message__password-length"
+    form.errorMessageUserPasswordLength = document.querySelector(
+      ".error-message__user-password-length"
     );
-    form.errorMessagePasswordLowercase = document.querySelector(
-      ".error-message__password-lowercase"
+    form.errorMessageUserPasswordLowercase = document.querySelector(
+      ".error-message__user-password-lowercase"
     );
-    form.errorMessagePasswordUppercase = document.querySelector(
-      ".error-message__password-uppercase"
+    form.errorMessageUserPasswordUppercase = document.querySelector(
+      ".error-message__user-password-uppercase"
     );
-    form.errorMessagePasswordNumber = document.querySelector(
-      ".error-message__password-number"
+    form.errorMessageUserPasswordNumber = document.querySelector(
+      ".error-message__user-password-number"
     );
-    form.errorMessagePasswordSpecialCharacter = document.querySelector(
-      ".error-message__password-special-character"
+    form.errorMessageUserPasswordSpecialCharacter = document.querySelector(
+      ".error-message__user-password-special-character"
     );
 
     // Error message gender
-    form.errorMessageGenderNotChecked = document.querySelector(
+    form.errorMessageUserGenderNotChecked = document.querySelector(
       ".error-message__user-gender-not-checked"
     );
 
     // Error message last name
-    form.errorMessageLastNameEmpty = document.querySelector(
-      ".error-message__empty-last-name"
+    form.errorMessageUserLastNameEmpty = document.querySelector(
+      ".error-message__user-last-name-empty"
     );
 
     // Error message first name.
-    form.errorMessageFirstNameEmpty = document.querySelector(
-      ".error-message__empty-first-name"
-    );
-
-    // Error message terms of service.
-    form.errorMessageTermsOfUseNotChecked = document.querySelector(
-      ".error-message__terms-of-use-not-checked"
+    form.errorMessageUserFirstNameEmpty = document.querySelector(
+      ".error-message__user-first-name-empty"
     );
 
     // Contact
@@ -875,42 +883,42 @@ const form = {
     // Address
 
     // Error message street number
-    form.errorMessageStreetNumberEmpty = document.querySelector(
+    form.errorMessageAddressStreetNumberEmpty = document.querySelector(
       ".error-message__empty-street-number"
     );
-    form.errorMessageStreetNumberValidity = document.querySelector(
+    form.errorMessageAddressStreetNumberValidity = document.querySelector(
       ".error-message__validity-street-number"
     );
 
     // Error message street name
-    form.errorMessageStreetNameEmpty = document.querySelector(
+    form.errorMessageAddressStreetNameEmpty = document.querySelector(
       ".error-message__empty-street-name"
     );
-    form.errorMessageStreetNameValidity = document.querySelector(
+    form.errorMessageAddressStreetNameValidity = document.querySelector(
       ".error-message__validity-street-name"
     );
 
     // Error message zip code
-    form.errorMessageZipCodeEmpty = document.querySelector(
+    form.errorMessageAddressZipCodeEmpty = document.querySelector(
       ".error-message__empty-zip-code"
     );
-    form.errorMessageZipCodeValidity = document.querySelector(
+    form.errorMessageAddressZipCodeValidity = document.querySelector(
       ".error-message__validity-zip-code"
     );
 
     // Error message city
-    form.errorMessageCityEmpty = document.querySelector(
+    form.errorMessageAddressCityEmpty = document.querySelector(
       ".error-message__empty-city"
     );
-    form.errorMessageCityValidity = document.querySelector(
+    form.errorMessageAddressCityValidity = document.querySelector(
       ".error-message__validity-city"
     );
 
     // Error message country
-    form.errorMessageCountryEmpty = document.querySelector(
+    form.errorMessageAddressCountryEmpty = document.querySelector(
       ".error-message__empty-country"
     );
-    form.errorMessageCountryValidity = document.querySelector(
+    form.errorMessageAddressCountryValidity = document.querySelector(
       ".error-message__validity-country"
     );
 
@@ -918,10 +926,10 @@ const form = {
     form.errorMessagePurchaseProductsNotChecked = document.querySelector(
       ".error-message__purchase-products-not-checked"
     );
-    form.errorMessageReferenceEmpty = document.querySelector(
+    form.errorMessagePurchaseReferenceEmpty = document.querySelector(
       ".error-message__reference-empty"
     );
-    form.errorMessageReferenceValidity = document.querySelector(
+    form.errorMessagePurchaseReferenceValidity = document.querySelector(
       ".error-message__reference-validity"
     );
     form.errorMessagePurchaseStatusNotChecked = document.querySelector(
@@ -1084,9 +1092,6 @@ const form = {
     form.searchDeliveryModeButton = document.getElementById(
       "search-delivery-mode-button"
     );
-    form.errorMessagePurchaseTermsOfSaleNotChecked = document.querySelector(
-      ".error-message__terms-of-sale-not-checked"
-    );
 
     // ==================== LINKS ====================
 
@@ -1142,7 +1147,7 @@ const form = {
    * @return {void}
    */
   switchInputOutlineColor: function (input, outlineColor) {
-    // console.log("form.switchInputOutlineColor()");
+    console.log("form.switchInputOutlineColor()");
 
     // We set the property of the CSS variable.
     input.style.setProperty("--outline", "0.1em solid " + outlineColor);
@@ -1154,7 +1159,7 @@ const form = {
    * @return {void}
    */
   handleAddInputFocusWithin: function (event) {
-    // console.log("form.handleAddInputFocusWithin()");
+    console.log("form.handleAddInputFocusWithin()");
 
     // We get the DOM element form which the event occured.
     let clickedInput = event.currentTarget;
@@ -1203,7 +1208,7 @@ const form = {
    * @return {void}
    */
   handleRemoveInputsFocusWithin: function (event) {
-    // console.log("form.handleRemoveInputsFocusWithin()");
+    console.log("form.handleRemoveInputsFocusWithin()");
 
     // For each input of form.inputs.
     for (let input of form.inputs) {
@@ -1227,7 +1232,7 @@ const form = {
     event.preventDefault();
     console.log("STOP 🛑👮🏼‍♂️ Security check 🔐");
 
-    // If clickedButton is form.registrationButton or form.loginButton or form.updateMyUserProfileButton or form.contactButton or form.searchUserButton or form.adminCreateUserButton or form.adminUpdateUserButton or form.requestPasswordButton.
+    // If clickedButton is one of the comparated buttons.
     if (
       clickedButton === form.registrationButton ||
       clickedButton === form.loginButton ||
@@ -1235,14 +1240,13 @@ const form = {
       clickedButton === form.contactButton ||
       clickedButton === form.adminCreateUserButton ||
       clickedButton === form.adminUpdateUserButton ||
-      // clickedButton === form.searchUserButton ||
       clickedButton === form.requestPasswordButton
     ) {
       // We call form.checkIfEmail() to check if the input it not empty and valid.
       form.checkIfEmail(
         form.userEmailInput,
-        form.errorMessageEmailEmpty,
-        form.errorMessageEmailValidity
+        form.errorMessageUserEmailEmpty,
+        form.errorMessageUserEmailValidity
       );
     }
 
@@ -1250,12 +1254,12 @@ const form = {
     if (clickedButton === form.searchUserButton) {
       // We call form.checkIfInputContainValue() to check if the input it not empty.
       form.checkIfInputContainValue(
-        form.userEmailInput,
-        form.errorMessageEmailEmpty
+        form.userLastNameInput,
+        form.errorMessageUserLastNameEmpty
       );
     }
 
-    // If clickedButton is form.registrationButton or form.loginButton or form.adminCreateUserButton or form.resetPasswordButton.
+    // If clickedButton is one of the comparated buttons.
     if (
       clickedButton === form.registrationButton ||
       clickedButton === form.loginButton ||
@@ -1265,16 +1269,16 @@ const form = {
       // We call form.checkIfPassword() to check if the input it not empty and valid.
       form.checkIfPassword(
         form.userPasswordInput,
-        form.errorMessagePasswordEmpty,
-        form.errorMessagePasswordLength,
-        form.errorMessagePasswordLowercase,
-        form.errorMessagePasswordUppercase,
-        form.errorMessagePasswordNumber,
-        form.errorMessagePasswordSpecialCharacter
+        form.errorMessageUserPasswordEmpty,
+        form.errorMessageUserPasswordLength,
+        form.errorMessageUserPasswordLowercase,
+        form.errorMessageUserPasswordUppercase,
+        form.errorMessageUserPasswordNumber,
+        form.errorMessageUserPasswordSpecialCharacter
       );
     }
 
-    // If clickedButton is form.registrationButton or form.updateMyUserProfileButton or form.contactButton or form.adminCreateUserButton or form.updateUserButto or form.userCreateAddressButton or form.userUpdateAdressButton or form.adminCreateAddressButton or form.adminUpdateAddressButton.
+    // If clickedButton is one of the comparated buttons.
     if (
       clickedButton === form.registrationButton ||
       clickedButton === form.updateMyUserProfileButton ||
@@ -1289,16 +1293,16 @@ const form = {
       // We call form.checkIfInputContainValue()to check if the input it not empty.
       form.checkIfInputContainValue(
         form.userFirstNameInput,
-        form.errorMessageFirstNameEmpty
+        form.errorMessageUserFirstNameEmpty
       );
       // We call form.checkIfInputContainValue() to check if the input it not empty.
       form.checkIfInputContainValue(
         form.userLastNameInput,
-        form.errorMessageLastNameEmpty
+        form.errorMessageUserLastNameEmpty
       );
     }
 
-    // If clickedButton is form.registrationButton or form.contactButton or form.adminCreateUserButto.
+    // If clickedButton is one of the comparated buttons.
     if (
       clickedButton === form.registrationButton ||
       clickedButton === form.adminCreateUserButton
@@ -1306,7 +1310,7 @@ const form = {
       // We call form.checkIfInputIsChecked() to check if the input is checked.
       form.checkIfInputIsChecked(
         form.userCivilityTitleInputs,
-        form.errorMessageGenderNotChecked
+        form.errorMessageUserGenderNotChecked
       );
       // If form.fileInput is contain a value.
       if (form.fileInput.value) {
@@ -1318,7 +1322,7 @@ const form = {
       }
     }
 
-    // If clickedButton is form.updateMyUserProfileButton or form.adminUpdateUserButton or form.contactButton.
+    // If clickedButton is one of the comparated buttons.
     if (
       form.updateMyUserProfileButton ||
       form.adminUpdateUserButton ||
@@ -1333,6 +1337,8 @@ const form = {
         );
       }
     }
+
+    // If clickedButton is one of the comparated buttons.
     if (
       clickedButton === form.contactButton ||
       clickedButton === form.userCreateAddressButton ||
@@ -1340,7 +1346,6 @@ const form = {
       clickedButton == form.adminCreateAddressButton ||
       clickedButton === form.adminUpdateAddressButton
     ) {
-      // If clickedButton is form.contactButtom or form.userCreateAddressButton or form.userUpdateAdressButton or form.adminCreateAddressButton or form.adminUpdateAddressButton or.
       // We call form.checkIfPhoneNumber() to check if the input it not empty and valid.
       form.checkIfPhoneNumber(
         form.phoneNumberInput,
@@ -1415,23 +1420,25 @@ const form = {
       form.submitFormIfNoError(form.resetPasswordForm);
     }
 
-    // If clickedButton is form.adminCreateCategoryButton or form.searchCategoryButton or form.adminUpdateCategoryButton.
+    // If clickedButton is one of the comparated buttons.
     if (
       clickedButton === form.adminCreateCategoryButton ||
       clickedButton === form.adminUpdateCategoryButton ||
       clickedButton === form.searchCategoryButton
     ) {
-      // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
-      form.checkIfAlphabeticalCharacters(
+      // We call form.checkIfInputContainValue() to check if the input it not empty.
+      form.checkIfInputContainValue(
         form.categoryNameInput,
-        form.errorMessageCategoryNameEmpty,
-        form.errorMessageCategoryNameValidity
+        form.errorMessageCategoryNameEmpty
       );
-      // // We call form.checkIfInputContainValue() to check if the input it not empty.
-      // form.checkIfInputContainValue(
+      //! START : category validity not used
+      // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
+      // form.checkIfAlphabeticalCharacters(
       //   form.categoryNameInput,
-      //   form.errorMessageCategoryNameEmpty
+      //   form.errorMessageCategoryNameEmpty,
+      //   form.errorMessageCategoryNameValidity
       // );
+      //! END : category validity not used
     }
 
     // If clickedButton is form.adminCreateCategoryButton.
@@ -1458,20 +1465,22 @@ const form = {
       clickedButton === form.adminUpdateProductButton ||
       clickedButton === form.searchProductButton
     ) {
+      // We call form.checkIfInputContainValue() to check if the input it not empty and valid.
+      form.checkIfInputContainValue(
+        form.productNameInput,
+        form.errorMessageProductNameEmpty
+      );
+      //! START : product validity not used
       // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty.
       // form.checkIfAlphabeticalCharacters(
       //   form.productNameInput,
       //   form.errorMessageProductNameEmpty,
       //   form.errorMessageProductNameValidity
       // );
-      // We call form.checkIfInputContainValue() to check if the input it not empty and valid.
-      form.checkIfInputContainValue(
-        form.productNameInput,
-        form.errorMessageProductNameEmpty
-      );
+      //! END : product validity not used
     }
 
-    // If clickedButton is form.adminCreateProductButton or form.adminUpdateProductButton.
+    // If clickedButton is one of the comparated buttons.
     if (
       clickedButton === form.adminCreateProductButton ||
       clickedButton === form.adminUpdateProductButton
@@ -1530,7 +1539,7 @@ const form = {
       form.submitFormIfNoError(form.searchProductForm);
     }
 
-    // If clickedButton is  form.userCreateAddressButton or form.userUpdateAdressButton or form.adminCreateAddressButton or form.adminUpdateAddressButton or form.searchAddressButton.
+    // If clickedButton is one of the comparated buttons.
     if (
       clickedButton === form.userCreateAddressButton ||
       clickedButton === form.userUpdateAdressButton ||
@@ -1541,17 +1550,17 @@ const form = {
       // // We call form.checkIfInputContainValue() to check if the input it not empty.
       // form.checkIfInputContainValue(
       //   form.addressCityInput,
-      //   form.errorMessageCityEmpty
+      //   form.errorMessageAddressCityEmpty
       // );
       // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
       form.checkIfAlphabeticalCharacters(
         form.addressCityInput,
-        form.errorMessageCityEmpty,
-        form.errorMessageCityValidity
+        form.errorMessageAddressCityEmpty,
+        form.errorMessageAddressCityValidity
       );
     }
 
-    // If clickedButton is  form.userCreateAddressButton or form.userUpdateAdressButton or form.adminCreateAddressButton or form.adminUpdateAddressButton or.
+    // If clickedButton is one of the comparated buttons.
     if (
       clickedButton === form.userCreateAddressButton ||
       clickedButton === form.userUpdateAdressButton ||
@@ -1561,47 +1570,47 @@ const form = {
       // We call form.checkIfStreetNumber() to check if the input it not empty and valid.
       form.checkIfStreetNumber(
         form.addressStreetNumberInput,
-        form.errorMessageStreetNumberEmpty,
-        form.errorMessageStreetNumberValidity
+        form.errorMessageAddressStreetNumberEmpty,
+        form.errorMessageAddressStreetNumberValidity
       );
       // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
       form.checkIfAlphabeticalCharacters(
         form.addressStreetNameInput,
-        form.errorMessageStreetNameEmpty,
-        form.errorMessageStreetNameValidity
+        form.errorMessageAddressStreetNameEmpty,
+        form.errorMessageAddressStreetNameValidity
       );
       // // We call form.checkIfInputContainValue() to check if the input it not empty.
       // form.checkIfInputContainValue(
       //   form.addressStreetNameInput,
-      //   form.errorMessageStreetNameEmpty
+      //   form.errorMessageAddressStreetNameEmpty
       // );
       // We call form.checkIfZipCode() to check if the input it not empty and valid.
       form.checkIfZipCode(
         form.addressZipCodeInput,
-        form.errorMessageZipCodeEmpty,
-        form.errorMessageZipCodeValidity
+        form.errorMessageAddressZipCodeEmpty,
+        form.errorMessageAddressZipCodeValidity
       );
       // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty.
       form.checkIfAlphabeticalCharacters(
         form.addressCityInput,
-        form.errorMessageCityEmpty,
-        form.errorMessageCityValidity
+        form.errorMessageAddressCityEmpty,
+        form.errorMessageAddressCityValidity
       );
       // // We call form.checkIfInputContainValue() to check if the input it not empty.
       // form.checkIfInputContainValue(
       //   form.addressCityInput,
-      //   form.errorMessageCityEmpty
+      //   form.errorMessageAddressCityEmpty
       // );
       // We call form.checkIfAlphabeticalCharacters()to check if the input it not empty and valid.
       form.checkIfAlphabeticalCharacters(
         form.addressCountryInput,
-        form.errorMessageCountryEmpty,
-        form.errorMessageCountryValidity
+        form.errorMessageAddressCountryEmpty,
+        form.errorMessageAddressCountryValidity
       );
       // // We call form.checkIfInputContainValue()to check if the input it not empty.
       // form.checkIfInputContainValue(
       //   form.addressCountryInput,
-      //   form.errorMessageCountryEmpty
+      //   form.errorMessageAddressCountryEmpty
       // );
     }
 
@@ -1635,7 +1644,7 @@ const form = {
       form.submitFormIfNoError(form.searchAddressForm);
     }
 
-    // If clickedButton is form.adminCreatePurchaseButton or form.adminUpdatePurchaseButton.
+    // If clickedButton is one of the comparated buttons.
     if (
       clickedButton === form.adminCreatePurchaseButton ||
       clickedButton === form.adminUpdatePurchaseButton
@@ -1679,21 +1688,21 @@ const form = {
       // // We call form.checkIfInputContainValue() to check if the input it not empty.
       // form.checkIfInputContainValue(
       //   form.purchaseReferenceInput,
-      //   form.errorMessageReferenceEmpty
+      //   form.errorMessagePurchaseReferenceEmpty
       // );
 
       // We call form.checkIfReference() to check if the input it not empty and valid.
       form.checkIfReference(
         form.purchaseReferenceInput,
-        form.errorMessageReferenceEmpty,
-        form.errorMessageReferenceValidity
+        form.errorMessagePurchaseReferenceEmpty,
+        form.errorMessagePurchaseReferenceValidity
       );
 
       // We call form.submitFormIfNoError() with form.searchPurchaseForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.searchPurchaseForm);
     }
 
-    // If clickedButton is form.adminCreateDeliveryModeButton or form.adminUpdateDeliveryModeButton or form.searchDeliveryModeButton.
+    // If clickedButton is one of the comparated buttons.
     if (
       clickedButton === form.adminCreateDeliveryModeButton ||
       clickedButton === form.adminUpdateDeliveryModeButton ||
@@ -1712,7 +1721,7 @@ const form = {
       // );
     }
 
-    // If clickedButton is form.adminCreateDeliveryModeButton or form.adminUpdateDeliveryModeButton.
+    // If clickedButton is one of the comparated buttons.
     if (
       clickedButton === form.adminCreateDeliveryModeButton ||
       clickedButton === form.adminUpdateDeliveryModeButton
@@ -1775,7 +1784,7 @@ const form = {
    * @return {void}
    */
   checkIfEmail: function (input, errorMessageEmpty, errorMessageValidity) {
-    // console.log("form.checkIfEmail()");
+    console.log("form.checkIfEmail()");
 
     // If input is not empty.
     if (input.value) {
@@ -1830,7 +1839,7 @@ const form = {
     errorMessageNumber,
     errorMessageSpecialCharacter
   ) {
-    // console.log("form.checkIfPassword()");
+    console.log("form.checkIfPassword()");
 
     // If input is not empty.
     if (input.value) {
@@ -1939,7 +1948,7 @@ const form = {
    * @return {void}
    */
   checkIfInputContainValue: function (input, errorMessageEmpty) {
-    // console.log("form.checkIfInputContainValue()");
+    console.log("form.checkIfInputContainValue()");
 
     // If input contain a value.
     if (input.value) {
@@ -1965,7 +1974,7 @@ const form = {
    * @return {void}
    */
   checkIfInputIsChecked: function (input, errorMessageNotChecked) {
-    // console.log("form.checkIfInputIsChecked()");
+    console.log("form.checkIfInputIsChecked()");
 
     // We initialize a checked input's counter.
     let numberOfCheckedInput = 0;
@@ -2197,9 +2206,7 @@ const form = {
     errorMessageEmpty,
     errorMessageValidity
   ) {
-    // console.log("form.checkIfAlphabeticalCharacters()");
-
-    console.log(input);
+    console.log("form.checkIfAlphabeticalCharacters()");
 
     // If input is not empty.
     if (input.value) {
@@ -2241,7 +2248,7 @@ const form = {
    * @return {void}
    */
   checkIfNumber: function (input, errorMessageEmpty, errorMessageValidity) {
-    // console.log("form.checkIfNumber()");
+    console.log("form.checkIfNumber()");
 
     // If input is not empty.
     if (input.value) {
@@ -2287,7 +2294,7 @@ const form = {
     errorMessageEmpty,
     errorMessageValidity
   ) {
-    // console.log("form.checkIfStreetNumber()");
+    console.log("form.checkIfStreetNumber()");
 
     // If input is not empty.
     if (input.value) {
@@ -2329,7 +2336,7 @@ const form = {
    * @return {void}
    */
   checkIfZipCode: function (input, errorMessageEmpty, errorMessageValidity) {
-    // console.log("form.checkIfZipCode()");
+    console.log("form.checkIfZipCode()");
 
     // If input is not empty.
     if (input.value) {
@@ -2410,7 +2417,7 @@ const form = {
    * @return {void}
    */
   handleUserProfileUpdate: function (event) {
-    // console.log("form.handleUserProfileUpdate()");
+    console.log("form.handleUserProfileUpdate()");
 
     // We get the DOM element form which the event occured.
     let clickedButton = event.currentTarget;
@@ -2452,7 +2459,7 @@ const form = {
    * @return {void}
    */
   displayNoneInputNotChecked: function (input, label) {
-    // console.log("form.displayNoneInputNotChecked()");
+    console.log("form.displayNoneInputNotChecked()");
 
     // If the input is not checked.
     if (!input.checked) {
@@ -2471,7 +2478,7 @@ const form = {
    * @return {void}
    */
   handlePurchaseSteps: function (event) {
-    // console.log("form.handlePurchaseSteps()");
+    console.log("form.handlePurchaseSteps()");
 
     // We get the DOM element form which the event occured.
     let clickedElement = event.currentTarget;
@@ -2508,7 +2515,7 @@ const form = {
    * @return {void}
    */
   handleAddressesStep: function (clickedElement) {
-    // console.log("form.handleAddressesStep()");
+    console.log("form.handleAddressesStep()");
 
     // If clickedElement is identical to form.purchaseConfirmAddressesButton.
     if (clickedElement === form.purchaseConfirmAddressesButton) {
@@ -2601,7 +2608,7 @@ const form = {
    * @return {void}
    */
   handleDeliveryModeStep: function (clickedElement) {
-    // console.log("form.handleDeliveryModeStep()");
+    console.log("form.handleDeliveryModeStep()");
 
     // If clickedElement is identical to form.purchaseConfirmDeliveryModeButton.
     if (clickedElement === form.purchaseConfirmDeliveryModeButton) {
@@ -2673,7 +2680,7 @@ const form = {
    * @return {void}
    */
   handleCheckoutMethodSteps: function (clickedElement) {
-    // console.log("form.handleCheckoutMethodSteps()");
+    console.log("form.handleCheckoutMethodSteps()");
 
     // If clickedElement is identical to form.purchaseConfirmButton.
     if (clickedElement === form.purchaseConfirmButton) {
@@ -2685,7 +2692,7 @@ const form = {
       // We call form.checkIfInputIsChecked() to check if form.termsOfSaleInput is checked.
       form.checkIfInputIsChecked(
         form.termsOfSaleInput,
-        form.errorMessagePurchaseTermsOfSaleNotChecked
+        form.errorMessageTermsOfSaleNotChecked
       );
       // We count the number of checked form.purchaseCheckoutMethodInputs.
       for (
@@ -2749,7 +2756,7 @@ const form = {
    * @return {void}
    */
   createDivForEachInputAndLabelOfCheckField: function (inputs) {
-    // console.log("createDivForEachInputAndLabelOfCheckField()");
+    console.log("createDivForEachInputAndLabelOfCheckField()");
 
     // We create a empty array for the choice fields.
     let checkFields = [];
@@ -2782,7 +2789,7 @@ const form = {
    * @return {void}
    */
   createImgTagForDeliveryModePicture: function () {
-    // console.log("form.createImgTagForDeliveryModePicture()");
+    console.log("form.createImgTagForDeliveryModePicture()");
 
     // We get the div in which all the delivery modes fields are store.
     const deliveryModeField =
@@ -2810,7 +2817,7 @@ const form = {
    * @return {void}
    */
   displayDeliveryModePicture: function () {
-    // console.log("form.displayDeliveryModePictures()");
+    console.log("form.displayDeliveryModePictures()");
 
     // The database value of the picture is in a HTML dataset attribut whose name is data-pictures.
     // We use the JSON.parse() method to convert the string value to a object.
@@ -2842,7 +2849,7 @@ const form = {
    * @return {void}
    */
   createImgTagForPaymentMethodPicture: function () {
-    // console.log("form.createImgTagForPaymentMethodPicture()");
+    console.log("form.createImgTagForPaymentMethodPicture()");
 
     // We get the div in which all the payment methodes fields are store.
     const purchaseConfirmPayementMethod = document.getElementById(
@@ -2921,7 +2928,7 @@ const form = {
    * @return {void}
    */
   displayPaymentMethodPicture: function () {
-    // console.log("form.displayPaymentMethodPicture()");
+    console.log("form.displayPaymentMethodPicture()");
 
     // We get all the HTML img tag witch the specify className.
     const imgTags = document.querySelectorAll(".page__picture-checkout-method");
@@ -2942,7 +2949,7 @@ const form = {
    * @return {void}
    */
   removeDisabledAttribute: function (inputs) {
-    // console.log("form.removeDisabledAttribute()");
+    console.log("form.removeDisabledAttribute()");
 
     // For each input of inputs.
     for (let input of inputs) {
