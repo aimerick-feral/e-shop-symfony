@@ -50,6 +50,11 @@
 			<p class="error-message error-message_color_red error-message__user-first-name-empty display-none">
 				Merci de saisir un prénom.
 			</p>
+			{#! START : user first name validity not used #}
+			<p class="error-message error-message_color_red error-message__validity-first-name display-none">
+				Merci de saisir un prénom valide.
+			</p>
+			{#! END : user first name validity not used #}
 			{{ form_errors(adminUpdateUserForm.firstName) }}
 		</div>
 		{# lastName #}
@@ -59,6 +64,11 @@
 			<p class="error-message error-message_color_red error-message__user-last-name-empty display-none">
 				Merci de saisir un nom.
 			</p>
+			{#! START : user last name validity not used #}
+			<p class="error-message error-message_color_red error-message__validity-last-name display-none">
+				Merci de saisir un nom valide.
+			</p>
+			{#! END : user last name validity not used #}
 			{{ form_errors(adminUpdateUserForm.lastName) }}
 		</div>
 		{# email #}

@@ -19,9 +19,11 @@
 				<p class="error-message error-message_color_red error-message__category-name-empty display-none">
 					Merci de saisir un nom.
 				</p>
-				<p class="error-message error-message_color_red error-message__category-name-validity display-none">
+				{#! START : category name validity not used #}
+				{# <p class="error-message error-message_color_red error-message__category-name-validity display-none">
 					Merci de saisir un nom de catégorie valide.
-				</p>
+				</p> #}
+				{#! END : category name validity not used #}
 				{{ form_errors(searchCategoryForm.name) }}
 			</div>
 			<button type="submit" class="page__button page__button-submit page__button-search page__button_background-color_blue page__button_color_white" id="search-category-button">

@@ -295,6 +295,7 @@ class CartController extends AbstractController
     {
         // We find the product by is id.
         $product = $this->productRepository->find($id);
+        
         // If we don't find any product.
         if (!$product) {
             // We display a flash message for the user.

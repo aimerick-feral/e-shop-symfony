@@ -17,18 +17,23 @@
 					</h3>
 					<p>
 						{{ numberOfUsers }}
-
-						Utilisateurs
+						Utilisateurs dont
+						{{ admins }}
+						Administrateurs
 					</p>
 					{# <p>
-																															{{ users }}
-																															Utilisateurs avec un rôle Utilisateur
-																														</p>
-																														<p>
-																															{{ admins }}
-																															Utilisateur avec un rôle Administrateur
-																														</p>
-																														<a class="page__link page__link_font-weight_normal card__link page__link_color_blue" href="#">Utilisateurs désactivés</a> #}
+						{{ numberOfUsers }}
+						Utilisateurs
+					</p>
+					<p>
+						{{ users }}
+						Utilisateurs avec un rôle Utilisateur
+					</p>
+					<p>
+						{{ admins }}
+						Utilisateur avec un rôle Administrateur
+					</p> #}
+					{# <a class="page__link page__link_font-weight_normal card__link page__link_color_blue" href="#">Utilisateurs désactivés</a> #}
 					<a class="page__link page__link_font-weight_normal page__link_padding-and-margin_0 card__link page__link_color_blue" href="{{ path('admin_user_statistics') }}">Statistiques 📊</a>
 				</div>
 				<div class="card card_color_blue">

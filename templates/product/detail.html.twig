@@ -22,7 +22,7 @@
 				</p>
 				{% if product.availability == available %}
 					<p class="availability available availability__avialable_color_green">Disponible</p>
-					<a class="page__link page__link_text-transform_uppercase page__link-add-to-cart page__link_background-color_blue page__link_color_white" href="{{ path('cart_add', {'id': product.id}) }}?returnToProductDetail=true">Ajouter au panier</a>
+					<a class="page__link page__link-add-to-cart page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('cart_add', {'id': product.id}) }}?returnToProductDetail=true">Ajouter au panier</a>
 				{% elseif product.availability == unavailable %}
 					<p class="availability unavailable  availability__unavailable_color_red">Indisponible</p>
 				{% endif %}
@@ -39,7 +39,7 @@
 					<p>{{ product.description }}</p>
 					{% if product.availability == available %}
 						<p class="availability available availability__avialable_color_green">Disponible</p>
-						<a class="page__link page__link_text-transform_uppercase page__link-add-to-cart page__link_background-color_blue page__link_color_white" href="{{ path('cart_add', {'id': product.id}) }}?returnToProductDetail=true">Ajouter au panier</a>
+						<a class="page__link page__link-add-to-cart page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('cart_add', {'id': product.id}) }}?returnToProductDetail=true">Ajouter au panier</a>
 					{% elseif product.availability == unavailable %}
 						<p class="availability unavailable availability__unavailable_color_red">Indisponible</p>
 					{% endif %}

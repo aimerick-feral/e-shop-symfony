@@ -153,7 +153,7 @@ class PurchaseController extends AbstractController
 
             // For each $cartItems in $this->cart->getItems().
             foreach ($this->cart->getItems() as $cartItems) {
-                // We create a new PurchaseItem.
+                // We create a new  PurchaseItem.
                 $purchaseItem = new PurchaseItem();
                 // We set the properties of the $purchaseItem.
                 $purchaseItem

@@ -13,10 +13,10 @@
 | /connexion                                                        | app_login                     | GET, POST    | SecurityController      | login()                      | ✅     |
 | /deconnexion                                                      | app_logout                    | GET, POST    | SecurityController      | logout()                     | ✅     |
 | /profil                                                           | user_profile                  | GET, POST    | UserController          | profile()                    | ✅     |
-| /demande-supression-compte                                        | user_delete_request           | GET          | UserController          | deleteRequest()              | ✅     |
+| /demande-supression-compte                                        | user_delete_request           | GET          | UserController          | deleteRequest()              | ❌     |
 | /supprimer-mon-compte                                             | user_delete_my-account        | GET, POST    | UserController          | delete()                     | ✅     |
-| /demande-reactivation-compte                                      | user_reactivate_request       | GET          | UserController          | reactivateRequest()          | ✅     |
-| /reactivation                                                     | user_reactivate               | GET, POST    | UserController          | reactivate()                 | ✅     |
+| /demande-reactivation-compte                                      | user_reactivate_request       | GET          | UserController          | reactivateRequest()          | ❌     |
+| /reactivation                                                     | user_reactivate               | GET, POST    | UserController          | reactivate()                 | ❌     |
 | /reinitialisation-mot-de-passe/demande                            | app_forgot_password_request   | GET, POST    | ResetPasswordController | request()                    | ❌     |
 | /reinitialisation-mot-de-passe/verification-e-mail                | app_check_email               | GET          | ResetPasswordController | checkEmail()                 | ❌     |
 | /reinitialisation-mot-de-passe/reset/{token}                      | app_reset_password            | GET          | ResetPasswordController | reset()                      | ❌     |
@@ -40,7 +40,8 @@
 | /admin/categories/{slug}/mettre-a-jour                            | admin_category_update         | GET, POST    | AdminCategoryController | update()                     | ✅     |
 | /admin/categories/{id}/supprimer                                  | admin_category_delete         | GET, POST    | AdminCategoryController | delete()                     | ✅     |
 | /admin/utilisateurs/{id}/adresses/creer                           | admin_address_create          | GET, POST    | AdminAddressController  | create()                     | ✅     |
-| /admin/utilisateurs/{id}/adresses                                 | admin_address_user_list       | GET          | AdminAddressController  | list()                       | ✅     |
+| /admin/adresses                                                   | admin_address_list            | GET          | AdminAddressController  | list()                       | ✅     |
+| /admin/utilisateurs/{id}/adresses                                 | admin_address_user_list       | GET          | AdminAddressController  | userList()                   | ✅     |
 | /admin/utilisateurs/{userId}/adresses/{addressId}                 | admin_address_detail          | GET          | AdminAddressController  | detail()                     | ✅     |
 | /admin/utilisateurs/{userId}/adresses/{addressId}/mettre-a-jour   | admin_address_update          | GET, POST    | AdminAddressController  | update()                     | ✅     |
 | /admin/utilisateurs/{userId}/adresses/{addressId}/supprimer       | admin_address_delete          | GET, POST    | AdminAddressController  | delete()                     | ✅     |

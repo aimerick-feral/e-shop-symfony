@@ -122,8 +122,8 @@ class Address
 
     public function setLastName(string $lastName): self
     {
-        $this->lastName = $lastName;
-
+        $this->lastName = strtoupper($lastName);
+        
         return $this;
     }
 

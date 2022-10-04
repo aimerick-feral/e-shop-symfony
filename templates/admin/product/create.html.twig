@@ -31,11 +31,11 @@
 				<p class="error-message error-message_color_red error-message__product-name-empty display-none">
 					Merci de saisir un nom.
 				</p>
-				{#! START : product validity not used #}
+				{#! START : product name validity not used #}
 				{# <p class="error-message error-message_color_red error-message__product-name-validity display-none">
 					Merci de saisir un nom de produit valide.
 				</p> #}
-				{#! START : product validity not used #}
+				{#! START : product name validity not used #}
 				{{ form_errors(adminCreateProductForm.name) }}
 			</div>
 			{# price #}
@@ -58,8 +58,8 @@
 					Merci de saisir une description.
 				</p>
 				{# <p class="error-message error-message_color_red error-message__product-description-validity display-none">
-																					Merci de saisir une description valide.
-																				</p> #}
+																													Merci de saisir une description valide.
+																												</p> #}
 				{{ form_errors(adminCreateProductForm.description) }}
 			</div>
 			{# availability #}

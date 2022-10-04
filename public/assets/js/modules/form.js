@@ -1431,14 +1431,14 @@ const form = {
         form.categoryNameInput,
         form.errorMessageCategoryNameEmpty
       );
-      //! START : category validity not used
+      //! START : category name validity not used
       // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
       // form.checkIfAlphabeticalCharacters(
       //   form.categoryNameInput,
       //   form.errorMessageCategoryNameEmpty,
       //   form.errorMessageCategoryNameValidity
       // );
-      //! END : category validity not used
+      //! END : category name validity not used
     }
 
     // If clickedButton is form.adminCreateCategoryButton.
@@ -1470,14 +1470,14 @@ const form = {
         form.productNameInput,
         form.errorMessageProductNameEmpty
       );
-      //! START : product validity not used
+      //! START : product name validity not used
       // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty.
       // form.checkIfAlphabeticalCharacters(
       //   form.productNameInput,
       //   form.errorMessageProductNameEmpty,
       //   form.errorMessageProductNameValidity
       // );
-      //! END : product validity not used
+      //! END : product name validity not used
     }
 
     // If clickedButton is one of the comparated buttons.
@@ -1547,17 +1547,19 @@ const form = {
       clickedButton === form.adminUpdateAddressButton ||
       clickedButton === form.searchAddressButton
     ) {
-      // // We call form.checkIfInputContainValue() to check if the input it not empty.
-      // form.checkIfInputContainValue(
-      //   form.addressCityInput,
-      //   form.errorMessageAddressCityEmpty
-      // );
-      // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
-      form.checkIfAlphabeticalCharacters(
+      // We call form.checkIfInputContainValue() to check if the input it not empty.
+      form.checkIfInputContainValue(
         form.addressCityInput,
-        form.errorMessageAddressCityEmpty,
-        form.errorMessageAddressCityValidity
+        form.errorMessageAddressCityEmpty
       );
+      //! START : address city validity not used
+      // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
+      // form.checkIfAlphabeticalCharacters(
+      //   form.addressCityInput,
+      //   form.errorMessageAddressCityEmpty,
+      //   form.errorMessageAddressCityValidity
+      // );
+      //! END : address city validity not used
     }
 
     // If clickedButton is one of the comparated buttons.
@@ -1573,45 +1575,51 @@ const form = {
         form.errorMessageAddressStreetNumberEmpty,
         form.errorMessageAddressStreetNumberValidity
       );
-      // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
-      form.checkIfAlphabeticalCharacters(
+      // We call form.checkIfInputContainValue() to check if the input it not empty.
+      form.checkIfInputContainValue(
         form.addressStreetNameInput,
-        form.errorMessageAddressStreetNameEmpty,
-        form.errorMessageAddressStreetNameValidity
+        form.errorMessageAddressStreetNameEmpty
       );
-      // // We call form.checkIfInputContainValue() to check if the input it not empty.
-      // form.checkIfInputContainValue(
+      //! START : address street name validity not used
+      // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
+      // form.checkIfAlphabeticalCharacters(
       //   form.addressStreetNameInput,
-      //   form.errorMessageAddressStreetNameEmpty
+      //   form.errorMessageAddressStreetNameEmpty,
+      //   form.errorMessageAddressStreetNameValidity
       // );
+      //! END : address street name validity not used
       // We call form.checkIfZipCode() to check if the input it not empty and valid.
       form.checkIfZipCode(
         form.addressZipCodeInput,
         form.errorMessageAddressZipCodeEmpty,
         form.errorMessageAddressZipCodeValidity
       );
-      // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty.
-      form.checkIfAlphabeticalCharacters(
+      // We call form.checkIfInputContainValue() to check if the input it not empty.
+      form.checkIfInputContainValue(
         form.addressCityInput,
-        form.errorMessageAddressCityEmpty,
-        form.errorMessageAddressCityValidity
+        form.errorMessageAddressCityEmpty
       );
-      // // We call form.checkIfInputContainValue() to check if the input it not empty.
-      // form.checkIfInputContainValue(
+      //! START : address city validity not used
+      // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty.
+      // form.checkIfAlphabeticalCharacters(
       //   form.addressCityInput,
-      //   form.errorMessageAddressCityEmpty
+      //   form.errorMessageAddressCityEmpty,
+      //   form.errorMessageAddressCityValidity
       // );
-      // We call form.checkIfAlphabeticalCharacters()to check if the input it not empty and valid.
-      form.checkIfAlphabeticalCharacters(
+      //! END : address city validity not used
+      // We call form.checkIfInputContainValue()to check if the input it not empty.
+      form.checkIfInputContainValue(
         form.addressCountryInput,
-        form.errorMessageAddressCountryEmpty,
-        form.errorMessageAddressCountryValidity
+        form.errorMessageAddressCountryEmpty
       );
-      // // We call form.checkIfInputContainValue()to check if the input it not empty.
-      // form.checkIfInputContainValue(
+      //!  START : address country validity not used
+      // // We call form.checkIfAlphabeticalCharacters()to check if the input it not empty and valid.
+      // form.checkIfAlphabeticalCharacters(
       //   form.addressCountryInput,
-      //   form.errorMessageAddressCountryEmpty
+      //   form.errorMessageAddressCountryEmpty,
+      //   form.errorMessageAddressCountryValidity
       // );
+      //!  END : address country validity not used
     }
 
     // If clickedButton is form.userCreateAddressButton.

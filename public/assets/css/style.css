@@ -2075,12 +2075,12 @@ body {
   }
 
   .product-property__icon {
-    vertical-align: bottom;
+    vertical-align: middle;
   }
 
   .page__icon-incrementation,
   .page__icon-decrementation {
-    margin-left: 0.5em;
+    margin: 0 0 0 0.5em;
   }
 
   .product-delete {
@@ -2171,7 +2171,7 @@ body {
 
   .product-detail h2,
   .product-detail-from-tablet h2 {
-    margin-bottom: 0.5em;
+    margin: 1em 0 0.5em 0;
   }
 
   .product-detail {
@@ -2220,7 +2220,7 @@ body {
   }
 
   .page__link-add-to-cart {
-    margin-bottom: 2em;
+    margin: 0.5em 0 2em 0;
   }
 
   /* ======================= category_list ====================== */
@@ -3470,17 +3470,12 @@ body {
   .card-address,
   .card-purchase {
     width: 45%;
-    height: 20em;
+    height: 22em;
   }
 
   .card-address h3 {
     margin: 0 0 0.5em;
   }
-
-  /* #card-address,
-  #card-purchase {
-    display: none;
-  } */
 
   /* ==================== purchase ==================== */
   .form-field-address .form-check {
@@ -4068,15 +4063,6 @@ body {
   .card-address,
   .card-purchase {
     width: 25%;
-    /* display: none; */
-  }
-
-  /* #confirm-address-card {
-    width: 35%;
-  } */
-
-  #card-address,
-  #card-purchase {
     display: none;
   }
 
@@ -4090,18 +4076,6 @@ body {
   #purchase-confirm-button {
     width: 25%;
   }
-
-  /* #desktop-purchase-item,
-  #desktop-purchase-subtotal,
-  #desktop-purchase-delivery-mode-price,
-  #desktop-purchase-total {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 45%;
-  } */
 
   .purchase-item-reminder,
   .purchase-subtotal-reminder,

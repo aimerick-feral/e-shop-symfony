@@ -91,7 +91,7 @@ class AddressController extends AbstractController
      * @return Response
      */
     #[Route('/adresses', name: 'address_list', methods: 'GET', priority: 2)]
-    public function list(Request $request, UserRepository $userRepository): Response
+    public function list(Request $request): Response
     {
         // We get the logged in user.
         /**
@@ -186,6 +186,7 @@ class AddressController extends AbstractController
     {
         // We find the address by its id.
         $address =  $this->addressRepository->find($id);
+
         // If we don't find any address.
         if (!$address) {
             // We redirect the user.
@@ -203,6 +204,7 @@ class AddressController extends AbstractController
          * @var User
          */
         $user = $this->getUser();
+
         // If the user of the address is not identical to the logged in user.
         if ($address->getUser() !== $user) {
             // We redirect the user.
@@ -220,7 +222,6 @@ class AddressController extends AbstractController
             'address/detail.html.twig',
             // We set a array of optional data.
             [
-                'user' => $user,
                 'address' => $address
             ],
             // We specify the related HTTP response status code.
@@ -307,56 +308,55 @@ class AddressController extends AbstractController
     #[Route('/adresses/{id}/supprimer', name: 'address_delete', methods: 'GET|POST', requirements: ['id' => '\d+'])]
     public function delete(Request $request, Address $address): Response
     {
-        // // We get the CSRF token.
-        // $submittedToken = $request->request->get('token') ?? $request->query->get('token');
+        // We get the CSRF token.
+        $submittedToken = $request->request->get('token') ?? $request->query->get('token');
 
-        // // If the CSRF token is valid.
-        // if ($this->isCsrfTokenValid('address-delete' . $address->getId(), $submittedToken)) {
-        //     // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-        //     $this->entityManagerInterface->remove($address);
-        //     // We call the flush() method of the EntityManagerInterface to backup the data in the database.
-        //     $this->entityManagerInterface->flush();
+        // If the CSRF token is valid.
+        if ($this->isCsrfTokenValid('address-delete' . $address->getId(), $submittedToken)) {
+            // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+            $this->entityManagerInterface->remove($address);
+            // We call the flush() method of the EntityManagerInterface to backup the data in the database.
+            $this->entityManagerInterface->flush();
 
-        //     // We display a flash message for the user.
-        //     $this->addFlash('success', 'Votre adresse a bien été supprimée.');
+            // We display a flash message for the user.
+            $this->addFlash('success', 'Votre adresse a bien été supprimée.');
 
-        //     // We redirect the user.
-        //     return $this->redirectToRoute(
-        //         'address_list',
-        //         // We set a array of optional data.
-        //         [],
-        //         // We specify the related HTTP response status code.
-        //         301
-        //     );
-        // }
-        // // Else the CSRF token is not valid.
-        // else {
-        //     // We redirect the user to the page 403.
-        //     return new Response(
-        //         'Action interdite',
-        //         // We specify the related HTTP response status code.
-        //         403
-        //     );
-        // }
+            // We redirect the user.
+            return $this->redirectToRoute(
+                'address_list',
+                // We set a array of optional data.
+                [],
+                // We specify the related HTTP response status code.
+                301
+            );
+        }
+        // Else the CSRF token is not valid.
+        else {
+            // We redirect the user to the page 403.
+            return new Response(
+                'Action interdite',
+                // We specify the related HTTP response status code.
+                403
+            );
+        }
 
         //! START : if we use the API
-        // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-        $this->entityManagerInterface->remove($address);
-        // We call the flush() method of the EntityManagerInterface to backup the data in the database.
-        $this->entityManagerInterface->flush();
+        // // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
+        // $this->entityManagerInterface->remove($address);
+        // // We call the flush() method of the EntityManagerInterface to backup the data in the database.
+        // $this->entityManagerInterface->flush();
 
-        // We display a flash message for the user.
-        $this->addFlash('success', 'Votre adresse a bien été supprimée.');
+        // // We display a flash message for the user.
+        // $this->addFlash('success', 'Votre adresse a bien été supprimée.');
 
-        // We redirect the user.
-        return $this->redirectToRoute(
-            'address_list',
-            // We set a array of optional data.
-            [],
-            // We specify the related HTTP response status code.
-            301
-        );
-
+        // // We redirect the user.
+        // return $this->redirectToRoute(
+        //     'address_list',
+        //     // We set a array of optional data.
+        //     [],
+        //     // We specify the related HTTP response status code.
+        //     301
+        // );
         //! END : if we use the API
     }
 }

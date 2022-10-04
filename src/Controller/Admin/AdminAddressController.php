@@ -50,7 +50,7 @@ class AdminAddressController extends AbstractController
             $this->entityManagerInterface->flush();
 
             // We display a flash message for the user.
-            $this->addFlash('success', 'L\' adresse de ' . $user->getFirstName() . ' '  . strtoupper($user->getLastName()) . ' a bien été créée.');
+            $this->addFlash('success', 'L\' adresse de ' . $user->getFirstName() . ' '  . $user->getLastName() . ' a bien été créée.');
 
             // If the query of the request contain the string returnToAdminPurchaseCreate.
             if ($request->query->get('returnToAdminPurchaseCreate')) {
@@ -99,7 +99,6 @@ class AdminAddressController extends AbstractController
     #[Route('/admin/adresses', name: 'admin_address_list', methods: 'GET', priority: 2)]
     public function list(Request $request): Response
     {
-
         // We find all the users.
         $addresses = $this->addressRepository->findAll();
 
@@ -165,7 +164,7 @@ class AdminAddressController extends AbstractController
      * @param User $user
      * @return Response
      */
-    #[Route('/admin/utilisateurs/{id}/adresses', name: 'admin_address_user_list', methods: 'GET', priority: 2, requirements: ['id' => '\d+'])]
+    #[Route('/admin/utilisateurs/{id}/adresses', name: 'admin_address_user_list', methods: 'GET', requirements: ['id' => '\d+'], priority: 2)]
     public function userList(Request $request, User $user): Response
     {
         // We create a array to backup each address.
@@ -180,7 +179,7 @@ class AdminAddressController extends AbstractController
         // If we don't find any address.
         if (!$addresses) {
             // We display a flash message for the user.
-            $this->addFlash('warning', $user->getFirstName() . ' '  . strtoupper($user->getLastName()) . ' ne possède actuellement aucune adresse. Nous vous invitons à lui  en créer une.');
+            $this->addFlash('warning', $user->getFirstName() . ' '  . $user->getLastName() . ' ne possède actuellement aucune adresse. Nous vous invitons à lui  en créer une.');
 
             // We redirect the user.
             return $this->redirectToRoute(
@@ -227,7 +226,7 @@ class AdminAddressController extends AbstractController
             // If we don't find a addresses with the submitted city.
             if (!$addresses) {
                 // We display a flash message for the user.
-                $this->addFlash('error', $user->getFirstName() . ' '  . strtoupper($user->getLastName()) . ' ne posséde aucune adresse ayant pour ville ' . $form->get('city')->getData() . '.');
+                $this->addFlash('error', $user->getFirstName() . ' '  . $user->getLastName() . ' ne posséde aucune adresse ayant pour ville ' . $form->get('city')->getData() . '.');
 
                 // We redirect the user.
                 return $this->redirectToRoute(
@@ -337,7 +336,7 @@ class AdminAddressController extends AbstractController
             $this->entityManagerInterface->flush();
 
             // We display a flash message for the user.
-            $this->addFlash('success', 'L\' adresse de ' . $user->getFirstName() . ' '  . strtoupper($user->getLastName()) . ' a bien été mise à jour.');
+            $this->addFlash('success', 'L\' adresse de ' . $user->getFirstName() . ' '  . $user->getLastName() . ' a bien été mise à jour.');
 
             // If the query of the request contain the string returnToAdminAddressList.
             if ($request->query->get('returnToAdminAddressList')) {
@@ -417,7 +416,7 @@ class AdminAddressController extends AbstractController
             $this->entityManagerInterface->flush();
 
             // We display a flash message for the user.
-            $this->addFlash('success', 'L\' adresse de ' . $user->getFirstName() . ' '  . strtoupper($user->getLastName()) . ' a bien été supprimée.');
+            $this->addFlash('success', 'L\' adresse de ' . $user->getFirstName() . ' '  . $user->getLastName() . ' a bien été supprimée.');
 
             // We redirect the user.
             return $this->redirectToRoute(

@@ -32,7 +32,7 @@ class AdminMainController extends AbstractController
             [
                 'numberOfUsers' => count($userRepository->findAll()),
                 // 'users' => count($userRepository->findUsersByRoles("[]")),
-                // 'admins' => count($userRepository->findUsersByRoles(User::ROLE_ADMIN)),
+                'admins' => count($userRepository->findUsersByRoles(User::ROLE_ADMIN)),
                 'addresses' => count($addressRepository->findAll()),
                 'categories' => count($categoryRepository->findAll()),
                 'products' => count($productRepository->findAll()),

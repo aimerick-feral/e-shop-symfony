@@ -19,9 +19,6 @@
 				<p class="error-message error-message_color_red error-message__user-first-name-empty display-none">
 					Merci de saisir un prénom.
 				</p>
-				<p class="error-message error-message_color_red error-message__validity-first-name display-none">
-					Merci de saisir un prénom valide.
-				</p>
 				{{ form_errors(userCreateAddressForm.firstName) }}
 			</div>
 			{# lastName #}
@@ -30,9 +27,6 @@
 				{{ form_widget(userCreateAddressForm.lastName, { 'id': 'user-create-address-last-name-input', 'attr': { 'class': 'form-field__input form-field__input_color_black form-field__input-user-last-name', 'placeholder': 'Nom' }}) }}
 				<p class="error-message error-message_color_red error-message__user-last-name-empty display-none">
 					Merci de saisir un nom.
-				</p>
-				<p class="error-message error-message_color_red error-message__validity-last-name display-none">
-					Merci de saisir un nom valide.
 				</p>
 				{{ form_errors(userCreateAddressForm.lastName) }}
 			</div>
@@ -57,9 +51,11 @@
 				<p class="error-message error-message_color_red error-message__empty-street-name display-none">
 					Merci de saisir un nom de rue.
 				</p>
+				{#! START : address street name validity not used #}
 				<p class="error-message error-message_color_red error-message__validity-street-name display-none">
 					Merci de saisir un nom de rue valide.
 				</p>
+				{#! START : address street name validity not used #}
 				{{ form_errors(userCreateAddressForm.streetName) }}
 			</div>
 			{# zipCode #}
@@ -81,9 +77,11 @@
 				<p class="error-message error-message_color_red error-message__empty-city display-none">
 					Merci de saisir un nom de ville.
 				</p>
+				{#! START : address city validity not used  #}
 				<p class="error-message error-message_color_red error-message__validity-city display-none">
 					Merci de saisir un nom de ville valide.
 				</p>
+				{#! END : address city validity not used  #}
 				{{ form_errors(userCreateAddressForm.city) }}
 			</div>
 			{# country #}
@@ -93,9 +91,11 @@
 				<p class="error-message error-message_color_red error-message__empty-country display-none">
 					Merci de saisir un nom de pays.
 				</p>
+				{#! START : address country validity not used #}
 				<p class="error-message error-message_color_red error-message__validity-country display-none">
 					Merci de saisir un nom de pays valide.
 				</p>
+				{#! END : address country validity not used #}
 				{{ form_errors(userCreateAddressForm.country) }}
 			</div>
 			{# phoneNumber #}

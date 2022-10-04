@@ -2,19 +2,19 @@
 
 {% block title %}
 	Adresse -
-	{{ user.firstName }}
-	{{ user.lastName }}
+	{{ app.user.firstName }}
+	{{ app.user.lastName }}
 	|
 	{{ parent() }}
 {% endblock %}
 
-{# START : admin_address_detail #}
+{# START : address_detail #}
 {% block body %}
 	<main>
 		<section class="page">
 			<h2>Adresse :
-				{{ user.firstName }}
-				{{ user.lastName }}
+				{{ app.user.firstName }}
+				{{ app.user.lastName }}
 			</h2>
 			<div
 				class="list">
@@ -40,7 +40,7 @@
 						{{ address.phoneNumber }}
 					</p>
 					<a class=" page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('address_update', {'id': address.id}) }}">Modifier</a>
-					<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('address_delete', {'id': address.id, 'token':csrf_token('address-delete' ~ address.id)} ) }}">Supprimer</a>
+					<a class="page__link page__link-delete page__link-delete-address page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('address_delete', {'id': address.id, 'token':csrf_token('address-delete' ~ address.id)} ) }}" data-userfirstname="{{ address.user.firstName }}" data-userlastname="{{ address.user.lastName }}">Supprimer</a>
 				</div>
 				{# END : card for mobile #}
 				{# START : table for desktop #}
@@ -90,7 +90,7 @@
 							<th>Actions</th>
 							<td>
 								<a class=" page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('address_update', {'id': address.id}) }}">Modifier</a>
-								<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('address_delete', {'id': address.id, 'token':csrf_token('address-delete' ~ address.id)} ) }}">Supprimer</a>
+								<a class="page__link page__link-delete page__link-delete-address page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('address_delete', {'id': address.id, 'token':csrf_token('address-delete' ~ address.id)} ) }}" data-userfirstname="{{ address.user.firstName }}" data-userlastname="{{ address.user.lastName }}">Supprimer</a>
 							</td>
 						</tr>
 					</tbody>
@@ -100,4 +100,4 @@
 		</section>
 	</main>
 {% endblock %}
-{# START : admin_address_detail #}
+{# START : address_detail #}

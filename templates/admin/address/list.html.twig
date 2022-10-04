@@ -21,9 +21,11 @@
 				<p class="error-message error-message_color_red error-message__empty-city display-none">
 					Merci de saisir un nom de ville.
 				</p>
-				<p class="error-message error-message_color_red error-message__validity-city display-none">
+				{#! START : address city validity not used  #}
+				{# <p class="error-message error-message_color_red error-message__validity-city display-none">
 					Merci de saisir un nom de ville valide.
-				</p>
+				</p> #}
+				{#! END : address city validity not used  #}
 				{{ form_errors(searchAddressForm.city) }}
 			</div>
 			<button type="submit" class="page__button page__button-submit page__button-search page__button_background-color_blue page__button_color_white" id="search-address-button">
