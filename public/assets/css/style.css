@@ -1833,7 +1833,6 @@ body {
   /*! None */
 
   /* =============== delivery_and_customer_service ============== */
-
   .term-customer-service h4 {
     font-size: 1em;
     font-weight: normal;
@@ -1915,7 +1914,7 @@ body {
     width: 22%;
   }
 
-  /* =======================  app_register ====================== */
+  /* ======================= app_register ====================== */
   .form__icon {
     width: 15%;
     margin-right: 0.5em;
@@ -1959,33 +1958,6 @@ body {
   /* ==================== app_reset_password ==================== */
   /*! None */
 
-  /* ======================= user_profile ======================= */
-  .page__link.page__link-delete-my-user-account,
-  .page__link.page__link-reactivate-account {
-    width: 56%;
-  }
-
-  .form-field-user-picture {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto 0;
-  }
-
-  /* .page__picture-entity {
-    border-radius: 50%;
-    margin: 1em 0 1em;
-    width: 6em;
-  } */
-
-  /* .page__picture-user, */
-  /* .page__picture-product,  */
-  /* .page__picture .page__picture-delivery-mode {
-    border-radius: none;
-  } */
-
   /* ===================== user_delete_request =================== */
   /*! None */
 
@@ -2024,6 +1996,419 @@ body {
 
   .term__user-email_color_slimy-green {
     color: var(--slimy-green);
+  }
+
+  /* ====================== admin_dashboard ===================== */
+  /*! None */
+
+  /* ===================== admin_user_create ==================== */
+  /*! None */
+
+  /* ====================== admin_user_list ===================== */
+  .table {
+    display: none;
+  }
+
+  .form-field__input-search {
+    width: 100%;
+  }
+
+  #create-category-link,
+  #create-product-link,
+  #create-address-link,
+  #create-purchase-link,
+  #create-delivery-mode-link {
+    width: 55%;
+  }
+
+  .admin-preview {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  .admin-preview p {
+    text-align: center;
+  }
+
+  .admin-preview p:first-child,
+  .admin-detail p:first-child {
+    margin-top: 1em;
+  }
+
+  .admin-preview .page__link-text:nth-child(1) {
+    margin: 0 0 0.5em;
+  }
+
+  .card_color_blue,
+  .admin-preview_color_blue,
+  .admin-detail_color_blue,
+  .card-address_color_blue,
+  .card-purchase_color_blue {
+    border: solid 0.1em var(--blue);
+  }
+
+  .card_color_green,
+  .admin-preview_color_green,
+  .admin-detail_color_green,
+  .card-address_color_green,
+  .card-purchase_color_green {
+    border: solid 0.1em var(--green);
+  }
+
+  .card_color_red,
+  .admin-preview_color_red,
+  .admin-detail_color_red,
+  .card-address_color_red,
+  .card-purchase_color_red {
+    border: solid 0.1em var(--red);
+  }
+
+  .card_color_safety-orange,
+  .admin-preview_color_safety-orange,
+  .admin-detail_color_safety-orange,
+  .card-address_color_safety-orange,
+  .card-purchase_color_safety-orange {
+    border: solid 0.1em var(--safety-orange);
+  }
+
+  .card_color_purple,
+  .admin-preview_color_purple,
+  .admin-detail_color_purple,
+  .card-address_color_purple,
+  .card-purchase_color_purple {
+    border: solid 0.1em var(--purple);
+  }
+
+  .card_color_yellow,
+  .admin-preview_color_yellow,
+  .admin-detail_color_yellow,
+  .card-address_color_yellow,
+  .card-purchase_color_yellow {
+    border: solid 0.1em var(--yellow);
+  }
+
+  .card_color_slimy-green,
+  .admin-preview_color_slimy-green,
+  .admin-detail_color_slimy-green,
+  .card-address_color_slimy-green,
+  .card-purchase_color_slimy-green {
+    border: solid 0.1em var(--slimy-green);
+  }
+
+  .admin-preview p.availability__avialable_color_green,
+  .admin-detail p.availability__avialable_color_green {
+    color: var(--green);
+  }
+
+  .admin-preview p.availability__unavailable_color_red,
+  .admin-detail p.availability__unavailable_color_red {
+    color: var(--red);
+  }
+
+  /* ===================== admin_user_detail ==================== */
+  .admin-detail {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  .admin-detail p {
+    margin: 0 0 0.5em 0.5em;
+    text-align: center;
+  }
+
+  /* ===================== admin_user_update ==================== */
+  /*! None */
+
+  /* =================== admin_user_statistics ================== */
+  .block-chart {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 2em 0 0;
+    /* background-color: #999999; */
+  }
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* ==================== admin_address_list ==================== */
+  /*! None */
+
+  /* =================== admin_address_detail =================== */
+  /*! None */
+
+  /* =================== admin_address_update =================== */
+  /*! None */
+
+  /* =================== admin_product_create =================== */
+  /*! None */
+
+  /* ==================== admin_product_list ==================== */
+  /*! None */
+
+  /* =================== admin_product_detail =================== */
+  /*! None */
+
+  /* =================== admin_product_update =================== */
+  /*! None */
+
+  /* ================== admin_category_create =================== */
+  /*! None */
+
+  /* ==================== admin_category_list =================== */
+  /*! None */
+
+  /* =================== admin_category_detail ================== */
+  /*! None */
+
+  /* =================== admin_category_update ================== */
+  /*! None */
+
+  /* ================ admin_delivery_mode_create ================ */
+  /*! None */
+
+  /* ================= admin_delivery_mode_list ================= */
+  /*! None */
+
+  /* ================ admin_delivery_mode_detail ================ */
+  /*! None */
+
+  /* ================ admin_delivery_mode_update ================ */
+  /*! None */
+
+  /* ================== admin_purchase_create =================== */
+  #purchase_billingAddress,
+  #purchase_deliveryAddress {
+    display: flex;
+  }
+
+  /* ==================== admin_purchase_list =================== */
+  .purchase-subtotal,
+  .purchase-delivery-mode-price,
+  .purchase-total,
+  .purchase-subtotal-reminder,
+  .purchase-delivery-mode-price-reminder,
+  .purchase-total-reminder {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+  }
+
+  .purchase-total p,
+  .purchase-total-reminder p {
+    margin-top: 0.5em;
+    font-weight: bold;
+  }
+
+  .purchase-total_border-color_blue {
+    border-top: solid 0.1em var(--blue);
+  }
+
+  .purchase-total_border-color_green {
+    border-top: solid 0.1em var(--green);
+  }
+
+  .purchase-total_border-color_red {
+    border-top: solid 0.1em var(--red);
+  }
+
+  .purchase-total_border-color_safety-orange {
+    border-top: solid 0.1em var(--safety-orange);
+  }
+
+  .purchase-total_border-color_purple {
+    border-top: solid 0.1em var(--purple);
+  }
+
+  .purchase-total_border-color_yellow {
+    border-top: solid 0.1em var(--yellow);
+  }
+
+  .purchase-total_border-color_slimy-green {
+    border-top: solid 0.1em var(--slimy-green);
+  }
+
+  .purchase-subtotal,
+  .purchase-subtotal-reminder {
+    margin-top: 2em;
+  }
+
+  /* ================= admin_purchase_user_list ================= */
+  .card-purchase p.status__paid_color_green {
+    color: var(--green);
+  }
+
+  /* ================== admin_purchase_detail =================== */
+  .purchase-item,
+  .purchase-item-reminder {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 2em 0 0;
+    /* background-color: #00ff00; */
+  }
+
+  .purchase-item-property,
+  .purchase-item-property-reminder {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+    /* margin-left: 1em; */
+  }
+
+  .purchase-item-property h3,
+  .purchase-item-property-reminder h3 {
+    margin: 0 0 0.5em;
+  }
+
+  /* ================== admin_purchase_update =================== */
+  /*! None */
+
+  /* ======================= user_profile ======================= */
+  .page__link.page__link-delete-my-user-account,
+  .page__link.page__link-reactivate-account {
+    width: 56%;
+  }
+
+  .form-field-user-picture {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 0;
+  }
+
+  /* ====================== address_create ====================== */
+  /*! None */
+
+  /* ======================= address_list ======================= */
+  .card-address {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  .card-address h3 {
+    margin: 0.5em 0 0.5em;
+  }
+
+  .card-address p:nth-child(1),
+  .card-purchase p:nth-child(1) {
+    margin: 0.5em 0 0.5em;
+  }
+
+  .card-purchase p:nth-child(1) {
+    text-align: center;
+  }
+
+  /* ====================== address_detail ====================== */
+  /*! None */
+
+  /* ====================== address_update ====================== */
+  /*! None */
+
+  /* ======================= category_list ====================== */
+  .card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 18em;
+    margin-top: 2em;
+  }
+
+  .card_background-color_white {
+    background-color: var(--white);
+  }
+
+  /* ====================== category_detail ===================== */
+  /*! None */
+
+  /* ======================= product_list ======================= */
+  /*! None */
+
+  /* ======================= product_detail ===================== */
+  .product-detail-from-tablet {
+    display: none;
+  }
+
+  .product-detail h2,
+  .product-detail-from-tablet h2 {
+    margin: 1em 0 0.5em 0;
+  }
+
+  .product-detail {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin-top: 2em;
+  }
+
+  .product-detail p.availability__avialable_color_green,
+  .admin-preview p.availability__avialable_color_green,
+  .admin-detail p.availability__avialable_color_green {
+    color: var(--green);
+  }
+
+  .product-detail p.availability__unavailable_color_red,
+  .admin-preview p.availability__unavailable_color_red,
+  .admin-detail p.availability__unavailable_color_red {
+    color: var(--red);
+  }
+
+  .product-detail-property {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-detail-property:nth-child(2) p:nth-child(2) {
+    font-weight: bold;
+  }
+
+  .product-quantity {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-quantity p {
+    margin-top: 0.5em;
+    margin-right: 1em;
+  }
+
+  .page__link-add-to-cart {
+    margin: 0.5em 0 2em 0;
   }
 
   /* ======================== cart_detail ======================= */
@@ -2157,393 +2542,6 @@ body {
     margin-top: 0.5em;
   }
 
-  /* #purchase-link {
-   margin: 0;
-  } */
-
-  /* ======================= product_list ======================= */
-  /*! None */
-
-  /* ======================= product_detail ===================== */
-  .product-detail-from-tablet {
-    display: none;
-  }
-
-  .product-detail h2,
-  .product-detail-from-tablet h2 {
-    margin: 1em 0 0.5em 0;
-  }
-
-  .product-detail {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 100%;
-    margin-top: 2em;
-  }
-
-  .product-detail p.availability__avialable_color_green,
-  .admin-preview p.availability__avialable_color_green,
-  .admin-detail p.availability__avialable_color_green {
-    color: var(--green);
-  }
-
-  .product-detail p.availability__unavailable_color_red,
-  .admin-preview p.availability__unavailable_color_red,
-  .admin-detail p.availability__unavailable_color_red {
-    color: var(--red);
-  }
-
-  .product-detail-property {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .product-detail-property:nth-child(2) p:nth-child(2) {
-    font-weight: bold;
-  }
-
-  .product-quantity {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .product-quantity p {
-    margin-top: 0.5em;
-    margin-right: 1em;
-  }
-
-  .page__link-add-to-cart {
-    margin: 0.5em 0 2em 0;
-  }
-
-  /* ======================= category_list ====================== */
-  .card {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 18em;
-    margin-top: 2em;
-  }
-
-  .card_background-color_white {
-    background-color: var(--white);
-  }
-
-  /* ====================== admin_dashboard ===================== */
-  /*! None */
-
-  /* ====================== admin_user_list ===================== */
-  .table {
-    display: none;
-  }
-
-  .form-field__input-search {
-    width: 100%;
-  }
-
-  #create-category-link,
-  #create-product-link,
-  #create-address-link,
-  #create-purchase-link,
-  #create-delivery-mode-link {
-    width: 55%;
-  }
-
-  .admin-preview {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 100%;
-    margin-top: 2em;
-  }
-
-  .admin-preview p {
-    text-align: center;
-  }
-
-  .admin-preview p:first-child,
-  .admin-detail p:first-child {
-    margin-top: 1em;
-  }
-
-  .admin-preview .page__link-text:nth-child(1) {
-    margin: 0 0 0.5em;
-  }
-
-  .card_color_blue,
-  .admin-preview_color_blue,
-  .admin-detail_color_blue,
-  .card-address_color_blue,
-  .card-purchase_color_blue {
-    border: solid 0.1em var(--blue);
-  }
-
-  .card_color_green,
-  .admin-preview_color_green,
-  .admin-detail_color_green,
-  .card-address_color_green,
-  .card-purchase_color_green {
-    border: solid 0.1em var(--green);
-  }
-
-  .card_color_red,
-  .admin-preview_color_red,
-  .admin-detail_color_red,
-  .card-address_color_red,
-  .card-purchase_color_red {
-    border: solid 0.1em var(--red);
-  }
-
-  .card_color_safety-orange,
-  .admin-preview_color_safety-orange,
-  .admin-detail_color_safety-orange,
-  .card-address_color_safety-orange,
-  .card-purchase_color_safety-orange {
-    border: solid 0.1em var(--safety-orange);
-  }
-
-  .card_color_purple,
-  .admin-preview_color_purple,
-  .admin-detail_color_purple,
-  .card-address_color_purple,
-  .card-purchase_color_purple {
-    border: solid 0.1em var(--purple);
-  }
-
-  .card_color_yellow,
-  .admin-preview_color_yellow,
-  .admin-detail_color_yellow,
-  .card-address_color_yellow,
-  .card-purchase_color_yellow {
-    border: solid 0.1em var(--yellow);
-  }
-
-  .card_color_slimy-green,
-  .admin-preview_color_slimy-green,
-  .admin-detail_color_slimy-green,
-  .card-address_color_slimy-green,
-  .card-purchase_color_slimy-green {
-    border: solid 0.1em var(--slimy-green);
-  }
-
-  .admin-preview p.availability__avialable_color_green,
-  .admin-detail p.availability__avialable_color_green {
-    color: var(--green);
-  }
-
-  .admin-preview p.availability__unavailable_color_red,
-  .admin-detail p.availability__unavailable_color_red {
-    color: var(--red);
-  }
-
-  /* ===================== admin_user_detail ==================== */
-  .admin-detail {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 100%;
-    margin-top: 2em;
-  }
-
-  .admin-detail p {
-    margin: 0 0 0.5em 0.5em;
-    text-align: center;
-  }
-
-  /* ===================== admin_user_create ==================== */
-  /*! None */
-
-  /* ===================== admin_user_update ==================== */
-  /*! None */
-
-  /* =================== admin_user_statistics ================== */
-  .block-chart {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin: 2em 0 0;
-    /* background-color: #999999; */
-  }
-
-  /* ==================== admin_product_list ==================== */
-  /*! None */
-
-  /* =================== admin_product_detail =================== */
-  /*! None */
-
-  /* =================== admin_product_create =================== */
-  /*! None */
-
-  /* =================== admin_product_update =================== */
-  /*! None */
-
-  /* ==================== admin_category_list =================== */
-  /*! None */
-
-  /* =================== admin_category_detail ================== */
-  /*! None */
-
-  /* =================== admin_category_create ================== */
-  /*! None */
-
-  /* =================== admin_category_update ================== */
-  /*! None */
-
-  /* =================== admin_address_create =================== */
-  /*! None */
-
-  /* =================== admin_address_user_list ================= */
-  /*! None */
-
-  /* ================== admin_address_detail ==================== */
-  /*! None */
-
-  /* ==================== admin_address_update ================== */
-  /*! None */
-
-  /* ================ admin_purchase_user_create ================ */
-  #purchase_billingAddress,
-  #purchase_deliveryAddress {
-    display: flex;
-  }
-
-  /* ==================== admin_purchase_list =================== */
-  .purchase-subtotal,
-  .purchase-delivery-mode-price,
-  .purchase-total,
-  .purchase-subtotal-reminder,
-  .purchase-delivery-mode-price-reminder,
-  .purchase-total-reminder {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    height: 100%;
-  }
-
-  .purchase-total p,
-  .purchase-total-reminder p {
-    margin-top: 0.5em;
-    font-weight: bold;
-  }
-
-  .purchase-total_border-color_blue {
-    border-top: solid 0.1em var(--blue);
-  }
-
-  .purchase-total_border-color_green {
-    border-top: solid 0.1em var(--green);
-  }
-
-  .purchase-total_border-color_red {
-    border-top: solid 0.1em var(--red);
-  }
-
-  .purchase-total_border-color_safety-orange {
-    border-top: solid 0.1em var(--safety-orange);
-  }
-
-  .purchase-total_border-color_purple {
-    border-top: solid 0.1em var(--purple);
-  }
-
-  .purchase-total_border-color_yellow {
-    border-top: solid 0.1em var(--yellow);
-  }
-
-  .purchase-total_border-color_slimy-green {
-    border-top: solid 0.1em var(--slimy-green);
-  }
-
-  .purchase-subtotal,
-  .purchase-subtotal-reminder {
-    margin-top: 2em;
-  }
-
-  /* ================= admin_purchase_user_list ================= */
-  .card-purchase p.status__paid_color_green {
-    color: var(--green);
-  }
-
-  /* =================== admin_purchase_detail ================== */
-  .purchase-item,
-  .purchase-item-reminder {
-    display: flex;
-    width: 90%;
-    height: 100%;
-    margin: 2em 0 0;
-    /* background-color: #00ff00; */
-  }
-
-  .purchase-item-property,
-  .purchase-item-property-reminder {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    align-items: flex-start;
-    width: 100%;
-    /* margin-left: 1em; */
-  }
-
-  .purchase-item-property h3,
-  .purchase-item-property-reminder h3 {
-    margin: 0 0 0.5em;
-  }
-
-  /* ================ admin_purchase_user_detail ================ */
-  /*! None */
-
-  /* =================== admin_purchase_update ================== */
-  /*! None */
-
-  /* ====================== address_create ====================== */
-  /*! None */
-
-  /* ====================== address_update ====================== */
-  /*! None */
-
-  /* ======================= address_list ======================= */
-  .card-address {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 100%;
-    margin-top: 2em;
-  }
-
-  .card-address h3 {
-    margin: 0.5em 0 0.5em;
-  }
-
-  .card-address p:nth-child(1),
-  .card-purchase p:nth-child(1) {
-    margin: 0.5em 0 0.5em;
-  }
-
-  .card-purchase p:nth-child(1) {
-    text-align: center;
-  }
-
   /* ========================= purchase ========================= */
   .form-field-address .form-check {
     width: 50%;
@@ -2599,33 +2597,6 @@ body {
     margin: 1em 0 0;
   }
 
-  /* .page__icon-checked {
-    vertical-align: bottom;
-    width: 1.2em;
-  } */
-
-  /* .page__picture-entity {
-    border-radius: 50%;
-    margin: 1em 0 1em;
-    width: 6em;
-  }
-
-  .page__picture-delivery-mode,
-  .page__picture-checkout-methode {
-    vertical-align: middle;
-  } */
-
-  /* .page__picture-delivery-mode {
-    width: 2em;
-    margin-right: 0.25em;
-  } */
-
-  /* .page__picture-user, */
-  /* .page__picture-product,  */
-  /* .page__picture .page__picture-delivery-mode {
-    border-radius: none;
-  } */
-
   .purchase-item-property-reminder p:nth-child(2),
   .purchase-item-property-reminder p:last-child {
     font-weight: bold;
@@ -2645,10 +2616,6 @@ body {
     height: 100%;
     margin-top: 2em;
   }
-
-  /* .card-purchase .page__link {
-    margin-bottom: 1em;
-  } */
 
   /* ====================== purchase_detail ===================== */
   .card-purchase .product-property p:nth-child(1) {
@@ -2772,7 +2739,7 @@ body {
   /* ====================== secure_payment ====================== */
   /*! None */
 
-  /* =======================  app_register ====================== */
+  /* ======================= app_register ====================== */
   /*! None */
 
   /* ========================= app_login ======================== */
@@ -2785,10 +2752,6 @@ body {
   /*! None */
 
   /* ==================== app_reset_password ==================== */
-
-  /*! None */
-
-  /* ======================= user_profile ======================= */
   /*! None */
 
   /* ===================== user_delete_request =================== */
@@ -2797,23 +2760,10 @@ body {
   /* =================== user_reactivate_request ================= */
   /*! None */
 
-  /* ======================== cart_detail ======================= */
-  .product-property h2 {
-    font-size: 1.6em;
-  }
-
-  /* ======================= product_list ======================= */
-  /*! None */
-
-  /* ======================= product_detail ===================== */
-  /*! None */
-
-  /* ======================= category_list ====================== */
-  .card {
-    height: 20em;
-  }
-
   /* ====================== admin_dashboard ===================== */
+  /*! None */
+
+  /* ===================== admin_user_create ==================== */
   /*! None */
 
   /* ====================== admin_user_list ===================== */
@@ -2822,13 +2772,28 @@ body {
   /* ===================== admin_user_detail ==================== */
   /*! None */
 
-  /* ===================== admin_user_create ==================== */
-  /*! None */
-
   /* ===================== admin_user_update ==================== */
   /*! None */
 
   /* =================== admin_user_statistics ================== */
+  /*! None */
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* ==================== admin_address_list ==================== */
+  /*! None */
+
+  /* =================== admin_address_detail =================== */
+  /*! None */
+
+  /* =================== admin_address_update =================== */
+  /*! None */
+
+  /* =================== admin_product_create =================== */
   /*! None */
 
   /* ==================== admin_product_list ==================== */
@@ -2837,10 +2802,10 @@ body {
   /* =================== admin_product_detail =================== */
   /*! None */
 
-  /* =================== admin_product_create =================== */
+  /* =================== admin_product_update =================== */
   /*! None */
 
-  /* =================== admin_product_update =================== */
+  /* ================== admin_category_create =================== */
   /*! None */
 
   /* ==================== admin_category_list =================== */
@@ -2849,25 +2814,22 @@ body {
   /* =================== admin_category_detail ================== */
   /*! None */
 
-  /* =================== admin_category_create ================== */
-  /*! None */
-
   /* =================== admin_category_update ================== */
   /*! None */
 
-  /* =================== admin_address_create =================== */
+  /* ================ admin_delivery_mode_create ================ */
   /*! None */
 
-  /* =================== admin_address_user_list ================ */
+  /* ================= admin_delivery_mode_list ================= */
   /*! None */
 
-  /* ================== admin_address_detail ==================== */
+  /* ================ admin_delivery_mode_detail ================ */
   /*! None */
 
-  /* ==================== admin_address_update ================== */
+  /* ================ admin_delivery_mode_update ================ */
   /*! None */
 
-  /* ================ admin_purchase_user_create ================ */
+  /* ================== admin_purchase_create =================== */
   /*! None */
 
   /* ==================== admin_purchase_list =================== */
@@ -2876,23 +2838,45 @@ body {
   /* ================= admin_purchase_user_list ================= */
   /*! None */
 
-  /* =================== admin_purchase_detail ================== */
+  /* ================== admin_purchase_detail =================== */
   /*! None */
 
-  /* ================ admin_purchase_user_detail ================ */
+  /* ================== admin_purchase_update =================== */
   /*! None */
 
-  /* =================== admin_purchase_update ================== */
+  /* ======================= user_profile ======================= */
   /*! None */
 
   /* ====================== address_create ====================== */
   /*! None */
 
+  /* ======================= address_list ======================= */
+  /*! None */
+
+  /* ====================== address_detail ====================== */
+  /*! None */
+
   /* ====================== address_update ====================== */
   /*! None */
 
-  /* ======================= address_list ======================= */
+  /* ======================= category_list ====================== */
+  .card {
+    height: 20em;
+  }
+
+  /* ====================== category_detail ===================== */
   /*! None */
+
+  /* ======================= product_list ======================= */
+  /*! None */
+
+  /* ======================= product_detail ===================== */
+  /*! None */
+
+  /* ======================== cart_detail ======================= */
+  .product-property h2 {
+    font-size: 1.6em;
+  }
 
   /* ========================= purchase ========================= */
   /*! None */
@@ -2986,7 +2970,7 @@ body {
   /* ====================== secure_payment ====================== */
   /*! None */
 
-  /* =======================  app_register ====================== */
+  /* ======================= app_register ====================== */
   .form-field__input::placeholder,
   .form-field__input-search::placeholder
   /* .form__label, */ {
@@ -3005,33 +2989,16 @@ body {
   /* ==================== app_reset_password ==================== */
   /*! None */
 
-  /* ======================= user_profile ======================= */
-  /*! None */
-
   /* ===================== user_delete_request =================== */
   /*! None */
 
   /* =================== user_reactivate_request ================= */
   /*! None */
 
-  /* ======================== cart_detail ======================= */
-  .product-property h2 {
-    font-size: 1.4em;
-  }
-
-  /* ======================= product_list ======================= */
-  /*! None */
-
-  /* ======================= product_detail ===================== */
-  /*! None */
-
-  /* ======================= category_list ====================== */
-  /*! None */
-
-  /* ======================= category_list ====================== */
-  /*! None */
-
   /* ====================== admin_dashboard ===================== */
+  /*! None */
+
+  /* ===================== admin_user_create ==================== */
   /*! None */
 
   /* ====================== admin_user_list ===================== */
@@ -3040,13 +3007,28 @@ body {
   /* ===================== admin_user_detail ==================== */
   /*! None */
 
-  /* ===================== admin_user_create ==================== */
-  /*! None */
-
   /* ===================== admin_user_update ==================== */
   /*! None */
 
   /* =================== admin_user_statistics ================== */
+  /*! None */
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* ==================== admin_address_list ==================== */
+  /*! None */
+
+  /* =================== admin_address_detail =================== */
+  /*! None */
+
+  /* =================== admin_address_update =================== */
+  /*! None */
+
+  /* =================== admin_product_create =================== */
   /*! None */
 
   /* ==================== admin_product_list ==================== */
@@ -3055,10 +3037,10 @@ body {
   /* =================== admin_product_detail =================== */
   /*! None */
 
-  /* =================== admin_product_create =================== */
+  /* =================== admin_product_update =================== */
   /*! None */
 
-  /* =================== admin_product_update =================== */
+  /* ================== admin_category_create =================== */
   /*! None */
 
   /* ==================== admin_category_list =================== */
@@ -3067,25 +3049,22 @@ body {
   /* =================== admin_category_detail ================== */
   /*! None */
 
-  /* =================== admin_category_create ================== */
-  /*! None */
-
   /* =================== admin_category_update ================== */
   /*! None */
 
-  /* =================== admin_address_create =================== */
+  /* ================ admin_delivery_mode_create ================ */
   /*! None */
 
-  /* =================== admin_address_user_list ================ */
+  /* ================= admin_delivery_mode_list ================= */
   /*! None */
 
-  /* ================== admin_address_detail ==================== */
+  /* ================ admin_delivery_mode_detail ================ */
   /*! None */
 
-  /* ==================== admin_address_update ================== */
+  /* ================ admin_delivery_mode_update ================ */
   /*! None */
 
-  /* ================ admin_purchase_user_create ================ */
+  /* ================== admin_purchase_create =================== */
   /*! None */
 
   /* ==================== admin_purchase_list =================== */
@@ -3094,23 +3073,45 @@ body {
   /* ================= admin_purchase_user_list ================= */
   /*! None */
 
-  /* =================== admin_purchase_detail ================== */
+  /* ================== admin_purchase_detail =================== */
   /*! None */
 
-  /* ================ admin_purchase_user_detail ================ */
+  /* ================== admin_purchase_update =================== */
   /*! None */
 
-  /* =================== admin_purchase_update ================== */
+  /* ======================= user_profile ======================= */
   /*! None */
 
   /* ====================== address_create ====================== */
   /*! None */
 
+  /* ======================= address_list ======================= */
+  /*! None */
+
+  /* ====================== address_detail ====================== */
+  /*! None */
+
   /* ====================== address_update ====================== */
   /*! None */
 
-  /* ======================= address_list ======================= */
+  /* ======================= category_list ====================== */
+  .card {
+    height: 20em;
+  }
+
+  /* ====================== category_detail ===================== */
   /*! None */
+
+  /* ======================= product_list ======================= */
+  /*! None */
+
+  /* ======================= product_detail ===================== */
+  /*! None */
+
+  /* ======================== cart_detail ======================= */
+  .product-property h2 {
+    font-size: 1.4em;
+  }
 
   /* ========================= purchase ========================= */
   .page__icon-checked {
@@ -3287,7 +3288,7 @@ body {
   /* ====================== secure_payment ====================== */
   /*! None */
 
-  /* =======================  app_register ====================== */
+  /* ======================= app_register ====================== */
   /*! None */
 
   /* ========================= app_login ======================== */
@@ -3302,19 +3303,123 @@ body {
   /* ==================== app_reset_password ==================== */
   /*! None */
 
-  /* ======================= user_profile ======================= */
-  /*! None */
-
   /* ===================== user_delete_request =================== */
   /*! None */
 
   /* =================== user_reactivate_request ================= */
   /*! None */
 
-  /* ======================== cart_detail ======================= */
-  .product-property h2 {
-    font-size: 1.4em;
+  /* ====================== admin_dashboard ===================== */
+  /*! None */
+
+  /* ===================== admin_user_create ==================== */
+  /*! None */
+
+  /* ====================== admin_user_list ===================== */
+  .admin-preview {
+    width: 45%;
   }
+
+  /* ===================== admin_user_detail ==================== */
+  /*! None */
+
+  /* ===================== admin_user_update ==================== */
+  /*! None */
+
+  /* =================== admin_user_statistics ================== */
+  .block-chart {
+    width: 50%;
+  }
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* ==================== admin_address_list ==================== */
+  /*! None */
+
+  /* =================== admin_address_detail =================== */
+  /*! None */
+
+  /* =================== admin_address_update =================== */
+  /*! None */
+
+  /* =================== admin_product_create =================== */
+  /*! None */
+
+  /* ==================== admin_product_list ==================== */
+  /*! None */
+
+  /* =================== admin_product_detail =================== */
+  /*! None */
+
+  /* =================== admin_product_update =================== */
+  /*! None */
+
+  /* ================== admin_category_create =================== */
+  /*! None */
+
+  /* ==================== admin_category_list =================== */
+  /*! None */
+
+  /* =================== admin_category_detail ================== */
+  /*! None */
+
+  /* =================== admin_category_update ================== */
+  /*! None */
+
+  /* ================ admin_delivery_mode_create ================ */
+  /*! None */
+
+  /* ================= admin_delivery_mode_list ================= */
+  /*! None */
+
+  /* ================ admin_delivery_mode_detail ================ */
+  /*! None */
+
+  /* ================ admin_delivery_mode_update ================ */
+  /*! None */
+
+  /* ================== admin_purchase_create =================== */
+  /*! None */
+
+  /* ==================== admin_purchase_list =================== */
+  /*! None */
+
+  /* ================= admin_purchase_user_list ================= */
+  /*! None */
+
+  /* ================== admin_purchase_detail =================== */
+  /*! None */
+
+  /* ================== admin_purchase_update =================== */
+  /*! None */
+
+  /* ======================= user_profile ======================= */
+  /*! None */
+
+  /* ====================== address_create ====================== */
+  /*! None */
+
+  /* ======================= address_list ======================= */
+  /*! None */
+
+  /* ====================== address_detail ====================== */
+  /*! None */
+
+  /* ====================== address_update ====================== */
+  /*! None */
+
+  /* ======================= category_list ====================== */
+  .card {
+    width: 45%;
+    /* height: 30em; */
+  }
+
+  /* ====================== category_detail ===================== */
+  /*! None */
 
   /* ======================= product_list ======================= */
   /*! None */
@@ -3348,123 +3453,12 @@ body {
     background-color:  var(--blue);
   } */
 
-  /* ======================= category_list ====================== */
-  .card {
-    width: 45%;
-    /* height: 30em; */
+  /* TODO */
+
+  /* ======================== cart_detail ======================= */
+  .product-property h2 {
+    font-size: 1.4em;
   }
-
-  /* ====================== admin_dashboard ===================== */
-  /*! None */
-
-  /* ====================== admin_user_list ===================== */
-  .admin-preview {
-    width: 45%;
-  }
-
-  /* ===================== admin_user_detail ==================== */
-  /*! None */
-
-  /* ===================== admin_user_create ==================== */
-  /*! None */
-
-  /* ===================== admin_user_update ==================== */
-  /*! None */
-
-  /* =================== admin_user_statistics ================== */
-  .block-chart {
-    width: 50%;
-  }
-
-  /* ======================= product_list ======================= */
-  /*! None */
-
-  /* ======================= product_detail ===================== */
-  /*! None */
-
-  /* ======================= category_list ====================== */
-  /*! None */
-
-  /* ====================== admin_dashboard ===================== */
-  /*! None */
-
-  /* ====================== admin_user_list ===================== */
-  /*! None */
-
-  /* ===================== admin_user_detail ==================== */
-  /*! None */
-
-  /* ===================== admin_user_create ==================== */
-  /*! None */
-
-  /* ===================== admin_user_update ==================== */
-  /*! None */
-
-  /* =================== admin_user_statistics ================== */
-  /*! None */
-
-  /* ==================== admin_product_list ==================== */
-  /*! None */
-
-  /* =================== admin_product_detail =================== */
-  /*! None */
-
-  /* =================== admin_product_create =================== */
-  /*! None */
-
-  /* =================== admin_product_update =================== */
-  /*! None */
-
-  /* ==================== admin_category_list =================== */
-  /*! None */
-
-  /* =================== admin_category_detail ================== */
-  /*! None */
-
-  /* =================== admin_category_create ================== */
-  /*! None */
-
-  /* =================== admin_category_update ================== */
-  /*! None */
-
-  /* =================== admin_address_create =================== */
-  /*! None */
-
-  /* =================== admin_address_user_list ================ */
-  /*! None */
-
-  /* ================== admin_address_detail ==================== */
-  /*! None */
-
-  /* ==================== admin_address_update ================== */
-  /*! None */
-
-  /* ================ admin_purchase_user_create ================ */
-  /*! None */
-
-  /* ==================== admin_purchase_list =================== */
-  /*! None */
-
-  /* ================= admin_purchase_user_list ================= */
-  /*! None */
-
-  /* =================== admin_purchase_detail ================== */
-  /*! None */
-
-  /* ================ admin_purchase_user_detail ================ */
-  /*! None */
-
-  /* =================== admin_purchase_update ================== */
-  /*! None */
-
-  /* ====================== address_create ====================== */
-  /*! None */
-
-  /* ====================== address_update ====================== */
-  /*! None */
-
-  /* ======================= address_list ======================= */
-  /*! None */
 
   /* ========================= purchase ========================= */
   .card-address,
@@ -3477,7 +3471,10 @@ body {
     margin: 0 0 0.5em;
   }
 
-  /* ==================== purchase ==================== */
+  .form-purchase {
+    width: 90%;
+  }
+
   .form-field-address .form-check {
     width: 25%;
   }
@@ -3493,9 +3490,7 @@ body {
   }
 
   /* ======================= purchase_list ====================== */
-  .form-purchase {
-    width: 90%;
-  }
+  /*! None */
 
   /* ====================== purchase_detail ===================== */
   /*! None */
@@ -3724,7 +3719,7 @@ body {
     width: 8%;
   }
 
-  /* =======================  app_register ====================== */
+  /* ======================= app_register ====================== */
   .form__icon {
     width: 10%;
   }
@@ -3741,68 +3736,19 @@ body {
   /* ==================== app_reset_password ==================== */
   /*! None */
 
-  /* ======================= user_profile ======================= */
-  .page__link.page__link-delete-my-user-account,
-  .page__link.page__link-reactivate-account {
-    width: 12%;
-  }
-
-  .form-field-user-picture .page__picture-entity {
-    width: 8em;
-  }
-
   /* ===================== user_delete_request =================== */
   /*! None */
 
   /* =================== user_reactivate_request ================= */
   /*! None */
 
-  /* ======================== cart_detail ======================= */
-  .product {
-    width: 50%;
-  }
-
-  .total-card,
-  .delivery-mode-price,
-  .total {
-    /* justify-content: center; */
-    /* width: 35%; */
-    width: 50%;
-  }
-
-  /* .total-card p:first-child,
-  .delivery-mode-price p:first-child,
-  .total p:first-child {
-    margin-right: 4em;
-  } */
-
-  #purchase-link {
-    width: 10%;
-  }
-
-  /* ======================= product_list ======================= */
+  /* ====================== admin_dashboard ===================== */
   /*! None */
 
-  /* ======================= product_detail ===================== */
-  .product-detail-property {
-    align-items: flex-start;
-  }
+  /* ===================== admin_user_create ==================== */
+  /*! None */
 
-  .product-detail-property:first-child {
-    align-items: center;
-  }
-
-  .product-detail-from-tablet {
-    width: 70%;
-  }
-
-  /* ======================= category_list ====================== */
-  .card {
-    width: 30%;
-    height: 30em;
-  }
-
-  /* ====================== admin_dashboard ===================== */
+  /* ===================== admin_user_create ==================== */
   /*! None */
 
   /* ====================== admin_user_list ===================== */
@@ -3988,17 +3934,33 @@ body {
     display: none;
   }
 
-  /* ===================== admin_user_create ==================== */
-  /*! None */
-
   /* ===================== admin_user_update ==================== */
   /*! None */
 
   /* =================== admin_user_statistics ================== */
+
   .block-chart {
     width: 35%;
     /* background-color: #999999; */
   }
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* =================== admin_address_create =================== */
+  /*! None */
+
+  /* ==================== admin_address_list ==================== */
+  /*! None */
+
+  /* =================== admin_address_detail =================== */
+  /*! None */
+
+  /* =================== admin_address_update =================== */
+  /*! None */
+
+  /* =================== admin_product_create =================== */
+  /*! None */
 
   /* ==================== admin_product_list ==================== */
   /*! None */
@@ -4006,10 +3968,10 @@ body {
   /* =================== admin_product_detail =================== */
   /*! None */
 
-  /* =================== admin_product_create =================== */
+  /* =================== admin_product_update =================== */
   /*! None */
 
-  /* =================== admin_product_update =================== */
+  /* ================== admin_category_create =================== */
   /*! None */
 
   /* ==================== admin_category_list =================== */
@@ -4018,25 +3980,22 @@ body {
   /* =================== admin_category_detail ================== */
   /*! None */
 
-  /* =================== admin_category_create ================== */
-  /*! None */
-
   /* =================== admin_category_update ================== */
   /*! None */
 
-  /* =================== admin_address_create =================== */
+  /* ================ admin_delivery_mode_create ================ */
   /*! None */
 
-  /* =================== admin_address_user_list ================ */
+  /* ================= admin_delivery_mode_list ================= */
   /*! None */
 
-  /* ================== admin_address_detail ==================== */
+  /* ================ admin_delivery_mode_detail ================ */
   /*! None */
 
-  /* ==================== admin_address_update ================== */
+  /* ================ admin_delivery_mode_update ================ */
   /*! None */
 
-  /* ================ admin_purchase_user_create ================ */
+  /* ================== admin_purchase_create =================== */
   /*! None */
 
   /* ==================== admin_purchase_list =================== */
@@ -4053,10 +4012,17 @@ body {
   /* =================== admin_purchase_update ================== */
   /*! None */
 
-  /* ====================== address_create ====================== */
-  /*! None */
+  /* ======================= user_profile ======================= */
+  .page__link.page__link-delete-my-user-account,
+  .page__link.page__link-reactivate-account {
+    width: 12%;
+  }
 
-  /* ====================== address_update ====================== */
+  .form-field-user-picture .page__picture-entity {
+    width: 8em;
+  }
+
+  /* ====================== address_create ====================== */
   /*! None */
 
   /* ======================= address_list ======================= */
@@ -4064,6 +4030,54 @@ body {
   .card-purchase {
     width: 25%;
     display: none;
+  }
+
+  /* ====================== address_detail ====================== */
+  /*! None */
+
+  /* ====================== address_update ====================== */
+  /*! None */
+
+  /* ======================= category_list ====================== */
+  .card {
+    width: 30%;
+    height: 30em;
+  }
+
+  /* ====================== category_detail ===================== */
+  /*! None */
+
+  /* ======================= product_list ======================= */
+  /*! None */
+
+  /* ======================= product_detail ===================== */
+  .product-detail-property {
+    align-items: flex-start;
+  }
+
+  .product-detail-property:first-child {
+    align-items: center;
+  }
+
+  .product-detail-from-tablet {
+    width: 70%;
+  }
+
+  /* ======================== cart_detail ======================= */
+  .product {
+    width: 50%;
+  }
+
+  .total-card,
+  .delivery-mode-price,
+  .total {
+    /* justify-content: center; */
+    /* width: 35%; */
+    width: 50%;
+  }
+
+  #purchase-link {
+    width: 10%;
   }
 
   /* ========================= purchase ========================= */
@@ -4094,13 +4108,11 @@ body {
   }
 
   /* ======================= purchase_list ====================== */
-
   .card-purchase {
     display: none;
   }
 
   /* ====================== purchase_detail ===================== */
-
   .purchase-subtotal,
   .purchase-delivery-mode-price,
   .purchase-total {

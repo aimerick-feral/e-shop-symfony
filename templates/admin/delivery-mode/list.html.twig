@@ -21,9 +21,11 @@
 				<p class="error-message error-message_color_red error-message__delivery-mode-name-empty display-none">
 					Merci de saisir un nom.
 				</p>
+				{#! START : deliveryMode name validity not used #}
 				<p class="error-message error-message_color_red error-message__delivery-mode-name-validity display-none">
 					Merci de saisir un nom de mode de livraison valide.
 				</p>
+				{#! END : deliveryMode name validity not used #}
 				{{ form_errors(searchDeliveryModeForm.name) }}
 			</div>
 			<button type="submit" class="page__button page__button-submit page__button-search page__button_background-color_blue page__button_color_white" id="search-delivery-mode-button">

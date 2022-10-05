@@ -31,9 +31,11 @@
 				<p class="error-message error-message_color_red error-message__delivery-mode-name-empty display-none">
 					Merci de saisir un nom.
 				</p>
+				{#! START : deliveryMode name validity not used #}
 				<p class="error-message error-message_color_red error-message__delivery-mode-name-validity display-none">
-					Merci de saisir un nom de mode de livraison valide valide.
+					Merci de saisir un nom de mode de livraison valide.
 				</p>
+				{#! END : deliveryMode name validity not used #}
 				{{ form_errors(adminCreateDeliveryModeForm.name) }}
 			</div>
 			{# price #}
@@ -41,7 +43,7 @@
 				{{ form_label(adminCreateDeliveryModeForm, 'Prix', { 'label_attr': { 'class': 'display-none' }}) }}
 				{{ form_widget(adminCreateDeliveryModeForm.price, { 'id': 'create-delivery-mode-price-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-delivery-mode-price', 'placeholder': 'Prix en euros' }}) }}
 				<p class="error-message error-message_color_red error-message__delivery-mode-price-empty display-none">
-					Merci de saisir un prix.
+					Merci de saisir un prix en euros.
 				</p>
 				<p class="error-message error-message_color_red error-message__delivery-mode-price-validity display-none">
 					Merci de saisir un prix en euros.

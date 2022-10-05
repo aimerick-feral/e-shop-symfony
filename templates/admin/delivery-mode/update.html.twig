@@ -38,9 +38,11 @@
 				<p class="error-message error-message_color_red error-message__delivery-mode-name-empty display-none">
 					Merci de saisir un nom.
 				</p>
+				{#! START : deliveryMode name validity not used #}
 				<p class="error-message error-message_color_red error-message__delivery-mode-name-validity display-none">
-					Merci de saisir un nom de mode de livraison valide valide.
+					Merci de saisir un nom de mode de livraison valide.
 				</p>
+				{#! END : deliveryMode name validity not used #}
 				{{ form_errors(adminUpdateDeliveryModeForm.name) }}
 			</div>
 			{# price #}

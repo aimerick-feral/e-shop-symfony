@@ -683,6 +683,7 @@ const form = {
     form.deliveryModeDescriptionInput = document.querySelector(
       ".form-field__input-delivery-mode-description"
     );
+
     form.termsOfSaleInput = document.querySelector(
       ".form-field__input-terms-of-sale"
     );
@@ -1716,17 +1717,19 @@ const form = {
       clickedButton === form.adminUpdateDeliveryModeButton ||
       clickedButton === form.searchDeliveryModeButton
     ) {
-      // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
-      form.checkIfAlphabeticalCharacters(
+      // We call form.checkIfInputContainValue() to check if the input it not empty.
+      form.checkIfInputContainValue(
         form.deliveryModeNameInput,
-        form.errorMessageDeliveryModeNameEmpty,
-        form.errorMessageDeliveryModeNameValidity
+        form.errorMessageDeliveryModeNameEmpty
       );
-      // // We call form.checkIfInputContainValue() to check if the input it not empty.
-      // form.checkIfInputContainValue(
+      //! START : deliveryMode name validity not used
+      // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
+      // form.checkIfAlphabeticalCharacters(
       //   form.deliveryModeNameInput,
-      //   form.errorMessageDeliveryModeNameEmpty
+      //   form.errorMessageDeliveryModeNameEmpty,
+      //   form.errorMessageDeliveryModeNameValidity
       // );
+      //! END : deliveryMode name validity not used
     }
 
     // If clickedButton is one of the comparated buttons.

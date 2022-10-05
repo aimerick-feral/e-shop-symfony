@@ -40,6 +40,7 @@ class AdminDeliveryModeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             // We call the uploadFile() method of the FileUploader service is order to upload the picture submit by the user.
             $picture = $fileUploader->uploadFile($form, 'picture');
+            
             // If we have a picture to upload.
             if ($picture) {
                 // We set to the picture property the value of $picture.

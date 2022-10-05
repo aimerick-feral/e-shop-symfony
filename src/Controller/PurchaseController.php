@@ -169,8 +169,8 @@ class PurchaseController extends AbstractController
                 $this->entityManagerInterface->persist($purchaseItem);
             }
 
-            //! START : comment this code if no checkout. 
-            //! START : Stripe checkout.
+            //! START : comment this code if no checkout 
+            //! START : Stripe checkout
             // If the payment method chosen by the user have the value of the PHP constant CHECKOUT_METHOD_CREDIT_CARD we start a Stripe checkout. 
             if ($form->get('checkoutMethod')->getData() === Purchase::CHECKOUT_METHOD_CREDIT_CARD) {
                 // We create a new StripeCheckout with in argument the value of the environnement variable STRIPE_SECRET_KEY, the UrlGeneratorInterface and the EntityManagerInterface.
@@ -194,7 +194,7 @@ class PurchaseController extends AbstractController
                 return $this->redirect($stripeSession['url']);
             }
             //! END : Stripe checkout 
-            // TODO #3 START : Make Paypal checkout.
+            // TODO #3 START : Make Paypal checkout
             // Else if the payment method chosen by the user have the value of the PHP constant CHECKOUT_METHOD_PAYPAL we start a Paypal checkout. 
             else if ($form->get('checkoutMethod')->getData() === Purchase::CHECKOUT_METHOD_PAYPAL) {
                 // We create a new PaypalCheckout with in argument the cart.
@@ -203,9 +203,9 @@ class PurchaseController extends AbstractController
                 $paypalCheckout->showUserInterface();
             }
             // TODO #3 END : Paypal checkout
-            //! END : comment this code if no checkout. 
+            //! END : comment this code if no checkout
 
-            //! START : decomment this code if no checkout. 
+            //! START : decomment this code if no checkout
             // // We call the flush() method of the EntityManagerInterface to backup the data in the database.
             // $this->entityManagerInterface->flush();
 

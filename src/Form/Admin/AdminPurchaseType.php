@@ -155,14 +155,11 @@ class AdminPurchaseType extends AbstractType
         // We get the data of the purchase.
         $purchase = $event->getData();
 
-        // If the submit doesn't contain a purchase.
-        if ($purchase) {
-            // We leave onPreSubmit().
-            return;
+        // If the submit doesn't contain a purchase with a reference.
+        if (!$purchase['reference']) {
+            // We set the reference property.
+            $purchase['reference'] = bin2hex(random_bytes(6));
         }
-
-        // We set the reference property.
-        $purchase['reference'] = bin2hex(random_bytes(6));
 
         // We set the data of the event with the new data of the product.
         $event->setData($purchase);
