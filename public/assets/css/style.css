@@ -97,8 +97,8 @@ body {
   color: var(--yellow);
 }
 
-/* If theme = mario */
-.mario {
+/* If theme = spider-man */
+.spider-man {
   background-color: var(--red);
   color: var(--blue);
 }
@@ -519,8 +519,8 @@ body {
     background-color: var(--before, var(--yellow));
   }
 
-  /* Switch for mario theme */
-  #mario-switch {
+  /* Switch for spider-man theme */
+  #spider-man-switch {
     top: 35%;
     left: 70%;
   }
@@ -1728,7 +1728,7 @@ body {
     color: var(--purple);
   }
 
-  /* If theme = mario */
+  /* If theme = spider-man */
   .form-field__input_color_blue,
   .form-field__input-search_color_blue {
     background-color: var(--blue);

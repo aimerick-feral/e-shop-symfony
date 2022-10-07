@@ -166,7 +166,7 @@ const font = {
     font.themes = [
       "knick",
       "lakers",
-      "mario",
+      "spider-man",
       "jamaica",
       "golden-state-warriors",
       "flash",
@@ -682,9 +682,9 @@ const font = {
         // We call font.switchToLakersTheme() to apply the lakers theme.
         font.switchToLakersTheme();
       }
-      // Else if the font item in localStorage have the mario value.
-      else if (font.color === "mario") {
-        // We call font.switchToMarioTheme() to apply the mario theme.
+      // Else if the font item in localStorage have the spider-man value.
+      else if (font.color === "spider-man") {
+        // We call font.switchToMarioTheme() to apply the spider-man theme.
         font.switchToMarioTheme();
       }
       // Else if the font item in localStorage have the jamaica value.
@@ -839,8 +839,8 @@ const font = {
         tools.uncheckInputs(font.lakersSwitch);
       }
 
-      // Else if the font item in localStorage have the mario value.
-      if (font.color === "mario") {
+      // Else if the font item in localStorage have the spider-man value.
+      if (font.color === "spider-man") {
         // We call tools.checkInputs() to check the input.
         tools.checkInputs(font.spiderManSwitch);
         // We call tools.setDisabledAttribute() to set the disabled attribute to the elements.
@@ -853,7 +853,7 @@ const font = {
         // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
         tools.setColorToBeforeProperty(font.flashSwitchSlider, font.colors.red);
       }
-      // Else the font item in localStorage is not mario.
+      // Else the font item in localStorage is not spider-man.
       else {
         // We call tools.uncheckInputs() to uncheck the switch.
         tools.uncheckInputs(font.spiderManSwitch);
@@ -974,8 +974,8 @@ const font = {
                 font.colors.yellow
               );
             }
-            // Else if font.color is mario.
-            else if (font.color === "mario") {
+            // Else if font.color is spider-man.
+            else if (font.color === "spider-man") {
               // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
               tools.setColorToBeforeProperty(
                 font.spiderManSwitchSlider,
@@ -1463,11 +1463,11 @@ const font = {
       );
       tools.setColorToBeforeProperty(font.flashSwitchSlider, "#ff0000");
       tools.setColorToBeforeProperty(font.forestSwitchSlider, "#009933");
-      // We set the value mario to font.color.
-      font.color = "mario";
+      // We set the value spider-man to font.color.
+      font.color = "spider-man";
       // We backup in localStorage the value of font.color.
       localStorage.setItem("font", font.color);
-      // We call font.switchToMarioTheme() to apply the mario theme.
+      // We call font.switchToMarioTheme() to apply the spider-man theme.
       font.switchToMarioTheme();
     }
 
@@ -3601,7 +3601,7 @@ const font = {
       "light",
       "knick",
       "lakers",
-      "mario",
+      "spider-man",
       "jamaica",
       "golden-state-warriors",
       "flash",
@@ -4555,7 +4555,7 @@ const font = {
     }
   },
   /**
-   * Metho that switch to the mario theme.
+   * Metho that switch to the spider-man theme.
    * @return {void}
    */
   switchToMarioTheme: function () {
@@ -4564,7 +4564,7 @@ const font = {
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
     // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-    tools.addClassesToElement(mode.body, "mario");
+    tools.addClassesToElement(mode.body, "spider-man");
 
     // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
     tools.setColorToBeforeProperty(font.spiderManSwitchSlider, font.colors.red);
