@@ -21,13 +21,12 @@
 				</p>
 				{#! START : product name validity not used #}
 				{# <p class="error-message error-message_color_red error-message__product-name-validity display-none">
-					Merci de saisir un nom de produit valide.
-				</p> #}
+									Merci de saisir un nom de produit valide.
+								</p> #}
 				{#! START : product name validity not used #}
-				{{ form_errors(searchProductForm.name) }}
+			{{ form_errors(searchProductForm.name) }}
 			</div>
-			<button type="submit" class="page__button page__button-submit page__button-search page__button_background-color_blue page__button_color_white" id="search-product-button">
-				Rechercher
+				<button type="submit" class="page__button page__button-submit page__button-search page__button_background-color_blue page__button_color_white" id="search-product-button"> Rechercher
 			</button>
 			{{ form_end(searchProductForm) }}
 			{# END : searchProductForm #}
@@ -35,7 +34,7 @@
 			<div class="list">
 				{% for product in products %}
 					{# START : card for mobile #}
-					<div class="admin-preview admin-preview_color_blue">
+					<div class="admin-preview admin-preview_border-color_blueblue">
 						<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/products/'~ product.picture) }}" alt="image {{ product.name }}"/>
 						<p>{{ product.name }}</p>
 						<p>{{ product.category }}</p>

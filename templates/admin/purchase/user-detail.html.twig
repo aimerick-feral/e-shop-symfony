@@ -5,7 +5,7 @@
 	{{ purchase.reference|upper }}
 	-
 	{{ user.firstName }}
-	{{ user.lastName|upper }}
+	{{ user.lastName }}
 	|
 	{{ parent() }}
 {% endblock %}
@@ -18,14 +18,15 @@
 				{{ purchase.reference|upper }}
 				-
 				{{ user.firstName }}
-				{{ user.lastName|upper }}</h2>
+				{{ user.lastName }}</h2>
 			{# START : card for mobile #}
 			<div class="list">
-				<div class="card-purchase card-purchase_color_blue" id="card-purchase">
+				<div class="admin-detail admin-detail_border-color_blue">
 					<p>
-						Commande :
+						Référence :
 						{{ purchase.reference|upper }}
-						du
+					</p>
+					<p>
 						{{ purchase.createdAt|format_datetime('short', 'none', locale='fr') }}
 					</p>
 					<p>
@@ -59,19 +60,23 @@
 						</p>
 					{% endif %}
 					<p>
+						Commandée le
+						{{ purchase.createdAt|format_datetime('short', 'none', locale='fr') }}
+					</p>
+					<p>
 						Mise à jour le
 						{{ purchase.updatedAt|format_datetime('short', 'none', locale='fr') }}
 					</p>
 					<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_purchase_update', {'userId': user.id, 'reference': purchase.reference}) }}?returnToAdminPurchaseUserList=true">Modifier</a>
 					<a class="page__link page__link-delete page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_red page__link_color_white" href="{{ path('admin_purchase_delete', {'id':purchase.id, 'token':csrf_token('admin-purchase-delete' ~ purchase.id)} ) }}">Supprimer</a>
 				</div>
-				<div class="card-address card-address_color_blue" id="card-address">
+				<div class="card-address card-address_border-color_blue">
 					<h3>Adresse de facturation</h3>
 					{% for data in billingAddress %}
 						<p>{{ data }}</p>
 					{% endfor %}
 				</div>
-				<div class="card-address card-address_color_blue" id="card-address">
+				<div class="card-address card-address_border-color_blue">
 					<h3>Adresse de livraison</h3>
 					{% for data in deliveryAddress %}
 						<p>{{ data }}</p>

@@ -5,7 +5,7 @@
 	{{ purchase.reference|upper }}
 	-
 	{{ app.user.firstName }}
-	{{ app.user.lastName|upper }}
+	{{ app.user.lastName }}
 	|
 	{{ parent() }}
 {% endblock %}
@@ -13,21 +13,24 @@
 {# START : purchase_detail #}
 {% block body %}
 	<main>
+
 		<section class="page">
 			<h2>
 				Commande :
 				{{ purchase.reference|upper }}
 				-
 				{{ app.user.firstName }}
-				{{ app.user.lastName|upper }}
+				{{ app.user.lastName }}
 			</h2>
 			{# START : card for mobile #}
 			<div class="list">
-				<div class="card-purchase card-purchase_color_blue" id="card-purchase">
+				<div class="card-purchase card-purchase_border-color_blue">
 					<p>
-						Commande :
+						Référence :
 						{{ purchase.reference|upper }}
-						du
+					</p>
+					<p>
+						Commandée le
 						{{ purchase.createdAt|format_datetime('short', 'none', locale='fr') }}
 					</p>
 					<p>
@@ -61,13 +64,13 @@
 						</p>
 					{% endif %}
 				</div>
-				<div class="card-address card-address_color_blue" id="card-address">
+				<div class="card-address card-address_border-color_blue">
 					<h3>Adresse de facturation</h3>
 					{% for data in billingAddress %}
 						<p>{{ data }}</p>
 					{% endfor %}
 				</div>
-				<div class="card-address card-address_color_blue" id="card-address">
+				<div class="card-address card-address_border-color_blue">
 					<h3>Adresse de livraison</h3>
 					{% for data in deliveryAddress %}
 						<p>{{ data }}</p>
@@ -77,10 +80,10 @@
 				{% for purchaseItem in purchaseItems %}
 					<div class="purchase-item">
 						<div class="purchase-item-property">
-							<h3>{{ purchaseItem.productName }}</h3>
+							<h3>{{ purchaseItem.drawingName }}</h3>
 							<p>Référence :
-								{{ purchaseItem.productReference}}</p>
-							<p>{{ purchaseItem.productPrice|amount }}</p>
+								{{ purchaseItem.drawingReference}}</p>
+							<p>{{ purchaseItem.drawingPrice|amount }}</p>
 							<p>
 								Quantité x
 								{{ purchaseItem.quantity }}
@@ -97,13 +100,13 @@
 					<p>Frais de livraison :</p>
 					<p>{{ purchase.deliveryModePrice|amount }}</p>
 				</div>
-				<div class="purchase-total purchase-total_border-color_blue">
+				<div class="purchase-total purchase-total_border-color_gold-crayola">
 					<p>TOTAL :</p>
 					<p>{{ purchase.total|amount }}</p>
 				</div>
 				{# END : card for mobile #}
 				{# START : table for desktop #}
-				<table class="table table_background-color_blue table_color_white table-purchase">
+				<table class="table table_background-color_gold-crayola table_color_black table-purchase">
 					<thead>
 						<tr>
 							<th>Propriétés</th>
@@ -191,7 +194,7 @@
 					</tr>
 				</tbody>
 				</table>
-					<table class="table table_background-color_blue table_color_white table-purchase-item"> <thead>
+					<table class="table table_background-color_gold-crayola table_color_black table-purchase-item"> <thead>
 						<tr>
 							<th>Produit</th>
 							<th>Quantité</th>
@@ -202,10 +205,10 @@
 					{% for purchaseItem in purchaseItems %}
 						<tbody>
 							<tr>
-								<td>{{ purchaseItem.productName }}<br>Référence :
-									{{ purchaseItem.productReference }}</td>
+								<td>{{ purchaseItem.drawingName }}<br>Référence :
+									{{ purchaseItem.drawingReference }}</td>
 								<td>{{ purchaseItem.quantity }}</td>
-								<td>{{ purchaseItem.productPrice|amount }}</td>
+								<td>{{ purchaseItem.drawingPrice|amount }}</td>
 								<td>{{ purchaseItem.total|amount }}</td>
 							</tr>
 						{% endfor %}

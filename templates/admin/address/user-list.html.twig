@@ -28,13 +28,12 @@
 				</p>
 				{#! START : address city validity not used  #}
 				{# <p class="error-message error-message_color_red error-message__validity-city display-none">
-					Merci de saisir un nom de ville valide.
-				</p> #}
+													Merci de saisir un nom de ville valide.
+												</p> #}
 				{#! END : address city validity not used  #}
-				{{ form_errors(searchAddressForm.city) }}
+			{{ form_errors(searchAddressForm.city) }}
 			</div>
-			<button type="submit" class="page__button page__button-submit page__button-search page__button_background-color_blue page__button_color_white" id="search-address-button">
-				Rechercher
+				<button type="submit" class="page__button page__button-submit page__button-search page__button_background-color_blue page__button_color_white" id="search-address-button"> Rechercher
 			</button>
 			{{ form_end(searchAddressForm) }}
 			{# END : searchAddressForm #}
@@ -43,7 +42,7 @@
 				class="list">
 				{# START : card for mobile #}
 				{% for address in addresses %}
-					<div class="card-address card-address_color_blue" id="card-address">
+					<div class="card-address card-address_border-color_blue" id="card-address">
 						<p>
 							{{ address.firstName }}
 							{{ address.lastName }}

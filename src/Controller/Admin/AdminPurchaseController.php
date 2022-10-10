@@ -138,7 +138,7 @@ class AdminPurchaseController extends AbstractController
             $request->getSession()->remove('cart');
 
             // We display a flash message for the user.
-            $this->addFlash('success', 'La commande ' . $purchase->getReference() . ' pour ' . $user->getFirstName() . ' '  . strtoupper($user->getLastName()) . ' a bien été créée.');
+            $this->addFlash('success', 'La commande ' . $purchase->getReference() . ' pour ' . $user->getFirstName() . ' '  . $user->getLastName() . ' a bien été créée.');
 
             // We redirect the user.
             return $this->redirectToRoute(
@@ -285,7 +285,7 @@ class AdminPurchaseController extends AbstractController
         // If we don't find any purchase.
         if (!$purchases) {
             // We display a flash message for the user.
-            $this->addFlash('warning', $user->getFirstName() . ' '  . strtoupper($user->getLastName()) . ' ne possède actuellement aucune commande. Nous vous invitons à lui  en créer une.');
+            $this->addFlash('warning', $user->getFirstName() . ' '  . $user->getLastName() . ' ne possède actuellement aucune commande. Nous vous invitons à lui  en créer une.');
 
             // We redirect the user.
             return $this->redirectToRoute(
@@ -334,7 +334,7 @@ class AdminPurchaseController extends AbstractController
                 // If the user of the purchase is not identical to the user.
                 if ($purchase->getUser() !== $user) {
                     // We display a flash message for the user.
-                    $this->addFlash('error', 'La commande ' . $form->get('reference')->getData() . ' n\'appartient pas à ' . $user->getFirstName() . ' ' . strtoupper($user->getLastName()) . ' mais à ' . $purchase->getUser()->getFirstName() . ' ' . strtoupper($purchase->getUser()->getLastName()) . '.');
+                    $this->addFlash('error', 'La commande ' . $form->get('reference')->getData() . ' n\'appartient pas à ' . $user->getFirstName() . ' ' . $user->getLastName() . ' mais à ' . $purchase->getUser()->getFirstName() . ' ' . $purchase->getUser()->getLastName() . '.');
 
                     // We redirect the user.
                     return $this->redirectToRoute(
@@ -539,7 +539,7 @@ class AdminPurchaseController extends AbstractController
             $this->entityManagerInterface->flush();
 
             // We display a flash message for the user.
-            $this->addFlash('success', 'La commande ' . strtoupper($purchase->getReference()) . ' de ' . $user->getFirstName() . ' '  . strtoupper($user->getLastName()) . ' a bien été mise à jour.');
+            $this->addFlash('success', 'La commande ' . strtoupper($purchase->getReference()) . ' de ' . $user->getFirstName() . ' '  . $user->getLastName() . ' a bien été mise à jour.');
 
             // If the query of the request contain the key returnToAdminPurchaseUserList.
             if ($request->query->get('returnToAdminPurchaseUserList')) {

@@ -32,7 +32,7 @@
 			<div class="form-field form-field-address">
 				{{ form_label(adminCreatePurchaseForm, 'Adresse de facturation :', { 'label_attr': { 'class': 'form-field__label' }}) }}
 				{{ form_widget(adminCreatePurchaseForm.billingAddress)|replace({"[br]":"</br>"})|raw }}
-				<p class="error-message error-message_color_red error-message__billing-address-not-checked display-none">
+				<p class="error-message error-message_color_red error-message__purchase-billing-address-not-checked display-none">
 					Merci de sélectionner une adresse de facturation.
 				</p>
 				{{ form_errors(adminCreatePurchaseForm.billingAddress) }}
@@ -41,7 +41,7 @@
 			<div class="form-field form-field-address">
 				{{ form_label(adminCreatePurchaseForm, 'Adresse de livraison :', { 'label_attr': { 'class': 'form-field__label' }}) }}
 				{{ form_widget(adminCreatePurchaseForm.deliveryAddress)|replace({"[br]":"</br>"})|raw }}
-				<p class="error-message error-message_color_red error-message__delivery-address-not-checked display-none">
+				<p class="error-message error-message_color_red error-message__purchase-delivery-address-not-checked display-none">
 					Merci de sélectionner une adresse de livraison.
 				</p>
 				{{ form_errors(adminCreatePurchaseForm.deliveryAddress) }}
@@ -62,6 +62,7 @@
 			</button>
 			{{ form_end(adminCreatePurchaseForm) }}
 			{# END : adminCreatePurchaseForm #}
-		</div>
-	</section>
-</main>{% endblock %}{# END : admin_purchase_create #}
+		</section>
+	</main>
+{% endblock %}
+{# END : admin_purchase_create #}

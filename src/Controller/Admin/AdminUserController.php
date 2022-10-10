@@ -539,8 +539,8 @@ class AdminUserController extends AbstractController
 
             // For each $purchase in $user->getPurchases().
             foreach ($user->getPurchases() as $purchase) {
-                // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.
-                $this->entityManagerInterface->remove($purchase);
+                // The user property of the purchase will be null. 
+                $purchase->setUser(null);
             }
 
             // We call the remove() method of the EntityManagerInterface with the value of the object we want to remove.

@@ -21,13 +21,12 @@
 				</p>
 				{#! START : category name validity not used #}
 				{# <p class="error-message error-message_color_red error-message__category-name-validity display-none">
-					Merci de saisir un nom de catégorie valide.
-				</p> #}
+									Merci de saisir un nom de catégorie valide.
+								</p> #}
 				{#! END : category name validity not used #}
-				{{ form_errors(searchCategoryForm.name) }}
+			{{ form_errors(searchCategoryForm.name) }}
 			</div>
-			<button type="submit" class="page__button page__button-submit page__button-search page__button_background-color_blue page__button_color_white" id="search-category-button">
-				Rechercher
+				<button type="submit" class="page__button page__button-submit page__button-search page__button_background-color_blue page__button_color_white" id="search-category-button"> Rechercher
 			</button>
 			{{ form_end(searchCategoryForm) }}
 			{# END : searchCategoryForm #}
@@ -35,7 +34,7 @@
 			<div class="list">
 				{% for category in categories %}
 					{# START : card for mobile #}
-					<div class="admin-preview admin-preview_color_blue admin-preview_color_white">
+					<div class="admin-preview admin-preview_border-color_blueblue admin-preview_border-color_bluewhite">
 						<p>{{ category.name }}</p>
 						<a class="page__link page__link-text page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_category_product_list', {'slug': category.slug}) }}">Liste  des
 							{{ category.name }}s</a>

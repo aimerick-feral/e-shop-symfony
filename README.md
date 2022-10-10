@@ -27,12 +27,18 @@ The **E-Shop-Symfony** project is demo of a e-commerce application that I develo
 
   ![](github/images/visual-studio-code.svg)
 
-## ⚙️ Database Set Up
+## ⚙️ Database & Set Up
 
 The E-Shop-Symfony project use the **MariaDB** Relational Database Management System in its verion 10.7.3.  
  The structure of the database is the following :
 
 ![](github/images/database.png)
+
+
+To use the projet you have to follow this steps : 
+
+- Git clone the repository 
+
 
 ## 👀 Glimpse 
 
@@ -41,7 +47,11 @@ The E-Shop-Symfony project use the **MariaDB** Relational Database Management Sy
 
 
 ▶️ E-Shop-Symfony  - Mobile tour with a administrator role :   
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/mQNfD4YjoVY/0.jpg)](https://www.youtube.com/watch?v=mQNfD4YjoVY&t=62s)  
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/mQNfD4YjoVY/0.jpg)](https://www.youtube.com/watch?v=mQNfD4YjoVY&t=62s) 
+
+
+
+## 👀 Glimpse 
 
 
 

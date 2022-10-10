@@ -3,7 +3,7 @@
 {% block title %}
 	Commandes -
 	{{ user.firstName }}
-	{{ user.lastName|upper }}
+	{{ user.lastName }}
 	|
 	{{ parent() }}
 {% endblock %}
@@ -14,7 +14,7 @@
 		<section class="page">
 			<h2>Liste des Commandes :
 				{{ user.firstName }}
-				{{ user.lastName|upper }}
+				{{ user.lastName }}
 			</h2>
 			{# START : searchPurchaseForm #}
 			{{ form_start(searchPurchaseForm, { 'attr': { 'novalidate': 'novalidate', 'class': 'form', 'id': 'search-purchase-form' }}
@@ -22,11 +22,11 @@
 			<div class="form-field">
 				{{ form_label(searchPurchaseForm, 'Référence', { 'label_attr': { 'class': 'display-none' }}) }}
 				{{ form_widget(searchPurchaseForm.reference, { 'id': '', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-search form-field__input-purchase-reference', 'placeholder': '🔍 Rechercher par référence' }}) }}
-				<p class="error-message error-message_color_red error-message__reference-empty display-none">
+				<p class="error-message error-message_color_red error-message__purchase-reference-empty display-none">
 					Merci de saisir une référence.
 				</p>
-				<p class="error-message error-message_color_red error-message__reference-validity display-none">
-					Merci de saisir une référence valide.
+				<p class="error-message error-message_color_red error-message__purchase-reference-length display-none">
+					La référence doit contenir 12 cactères.
 				</p>
 				{{ form_errors(searchPurchaseForm.reference) }}
 			</div>
@@ -40,7 +40,7 @@
 				class="list">
 				{# START : card for mobile #}
 				{% for purchase in purchases %}
-					<div class="card-purchase card-purchase_color_blue" id="card-purchase">
+					<div class="admin-preview admin-preview_border-color_blueblue">
 						<p>
 							{{ purchase.reference|upper }}
 						</p>

@@ -703,7 +703,10 @@ const api = {
         // We create a HTML element with the <div> tag name.
         let div = document.createElement("div");
         // We set className to the <div>.
-        div.setAttribute("class", "admin-preview admin-preview_color_blue");
+        div.setAttribute(
+          "class",
+          "admin-preview admin-preview_border-color_blueblue"
+        );
         // We insert the <div> inside blockUsersList, before its first child.
         api.blockUsersList.insertAdjacentElement("afterbegin", div);
         // We set HTML elements in the <div>.
@@ -852,7 +855,10 @@ const api = {
           // We create a HTML element with the <div> tag name.
           let div = document.createElement("div");
           // We set className to the <div>.
-          div.setAttribute("class", "admin-preview admin-preview_color_blue");
+          div.setAttribute(
+            "class",
+            "admin-preview admin-preview_border-color_blueblue"
+          );
           // We insert the <div> inside blockProductsList, before its first child.
           api.blockProductsList.insertAdjacentElement("afterbegin", div);
           // We set HTML elements in the <div>.
@@ -988,7 +994,10 @@ const api = {
           // We create a HTML element with the <div> tag name.
           let div = document.createElement("div");
           // We set className to the <div>.
-          div.setAttribute("class", "admin-preview admin-preview_color_blue");
+          div.setAttribute(
+            "class",
+            "admin-preview admin-preview_border-color_blueblue"
+          );
           // We insert the <div> inside blockProductsList, before its first child.
           api.blockProductsList.insertAdjacentElement("afterbegin", div);
           // We set HTML elements in the <div>.
@@ -1287,7 +1296,10 @@ const api = {
           // We create a HTML element with the <div> tag name.
           let div = document.createElement("div");
           // We set className to the <div>.
-          div.setAttribute("class", "admin-preview admin-preview_color_blue");
+          div.setAttribute(
+            "class",
+            "admin-preview admin-preview_border-color_blueblue"
+          );
           // We insert the <div> inside blockCategoriesList, before its first child.
           api.blockCategoriesList.insertAdjacentElement("afterbegin", div);
           // We set HTML elements in the <div>.
@@ -1371,7 +1383,7 @@ const api = {
         // We create a HTML element with the <div> tag name.
         let div = document.createElement("div");
         // We set className to the <div>.
-        div.setAttribute("class", "card card_color_blue");
+        div.setAttribute("class", "card card_border-color_blue");
         // We insert the <div> inside blockCategoriesList, before its first child.
         api.blockCategoriesList.insertAdjacentElement("afterbegin", div);
         // We set HTML elements in the <div>.
@@ -1412,7 +1424,10 @@ const api = {
         // We create a HTML element with the <div> tag name.
         let div = document.createElement("div");
         // We set className to the <div>.
-        div.setAttribute("class", "admin-preview admin-preview_color_blue");
+        div.setAttribute(
+          "class",
+          "admin-preview admin-preview_border-color_blueblue"
+        );
         // We insert the <div> inside blockDeliveryModesList, before its first child.
         api.blockDeliveryModesList.insertAdjacentElement("afterbegin", div);
         // We set HTML elements in the <div>.
@@ -1561,8 +1576,11 @@ const api = {
           // We create a HTML element with the <div> tag name.
           let div = document.createElement("div");
           // We set className to the <div>.
-          // div.setAttribute("class", "card-purchase card-purchase_color_blue");
-          div.setAttribute("class", "admin-preview admin-preview_color_blue");
+          // div.setAttribute("class", "card-purchase card-purchase_border-color_blue");
+          div.setAttribute(
+            "class",
+            "admin-preview admin-preview_border-color_blueblue"
+          );
           // We insert the <div> inside blockPurchasesList, before its first child.
           api.blockPurchasesList.insertAdjacentElement("afterbegin", div);
           // We set HTML elements in the <div>.
@@ -1635,7 +1653,10 @@ const api = {
           // We create a HTML element with the <div> tag name.
           let div = document.createElement("div");
           // We set className to the <div>.
-          div.setAttribute("class", "admin-preview admin-preview_color_blue");
+          div.setAttribute(
+            "class",
+            "admin-preview admin-preview_border-color_blueblue"
+          );
           // We insert the <div> inside blockPurchasesList, before its first child.
           api.blockPurchasesList.insertAdjacentElement("afterbegin", div);
           // We set HTML elements in the <div>.
@@ -1711,7 +1732,10 @@ const api = {
           // We create a HTML element with the <div> tag name.
           let div = document.createElement("div");
           // We set className to the <div>.
-          div.setAttribute("class", "card-purchase card-purchase_color_blue");
+          div.setAttribute(
+            "class",
+            "card-purchase card-purchase_border-color_blue"
+          );
           // We insert the <div> inside blockPurchasesList, before its first child.
           api.blockPurchasesList.insertAdjacentElement("afterbegin", div);
           // We set HTML elements in the <div>.
@@ -2058,7 +2082,10 @@ const api = {
           // We create a HTML element with the <div> tag name.
           let div = document.createElement("div");
           // We set className to the <div>.
-          div.setAttribute("class", "admin-preview admin-preview_color_blue");
+          div.setAttribute(
+            "class",
+            "admin-preview admin-preview_border-color_blueblue"
+          );
           // We insert the <div> inside blockAddressesList, before its first child.
           api.blockAddressesList.insertAdjacentElement("afterbegin", div);
           // We set HTML elements in the <div>.
@@ -2098,7 +2125,10 @@ const api = {
           // We create a HTML element with the <div> tag name.
           let div = document.createElement("div");
           // We set className to the <div>.
-          div.setAttribute("class", "card-address card-address_color_blue");
+          div.setAttribute(
+            "class",
+            "card-address card-address_border-color_blue"
+          );
           // We insert the <div> inside blockAddressesList, before its first child.
           api.blockAddressesList.insertAdjacentElement("afterbegin", div);
           // We set HTML elements in the <div>.

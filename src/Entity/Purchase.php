@@ -21,10 +21,10 @@ class Purchase
 
     // The value of the different status.
     const STATUS_PENDING_CHECKOUT = 'En attente de paiment';
-    const STATUS_ABANDONNED_CHECKOUT = 'Paiement abandonné';
+    // const STATUS_ABANDONNED_CHECKOUT = 'Paiement abandonné';
     const STATUS_PAID = 'Payée';
     const STATUS_IN_PROGRESS = 'En cours de préparation';
-    const STATUS_SEND = 'Expédiee';
+    const STATUS_SEND = 'Expédiée';
     const STATUS_DELIVER = 'Livrée';
     const STATUS_ANNUL = 'Annulée';
 
@@ -96,10 +96,7 @@ class Purchase
     {
         $this->createdAt = new DateTimeImmutable();
         $this->updatedAt = new DateTimeImmutable();
-        $this->addresses = new ArrayCollection();
         $this->purchaseItems = new ArrayCollection();
-        $this->billingAddress = new ArrayCollection();
-        $this->deliveryAddress = new ArrayCollection();
     }
 
     public function __toString()
@@ -107,7 +104,7 @@ class Purchase
         return $this->reference;
     }
 
-    public function getId(): int|null
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -177,7 +174,7 @@ class Purchase
         return $this->user;
     }
 
-    public function setUser(User $user): self
+    public function setUser(?User $user): self
     {
         $this->user = $user;
 

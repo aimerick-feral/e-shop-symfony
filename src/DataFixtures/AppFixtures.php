@@ -1394,7 +1394,6 @@ class AppFixtures extends Fixture
             $objectManager->persist($deliveryMode);
         }
 
-
         // Purchase
 
         // dd($addresses);
@@ -1424,6 +1423,8 @@ class AppFixtures extends Fixture
 
                 // We call the persit() method of the ObjectManager to put on hold the data.
                 $objectManager->persist($purchase);
+
+                // PurchaseItem
 
                 // We create a array of purchased products. 
                 $purchasedProducts = [];

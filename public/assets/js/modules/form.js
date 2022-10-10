@@ -37,6 +37,7 @@ const form = {
   searchDeliveryModeForm: null,
   // ========================= FIELDS ===========================
   uploadFileField: null,
+  // Purchase
   purchaseBillingAddressField: null,
   purchaseDeliveryAddressField: null,
   purchaseDeliveryModeField: null,
@@ -175,7 +176,7 @@ const form = {
   // Purchase
   errorMessagePurchaseProductsNotChecked: null,
   errorMessagePurchaseReferenceEmpty: null,
-  errorMessagePurchaseReferenceValidity: null,
+  errorMessagePurchaseReferenceLength: null,
   errorMessagePurchaseStatusNotChecked: null,
   errorMessagePurchaseBillingAddressNotChecked: null,
   errorMessagePurchaseDeliveryAddressNotChecked: null,
@@ -334,6 +335,8 @@ const form = {
     // ==================== FIELDS ====================
 
     form.uploadFileField = document.querySelector(".form-field-upload-file");
+
+    // Purchase
     form.purchaseBillingAddressField = document.querySelector(
       ".form-field-purchase-billing-address"
     );
@@ -928,19 +931,19 @@ const form = {
       ".error-message__purchase-products-not-checked"
     );
     form.errorMessagePurchaseReferenceEmpty = document.querySelector(
-      ".error-message__reference-empty"
+      ".error-message__purchase-reference-empty"
     );
-    form.errorMessagePurchaseReferenceValidity = document.querySelector(
-      ".error-message__reference-validity"
+    form.errorMessagePurchaseReferenceLength = document.querySelector(
+      ".error-message__purchase-reference-length"
     );
     form.errorMessagePurchaseStatusNotChecked = document.querySelector(
       ".error-message__purchase-status-not-checked"
     );
     form.errorMessagePurchaseBillingAddressNotChecked = document.querySelector(
-      ".error-message__billing-address-not-checked"
+      ".error-message__purchase-billing-address-not-checked"
     );
     form.errorMessagePurchaseDeliveryAddressNotChecked = document.querySelector(
-      ".error-message__delivery-address-not-checked"
+      ".error-message__purchase-delivery-address-not-checked"
     );
     form.errorMessagePurchaseDeliveryModeNotChecked = document.querySelector(
       ".error-message__purchase-delivery-mode-not-checked"
@@ -1694,17 +1697,11 @@ const form = {
 
     // If clickedButton is form.searchPurchaseButton.
     if (clickedButton === form.searchPurchaseButton) {
-      // // We call form.checkIfInputContainValue() to check if the input it not empty.
-      // form.checkIfInputContainValue(
-      //   form.purchaseReferenceInput,
-      //   form.errorMessagePurchaseReferenceEmpty
-      // );
-
-      // We call form.checkIfReference() to check if the input it not empty and valid.
-      form.checkIfReference(
+      // We call form.checkIfPurchaseReference() to check if the input it not empty and valid.
+      form.checkIfPurchaseReference(
         form.purchaseReferenceInput,
         form.errorMessagePurchaseReferenceEmpty,
-        form.errorMessagePurchaseReferenceValidity
+        form.errorMessagePurchaseReferenceLength
       );
 
       // We call form.submitFormIfNoError() with form.searchPurchaseForm in argument to check if the form contain some errors and submit him if not.
@@ -2385,10 +2382,14 @@ const form = {
    *  Method that check if a input contain a value type of reference and call the methods that display the related error messages.
    * @param {Element} input
    * @param {Element} errorMessageEmpty
-   * @param {Element} errorMessageValidity
+   * @param {Element} errorMessageLength
    */
-  checkIfReference: function (input, errorMessageEmpty, errorMessageValidity) {
-    console.log("form.checkIfReference()");
+  checkIfPurchaseReference: function (
+    input,
+    errorMessageEmpty,
+    errorMessageLength
+  ) {
+    console.log("form.checkIfPurchaseReference()");
 
     // If input is not empty.
     if (input.value) {
@@ -2399,15 +2400,15 @@ const form = {
       if (form.regexMatchAtLeastTweleCharacters.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageValidity.
-        tools.addDisplayNone(errorMessageValidity);
+        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageLength.
+        tools.addDisplayNone(errorMessageLength);
       }
       // Else input is empty.
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageValidity.
-        tools.removeDisplayNone(errorMessageValidity);
+        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageLength.
+        tools.removeDisplayNone(errorMessageLength);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
       }
@@ -2767,12 +2768,12 @@ const form = {
    * @return {void}
    */
   createDivForEachInputAndLabelOfCheckField: function (inputs) {
-    console.log("createDivForEachInputAndLabelOfCheckField()");
+    console.log("form.createDivForEachInputAndLabelOfCheckField()");
 
     // We create a empty array for the choice fields.
     let checkFields = [];
     // For each input of inputs.
-    for (input of inputs) {
+    for (let input of inputs) {
       // We create a HTML element with the <div> tag name.
       let field = document.createElement("div");
       // We set a class and a class name to the <div>.
@@ -2784,7 +2785,7 @@ const form = {
     }
 
     // For each field of checkFields.
-    for (field of checkFields) {
+    for (let field of checkFields) {
       // We get each input which are the nextElementSibling of each field.
       let input = field.nextElementSibling;
       // We get each label which are the nextElementSibling each field.
@@ -2869,24 +2870,6 @@ const form = {
 
     // We get the labels content in purchaseConfirmPayementMethod.
     const labels = purchaseConfirmPayementMethod.getElementsByTagName("label");
-
-    //! START : create img tag with loop
-    // // We set the number of img tag we need for the credit card payement method.
-    // let numberOfNeededImgTagForCreditCardPaymentMethod = 3;
-    // // We start a counter at 0 and we incremente it until it reach numberOfNeededImgTagForCreditCardPaymentMethod.
-    // for (
-    //   let index = 0;
-    //   index < numberOfNeededImgTagForCreditCardPaymentMethod;
-    //   index++
-    // ) {
-    //   // We create a HTML element with the <img> tag name.
-    //   let imgTag = document.createElement("img");
-    //   // We set a className to the <img>.
-    //   imgTag.setAttribute("class", "page__picture-checkout-method");
-    //   // We insert the <img> after the label.
-    //   labels[0].insertAdjacentElement("afterend", imgTag);
-    // }
-    //! END : create img tag with loop
 
     // We create a empty array for the img tags.
     let imgTags = [];

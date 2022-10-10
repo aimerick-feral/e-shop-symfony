@@ -362,35 +362,35 @@ const font = {
 
     // All the card color class names.
     font.cardColorClassNames = [
-      "card_color_blue",
-      "card_color_green",
-      "card_color_red",
-      "card_color_safety-orange",
-      "card_color_purple",
-      "card_color_yellow",
-      "card_color_slimy-green",
+      "card_border-color_blue",
+      "card_border-color_green",
+      "card_border-color_red",
+      "card_border-color_safety-orange",
+      "card_border-color_purple",
+      "card_border-color_yellow",
+      "card_border-color_slimy-green",
     ];
 
     // All the admin preview color class names.
     font.adminPreviewColorClassNames = [
-      "admin-preview_color_blue",
-      "admin-preview_color_green",
-      "admin-preview_color_red",
-      "admin-preview_color_safety-orange",
-      "admin-preview_color_purple",
-      "admin-preview_color_yellow",
-      "admin-preview_color_slimy-green",
+      "admin-preview_border-color_blueblue",
+      "admin-preview_border-color_bluegreen",
+      "admin-preview_border-color_bluered",
+      "admin-preview_border-color_bluesafety-orange",
+      "admin-preview_border-color_bluepurple",
+      "admin-preview_border-color_blueyellow",
+      "admin-preview_border-color_blueslimy-green",
     ];
 
     // All the admin detail color class names.
     font.adminDetailColorClassNames = [
-      "admin-detail_color_blue",
-      "admin-detail_color_green",
-      "admin-detail_color_red",
-      "admin-detail_color_safety-orange",
-      "admin-detail_color_purple",
-      "admin-detail_color_yellow",
-      "admin-detail_color_slimy-green",
+      "admin-detail_border-color_blue",
+      "admin-detail_border-color_green",
+      "admin-detail_border-color_red",
+      "admin-detail_border-color_safety-orange",
+      "admin-detail_border-color_purple",
+      "admin-detail_border-color_yellow",
+      "admin-detail_border-color_slimy-green",
     ];
 
     // All the total border color class names.
@@ -416,24 +416,24 @@ const font = {
 
     // All the card address color class names.
     font.cardAddressColorClassNames = [
-      "card-address_color_blue",
-      "card-address_color_green",
-      "card-address_color_red",
-      "card-address_color_safety-orange",
-      "card-address_color_purple",
-      "card-address_color_yellow",
-      "card-address_color_slimy-green",
+      "card-address_border-color_blue",
+      "card-address_border-color_green",
+      "card-address_border-color_red",
+      "card-address_border-color_safety-orange",
+      "card-address_border-color_purple",
+      "card-address_border-color_yellow",
+      "card-address_border-color_slimy-green",
     ];
 
     // All the card purchase color class names.
     font.cardPurchaseColorClassNames = [
-      "card-purchase_color_blue",
-      "card-purchase_color_green",
-      "card-purchase_color_red",
-      "card-purchase_color_safety-orange",
-      "card-purchase_color_purple",
-      "card-purchase_color_yellow",
-      "card-purchase_color_slimy-green",
+      "card-purchase_border-color_blue",
+      "card-purchase_border-color_green",
+      "card-purchase_border-color_red",
+      "card-purchase_border-color_safety-orange",
+      "card-purchase_border-color_purple",
+      "card-purchase_border-color_yellow",
+      "card-purchase_border-color_slimy-green",
     ];
 
     // All the status color class names.
@@ -464,7 +464,7 @@ const font = {
       "status_color_safety-orange",
       "status_color_yellow",
       "status_color_blue",
-      "status_color_safety-slimy-green",
+      "status_color_slimy-green",
     ];
 
     // All the purchase total border color class names.
@@ -1865,7 +1865,7 @@ const font = {
         tools.removeClassesFromElement(card, className);
       }
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card_color_" + newColor);
+      tools.addClassesToElement(card, "card_border-color_" + newColor);
     }
 
     // For each link of font.cardsLinks.
@@ -1889,7 +1889,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
         adminPreview,
-        "admin-preview_color_" + newColor
+        "admin-preview_border-color_blue" + newColor
       );
     }
 
@@ -1901,7 +1901,10 @@ const font = {
         tools.removeClassesFromElement(adminDetail, className);
       }
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(adminDetail, "admin-detail_color_" + newColor);
+      tools.addClassesToElement(
+        adminDetail,
+        "admin-detail_border-color_" + newColor
+      );
     }
 
     // For each input of mode.inputs.
@@ -2245,7 +2248,7 @@ const font = {
         tools.removeClassesFromElement(card, className);
       }
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-address_color_" + newColor);
+      tools.addClassesToElement(card, "card-address_border-color_" + newColor);
     }
 
     // For each icon of font.checkedIcons.
@@ -2293,7 +2296,7 @@ const font = {
         tools.removeClassesFromElement(card, className);
       }
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_color_" + newColor);
+      tools.addClassesToElement(card, "card-purchase_border-color_" + newColor);
     }
 
     // For each element of font.purchaseStatusElements.
@@ -3831,7 +3834,7 @@ const font = {
     // For each card of font.cards.
     for (let card of font.cards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card_color_safety-orange");
+      tools.addClassesToElement(card, "card_border-color_safety-orange");
     }
 
     // For each link of font.cardsLinks.
@@ -3845,7 +3848,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
         adminPreview,
-        "admin-preview_color_safety-orange"
+        "admin-preview_border-color_bluesafety-orange"
       );
     }
 
@@ -3854,7 +3857,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
         adminDetail,
-        "admin-detail_color_safety-orange"
+        "admin-detail_border-color_safety-orange"
       );
     }
 
@@ -3989,7 +3992,10 @@ const font = {
     // For each card of font.addressCards.
     for (let card of font.addressCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-address_color_safety-orange");
+      tools.addClassesToElement(
+        card,
+        "card-address_border-color_safety-orange"
+      );
     }
 
     // For each icon of font.checkedIcons.
@@ -4017,7 +4023,10 @@ const font = {
     // For each card of font.purchaseCards.
     for (let card of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_color_safety-orange");
+      tools.addClassesToElement(
+        card,
+        "card-purchase_border-color_safety-orange"
+      );
     }
 
     // For each element of font.purchaseStatusElements.
@@ -4299,7 +4308,7 @@ const font = {
     // For each card of font.cards.
     for (let card of font.cards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card_color_yellow");
+      tools.addClassesToElement(card, "card_border-color_yellow");
     }
 
     // For each link of font.cardsLinks.
@@ -4311,13 +4320,19 @@ const font = {
     // For each adminPreview of font.cards.
     for (let adminPreview of font.adminPreviews) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(adminPreview, "admin-preview_color_yellow");
+      tools.addClassesToElement(
+        adminPreview,
+        "admin-preview_border-color_blueyellow"
+      );
     }
 
     // For each adminPreview of font.cards.
     for (let adminDetail of font.adminDetails) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(adminDetail, "admin-detail_color_yellow");
+      tools.addClassesToElement(
+        adminDetail,
+        "admin-detail_border-color_yellow"
+      );
     }
 
     // For each input of mode.inputs.
@@ -4448,7 +4463,7 @@ const font = {
     // For each card of font.addressCards.
     for (let card of font.addressCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-address_color_yellow");
+      tools.addClassesToElement(card, "card-address_border-color_yellow");
     }
 
     // For each icon of font.checkedIcons.
@@ -4476,7 +4491,7 @@ const font = {
     // For each card of font.purchaseCards.
     for (let card of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_color_yellow");
+      tools.addClassesToElement(card, "card-purchase_border-color_yellow");
     }
 
     // For each element of font.purchaseStatusElements.
@@ -4758,7 +4773,7 @@ const font = {
     // For each card of font.cards.
     for (let card of font.cards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card_color_blue");
+      tools.addClassesToElement(card, "card_border-color_blue");
     }
 
     // For each link of font.cardsLinks.
@@ -4770,13 +4785,16 @@ const font = {
     // For each adminPreview of font.cards.
     for (let adminPreview of font.adminPreviews) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(adminPreview, "admin-preview_color_blue");
+      tools.addClassesToElement(
+        adminPreview,
+        "admin-preview_border-color_blueblue"
+      );
     }
 
     // For each adminPreview of font.cards.
     for (let adminDetail of font.adminDetails) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(adminDetail, "admin-detail_color_blue");
+      tools.addClassesToElement(adminDetail, "admin-detail_border-color_blue");
     }
 
     // For each input of mode.inputs.
@@ -4914,7 +4932,7 @@ const font = {
     // For each card of font.addressCards.
     for (let card of font.addressCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-address_color_blue");
+      tools.addClassesToElement(card, "card-address_border-color_blue");
     }
 
     // For each icon of font.checkedIcons.
@@ -4942,7 +4960,7 @@ const font = {
     // For each card of font.purchaseCards.
     for (let card of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_color_blue");
+      tools.addClassesToElement(card, "card-purchase_border-color_blue");
     }
 
     // For each element of font.purchaseStatusElements.
@@ -5233,7 +5251,7 @@ const font = {
     // For each card of font.cards.
     for (let card of font.cards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card_color_yellow");
+      tools.addClassesToElement(card, "card_border-color_yellow");
     }
 
     // For each link of font.cardsLinks.
@@ -5245,13 +5263,19 @@ const font = {
     // For each adminPreview of font.cards.
     for (let adminPreview of font.adminPreviews) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(adminPreview, "admin-preview_color_yellow");
+      tools.addClassesToElement(
+        adminPreview,
+        "admin-preview_border-color_blueyellow"
+      );
     }
 
     // For each adminPreview of font.cards.
     for (let adminDetail of font.adminDetails) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(adminDetail, "admin-detail_color_yellow");
+      tools.addClassesToElement(
+        adminDetail,
+        "admin-detail_border-color_yellow"
+      );
     }
 
     // For each input of mode.inputs.
@@ -5385,7 +5409,7 @@ const font = {
     // For each card of font.addressCards.
     for (let card of font.addressCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-address_color_yellow");
+      tools.addClassesToElement(card, "card-address_border-color_yellow");
     }
 
     // For each icon of font.checkedIcons.
@@ -5413,7 +5437,7 @@ const font = {
     // For each card of font.purchaseCards.
     for (let card of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_color_yellow");
+      tools.addClassesToElement(card, "card-purchase_border-color_yellow");
     }
 
     // For each element of font.purchaseStatusElements.
@@ -5698,7 +5722,7 @@ const font = {
     // For each card of font.cards.
     for (let card of font.cards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card_color_blue");
+      tools.addClassesToElement(card, "card_border-color_blue");
     }
 
     // For each link of font.cardsLinks.
@@ -5710,13 +5734,16 @@ const font = {
     // For each adminPreview of font.cards.
     for (let adminPreview of font.adminPreviews) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(adminPreview, "admin-preview_color_blue");
+      tools.addClassesToElement(
+        adminPreview,
+        "admin-preview_border-color_blueblue"
+      );
     }
 
     // For each adminPreview of font.cards.
     for (let adminDetail of font.adminDetails) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(adminDetail, "admin-detail_color_blue");
+      tools.addClassesToElement(adminDetail, "admin-detail_border-color_blue");
     }
 
     // For each input of mode.inputs.
@@ -5841,7 +5868,7 @@ const font = {
     // For each card of font.addressCards.
     for (let card of font.addressCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-address_color_blue");
+      tools.addClassesToElement(card, "card-address_border-color_blue");
     }
 
     // For each icon of font.checkedIcons.
@@ -5869,7 +5896,7 @@ const font = {
     // For each card of font.purchaseCards.
     for (let card of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_color_blue");
+      tools.addClassesToElement(card, "card-purchase_border-color_blue");
     }
 
     // For each element of font.purchaseStatusElements.
@@ -6151,7 +6178,7 @@ const font = {
     // For each card of font.cards.
     for (let card of font.cards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card_color_yellow");
+      tools.addClassesToElement(card, "card_border-color_yellow");
     }
 
     // For each link of font.cardsLinks.
@@ -6162,13 +6189,19 @@ const font = {
     // For each adminPreview of font.cards.
     for (let adminPreview of font.adminPreviews) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(adminPreview, "admin-preview_color_yellow");
+      tools.addClassesToElement(
+        adminPreview,
+        "admin-preview_border-color_blueyellow"
+      );
     }
 
     // For each adminPreview of font.cards.
     for (let adminDetail of font.adminDetails) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(adminDetail, "admin-detail_color_yellow");
+      tools.addClassesToElement(
+        adminDetail,
+        "admin-detail_border-color_yellow"
+      );
     }
 
     // For each input of mode.inputs.
@@ -6293,7 +6326,7 @@ const font = {
     // For each card of font.addressCards.
     for (let card of font.addressCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-address_color_yellow");
+      tools.addClassesToElement(card, "card-address_border-color_yellow");
     }
 
     // For each icon of font.checkedIcons.
@@ -6321,7 +6354,7 @@ const font = {
     // For each card of font.purchaseCards.
     for (let card of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_color_yellow");
+      tools.addClassesToElement(card, "card-purchase_border-color_yellow");
     }
 
     // For each element of font.purchaseStatusElements.
@@ -6612,7 +6645,7 @@ const font = {
     // For each card of font.cards.
     for (let card of font.cards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card_color_slimy-green");
+      tools.addClassesToElement(card, "card_border-color_slimy-green");
     }
 
     // For each link of font.cardsLinks.
@@ -6626,14 +6659,17 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
       tools.addClassesToElement(
         adminPreview,
-        "admin-preview_color_slimy-green"
+        "admin-preview_border-color_blueslimy-green"
       );
     }
 
     // For each adminPreview of font.cards.
     for (let adminDetail of font.adminDetails) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(adminDetail, "admin-detail_color_slimy-green");
+      tools.addClassesToElement(
+        adminDetail,
+        "admin-detail_border-color_slimy-green"
+      );
     }
 
     // For each input of mode.inputs.
@@ -6773,7 +6809,7 @@ const font = {
     // For each card of font.addressCards.
     for (let card of font.addressCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-address_color_slimy-green");
+      tools.addClassesToElement(card, "card-address_border-color_slimy-green");
     }
 
     // For each icon of font.checkedIcons.
@@ -6801,13 +6837,13 @@ const font = {
     // For each card of font.purchaseCards.
     for (let card of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_color_slimy-green");
+      tools.addClassesToElement(card, "card-purchase_border-color_slimy-green");
     }
 
     // For each element of font.purchaseStatusElements.
     for (let element of font.purchaseStatusElements) {
       // We call tools.addClassesToElement() in order to add one or many classNames to the element.
-      tools.addClassesToElement(element, "status_color_sepia");
+      tools.addClassesToElement(element, "status_color_slimy-green");
     }
 
     // If the DOM element exist.

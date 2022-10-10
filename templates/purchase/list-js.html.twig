@@ -3,7 +3,7 @@
 {% block title %}
 	Commandes -
 	{{ app.user.firstName }}
-	{{ app.user.lastName|upper }}
+	{{ app.user.lastName }}
 	|
 	{{ parent() }}
 {% endblock %}
@@ -19,7 +19,7 @@
 			<div class="form-field">
 				{{ form_label(searchPurchaseForm, 'Référence', { 'label_attr': { 'class': 'display-none' }}) }}
 				{{ form_widget(searchPurchaseForm.reference, { 'id': 'search-purchase-input', 'attr': {'class': 'form-field__input form-field__input_color_black form-field__input-search form-field__input-purchase-reference', 'placeholder': '🔍 Rechercher par référence' }}) }}
-				<p class="error-message error-message_color_red error-message__reference-empty display-none">
+				<p class="error-message error-message_color_red error-message__purchase-reference-empty display-none">
 					Merci de saisir une référence.
 				</p>
 				{{ form_errors(searchPurchaseForm.reference) }}

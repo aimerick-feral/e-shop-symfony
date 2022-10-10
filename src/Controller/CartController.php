@@ -155,6 +155,7 @@ class CartController extends AbstractController
      * Method that display the user's cart.
      * @param DeliveryModeRepository $deliveryModeRepository
      * @param PurchaseRepository $purchaseRepository
+     * @param EntityManagerInterface entityManagerInterface
      * @return Response
      */
     #[Route('/panier', name: 'cart_detail', methods: 'GET', priority: 2)]

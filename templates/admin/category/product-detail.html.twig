@@ -16,7 +16,7 @@
 				{{ product.name }}
 			</h2>
 			{# START : card for mobile #}
-			<div class="admin-detail admin-detail_color_blue">
+			<div class="admin-detail admin-detail_border-color_blue">
 				<img class="page__picture-entity" src="{{ asset('assets/uploads/pictures/products/'~ product.picture) }}" alt="image {{ product.name }}"/>
 				<p>
 					{{ product.name }}
@@ -67,52 +67,51 @@
 					<tr>
 						<th>Nom</th>
 						<td>{{ product.name }}</td>
+					</tr>
 					<tr>
 						<th>Catégorie</th>
 						<td>{{ product.category }}</td>
 					</tr>
-					</tr>
-					<tr>
-						<th>Référence</th>
-						<td>{{ product.reference }}</td>
-					</tr>
-					<tr>
-						<th>Prix</th>
-						<td>{{ product.price | amount }}</td>
-
-					</tr>
-					<tr>
-						<th>Description</th>
-						<td>{{ product.description }}</td>
-
-					</tr>
-					<tr>
-						<th>Disponibilité</th>
-						{% if product.availability == available %}
-							<td class="availability available availability__avialable_color_green">Disponible</td>
-						{% elseif product.availability == unavailable %}
-							<td class="availability unavailable availability__unavailable_color_red">Indisponible</td>
-						{% endif %}
-					</tr>
-					<tr>
-						<th>Crée le</th>
-						<td>{{ product.createdAt|format_datetime('short', 'none', locale='fr') }}</td>
-					</tr>
-					<tr>
-						<th>Mis à jour le</th>
-						<td>{{ product.updatedAt|format_datetime('short', 'none', locale='fr') }}</td>
-					</tr>
-					<tr>
-						<th>Actions</th>
-						<td>
-							<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_product_update', {'slug': product.slug}) }}?returnToAdminCategoryProductList=true">Modifier</a>
-							<a class="page__link page__link-delete page__link-delete-product page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_product_delete', {'id':product.id, 'token':csrf_token('admin-product-delete' ~ product.id)} ) }}" data-productname="{{ product.name }}">Supprimer</a>
-						</td>
-					</tr>
 				</tbody>
-			</table>
-			{# END : table for desktop #}
-		</section>
-	</main>
-{% endblock %}
-{# START : admin_category_product_detail #}
+			</tr>
+			<tr>
+				<th>Référence</th>
+				<td>{{ product.reference }}</td>
+			</tr>
+			<tr>
+				<th>Prix</th>
+				<td>{{ product.price | amount }}</td>
+
+			</tr>
+			<tr>
+				<th>Description</th>
+				<td>{{ product.description }}</td>
+
+			</tr>
+			<tr>
+				<th>Disponibilité</th>
+				{% if product.availability == available %}
+					<td class="availability available availability__avialable_color_green">Disponible</td>
+				{% elseif product.availability == unavailable %}
+					<td class="availability unavailable availability__unavailable_color_red">Indisponible</td>
+				{% endif %}
+			</tr>
+			<tr>
+				<th>Crée le</th>
+				<td>{{ product.createdAt|format_datetime('short', 'none', locale='fr') }}</td>
+			</tr>
+			<tr>
+				<th>Mis à jour le</th>
+				<td>{{ product.updatedAt|format_datetime('short', 'none', locale='fr') }}</td>
+			</tr>
+			<tr>
+				<th>Actions</th>
+				<td>
+					<a class="page__link page__link_text-transform_uppercase page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_product_update', {'slug': product.slug}) }}?returnToAdminCategoryProductList=true">Modifier</a>
+					<a class="page__link page__link-delete page__link-delete-product page__link_text-transform_uppercase page__link_background-color_red page__link_color_white" href="{{ path('admin_product_delete', {'id':product.id, 'token':csrf_token('admin-product-delete' ~ product.id)} ) }}" data-productname="{{ product.name }}">Supprimer</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	{# END : table for desktop #}
+</section></main>{% endblock %}{# START : admin_category_product_detail #}
