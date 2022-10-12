@@ -672,6 +672,15 @@ const form = {
       // We call form.createImgTagForPaymentMethodPicture() to create a HTML img tag before each payment method field label.
       form.createImgTagForPaymentMethodPicture();
     }
+    form.termsOfSaleInput = document.querySelector(
+      ".form-field__input-terms-of-sale"
+    );
+    // If the DOM element exist.
+    if (form.termsOfSaleInput) {
+      // We get the label related to form.userTermsOfUseInput.
+      label = form.termsOfSaleInput.nextElementSibling;
+      label.setAttribute("for", "purchase-terms-of-sale-input");
+    }
 
     // DeliveryMode
     form.deliveryModeNameInput = document.querySelector(
@@ -686,16 +695,6 @@ const form = {
     form.deliveryModeDescriptionInput = document.querySelector(
       ".form-field__input-delivery-mode-description"
     );
-
-    form.termsOfSaleInput = document.querySelector(
-      ".form-field__input-terms-of-sale"
-    );
-    // If the DOM element exist.
-    if (form.termsOfSaleInput) {
-      // We get the label related to form.userTermsOfUseInput.
-      label = form.termsOfSaleInput.nextElementSibling;
-      label.setAttribute("for", "purchase-terms-of-sale-input");
-    }
     form.purchasePendingCheckoutInput = document.querySelector(
       ".form-field__pending-checkout-input"
     );
@@ -2495,7 +2494,7 @@ const form = {
     // We get the DOM element form which the event occured.
     let clickedElement = event.currentTarget;
 
-    // If clickedElement is identical to form.purchaseConfirmAddressesButton.
+    // If clickedElement is one of the comparated elements.
     if (
       clickedElement === form.purchaseConfirmAddressesButton ||
       clickedElement === form.addressStep
@@ -2503,7 +2502,7 @@ const form = {
       // We call form.handleAddressesStep() with the value of clickedElement.
       form.handleAddressesStep(clickedElement);
     }
-    // Else if clickedElement is identical to form.purchaseConfirmDeliveryModeButton or form.deliveryModeStep.
+    // Else if clickedElement is one of the comparated elements.
     else if (
       clickedElement === form.purchaseConfirmDeliveryModeButton ||
       clickedElement === form.deliveryModeStep
@@ -2512,7 +2511,7 @@ const form = {
       form.handleDeliveryModeStep(clickedElement);
     }
 
-    // Else if clickedElement is identical to form.purchaseConfirmDeliveryModeButton or form.deliveryModeStep.
+    // Else if clickedElement is one of the comparated elements.
     else if (
       clickedElement === form.purchaseConfirmButton ||
       clickedElement === form.paymentMethodStep
@@ -2718,7 +2717,6 @@ const form = {
 
           //! START : Stripe checkout.
           let stripeInput = document.querySelector(".form-field__stripe-input");
-          // let stripeCheckoutLink = document.getElementById("stripe-checkout-link");
           let paypalInput = document.querySelector(".form-field__paypal-input");
 
           if (

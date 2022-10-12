@@ -70,7 +70,6 @@ class AdminPurchaseController extends AbstractController
         // We link the form to the request.
         $form->handleRequest($request);
 
-
         // We create a array to backup the pictures of each delivery mode.
         $deliveryModePictures = [];
         // For each $deliveryMode in $deliveryModeRepository->findAll().
@@ -475,10 +474,16 @@ class AdminPurchaseController extends AbstractController
         // We find the purchase by its reference.
         $purchase =  $this->purchaseRepository->findOneBy(['reference' => $reference]);
 
-        // If we don't find any purchase or if the status of the purchase is identical to  Purchase::STATUS_DELIVER.
-        if (!$purchase || $purchase->getStatus() === Purchase::STATUS_DELIVER) {
-            // If the status of the purchase is identical to  Purchase::STATUS_DELIVER.
-            if ($purchase->getStatus() === Purchase::STATUS_DELIVER) {
+        // If we don't find any purchase or if the status of the purchase is identical to Purchase::STATUS_DELIVER or Purchase::STATUS_ANNUL.
+        if (
+            !$purchase ||
+            $purchase->getStatus() === Purchase::STATUS_DELIVER ||  $purchase->getStatus() === Purchase::STATUS_ANNUL
+        ) {
+            // If the status of the purchase is identical to Purchase::STATUS_DELIVER or Purchase::STATUS_ANNUL. 
+            if (
+                $purchase->getStatus() === Purchase::STATUS_DELIVER ||
+                $purchase->getStatus() === Purchase::STATUS_ANNUL
+            ) {
                 // We display a flash message for the user.
                 $this->addFlash('error', 'La commande ' . strtoupper($purchase->getReference()) . ' n\'est pas modifiable car elle a été ' . strtolower($purchase->getStatus()) . '.');
             }

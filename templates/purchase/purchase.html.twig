@@ -32,9 +32,9 @@
 				</p>
 				{{ form_errors(purchaseForm.deliveryAddress) }}
 			</div>
-			<a class="page__link page__link_font-weight_normal page__purchase-step page__link_color_blue page__link_padding-and-margin_0" id="add-new-address-link" href="{{ path('address_create') }}?returnToPurchase=true">
+			<a class="page__link page__link-add-new-address page__link_font-weight_normal page__purchase-step page__link_color_blue page__link_padding-and-margin_0" id="add-new-address-link" href="{{ path('address_create') }}?returnToPurchase=true">
 				+ Ajouter une nouvelle adresse.</a>
-			<button type="button" class="page__purchase-step page__button page__button_background-color_blue page__button_color_white" id="purchase-confirm-address-button">
+			<button type="button" class="page__purchase-step page__button page__button-purchase-confirm-address page__button_background-color_blue page__button_color_white" id="purchase-confirm-address-button">
 				Continuer
 			</button>
 			<h3 class="page__title-purchase-step page__title-delivery-mode-step page__purchase-step page__title-purchase-step_color_shady-lady" id="delivery-mode-step">2 - Mode de livraison 📦
@@ -50,7 +50,7 @@
 				</p>
 				{{ form_errors(purchaseForm.deliveryMode) }}
 			</div>
-			<button type="button" class="page__purchase-step page__button page__button_background-color_blue page__button_color_white display-none" id="purchase-confirm-delivery-mode-button">
+			<button type="button" class="page__purchase-step page__button page__button-purchase-confirm-delivery-mode page__button_background-color_blue page__button_color_white display-none" id="purchase-confirm-delivery-mode-button">
 				Continuer
 			</button>
 			<h3 class="page__title-purchase-step page__title-payment-method-step page__purchase-step page__title-purchase-step_color_shady-lady" id="payment-method-step">3 - Paiement Sécurisé 🔐</h3>
@@ -78,11 +78,11 @@
 				{{ form_errors(purchaseForm.agreeTerms) }}
 			</div>
 			{#  Submit purchaseForm button #}
-			<button type="button" class="page__purchase-step page__button page__button_background-color_blue page__button_color_white display-none" id="purchase-confirm-button">COMMANDER</button>
+			<button type="button" class="page__purchase-step page__button page__button-purchase-confirm page__button_background-color_blue page__button_color_white display-none" id="purchase-confirm-button">Commander</button>
 			{{ form_end(purchaseForm) }}
 			{# END : purchaseForm #}
-			{# <a class="display-none" id="stripe-checkout-link" href="{{ path('purchase_stripe_checkout') }}"></a>. #}
-				<h4 class="page__title-your-cart"> Votre Panier</h4>
+			<h4 class="page__title-your-cart">
+				Votre Panier</h4>
 			{% for item in cartItems %}
 				<div class="purchase-item-reminder" id="desktop-purchase-item">
 					<div class="purchase-item-property-reminder">
@@ -106,7 +106,7 @@
 			</div>
 			<div class="purchase-total-reminder purchase-total_border-color_blue" id="desktop-purchase-total">
 				<p>TOTAL :</p>
-				<p id="purchase-total-paragraph" data-total="{{ total|amount }}"></p>
+				<p id="purchase-total-paragraph"></p>
 			</div>
 		</section>
 	</main>

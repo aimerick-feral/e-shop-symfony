@@ -25,6 +25,7 @@
   --slimy-green: #009933;
   --sepia: #663300;
   --dodger-blue: #0092f2;
+  --shady-lady: #999999;
   /* --cornflower-blue: #7799e5; */
   /* flash-success */
   --ao-english: #00802b;
@@ -849,6 +850,12 @@ body {
     width: 100%;
   }
 
+  .page__link.page__link-add-new-address {
+    text-align: left;
+    width: 100%;
+    margin: 0.5em 0 0;
+  }
+
   /* ============================================================ */
   /* ========================== IMAGES ========================== */
   /* ============================================================ */
@@ -905,7 +912,7 @@ body {
     width: 3.5em;
   }
 
-  .page__icon-checked {
+  .page__icon.page__icon-checked {
     vertical-align: bottom;
     width: 1.2em;
   }
@@ -1646,12 +1653,12 @@ body {
   }
 
   .form p {
-    margin: 0.25em 0 0;
+    margin: 0.25em 0 0 0;
   }
 
   .form-field {
     width: 100%;
-    margin: 0.5em 0 0;
+    margin: 0.5em 0 0 0;
   }
 
   .form-field:nth-child(1) {
@@ -1660,7 +1667,7 @@ body {
 
   .form-check {
     width: 100%;
-    margin: 0.5em 0 0;
+    margin: 0.5em 0 0 0;
   }
 
   .form-field__input,
@@ -2194,9 +2201,11 @@ body {
   /*! None */
 
   /* ================== admin_purchase_create =================== */
-  #purchase_billingAddress,
-  #purchase_deliveryAddress {
+  #admin_purchase_billingAddress,
+  #admin_purchase_deliveryAddress {
+    width: 100%;
     display: flex;
+    flex-flow: row wrap;
   }
 
   /* ==================== admin_purchase_list =================== */
@@ -2546,13 +2555,6 @@ body {
     width: 50%;
   }
 
-  #change-billing-address-link,
-  #add-new-address-link {
-    text-align: left;
-    width: 100%;
-    margin: 0.5em 0 0;
-  }
-
   /* .form-field-purchase-billing-address,
   .form-field-purchase-delivery-address,
   .form-field-purchase-delivery-mode,
@@ -2565,8 +2567,6 @@ body {
     background-color: #999999;
   } */
 
-  #admin_purchase_billingAddress,
-  #admin_purchase_deliveryAddress,
   #purchase_billingAddress,
   #purchase_deliveryAddress {
     width: 100%;
@@ -2582,7 +2582,7 @@ body {
   }
 
   .page__title-purchase-step_color_shady-lady {
-    color: #999999;
+    color: var(--shady-lady);
   }
 
   .page h3.page__title-address-step {
@@ -2675,10 +2675,6 @@ body {
   /* ============================================================ */
   /* ========================== IMAGES ========================== */
   /* ============================================================ */
-  .page__icon-checked {
-    width: 1.2em;
-  }
-
   .page__icon {
     width: 1.9em;
   }
@@ -3111,9 +3107,7 @@ body {
   }
 
   /* ========================= purchase ========================= */
-  .page__icon-checked {
-    width: 1.2em;
-  }
+  /*! None */
 
   /* ======================= purchase_list ====================== */
   /*! None */
@@ -3139,6 +3133,12 @@ body {
   .burger-menu-opening-button,
   .burger-menu-closing-button {
     margin-left: 1.5em;
+  }
+
+  .page__button.page__button-purchase-confirm-address,
+  .page__button.page__button-purchase-confirm-delivery-mode,
+  .page__button.page__button-purchase-confirm {
+    width: 35%;
   }
 
   /* ============================================================ */
@@ -3183,10 +3183,6 @@ body {
   /* .page__picture-entity {
     width: 12em;
   } */
-
-  .page__icon-checked {
-    width: 1.2em;
-  }
 
   .page__icon_payment-modes {
     width: 10%;
@@ -3466,11 +3462,11 @@ body {
     width: 25%;
   }
 
-  #purchase-confirm-address-button,
+  /* #purchase-confirm-address-button,
   #purchase-confirm-delivery-mode-button,
   #purchase-confirm-button {
     width: 35%;
-  }
+  } */
 
   .paypal-button-container {
     width: 50%;
@@ -3511,6 +3507,12 @@ body {
   #create-purchase-link,
   #create-delivery-mode-link {
     width: 12%;
+  }
+
+  .page__button.page__button-purchase-confirm-address,
+  .page__button.page__button-purchase-confirm-delivery-mode,
+  .page__button.page__button-purchase-confirm {
+    width: 35%;
   }
 
   /* ============================================================ */
@@ -4071,11 +4073,11 @@ body {
     width: 45%;
   }
 
-  #purchase-confirm-address-button,
+  /* #purchase-confirm-address-button,
   #purchase-confirm-delivery-mode-button,
   #purchase-confirm-button {
     width: 25%;
-  }
+  } */
 
   .purchase-item-reminder,
   .purchase-subtotal-reminder,
@@ -4087,10 +4089,6 @@ body {
     align-items: center;
     height: 100%;
     width: 45%;
-  }
-
-  .page__icon-checked {
-    width: 1.2em;
   }
 
   /* ======================= purchase_list ====================== */
