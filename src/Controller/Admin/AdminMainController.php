@@ -18,8 +18,11 @@ class AdminMainController extends AbstractController
     /** 
      * Method that display the dashboard.
      * @param UserRepository $userRepository
+     * @param AddressRepository $addressRepository
      * @param CategoryRepository $categoryRepository
      * @param ProductRepository $productRepository
+     * @param DeliveryModeRepository $deliveryModeRepository
+     * @param PurchaseRepository $purchaseRepository
      * @return Response
      */
     #[Route('/admin', name: 'admin_dashboard', methods: 'GET', priority: 3)]
