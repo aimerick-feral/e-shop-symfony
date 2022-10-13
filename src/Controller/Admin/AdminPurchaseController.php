@@ -477,7 +477,7 @@ class AdminPurchaseController extends AbstractController
         // If we don't find any purchase or if the status of the purchase is identical to Purchase::STATUS_DELIVER or Purchase::STATUS_ANNUL.
         if (
             !$purchase ||
-            $purchase->getStatus() === Purchase::STATUS_DELIVER ||  $purchase->getStatus() === Purchase::STATUS_ANNUL
+            $purchase->getStatus() === Purchase::STATUS_DELIVER ||  $purchase->getStatus() === Purchase::STATUS_ANNUL 
         ) {
             // If the status of the purchase is identical to Purchase::STATUS_DELIVER or Purchase::STATUS_ANNUL. 
             if (

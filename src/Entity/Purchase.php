@@ -169,9 +169,9 @@ class Purchase
         return $this;
     }
 
-    public function getUser(): User|null
+    public function getUser(): ?User
     {
-        return $this->user;
+        return $this->user ?? null;
     }
 
     public function setUser(?User $user): self

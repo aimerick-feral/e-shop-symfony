@@ -110,10 +110,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->purchases = new ArrayCollection();
     }
 
-    // public function __toString()
-    // {
-    //     return $this->firstName;
-    // }
+    public function __toString()
+    {
+        return $this->firstName;
+    }
 
     public function getId(): ?int
     {

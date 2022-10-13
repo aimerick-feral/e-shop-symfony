@@ -37,7 +37,7 @@
 						<p>{{ user.firstName }}</p>
 						<p>{{ user.lastName }}</p>
 						<p>
-							<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" id="" href="mailto:{{ user.email }}">{{ user.email }}</a>
+							<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" id="" href="{{ path('admin_user_detail', {'id': user.id}) }}">{{ user.email }}</a>
 						</p>
 						<p>{{ user.roles|json_encode() }}</p>
 						<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_address_user_list', {'id': user.id}) }}">Adresses</a>
@@ -84,8 +84,8 @@
 								<td>{{ user.firstName }}</td>
 								<td>{{ user.lastName }}</td>
 								<td>
-									<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="mailto:{{ user.email }}">{{ user.email }}</a>
-									{# <a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_user_detail', {'id': user.id}) }}">{{ user.email }}</a> #}
+									<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_user_detail', {'id': user.id}) }}">{{ user.email }}</a>
+									{# <a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="mailto:{{ user.email }}">{{ user.email }}</a> #}
 								</td>
 								<td>{{ user.roles|json_encode() }}</td>
 								<td>

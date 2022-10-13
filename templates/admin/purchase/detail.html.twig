@@ -59,7 +59,14 @@
 						Mise à jour le
 						{{ purchase.updatedAt|format_datetime('short', 'none', locale='fr') }}
 					</p>
-					<a class="page__link page__link_text-transform_uppercase page__link_margin-bottom_1em page__link-text_bold page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_purchase_update', {'userId': user.id, 'reference': purchase.reference}) }}?returnToAdminPurchaseList=true">Modifier</a>
+					{% if purchase.user != null %}
+						<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_user_detail', {'id': purchase.user.id}) }}">{{ purchase.user.email }}</a>
+						<a class="page__link page__link_text-transform_uppercase page__link_margin-bottom_1em page__link-text_bold page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_purchase_update', {'userId': user.id, 'reference': purchase.reference}) }}?returnToAdminPurchaseList=true">Modifier</a>
+					{% else %}
+						<p>
+							Utilisateur supprimé
+						</p>
+					{% endif %}
 				</div>
 				<div class="card-address card-address_border-color_blue">
 					<h3>Adresse de facturation</h3>
@@ -179,12 +186,25 @@
 							<th>Mise à jour le</th>
 							<td>{{ purchase.updatedAt|format_datetime('short', 'none', locale='fr') }}</td>
 						</tr>
-						<tr>
-							<th>Actions</th>
-							<td>
-								<a class="page__link page__link_text-transform_uppercase page__link-text_bold page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_purchase_update', {'userId': user.id, 'reference': purchase.reference}) }}?returnToAdminPurchaseList=true">Modifier</a>
-							</td>
-						</tr>
+						{% if purchase.user != null %}
+							<tr>
+								<th>Utilisateur</th>
+								<td>
+									<a class="page__link page__link-text  page__link_font-weight_normal page__link_padding-and-margin_0 page__link_color_blue" href="{{ path('admin_user_detail', {'id': purchase.user.id}) }}">{{ purchase.user.email }}</a>
+								</td>
+							</tr>
+							<tr>
+								<th>Actions</th>
+								<td>
+									<a class="page__link page__link_text-transform_uppercase page__link-text_bold page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_purchase_update', {'userId': user.id, 'reference': purchase.reference}) }}?returnToAdminPurchaseList=true">Modifier</a>
+								</td>
+							</tr>
+						{% else %}
+							<tr>
+								<th>Utilisateur</th>
+								<td>Utilisateur supprimé</td>
+							</tr>
+						{% endif %}
 					</tbody>
 				</table>
 				<table class="table table_background-color_blue table_color_white table-purchase-item">
