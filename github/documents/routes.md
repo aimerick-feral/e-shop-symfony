@@ -55,7 +55,7 @@
 | /admin/utilisateurs/{id}/commandes                                | admin_purchase_user_list      | GET          | AdminPurchaseController     | userList()                   | ✅     |
 | /admin/commandes/{id}                                             | admin_purchase_detail         | GET          | AdminPurchaseController     | detail()                     | ✅     |
 | /admin/utilisateurs/{userId}/commandes/{purchaseId}               | admin_purchase_user_detail    | GET          | AdminPurchaseController     | userDetail()                 | ✅     |
-| /admin/utilisateurs/{userId}/commandes/{purchaseId}/mettre-a-jour | admin_purchase_update         | GET, POST    | AdminPurchaseController     | userDetail()                 | ✅     |
+| /admin/utilisateurs/{userId}/commandes/{purchaseId}/mettre-a-jour | admin_purchase_update         | GET, POST    | AdminPurchaseController     | update()                     | ✅     |
 | /admin/purchase/{id}/supprimer                                    | admin_purchase_delete         | GET, POST    | AdminPurchaseController     | delete()                     | ✅     |
 | /produits                                                         | product_list                  | GET          | ProductController           | list()                       | ✅     |
 | /produits/{slug}                                                  | product_detail                | GET          | ProductController           | detail()                     | ✅     |
@@ -66,11 +66,11 @@
 | /adresses                                                         | address_list                  | GET          | AddressController           | list()                       | ✅     |
 | /adresses/{id}                                                    | address_detail                | GET          | AddressController           | detail()                     | ✅     |
 | /adresses/{id}/mettre-a-jour                                      | address_update                | GET, POST    | AddressController           | update()                     | ✅     |
-| /adresses/{id}/supprimer                                           | address_delete                | GET, POST    | AddressController           | delete()                     | ✅     |
-| /commande                                                         | purchase                      | GET, POST    | PurchaseController          | purchase()                   | ✅     |
-| /commandes                                                        | purchase_list                 | GET          | PurchaseController          | list()                       | ✅     |
-| /commandes/{id}                                                   | purchase_detail               | GET          | PurchaseController          | detail()                     | ✅     |
+| /adresses/{id}/supprimer                                          | address_delete                | GET, POST    | AddressController           | delete()                     | ✅     |
 | /panier/ajouter/produits/{id}                                     | cart_add                      | GET          | CartController              | add()                        | ✅     |
 | /panier                                                           | cart_detail                   | GET          | CartController              | add()                        | ✅     |
 | /panier/produits/{id}/supprimer                                   | cart_delete                   | GET          | CartController              | delete()                     | ✅     |
 | /panier/produits/{id}/decrementer                                 | cart_decremente               | GET          | CartController              | decremente()                 | ✅     |
+| /commande                                                         | purchase                      | GET, POST    | PurchaseController          | purchase()                   | ✅     |
+| /commandes                                                        | purchase_list                 | GET          | PurchaseController          | list()                       | ✅     |
+| /commandes/{id}                                                   | purchase_detail               | GET          | PurchaseController          | detail()                     | ✅     |
