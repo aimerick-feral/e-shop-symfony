@@ -293,7 +293,6 @@ class PurchaseController extends AbstractController
         // We link the form to the request.
         $form->handleRequest($request);
 
-        //! START : if api.js is active this code is not execute and you have to render the file list.html.twig insted of list-js.html.twig insted of list-js.html.twig.   
         // If the form is submitted and valid.
         if ($form->isSubmitted() && $form->isValid()) {
             // We find the purchase by its reference.
@@ -331,13 +330,11 @@ class PurchaseController extends AbstractController
                     );
                 }
             }
-            //! END : if api.js is active this code is not execute and you have to render the file list.html.twig insted of list-js.html.twig insted of list-js.html.twig.  
         }
 
         // We display our template.
         return $this->render(
             'purchase/list.html.twig',
-            // 'purchase/list-js.html.twig',
             // We set a array of optional data.
             [
                 'searchPurchaseForm' => $form->createView(),
@@ -484,7 +481,7 @@ class PurchaseController extends AbstractController
     }
 
 
-    //! Not used for now #7 START : test of templated email
+    //! START : test of templated email
     // #[Route('/emails/purchase-confirmation', name: 'purchase_confirmation', methods: 'GET')]
     // public function confimPurchaseToUser(): Response
     // {
@@ -520,6 +517,6 @@ class PurchaseController extends AbstractController
     //         new Response('', 200)
     //     );
     // }
-    //! Not used for now #7 END : test of templated email
+    //! END : test of templated email
 
 }

@@ -87,8 +87,8 @@ class StripeCheckout
 
         // If checkout is accepted : OK. 
 
-        // If the user backup : the user is redirect to the cancel_url and the purchase is remove from the database. Other option will be to use Not used for now #4 START : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT. 
+        // If the user backup : the user is redirect to the cancel_url and the purchase is remove from the database. Other option will be to use START : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT. 
 
-        // If the checkout is decline because of insufficient funds : the user is redirect to the cancel_url and the purchase is remove from the database. Other option is to use : Not used for now #4 START : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT and take back the started purchase insted of create a new one.
+        // If the checkout is decline because of insufficient funds : the user is redirect to the cancel_url and the purchase is remove from the database. Other option is to use : START : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT and take back the started purchase insted of create a new one.
     }
 }

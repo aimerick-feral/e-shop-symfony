@@ -936,9 +936,6 @@ const font = {
   handleColorsSwtich: function (event) {
     console.log("font.handleColorsSwtich()");
 
-    // We load the module api.js.
-    api.init();
-
     // We get the DOM element from which the event occured.
     let clickedSwitch = event.currentTarget;
 

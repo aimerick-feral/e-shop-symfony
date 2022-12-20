@@ -200,7 +200,6 @@ class AdminAddressController extends AbstractController
         // We link the form to the request.
         $form->handleRequest($request);
 
-        //! START : if api.js is active this code is not execute and you have to render the file list.html.twig insted of list-js.html.twig.  
         // If the form is submitted and valid.
         if ($form->isSubmitted() && $form->isValid()) {
             // // We find the city by its name.
@@ -240,12 +239,10 @@ class AdminAddressController extends AbstractController
                 );
             }
         }
-        //! END : if api.js is active this code is not execute and you have to render the file list.html.twig insted of list-js.html.twig.  
 
         // We display our template.
         return $this->render(
             'admin/address/user-list.html.twig',
-            // 'admin/address/user-list-js.html.twig',
             // We set a array of optional data.
             [
                 'user' => $user,

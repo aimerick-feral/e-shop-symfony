@@ -30,9 +30,6 @@ const app = {
     // We load the module puchase.js.
     purchase.init();
 
-    // We load the module search.js.
-    // api.init();
-
     // We load the module chart.js.
     chart.init();
 

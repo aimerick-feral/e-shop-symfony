@@ -177,7 +177,7 @@ class AdminPurchaseController extends AbstractController
         // We find all the purchases.
         $purchases = $this->purchaseRepository->findAll();
 
-        //! Not used for now #4 START : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT.
+        //! START : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT.
         // // For each purchase in $purchases.
         // foreach ($purchases as $index => $purchase) {
         //     // if the status of the purchase status is identical to the value of the PHP constant STATUS_ABANDONNED_CHECKOUT.
@@ -186,7 +186,7 @@ class AdminPurchaseController extends AbstractController
         //         unset($purchases[$index]);
         //     }
         // }
-        //! Not used for now #4 END : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT.
+        //! END : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT.
 
         // If we don't find any purchase.
         if (!$purchases) {
@@ -210,7 +210,6 @@ class AdminPurchaseController extends AbstractController
         // We link the form to the request.
         $form->handleRequest($request);
 
-        //! START : if api.js is active this code is not execute and you have to render the file list.html.twig insted of list-js.html.twig.  
         // If the form is submitted and valid.
         if ($form->isSubmitted() && $form->isValid()) {
             // We find the purchase by its reference.
@@ -231,12 +230,10 @@ class AdminPurchaseController extends AbstractController
                 );
             }
         }
-        //! END : if api.js is active this code is not execute and you have to render the file list.html.twig insted of list-js.html.twig.  
 
         // We display our template.
         return $this->render(
             'admin/purchase/list.html.twig',
-            // 'admin/purchase/list-js.html.twig',
             // We set a array of optional data.
             [
                 'searchPurchaseForm' => $form->createView(),
@@ -267,13 +264,13 @@ class AdminPurchaseController extends AbstractController
         $references = [];
         // For each $purchase in $user->getPurchases().
         foreach ($user->getPurchases() as $purchase) {
-            //! Not used for now #4 START : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT.
+            //! START : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT.
             // // if the status of the purchase status is identical to the value of the PHP constant STATUS_ABANDONNED_CHECKOUT.
             // if ($purchase->getStatus() === Purchase::STATUS_ABANDONNED_CHECKOUT) {
             //     // We begin the next iteration of the loop so we don't put the purchase in the purchases array. 
             //     continue;
             // }
-            //! Not used for now #4 END : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT.
+            //! END : purchase backup with a status value to STATUS_ABANDONNED_CHECKOUT.
 
             // We push each $purchase in the array .
             $purchases[] = $purchase;
@@ -305,7 +302,6 @@ class AdminPurchaseController extends AbstractController
         // We link the form to the request.
         $form->handleRequest($request);
 
-        //! START : if api.js is active this code is not execute and you have to render the file list.html.twig insted of list-js.html.twig.
         // If the form is submitted and valid.
         if ($form->isSubmitted() && $form->isValid()) {
             // We find the purchase by its reference.
@@ -348,12 +344,10 @@ class AdminPurchaseController extends AbstractController
                 }
             }
         }
-        //! END : if api.js is active this code is not execute and you have to render the file list.html.twig insted of list-js.html.twig.  
 
         // We display our template.
         return $this->render(
             'admin/purchase/user-list.html.twig',
-            // 'admin/purchase/user-list-js.html.twig',
             // We set a array of optional data.
             [
                 'user' => $user,
