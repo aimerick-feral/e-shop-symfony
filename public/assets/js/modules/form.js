@@ -1968,7 +1968,7 @@ const form = {
     else {
       // We call form.switchInputOutlineColor() to switch the input's outline in red.
       form.switchInputOutlineColor(input, form.colors.red);
-      // We call tools.addDisplayNone() in order to remove the display-none class from errorMessageEmpty.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
       // We add a error to form.numberOfErrors.
       form.numberOfErrors++;
@@ -2069,7 +2069,7 @@ const form = {
     console.log(input.files);
 
     // We put in a array the mime types we authorize.
-    let authorizedMimeTypes = [
+    const authorizedMimeTypes = [
       "application/pdf",
       "image/png",
       "image/jpeg",
@@ -2129,7 +2129,7 @@ const form = {
         console.log("File size denied ❌");
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.addDisplayNone() in order to remove the display-none class from errorMessageFileSize.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageFileSize);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -2266,7 +2266,7 @@ const form = {
 
     // If input is not empty.
     if (input.value) {
-      // We call tools.addDisplayNone() in order to add the display-none class to errorMessageEmpty.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(errorMessageEmpty);
 
       // If input is valid.
@@ -2312,7 +2312,7 @@ const form = {
 
     // If input is not empty.
     if (input.value) {
-      // We call tools.addDisplayNone() in order to add the display-none class to errorMessageEmpty.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(errorMessageEmpty);
 
       // If input is valid.
@@ -2368,7 +2368,7 @@ const form = {
       else {
         // We call form.switchInputBorderColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.addDisplayNone() in order to remove the display-none class from errorMessageValidity.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -2378,7 +2378,7 @@ const form = {
     else {
       // We call form.switchInputBorderColor() to switch the input's outline in red.
       form.switchInputOutlineColor(input, form.colors.red);
-      // We call tools.addDisplayNone() in order to remove the display-none class from errorMessageEmpty.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
       // We add a error to form.numberOfErrors.
       form.numberOfErrors++;
@@ -2446,7 +2446,7 @@ const form = {
       form.removeDisabledAttribute(form.inputs);
       // We call form.removeDisabledAttribute() to remove the disabled attribute from the elements.
       form.removeDisabledAttribute(form.userCivilityTitleInputs);
-      // We call tools.addDisplayNone() in order in order to add the display-none class to the element.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(form.modifyMyUserProfileButton);
       // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(
@@ -2462,7 +2462,7 @@ const form = {
     }
     // Else if clickedButton is strictly equal to form.updateUserProfileButton.
     else if (clickedButton === form.updateMyUserProfileButton) {
-      // We call tools.addDisplayNone() in order in order to add the display-none class to the elements.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(
         form.modifyMyUserProfileButton,
         form.deleteMyUserPictureLink,
@@ -2481,7 +2481,7 @@ const form = {
 
     // If the input is not checked.
     if (!input.checked) {
-      // We call tools.addDisplayNone() in order in order to add the display-none class to the elements.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(input, label);
     }
     // Else the input is checked.
@@ -2548,7 +2548,7 @@ const form = {
       );
       // If form.numberOfErrors is supperior to 0.
       if (form.numberOfErrors > 0) {
-        // We call tools.addDisplayNone() in order in order to add the display-none class to the elements.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(
           form.addressStepIconChecked,
           form.purchaseDeliveryModeField,
@@ -2578,7 +2578,7 @@ const form = {
           form.purchaseDeliveryModeField,
           form.purchaseConfirmDeliveryModeButton
         );
-        // We call tools.addDisplayNone() in order in order to add the display-none class to the elements.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(
           form.addNewAddressLink,
           form.purchaseBillingAddressField,
@@ -2594,7 +2594,7 @@ const form = {
     }
     // Else if clickedElement is strictly equal to form.addressStep.
     else if (clickedElement === form.addressStep) {
-      // We call tools.addDisplayNone() in order in order to add the display-none class to the elements.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(
         form.addressStepIconChecked,
         form.deliveryModeStepIconChecked,
@@ -2649,7 +2649,7 @@ const form = {
           form.purchaseConfirmButton
           // form.paypalButtonContainer
         );
-        // We call tools.addDisplayNone() in order in order to add the display-none class to the elements.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(
           form.purchaseDeliveryModeField,
           form.purchaseConfirmDeliveryModeButton
@@ -2669,7 +2669,7 @@ const form = {
         // We leave form.handleDeliveryModeStep() beause form.purchaseAddressesInputs is not checked.
         return;
       }
-      // We call tools.addDisplayNone() in order in order to add the display-none class to the elements.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(
         form.deliveryModeStepIconChecked,
         form.purchaseCheckoutMethodField,
