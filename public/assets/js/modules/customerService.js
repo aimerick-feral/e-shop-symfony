@@ -14,7 +14,7 @@ const customerService = {
 
     customerService.terms = document.querySelectorAll(".term-customer-service");
 
-    // For each question ofcustomerService.questions.
+    // For each question of customerService.questions.
     for (let question of customerService.questions) {
       // We add a listener and a handler on the click event.
       question.addEventListener(
@@ -41,7 +41,7 @@ const customerService = {
 
     // For each question of customerService.questions.
     for (let question of customerService.questions) {
-      // If clickedQuestion is identical to question.
+      // If clickedQuestion is strictly equal to question.
       if (clickedQuestion === question) {
         // For each term of customerService.terms.
         for (let term of customerService.terms) {
@@ -60,7 +60,7 @@ const customerService = {
         const ps = customerService.terms[index].getElementsByTagName("p");
         // For each p of ps.
         for (let p of ps) {
-          // If the customerService.terms related to the clickedQuestion contain one or many <p> HTML elements.
+          // If the customerService.terms related to the clickedQuestion contain one or several <p> HTML elements.
           if (customerService.terms[index].contains(p)) {
             // We call tools.removeDisplayNone() in order to remove the display-none class from each <p> contains in the customerService.terms related to the clickedQuestion.
             tools.removeDisplayNone(p);

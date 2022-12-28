@@ -43,25 +43,25 @@ const responsive = {
    * @return {void}
    */
   applyResponsive: function () {
-    // console.log("responsive.applyResponsive()");
+    console.log("responsive.applyResponsive()");
 
     // If the DOM elements exist.
     if (responsive.bugerMenu && responsive.menuNavMobile) {
-      // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+      // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
       tools.removeClassesFromElement(responsive.closingButton, "burger-menu");
-      // We call tools.addDisplayNone() in order to add the display-none class to one or many elements.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(responsive.closingButton);
       // If the window size is higher or equal to 320px and inferior to 992px.
       if (
         window.innerWidth >= responsive.window320Px &&
         window.innerWidth < responsive.window992Px
       ) {
-        // We call tools.addDisplayNone() in order to add the display-none class to one or many elements.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(responsive.menuNavMobile);
       }
       // Else if the window size is higher or equal to 992px.
       else if (window.innerWidth >= responsive.window992Px) {
-        // We call tools.removeDisplayNone() in order to remove the display-none class from one or many elements.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(responsive.menuNavMobile);
       }
     }
@@ -72,65 +72,65 @@ const responsive = {
    * @return {void}
    */
   handleSelectedNavButton: function (event) {
-    // console.log("responsive.handleSelectedNavButton()");
+    console.log("responsive.handleSelectedNavButton()");
 
     // We get the DOM element form which the event occured.
     let selectedButton = event.currentTarget;
 
-    // If selectedButton === responsive.openingButton.
+    // If selectedButton is strictly equal to responsive.openingButton.
     if (selectedButton === responsive.openingButton) {
-      // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+      // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
       tools.removeClassesFromElement(responsive.openingButton, "burger-menu");
-      // We call tools.addDisplayNone() in order to add the display-none class to one or many elements.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(responsive.openingButton);
-      // We call tools.removeDisplayNone() in order to remove the display-none class from one or many elements.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(responsive.closingButton);
-      // We call tools.addClassesToElement() in order to add multiple className to the element.
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(responsive.closingButton, "burger-menu");
-      // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+      // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
       tools.removeClassesFromElement(responsive.footer, "footer");
-      // We call tools.addDisplayNone() in order to add the display-none class to one or many elements.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(responsive.footer);
 
       // If the DOM element exist.
       if (responsive.menuNavMobile) {
-        // We call tools.toggleClassToElements() in order to toggle a className to one or many elements.
+        // We call tools.toggleClassToElements() in order to toggle a className to one or several elements.
         tools.toggleDisplayNone(responsive.menuNavMobile);
 
         // If the DOM element exist.
         if (responsive.page) {
-          // We call tools.toggleClassToElements() in order to toggle a className to one or many elements.
+          // We call tools.toggleClassToElements() in order to toggle a className to one or several elements.
           tools.toggleClassToElements("page", responsive.page);
-          // We call tools.addDisplayNone() in order to add the display-none class to one or many elements.
+          // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
           tools.addDisplayNone(responsive.page);
         }
       }
     }
-    // Else if selectedButton isresponsive.closingButton.
+    // Else if selectedButton is strictly equal to responsive.closingButton.
     else if (selectedButton === responsive.closingButton) {
-      // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+      // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
       tools.removeClassesFromElement(responsive.closingButton, "burger-menu");
-      // We call tools.addDisplayNone() in order to add the display-none class to one or many elements.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(responsive.closingButton);
-      // We call tools.removeDisplayNone() in order to remove the display-none class from one or many elements.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(responsive.openingButton);
-      // We call tools.addClassesToElement() in order to add multiple className to the element.
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(responsive.openingButton, "burger-menu");
-      // We call tools.removeDisplayNone() in order to remove the display-none class from one or many elements.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(responsive.footer);
       // We call tools.addClassToElements() in order to add className to the element.
       tools.addClassToElements("footer", responsive.footer);
 
       // If the DOM element exist.
       if (responsive.menuNavMobile) {
-        // We call tools.toggleClassToElements() in order to toggle a className to one or many elements.
+        // We call tools.toggleClassToElements() in order to toggle a className to one or several elements.
         tools.toggleDisplayNone(responsive.menuNavMobile);
 
         // If the DOM element exist.
         if (responsive.page) {
-          // We call tools.toggleClassToElements() in order to toggle a className to one or many elements.
+          // We call tools.toggleClassToElements() in order to toggle a className to one or several elements.
           tools.toggleClassToElements("page", responsive.page);
-          // We call tools.removeDisplayNone() in order to remove the display-none class from one or many elements.
+          // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
           tools.removeDisplayNone(responsive.page);
         }
       }

@@ -113,13 +113,13 @@ const form = {
   // Contact
   regexMatchStartBy06Or07: null,
   // Category
-  //! START : regex not used
+  //! START. regex not used
   regexMatchAlphabeticalCharactersWithOrWithoutDiacriticalMarks: null,
   regexMatchAccentedAlphabeticalCharacters: null,
   regexMatchAlphabeticalCharacters: null,
   regexMatchAlphabeticalCharactersAndSpace: null,
   regexMatchAlphabeticalCharactersWithHyphen: null,
-  //! END : regex not used
+  //! END. regex not used
   // Product
   regexMatchNumber: null,
   // Address
@@ -439,7 +439,7 @@ const form = {
     form.userTermsOfUseInput = document.querySelector(
       ".form-field__input-terms-of-use"
     );
-    // If the DOM elements exist.
+    // If the DOM element exist.
     if (form.userTermsOfUseInput) {
       // We get the label related to form.userTermsOfUseInput.
       label = form.userTermsOfUseInput.nextElementSibling;
@@ -485,7 +485,7 @@ const form = {
     for (let input of form.productAvailabilityInputs) {
       // We get the label related to form.productAvailabilityInputs.
       label = input.nextElementSibling;
-      // We call tools.addClassesToElement() in order to add multiple className to the element.
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(label, "availability");
     }
     form.productAvailableInputs = document.querySelectorAll(
@@ -495,7 +495,7 @@ const form = {
     for (let input of form.productAvailableInputs) {
       // We get the label related to form.productAvailableInputs.
       label = input.nextElementSibling;
-      // We call tools.addClassesToElement() in order to add multiple className to the element.
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         label,
         "available",
@@ -509,7 +509,7 @@ const form = {
     for (let input of form.productUnavailableInputs) {
       // We get the label related to form.productUnavailableInputs.
       label = input.nextElementSibling;
-      // We call tools.addClassesToElement() in order to add multiple className to the element.
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         label,
         "unavailable",
@@ -550,7 +550,7 @@ const form = {
     for (let input of form.purchaseStatusInputs) {
       // We get the label related to form.purchaseStatusInputs.
       label = input.nextElementSibling;
-      // We call tools.addClassesToElement() in order to add multiple className to the element.
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(label, "status");
     }
     form.purchaseStatusPaidInputs = document.querySelectorAll(
@@ -560,7 +560,7 @@ const form = {
     for (let input of form.purchaseStatusPaidInputs) {
       // We get the label related to form.purchaseStatusPaidInputs.
       label = input.nextElementSibling;
-      // We call tools.addClassesToElement() in order to add multiple className to the element.
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         label,
         "status__paid",
@@ -572,9 +572,9 @@ const form = {
     );
     // For each input of form.purchaseStatusInProgressInputs.
     for (let input of form.purchaseStatusInProgressInputs) {
-      // We get the label related to form.purchaseStatusInProgressInputs.
+      // We get the label related to form purchaseStatusInProgressInputs.
       label = input.nextElementSibling;
-      // We call tools.addClassesToElement() in order to add multiple className to the element.
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         label,
         "status__in-progress",
@@ -586,9 +586,9 @@ const form = {
     );
     // For each input of form.purchaseStatusSendInputs.
     for (let input of form.purchaseStatusSendInputs) {
-      // We get the label related to form.purchaseStatusSendInputs.
+      // -  We get the label related to form.purchaseStatusSendInputs.
       label = input.nextElementSibling;
-      // We call tools.addClassesToElement() in order to add multiple className to the element.
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         label,
         "status__send",
@@ -602,7 +602,7 @@ const form = {
     for (let input of form.purchaseStatusDeliverInputs) {
       // We get the label related to form.purchaseStatusDeliverInputs.
       label = input.nextElementSibling;
-      // We call tools.addClassesToElement() in order to add multiple className to the element.
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         label,
         "status__deliver",
@@ -616,7 +616,7 @@ const form = {
     for (let input of form.purchaseStatusAnnulInputs) {
       // We get the label related to form.purchaseStatusAnnulInputs.
       label = input.nextElementSibling;
-      // We call tools.addClassesToElement() in order to add multiple className to the element.
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         label,
         "status__annul",
@@ -700,16 +700,16 @@ const form = {
     );
     // If the DOM element exist.
     if (form.purchasePendingCheckoutInput) {
-      // We call tools.addDisplayNone() in order to add the display-none class to one or many elements.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(
         form.purchasePendingCheckoutInput.nextElementSibling
       );
     }
     // ==================== REGEX ====================
 
-    // The $ means : ????
-    // The +$ means : ????
-    // The *$ means : match, from beginning to end, any character that appears zero or more times. Basically, that means : match everything from start to end of the string.
+    // The $ means. ????
+    // The +$ means. ????
+    // The *$ means. match, from beginning to end, any character that appears zero or more times. Basically, that means. match everything from start to end of the string.
 
     // Regex that match only type of e-mail value.
     form.regexMatchEmail = /^(.+)@(\S+)$/;
@@ -729,7 +729,7 @@ const form = {
     form.regexMatchTenNumericCharacters = /^\d{10}$/;
     // Regex that match only value that start with the numeric value 06 or 07.
     form.regexMatchStartBy06Or07 = /^((06)|(07))[0-9]{8}$/;
-    //! START : regex not used
+    //! START. regex not used
     // Regex that match only alphabetical characters with or without diacritical marks.
     regexMatchAlphabeticalCharactersWithOrWithoutDiacriticalMarks =
       /^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$/;
@@ -741,7 +741,7 @@ const form = {
     form.regexMatchAlphabeticalCharactersWithHyphen = /^[A-Za-z-]+$/;
     // Regex that match alphabetical characters in uppercase and lowercase with accentend characters for uppercase and lowercase.
     form.regexMatchAccentedAlphabeticalCharacters = /[A-Za-zÀ-Ÿa-ÿ]/;
-    //! END : regex not used
+    //! END. regex not used
     // The regex accepting only value that contain a digit number.
     form.regexMatchNumber = /\d+/;
     // Regex that match only value who contain 5 numeric characters.
@@ -989,7 +989,7 @@ const form = {
     form.submitButtons = document.querySelectorAll(".page__button-submit");
     // If the DOM elements exist.
     if (form.submitButtons) {
-      // For each submitButton of form.submitButtons
+      // - For each submitButton of form.submitButtons.
       for (let submitButton of form.submitButtons) {
         // We add a listener and a handler on the click event.
         submitButton.addEventListener("click", form.handleFormSubmit);
@@ -1120,20 +1120,20 @@ const form = {
       step.addEventListener("click", form.handlePurchaseSteps);
     }
 
-    // Step 1 : address
+    // Step 1. address
     form.addressStep = document.getElementById("addresses-step");
 
     form.addressStepIconChecked = document.getElementById(
       "icon-checked-addresses-step"
     );
 
-    // Step 2 : delivery mode
+    // Step 2. delivery mode
     form.deliveryModeStep = document.getElementById("delivery-mode-step");
     form.deliveryModeStepIconChecked = document.getElementById(
       "icon-checked-delivery-mode-step"
     );
 
-    // Step 3 : payment method
+    // Step 3. payment method
     form.paymentMethodStep = document.getElementById("payment-method-step");
     form.paypalButtonContainer = document.getElementById(
       "paypal-button-container"
@@ -1145,8 +1145,8 @@ const form = {
   },
   /**
    * Method that switch the color of the outline around the inputs.
-   * @param {Element} input
-   * @param {string} outlineColor
+   * @param {HTMLInputElement} input
+   * @param {Sring} outlineColor
    * @return {void}
    */
   switchInputOutlineColor: function (input, outlineColor) {
@@ -1172,11 +1172,11 @@ const form = {
     // The index is the index of the clickedInput.
     index = form.inputs.indexOf(clickedInput);
 
-    // If the mode item in localStorage have the dark value.
+    // If the mode item in localStorage is strictly equal to "dark".
     if (mode.backgroundColor === "dark") {
       // For each input of form.inputs.
       for (let input of form.inputs) {
-        // If the DOM element === true.
+        // If the the clickedInput is strictly equal to input.
         if (clickedInput === input) {
           // We call form.switchInputOutlineColor() to switch the outline color of the input.
           form.switchInputOutlineColor(clickedInput, mode.colors.white);
@@ -1188,11 +1188,11 @@ const form = {
         // }
       }
     }
-    // Else if the mode item in localStorage have the light value.
+    // Else if the mode item in localStorage is strictly equal to "light".
     else if (mode.backgroundColor === "light") {
-      // For each input of form.inputs.
+      // - For each input of form.inputs.
       for (let input of form.inputs) {
-        // If the DOM element === true.
+        // If the clickedInput is strictly equal to input.
         if (clickedInput === input) {
           // We call form.switchInputOutlineColor() to switch the outline color of the input.
           form.switchInputOutlineColor(clickedInput, mode.colors.black);
@@ -1235,7 +1235,7 @@ const form = {
     event.preventDefault();
     console.log("STOP 🛑👮🏼‍♂️ Security check 🔐");
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.registrationButton ||
       clickedButton === form.loginButton ||
@@ -1253,7 +1253,7 @@ const form = {
       );
     }
 
-    // If clickedButton is form.searchUserButton
+    // If clickedButton is strictly equal to form.searchUserButton.
     if (clickedButton === form.searchUserButton) {
       // We call form.checkIfInputContainValue() to check if the input it not empty.
       form.checkIfInputContainValue(
@@ -1262,7 +1262,7 @@ const form = {
       );
     }
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.registrationButton ||
       clickedButton === form.loginButton ||
@@ -1281,7 +1281,7 @@ const form = {
       );
     }
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.registrationButton ||
       clickedButton === form.updateMyUserProfileButton ||
@@ -1305,7 +1305,7 @@ const form = {
       );
     }
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.registrationButton ||
       clickedButton === form.adminCreateUserButton
@@ -1315,7 +1315,7 @@ const form = {
         form.userCivilityTitleInputs,
         form.errorMessageUserGenderNotChecked
       );
-      // If form.fileInput is contain a value.
+      // If form.fileInput contain a value.
       if (form.fileInput.value) {
         // We call form.checkUploadedFileMimeType() to check the mime type of the uploded file.
         form.checkUploadedFileMimeType(
@@ -1325,13 +1325,13 @@ const form = {
       }
     }
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       form.updateMyUserProfileButton ||
       form.adminUpdateUserButton ||
       form.contactButton
     ) {
-      // If form.fileInput is contain a value.
+      // If form.fileInput contain a value.
       if (form.fileInput.value) {
         // We call form.checkUploadedFileMimeType() to check the mime type of the uploded file.
         form.checkUploadedFileMimeType(
@@ -1341,7 +1341,7 @@ const form = {
       }
     }
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.contactButton ||
       clickedButton === form.userCreateAddressButton ||
@@ -1357,7 +1357,7 @@ const form = {
       );
     }
 
-    // If clickedButton is form.registrationButton.
+    // If clickedButton is strictly equal to form.registrationButton.
     if (clickedButton === form.registrationButton) {
       // We call form.checkIfInputIsChecked() to check if the input is checked.
       form.checkIfInputIsChecked(
@@ -1368,19 +1368,19 @@ const form = {
       form.submitFormIfNoError(form.registrationForm);
     }
 
-    // If clickedButton is form.loginButton.
+    // If clickedButton is strictly equal to form.loginButton.
     if (clickedButton === form.loginButton) {
       // We call form.submitFormIfNoError() with form.loginForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.loginForm);
     }
 
-    // If clickedButton is form.updateMyUserProfileButton.
+    // If clickedButton is strictly equal to form.updateMyUserProfileButton.
     if (clickedButton === form.updateMyUserProfileButton) {
       // We call form.submitFormIfNoError() with form.userProfileForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.userProfileForm);
     }
 
-    // If clickedButton is form.contactButton.
+    // If clickedButton is strictly equal to form.contactButton.
     if (clickedButton === form.contactButton) {
       // We call form.checkIfInputIsChecked() to check if the input is checked.
       form.checkIfInputIsChecked(
@@ -1393,37 +1393,37 @@ const form = {
       form.submitFormIfNoError(form.contactForm);
     }
 
-    // If clickedButton is form.adminCreateUserForm.
+    // If clickedButton is strictly equal to form.adminCreateUserForm.
     if (clickedButton === form.adminCreateUserButton) {
       // We call form.submitFormIfNoError() with form.adminCreateUserForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.adminCreateUserForm);
     }
 
-    // If clickedButton is form.adminUpdateUserButton.
+    // If clickedButton is strictly equal to form.adminUpdateUserButton.
     if (clickedButton == form.adminUpdateUserButton) {
       // We call form.submitFormIfNoError() with form.adminUpdateUserForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.adminUpdateUserForm);
     }
 
-    // If clickedButton is form.searchUserButton.
+    // If clickedButton is strictly equal to form.searchUserButton.
     if (clickedButton === form.searchUserButton) {
       // We call form.submitFormIfNoError() with form.searchUserForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.searchUserForm);
     }
 
-    // If clickedButton is form.requestPasswordButton.
+    // If clickedButton is strictly equal to form.requestPasswordButton.
     if (clickedButton == form.requestPasswordButton) {
       // We call form.submitFormIfNoError() with form.requestPasswordForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.requestPasswordForm);
     }
 
-    // If clickedButton is form.resetPasswordButton.
+    // If clickedButton is strictly equal to form.resetPasswordButton.
     if (clickedButton === form.resetPasswordButton) {
       // We call form.submitFormIfNoError() with form.resetPasswordForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.resetPasswordForm);
     }
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.adminCreateCategoryButton ||
       clickedButton === form.adminUpdateCategoryButton ||
@@ -1434,35 +1434,35 @@ const form = {
         form.categoryNameInput,
         form.errorMessageCategoryNameEmpty
       );
-      //! START : category name validity not used
+      //! START. category name validity not used
       // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
       // form.checkIfAlphabeticalCharacters(
       //   form.categoryNameInput,
       //   form.errorMessageCategoryNameEmpty,
       //   form.errorMessageCategoryNameValidity
       // );
-      //! END : category name validity not used
+      //! END. category name validity not used
     }
 
-    // If clickedButton is form.adminCreateCategoryButton.
+    // If clickedButton is strictly equal to form.adminCreateCategoryButton.
     if (clickedButton === form.adminCreateCategoryButton) {
       // We call form.submitFormIfNoError() with form.adminCreateCategoryForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.adminCreateCategoryForm);
     }
 
-    // If clickedButton is form.adminUpdateCategoryButton.
+    // If clickedButton is strictly equal to form.adminUpdateCategoryButton.
     if (clickedButton === form.adminUpdateCategoryButton) {
       // We call form.submitFormIfNoError() with form.searchCategoryForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.adminUpdateCategoryForm);
     }
 
-    // If clickedButton is form.searchCategoryButton.
+    // If clickedButton is strictly equal to form.searchCategoryButton.
     if (clickedButton === form.searchCategoryButton) {
       // We call form.submitFormIfNoError() with form.searchCategoryForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.searchCategoryForm);
     }
 
-    // If clickedButton is form.adminCreateProductButton or form.searchProductButton or form.adminUpdateProductButton.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.adminCreateProductButton ||
       clickedButton === form.adminUpdateProductButton ||
@@ -1473,17 +1473,17 @@ const form = {
         form.productNameInput,
         form.errorMessageProductNameEmpty
       );
-      //! START : product name validity not used
+      //! START. product name validity not used
       // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty.
       // form.checkIfAlphabeticalCharacters(
       //   form.productNameInput,
       //   form.errorMessageProductNameEmpty,
       //   form.errorMessageProductNameValidity
       // );
-      //! END : product name validity not used
+      //! END. product name validity not used
     }
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.adminCreateProductButton ||
       clickedButton === form.adminUpdateProductButton
@@ -1511,7 +1511,7 @@ const form = {
       );
     }
 
-    // If clickedButton is form.adminCreateProductButton.
+    // If clickedButton is strictly equal to form.adminCreateProductButton.
     if (clickedButton === form.adminCreateProductButton) {
       // We call form.checkUploadedFileMimeType() to check the mime type of the uploded file.
       form.checkUploadedFileMimeType(
@@ -1522,9 +1522,9 @@ const form = {
       form.submitFormIfNoError(form.adminCreateProductForm);
     }
 
-    // If clickedButton is form.adminUpdateProductButton.
+    // If clickedButton is strictly equal to form.adminUpdateProductButton.
     if (clickedButton === form.adminUpdateProductButton) {
-      // If form.fileInput is contain a value.
+      // If form.fileInput contain a value.
       if (form.fileInput.value) {
         // We call form.checkUploadedFileMimeType() to check the mime type of the uploded file.
         form.checkUploadedFileMimeType(
@@ -1536,13 +1536,13 @@ const form = {
       form.submitFormIfNoError(form.adminUpdateProductForm);
     }
 
-    // If clickedButton is form.searchProductButton.
+    // If clickedButton is strictly equal to form.searchProductButton.
     if (clickedButton === form.searchProductButton) {
       // We call form.submitFormIfNoError() with form.searchProductForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.searchProductForm);
     }
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.userCreateAddressButton ||
       clickedButton === form.userUpdateAdressButton ||
@@ -1555,17 +1555,17 @@ const form = {
         form.addressCityInput,
         form.errorMessageAddressCityEmpty
       );
-      //! START : address city validity not used
+      //! START. address city validity not used
       // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
       // form.checkIfAlphabeticalCharacters(
       //   form.addressCityInput,
       //   form.errorMessageAddressCityEmpty,
       //   form.errorMessageAddressCityValidity
       // );
-      //! END : address city validity not used
+      //! END. address city validity not used
     }
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.userCreateAddressButton ||
       clickedButton === form.userUpdateAdressButton ||
@@ -1583,14 +1583,14 @@ const form = {
         form.addressStreetNameInput,
         form.errorMessageAddressStreetNameEmpty
       );
-      //! START : address street name validity not used
+      //! START. address street name validity not used
       // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
       // form.checkIfAlphabeticalCharacters(
       //   form.addressStreetNameInput,
       //   form.errorMessageAddressStreetNameEmpty,
       //   form.errorMessageAddressStreetNameValidity
       // );
-      //! END : address street name validity not used
+      //! END. address street name validity not used
       // We call form.checkIfZipCode() to check if the input it not empty and valid.
       form.checkIfZipCode(
         form.addressZipCodeInput,
@@ -1602,60 +1602,60 @@ const form = {
         form.addressCityInput,
         form.errorMessageAddressCityEmpty
       );
-      //! START : address city validity not used
+      //! START. address city validity not used
       // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty.
       // form.checkIfAlphabeticalCharacters(
       //   form.addressCityInput,
       //   form.errorMessageAddressCityEmpty,
       //   form.errorMessageAddressCityValidity
       // );
-      //! END : address city validity not used
+      //! END. address city validity not used
       // We call form.checkIfInputContainValue()to check if the input it not empty.
       form.checkIfInputContainValue(
         form.addressCountryInput,
         form.errorMessageAddressCountryEmpty
       );
-      //!  START : address country validity not used
+      //!  START. address country validity not used
       // // We call form.checkIfAlphabeticalCharacters()to check if the input it not empty and valid.
       // form.checkIfAlphabeticalCharacters(
       //   form.addressCountryInput,
       //   form.errorMessageAddressCountryEmpty,
       //   form.errorMessageAddressCountryValidity
       // );
-      //!  END : address country validity not used
+      //!  END. address country validity not used
     }
 
-    // If clickedButton is form.userCreateAddressButton.
+    // If clickedButton is strictly equal to form.userCreateAddressButton.
     if (clickedButton === form.userCreateAddressButton) {
       // We call form.submitFormIfNoError() with form.userCreateAddressForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.userCreateAddressForm);
     }
 
-    // If clickedButton is form.updateAddressOnPurchaseButton.
+    // If clickedButton is strictly equal to form.updateAddressOnPurchaseButton.
     if (clickedButton === form.userUpdateAdressButton) {
       // We call form.submitFormIfNoError() with form.userUpdateAddressForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.userUpdateAddressForm);
     }
 
-    // If clickedButton is form.adminCreateAddressButton.
+    // If clickedButton is strictly equal to form.adminCreateAddressButton.
     if (clickedButton === form.adminCreateAddressButton) {
       // We call form.submitFormIfNoError() with form.adminCreateAddressForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.adminCreateAddressForm);
     }
 
-    // If clickedButton is form.adminUpdateAddressButton.
+    // If clickedButton is strictly equal to form.adminUpdateAddressButton.
     if (clickedButton === form.adminUpdateAddressButton) {
       // We call form.submitFormIfNoError() with form.adminUpdateAddressForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.adminUpdateAddressForm);
     }
 
-    // If clickedButton is form.searchAddressButton.
+    // If clickedButton is strictly equal to form.searchAddressButton.
     if (clickedButton === form.searchAddressButton) {
       // We call form.submitFormIfNoError() with form.searchAddressForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.searchAddressForm);
     }
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.adminCreatePurchaseButton ||
       clickedButton === form.adminUpdatePurchaseButton
@@ -1667,7 +1667,7 @@ const form = {
       );
     }
 
-    // If clickedButton is form.adminCreatePurchaseButton.
+    // If clickedButton is strictly equal to form.adminCreatePurchaseButton.
     if (clickedButton === form.adminCreatePurchaseButton) {
       // We call form.checkIfInputIsChecked() to check if fthe input is checked.
       form.checkIfInputIsChecked(
@@ -1688,13 +1688,13 @@ const form = {
       form.submitFormIfNoError(form.adminCreatePurchaseForm);
     }
 
-    // If clickedButton is form.adminUpdatePurchaseButton.
+    // If clickedButton is strictly equal to form.adminUpdatePurchaseButton.
     if (clickedButton === form.adminUpdatePurchaseButton) {
       // We call form.submitFormIfNoError() with form.adminUpdatePurchaseForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.adminUpdatePurchaseForm);
     }
 
-    // If clickedButton is form.searchPurchaseButton.
+    // If clickedButton is strictly equal to form.searchPurchaseButton.
     if (clickedButton === form.searchPurchaseButton) {
       // We call form.checkIfPurchaseReference() to check if the input it not empty and valid.
       form.checkIfPurchaseReference(
@@ -1707,7 +1707,7 @@ const form = {
       form.submitFormIfNoError(form.searchPurchaseForm);
     }
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.adminCreateDeliveryModeButton ||
       clickedButton === form.adminUpdateDeliveryModeButton ||
@@ -1718,17 +1718,17 @@ const form = {
         form.deliveryModeNameInput,
         form.errorMessageDeliveryModeNameEmpty
       );
-      //! START : deliveryMode name validity not used
+      //! START. deliveryMode name validity not used
       // // We call form.checkIfAlphabeticalCharacters() to check if the input it not empty and valid.
       // form.checkIfAlphabeticalCharacters(
       //   form.deliveryModeNameInput,
       //   form.errorMessageDeliveryModeNameEmpty,
       //   form.errorMessageDeliveryModeNameValidity
       // );
-      //! END : deliveryMode name validity not used
+      //! END. deliveryMode name validity not used
     }
 
-    // If clickedButton is one of the comparated buttons.
+    // If clickedButton is strictly equal to one of the compared buttons.
     if (
       clickedButton === form.adminCreateDeliveryModeButton ||
       clickedButton === form.adminUpdateDeliveryModeButton
@@ -1752,7 +1752,7 @@ const form = {
       );
     }
 
-    // If clickedButton is form.adminCreateDeliveryModeButton .
+    // If clickedButton is strictly equal to form.adminCreateDeliveryModeButton.
     if (clickedButton === form.adminCreateDeliveryModeButton) {
       // We call form.checkUploadedFileMimeType() to check the mime type of the uploded file.
       form.checkUploadedFileMimeType(
@@ -1763,9 +1763,9 @@ const form = {
       form.submitFormIfNoError(form.adminCreateDeliveryModeForm);
     }
 
-    // If clickedButton is form.adminUpdateDeliveryModeButton.
+    // If clickedButton is strictly equal to form.adminUpdateDeliveryModeButton.
     if (clickedButton === form.adminUpdateDeliveryModeButton) {
-      // If form.fileInput is contain a value.
+      // If form.fileInput contain a value.
       if (form.fileInput.value) {
         // We call form.checkUploadedFileMimeType() to check the mime type of the uploded file.
         form.checkUploadedFileMimeType(
@@ -1777,7 +1777,7 @@ const form = {
       form.submitFormIfNoError(form.adminUpdateDeliveryModeForm);
     }
 
-    // If clickedButton is form.searchDeliveryModeButton.
+    // If clickedButton is strictly equal to form.searchDeliveryModeButton.
     if (clickedButton === form.searchDeliveryModeButton) {
       // We call form.submitFormIfNoError() with form.searchDeliveryModeForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.searchDeliveryModeForm);
@@ -1785,9 +1785,9 @@ const form = {
   },
   /**
    * Method that check if a input contain a value type of e-mail and and call the methods that display the related error message.
-   * @param {Element} input
-   * @param {Element} errorMessageEmpty
-   * @param {Element} errorMessageValidity
+   * @param {HTMLInputElement} input
+   * @param {HTMLParagraphElement} errorMessageEmpty
+   * @param {HTMLParagraphElement} errorMessageValidity
    * @return {void}
    */
   checkIfEmail: function (input, errorMessageEmpty, errorMessageValidity) {
@@ -1795,21 +1795,21 @@ const form = {
 
     // If input is not empty.
     if (input.value) {
-      // We call tools.addDisplayNone() in order to add the display-none class to errorMessageEmpty.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(errorMessageEmpty);
 
       // If input contain a e-mail.
       if (form.regexMatchEmail.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageValidity.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
       }
       // Else input is not valid.
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageValidity.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -1819,7 +1819,7 @@ const form = {
     else {
       // We call form.switchInputOutlineColor() to switch the input's outline in red.
       form.switchInputOutlineColor(input, form.colors.red);
-      // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageEmpty.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
       // We add a error to form.numberOfErrors.
       form.numberOfErrors++;
@@ -1827,14 +1827,14 @@ const form = {
   },
   /**
    * Method that check if a input contain a value type of password and call the methods that display the related error messages.
-   * @param {Element} input
-   * @param {Element} errorMessageEmpty
-   * @param {Element} errorMessageValidity
-   * @param {Element} errorMessageLength
-   * @param {Element} errorMessageLowercase
-   * @param {Element} errorMessageUppercase
-   * @param {Element} errorMessageNumber
-   * @param {Element} errorMessageSpecialCharacter
+   * @param {HTMLInputElement} input
+   * @param {HTMLParagraphElement} errorMessageEmpty
+   * @param {HTMLParagraphElement} errorMessageValidity
+   * @param {HTMLParagraphElement} errorMessageLength
+   * @param {HTMLParagraphElement} errorMessageLowercase
+   * @param {HTMLParagraphElement} errorMessageUppercase
+   * @param {HTMLParagraphElement} errorMessageNumber
+   * @param {HTMLParagraphElement} errorMessageSpecialCharacter
    * @return {void}
    */
   checkIfPassword: function (
@@ -1850,21 +1850,21 @@ const form = {
 
     // If input is not empty.
     if (input.value) {
-      // We call tools.addDisplayNone() in order to add the display-none class to errorsMessageEmpty.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(errorMessageEmpty);
 
       // If input contain at leat 1 lowercase alphabetical character.
       if (form.regexMatchAtLeastOneLowercase.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageLowercase.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageLowercase);
       }
       // Else input doesn't contain at least 1 lowercase alphabetical character.
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageLowercase.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageLowercase);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -1874,14 +1874,14 @@ const form = {
       if (form.regexMatchAtLeastOneUppercase.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageUppercase.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageUppercase);
       }
       // Else the value of the password input doesn't contain at least 1 uppercase alphabetical character.
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageUppercase.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageUppercase);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -1891,14 +1891,14 @@ const form = {
       if (form.regexMatchAtLeastOneNumericCharacter.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageNumber.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageNumber);
       }
       // Else the value of the password input doesn't contain at least 1 numeric character.
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageNumber.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageNumber);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -1908,14 +1908,14 @@ const form = {
       if (form.regexMatchAtLeastOneSpecialCharacter.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageSpecialCharacter.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageSpecialCharacter);
       }
       // Else the value of the password input doesn't contain at least 1 special character.
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageSpecialCharacter.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageSpecialCharacter);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -1925,14 +1925,14 @@ const form = {
       if (form.regexMatchAtLeastHeightCharacters.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageLength.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageLength);
       }
       // Else input is empty.
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageLength.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageLength);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -1942,7 +1942,7 @@ const form = {
     else {
       // We call form.switchInputOutlineColor() to switch the input's outline in red.
       form.switchInputOutlineColor(input, form.colors.red);
-      // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageEmpty.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
       // We add a error to form.numberOfErrors.
       form.numberOfErrors++;
@@ -1950,8 +1950,8 @@ const form = {
   },
   /**
    * Method that check if a input contain a value and call the methods that display the related outline color and error message.
-   * @param {Element} input
-   * @param {Element} errorMessageEmpty
+   * @param {HTMLInputElement} input
+   * @param {HTMLParagraphElement} errorMessageEmpty
    * @return {void}
    */
   checkIfInputContainValue: function (input, errorMessageEmpty) {
@@ -1961,7 +1961,7 @@ const form = {
     if (input.value) {
       // We call form.switchInputOutlineColor() to switch the input's outline in green.
       form.switchInputOutlineColor(input, form.colors.green);
-      // We call tools.addDisplayNone() in order to add the display-none class of errorMessageEmpty.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(errorMessageEmpty);
     }
     // Else input is empty.
@@ -1976,8 +1976,8 @@ const form = {
   },
   /**
    * Method that check if a input is checked and call the methods that display the related error message.
-   * @param {Element} input
-   * @param {Element} errorMessageNotChecked
+   * @param {HTMLInputElement} input
+   * @param {HTMLParagraphElement} errorMessageNotChecked
    * @return {void}
    */
   checkIfInputIsChecked: function (input, errorMessageNotChecked) {
@@ -1988,23 +1988,23 @@ const form = {
 
     // If the number of input is superior to 1.
     if (input.length > 1) {
-      // console.log(input.length);
-      // console.log(input);
-      // console.log(Array.from(input));
+      console.log(input.length);
+      console.log(input);
+      console.log(Array.from(input));
       // We count the number of checked input.
       for (let index = 0; index < input.length; index++) {
         // If a input is checked.
         if (input[index].checked) {
           // We add one to the counter.
           numberOfCheckedInput++;
-          // console.log(numberOfCheckedInput);
-          // console.log(input[index].value);
+          console.log(numberOfCheckedInput);
+          console.log(input[index].value);
         }
       }
 
       // If the number of checked input is superior to 0.
       if (numberOfCheckedInput > 0) {
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageNotChecked.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageNotChecked);
       }
       // Else the number of checked input is egual to 0.
@@ -2018,11 +2018,11 @@ const form = {
     // Else the number of input is 1.
     else {
       // We can have one input which is a NodeList and when one input is a NodeList it as key 0 which is the input.
-      // If we have have a input[0] (so a NodeList) and if the input[0] nodeTye is identical to Node.ELEMENT_NODE.
+      // If we have have a input[0] (so a NodeList) and if the input[0] nodeTye is strictly equal to Node.ELEMENT_NODE.
       if (input[0] && input[0].nodeType === Node.ELEMENT_NODE) {
         // If the input is checked.
         if (input[0].checked) {
-          // We call tools.addDisplayNone() in order to add the display-none class to errorMessageNotChecked.
+          //We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
           tools.addDisplayNone(errorMessageNotChecked);
         }
         // Else the input is not checked.
@@ -2037,7 +2037,7 @@ const form = {
       else {
         // If the input is checked or if the first input of the NodeList of input is checked.
         if (input.checked) {
-          // We call tools.addDisplayNone() in order to add the display-none class to errorMessageNotChecked.
+          // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
           tools.addDisplayNone(errorMessageNotChecked);
         }
         // Else the input is not checked.
@@ -2052,16 +2052,23 @@ const form = {
   },
   /**
    * Method that check if a uploaded file fit the authorized file mime type and call the methods that display the related error message.
-   * @param {Element} input
-   * @param {Element} errorMessageFileMimeType
+   * @param {HTMLInputElement} input
+   * @param {HTMLParagraphElement} errorMessageFileMimeType
    * @return {void}
    */
   checkUploadedFileMimeType: function (input, errorMessageFileMimeType) {
     console.log("form.checkUploadedFileMimeType()");
 
+    // Return the type of the variable.
+    console.log(typeof input);
+    // Return the type of the variable.
+    console.log(Object.prototype.toString.call(input));
+    // Return false if the variable is not a array and true if it is.
+    console.log(Array.isArray());
+
     console.log(input.files);
 
-    // We put in a array the type mime we want to authorize.
+    // We put in a array the mime types we authorize.
     let authorizedMimeTypes = [
       "application/pdf",
       "image/png",
@@ -2074,21 +2081,21 @@ const form = {
 
     // We count the number of uploaded file.
     for (let index = 0; index < input.files.length; index++) {
-      // For each mimeType of authorizedMimeTypes.
-      for (let mimeType of authorizedMimeTypes) {
-        // If the mine type of the file is one of the authorizedMimeTypes.
-        if (input.files[index].type === mimeType) {
+      // For each authorizedMimeType of authorizedMimeTypes.
+      for (let authorizedMimeType of authorizedMimeTypes) {
+        // If the mine type of the file is strictly equal to one of the authorizedMimeTypes.
+        if (input.files[index].type === authorizedMimeType) {
           console.log(input.files[index].type);
-          console.log("File type accepted ✅");
+          console.log("File mime type accepted ✅");
           // We call form.switchInputOutlineColor() to switch the input's outline in green.
           form.switchInputOutlineColor(input, form.colors.green);
-          // We call tools.addDisplayNone() in order to add the display-none class to errorMessageFileMimeType.
+          // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
           tools.addDisplayNone(errorMessageFileMimeType);
           // We confirm that a authorizedMimeTypes is authorized.
           isAuthorized = true;
           // We call form.checkUploadedFileSize() to check the size of the uploded file.
           form.checkUploadedFileSize(input, form.errorMessageFileSize);
-          // We leave checkUploadedFileMimeType();
+          // We leave checkUploadedFileMimeType().
           return;
         }
       }
@@ -2096,10 +2103,10 @@ const form = {
 
     // If none of the authorizedMimeTypes has been authorized.
     if (!isAuthorized) {
-      console.log("File type denied ❌");
+      console.log("File mime type denied ❌");
       // We call form.switchInputOutlineColor() to switch the input's outline in red.
       form.switchInputOutlineColor(input, form.colors.red);
-      // We call tools.addDisplayNone() in order to remove the display-none class from errorMessageFileMimeType.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageFileMimeType);
       // We add a error to form.numberOfErrors.
       form.numberOfErrors++;
@@ -2107,8 +2114,8 @@ const form = {
   },
   /**
    * Method that check if a uploaded file fit the required file size and call the methods that display the related error message.
-   * @param {Element} input
-   * @param {Element} errorMessageFileSize
+   * @param {HTMLInputElement} input
+   * @param {HTMLParagraphElement} errorMessageFileSize
    * @return {void}
    */
   checkUploadedFileSize: function (input, errorMessageFileSize) {
@@ -2133,16 +2140,16 @@ const form = {
         console.log("File size accepted ✅");
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageFileSize.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageFileSize);
       }
     }
   },
   /**
    * Method that check if a input contain a value type of french phone number and call the methods that display the related error message.
-   * @param {Element} input
-   * @param {Element} errorMessageEmpty
-   * @param {Element} errorMessageValidity
+   * @param {HTMLInputElement} input
+   * @param {HTMLParagraphElement} errorMessageEmpty
+   * @param {HTMLParagraphElement} errorMessageValidity
    * @return {void}
    */
   checkIfPhoneNumber: function (
@@ -2150,25 +2157,25 @@ const form = {
     errorMessageEmpty,
     errorMessageValidity
   ) {
-    // console.log("form.checkIfPhoneNumber()");
+    console.log("form.checkIfPhoneNumber()");
 
     // If input is not empty.
     if (input.value) {
-      // We call tools.addDisplayNone() in order to add the display-none class to errorMessageEmpty.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(errorMessageEmpty);
 
       // If input contain 10 numeric characters.
       if (form.regexMatchTenNumericCharacters.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageValidity.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
       }
       // Else input is not valid.
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageValidity.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -2178,14 +2185,14 @@ const form = {
       if (form.regexMatchStartBy06Or07.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageValidity.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
       }
       // Else input is not valid.
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageValidity.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -2195,7 +2202,7 @@ const form = {
     else {
       // We call form.switchInputOutlineColor() to switch the input's outline in red.
       form.switchInputOutlineColor(input, form.colors.red);
-      // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageEmpty.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
       // We add a error to form.numberOfErrors.
       form.numberOfErrors++;
@@ -2203,9 +2210,9 @@ const form = {
   },
   /**
    * Method that check if a input contain a value type of number and call the methods that display the related error message.
-   * @param {Element} input
-   * @param {Element} errorMessageEmpty
-   * @param {Element} errorMessageValidity
+   * @param {HTMLInputElement} input
+   * @param {HTMLParagraphElement} errorMessageEmpty
+   * @param {HTMLParagraphElement} errorMessageValidity
    * @return {void}
    */
   checkIfAlphabeticalCharacters: function (
@@ -2217,14 +2224,14 @@ const form = {
 
     // If input is not empty.
     if (input.value) {
-      // We call tools.addDisplayNone() in order to add the display-none class to errorMessageEmpty.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(errorMessageEmpty);
 
       // If input value contain a number it's invalid.
       if (form.regexMatchNumber.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input's outline in re.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageValidity.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -2233,7 +2240,7 @@ const form = {
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageValidity.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
       }
     }
@@ -2241,7 +2248,7 @@ const form = {
     else {
       // We call form.switchInputOutlineColor() to switch the input's outline in red.
       form.switchInputOutlineColor(input, form.colors.red);
-      // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageEmpty.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
       // We add a error to form.numberOfErrors.
       form.numberOfErrors++;
@@ -2249,9 +2256,9 @@ const form = {
   },
   /**
    * Method that check if a input contain a value type of number and call the methods that display the related error message.
-   * @param {Element} input
-   * @param {Element} errorMessageEmpty
-   * @param {Element} errorMessageValidity
+   * @param {HTMLInputElement} input
+   * @param {HTMLParagraphElement} errorMessageEmpty
+   * @param {HTMLParagraphElement} errorMessageValidity
    * @return {void}
    */
   checkIfNumber: function (input, errorMessageEmpty, errorMessageValidity) {
@@ -2266,14 +2273,14 @@ const form = {
       if (form.regexMatchNumber.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageValidity.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
       }
       // Else input is not valid.
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageValidity.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -2283,7 +2290,7 @@ const form = {
     else {
       // We call form.switchInputOutlineColor() to switch the input's outline in red.
       form.switchInputOutlineColor(input, form.colors.red);
-      // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageEmpty.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
       // We add a error to form.numberOfErrors.
       form.numberOfErrors++;
@@ -2291,9 +2298,9 @@ const form = {
   },
   /**
    * Method that check if a input contain a value with at least 1 numeric character and call the methods that display the related error message.
-   * @param {Element} input
-   * @param {Element} errorMessageEmpty
-   * @param {Element} errorMessageValidity
+   * @param {HTMLInputElement} input
+   * @param {HTMLParagraphElement} errorMessageEmpty
+   * @param {HTMLParagraphElement} errorMessageValidity
    * @return {void}
    */
   checkIfStreetNumber: function (
@@ -2312,14 +2319,14 @@ const form = {
       if (form.regexMatchAtLeastOneNumericCharacter.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageValidity.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
       }
       // Else input is not valid.
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageValidity.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -2329,7 +2336,7 @@ const form = {
     else {
       // We call form.switchInputOutlineColor() to switch the input's outline in red.
       form.switchInputOutlineColor(input, form.colors.red);
-      // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageEmpty.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
       // We add a error to form.numberOfErrors.
       form.numberOfErrors++;
@@ -2337,9 +2344,9 @@ const form = {
   },
   /**
    * Method that check if input contain a value type french zip code and call the methods that display the related error message.
-   * @param {Element} input
-   * @param {Element} errorMessageEmpty
-   * @param {Element} errorMessageValidity
+   * @param {HTMLInputElement} input
+   * @param {HTMLParagraphElement} errorMessageEmpty
+   * @param {HTMLParagraphElement} errorMessageValidity
    * @return {void}
    */
   checkIfZipCode: function (input, errorMessageEmpty, errorMessageValidity) {
@@ -2347,14 +2354,14 @@ const form = {
 
     // If input is not empty.
     if (input.value) {
-      // We call tools.addDisplayNone() in order to add the display-none class to errorMessageEmpty.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(errorMessageEmpty);
 
       // If input is valid.
       if (form.regexMatchFiveNumericCharacters.test(input.value)) {
         // We call form.switchInputBorderColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageValidity.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
       }
       // Else input is not valid.
@@ -2379,9 +2386,9 @@ const form = {
   },
   /**
    *  Method that check if a input contain a value type of reference and call the methods that display the related error messages.
-   * @param {Element} input
-   * @param {Element} errorMessageEmpty
-   * @param {Element} errorMessageLength
+   * @param {HTMLInputElement} input
+   * @param {HTMLParagraphElement} errorMessageEmpty
+   * @param {HTMLParagraphElement} errorMessageLength
    */
   checkIfPurchaseReference: function (
     input,
@@ -2392,21 +2399,21 @@ const form = {
 
     // If input is not empty.
     if (input.value) {
-      // We call tools.addDisplayNone() in order to add the display-none class to errorsMessageEmpty.
+      // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(errorMessageEmpty);
 
       // If input contain at leat 12 characters.
       if (form.regexMatchAtLeastTweleCharacters.test(input.value)) {
         // We call form.switchInputOutlineColor() to switch the input's outline in green.
         form.switchInputOutlineColor(input, form.colors.green);
-        // We call tools.addDisplayNone() in order to add the display-none class to errorMessageLength.
+        // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageLength);
       }
       // Else input is empty.
       else {
         // We call form.switchInputOutlineColor() to switch the input's outline in red.
         form.switchInputOutlineColor(input, form.colors.red);
-        // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageLength.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageLength);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -2416,7 +2423,7 @@ const form = {
     else {
       // We call form.switchInputOutlineColor() to switch the input's outline in red.
       form.switchInputOutlineColor(input, form.colors.red);
-      // We call tools.removeDisplayNone() in order to remove the display-none class from errorMessageEmpty.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
       // We add a error to form.numberOfErrors.
       form.numberOfErrors++;
@@ -2433,7 +2440,7 @@ const form = {
     // We get the DOM element form which the event occured.
     let clickedButton = event.currentTarget;
 
-    // If clickedButton is form.modifyMyUserProfileButton.
+    // If clickedButton is strictly equal to form.modifyMyUserProfileButton.
     if (clickedButton === form.modifyMyUserProfileButton) {
       // We call form.removeDisabledAttribute() to remove the disabled attribute from the elements.
       form.removeDisabledAttribute(form.inputs);
@@ -2441,7 +2448,7 @@ const form = {
       form.removeDisabledAttribute(form.userCivilityTitleInputs);
       // We call tools.addDisplayNone() in order in order to add the display-none class to the element.
       tools.addDisplayNone(form.modifyMyUserProfileButton);
-      // We call tools.removeDisplayNone() in order in order to remove the display-none class from the elements.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(
         form.uploadFileField,
         form.deleteMyUserPictureLink,
@@ -2453,7 +2460,7 @@ const form = {
         form.userGenderWomanLabel
       );
     }
-    // Else if clickedButton is form.updateUserProfileButton.
+    // Else if clickedButton is strictly equal to form.updateUserProfileButton.
     else if (clickedButton === form.updateMyUserProfileButton) {
       // We call tools.addDisplayNone() in order in order to add the display-none class to the elements.
       tools.addDisplayNone(
@@ -2465,8 +2472,8 @@ const form = {
   },
   /**
    * Method that display only the inputs that are checked.
-   * @param {Elements} input
-   * @param {Elements} label
+   * @param {HTMLInputElement} input
+   * @param {HTMLLabelElement} label
    * @return {void}
    */
   displayNoneInputNotChecked: function (input, label) {
@@ -2479,7 +2486,7 @@ const form = {
     }
     // Else the input is checked.
     else {
-      // We call tools.removeDisplayNone() in order in order to remove the display-none class from the elements.
+      // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(input, label);
     }
   },
@@ -2494,7 +2501,7 @@ const form = {
     // We get the DOM element form which the event occured.
     let clickedElement = event.currentTarget;
 
-    // If clickedElement is one of the comparated elements.
+    // If clickedElement is strictly equal to one of the compared elements.
     if (
       clickedElement === form.purchaseConfirmAddressesButton ||
       clickedElement === form.addressStep
@@ -2502,7 +2509,7 @@ const form = {
       // We call form.handleAddressesStep() with the value of clickedElement.
       form.handleAddressesStep(clickedElement);
     }
-    // Else if clickedElement is one of the comparated elements.
+    // Else if clickedElement is strictly equal to one of the compared elements.
     else if (
       clickedElement === form.purchaseConfirmDeliveryModeButton ||
       clickedElement === form.deliveryModeStep
@@ -2510,8 +2517,7 @@ const form = {
       // We call form.handleDeliveryModeStep() with the value of clickedElement.
       form.handleDeliveryModeStep(clickedElement);
     }
-
-    // Else if clickedElement is one of the comparated elements.
+    // Else if clickedElement is strictly equal to one of the compared elements.
     else if (
       clickedElement === form.purchaseConfirmButton ||
       clickedElement === form.paymentMethodStep
@@ -2522,13 +2528,13 @@ const form = {
   },
   /**
    * Method that handle the layout of the addresses step.
-   * @param {Element} clickedElement
+   * @param {HTMLElement} clickedElement
    * @return {void}
    */
   handleAddressesStep: function (clickedElement) {
     console.log("form.handleAddressesStep()");
 
-    // If clickedElement is identical to form.purchaseConfirmAddressesButton.
+    // If clickedElement is strictly equal to form.purchaseConfirmAddressesButton.
     if (clickedElement === form.purchaseConfirmAddressesButton) {
       // We call form.checkIfInputIsChecked() to check if form.purchaseBillingAddressInputs is checked.
       form.checkIfInputIsChecked(
@@ -2548,14 +2554,14 @@ const form = {
           form.purchaseDeliveryModeField,
           form.purchaseConfirmDeliveryModeButton
         );
-        // We call tools.removeDisplayNone() in order in order to remove the display-none class from the elements.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(
           form.purchaseBillingAddressField,
           form.purchaseDeliveryAddressField,
           form.purchaseConfirmAddressesButton,
           form.addNewAddressLink
         );
-        // We call tools.addClassToElements() in order to add a className to one or many elements.
+        // We call tools.addClassToElements() in order to add a className to one or several elements.
         tools.addClassToElements(
           "page__title-purchase-step_color_shady-lady",
           form.deliveryModeStep,
@@ -2566,7 +2572,7 @@ const form = {
       }
       // Else we don't count any error.
       else {
-        // We call tools.removeDisplayNone() in order in order to remove the display-none class from the elements.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(
           form.addressStepIconChecked,
           form.purchaseDeliveryModeField,
@@ -2586,7 +2592,7 @@ const form = {
         );
       }
     }
-    // Else if clickedElement is identical to form.addressStep.
+    // Else if clickedElement is strictly equal to form.addressStep.
     else if (clickedElement === form.addressStep) {
       // We call tools.addDisplayNone() in order in order to add the display-none class to the elements.
       tools.addDisplayNone(
@@ -2605,7 +2611,7 @@ const form = {
         form.purchaseBillingAddressField,
         form.purchaseDeliveryAddressField
       );
-      // We call tools.addClassToElements() in order to add a className to one or many elements.
+      // We call tools.addClassToElements() in order to add a className to one or several elements.
       tools.addClassToElements(
         "page__title-purchase-step_color_shady-lady",
         form.deliveryModeStep,
@@ -2615,13 +2621,13 @@ const form = {
   },
   /**
    * Method that handle the layout of the delivery mode step.
-   * @param {Element} clickedElement
+   * @param {HTMLElement} clickedElement
    * @return {void}
    */
   handleDeliveryModeStep: function (clickedElement) {
     console.log("form.handleDeliveryModeStep()");
 
-    // If clickedElement is identical to form.purchaseConfirmDeliveryModeButton.
+    // If clickedElement is strictly equal to form.purchaseConfirmDeliveryModeButton.
     if (clickedElement === form.purchaseConfirmDeliveryModeButton) {
       // We call form.checkIfInputIsChecked() to check if form.purchaseAddressesInputs is checked.
       form.checkIfInputIsChecked(
@@ -2635,7 +2641,7 @@ const form = {
       }
       // Else we don't count any error.
       else {
-        // We call tools.removeDisplayNone() in order in order to remove the display-none class from the elements.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(
           form.deliveryModeStepIconChecked,
           form.purchaseCheckoutMethodField,
@@ -2656,7 +2662,7 @@ const form = {
         // form.displayDeliveryModePriceAndTotal();
       }
     }
-    // Else if clickedElement is identical to form.deliveryModeStep.
+    // Else if clickedElement is strictly equal to form.deliveryModeStep.
     else if (clickedElement === form.deliveryModeStep) {
       // If form.addressStepIconChecked contains the display-none class.
       if (form.addressStepIconChecked.classList.contains("display-none")) {
@@ -2678,7 +2684,7 @@ const form = {
         form.purchaseConfirmDeliveryModeButton,
         form.purchaseDeliveryModeField
       );
-      // We call tools.addClassToElements() in order to add a className to one or many elements.
+      // We call tools.addClassToElements() in order to add a className to one or several elements.
       tools.addClassToElements(
         "page__title-purchase-step_color_shady-lady",
         form.paymentMethodStep
@@ -2687,13 +2693,13 @@ const form = {
   },
   /**
    * Method that handle the layout of the payment method step.
-   * @param {Element} clickedElement
+   * @param {HTMLElement} clickedElement
    * @return {void}
    */
   handleCheckoutMethodSteps: function (clickedElement) {
     console.log("form.handleCheckoutMethodSteps()");
 
-    // If clickedElement is identical to form.purchaseConfirmButton.
+    // If clickedElement is strictly equal to form.purchaseConfirmButton.
     if (clickedElement === form.purchaseConfirmButton) {
       // We call form.checkIfInputIsChecked() to check if form.purchaseAddressesInputs is checked.
       form.checkIfInputIsChecked(
@@ -2715,7 +2721,7 @@ const form = {
         if (form.purchaseCheckoutMethodInputs[index].checked) {
           console.log(form.purchaseCheckoutMethodInputs[index]);
 
-          //! START : Stripe checkout.
+          //! START. Stripe checkout.
           let stripeInput = document.querySelector(".form-field__stripe-input");
           let paypalInput = document.querySelector(".form-field__paypal-input");
 
@@ -2724,12 +2730,12 @@ const form = {
             stripeInput.dataset.value
           ) {
             console.log(
-              stripeInput.dataset.value + " ✅ : init Stripe checkout 💳"
+              stripeInput.dataset.value + " ✅. init Stripe checkout 💳"
             );
           }
-          //! END : Stripe checkout
+          //! END. Stripe checkout
 
-          // TODO #3 START : Make Paypal checkout.
+          // TODO #3 START. Make Paypal checkout.
           // The value of the PHP constante Purchase::CHECKOUT_METHOD_PAYPAL in is a HTML dataset attribut whose name is data-value.
           // If the value of the input is identical to the value of this attribut.
           if (
@@ -2737,18 +2743,18 @@ const form = {
             paypalInput.dataset.value
           ) {
             // We simulate a click on the Paypal button to init the payment with the Paypal method.
-            console.log(paypalInput.dataset.value + " : start Paypal checkout");
+            console.log(paypalInput.dataset.value + ". start Paypal checkout");
             // form.paypalButton.click();
             // return;
           }
-          // TODO #3 END : Paypal checkout
+          // TODO #3 END. Paypal checkout
         }
       }
 
       // We call form.submitFormIfNoError() with form.loginForm in argument to check if the form contain some errors and submit him if not.
       form.submitFormIfNoError(form.purchaseForm);
     }
-    // Else if clickedElement is identical to form.paymentMethodStep.
+    // Else if clickedElement is strictly equal to form.paymentMethodStep.
     else if (clickedElement === form.paymentMethodStep) {
       // If form.addressStepIconChecked or form.deliveryModeStepIconChecked contain the display-none class.
       if (
@@ -2761,7 +2767,7 @@ const form = {
     }
   },
   /**
-   * Methot that create a HTML element with the form-check class name before each given inputs and put inside each new element the following pair of input and label.
+   * Methot that create multiplie HTML elements <div> with the form-check class name before each given inputs and put inside each new element the following pair of input and label.
    * @param {NodeList} inputs
    * @return {void}
    */
@@ -2770,9 +2776,10 @@ const form = {
 
     // We create a empty array for the choice fields.
     let checkFields = [];
+
     // For each input of inputs.
     for (let input of inputs) {
-      // We create a HTML element with the <div> tag name.
+      // We create a HTML element <div>.
       let field = document.createElement("div");
       // We set a class and a class name to the <div>.
       field.setAttribute("class", "form-check");
@@ -2795,7 +2802,7 @@ const form = {
     }
   },
   /**
-   * Methot that create a HTML img tag before each label content in the delivery mode field and call form.displayDeliveryModePicture() to display the picture of each created img tag.
+   * Methot that create multiplie HTML elements <img> before each label content in the delivery mode field and call form.displayDeliveryModePicture() to display the picture of each created <img>.
    * @return {void}
    */
   createImgTagForDeliveryModePicture: function () {
@@ -2811,12 +2818,12 @@ const form = {
 
     // For each label of labels.
     for (let label of labels) {
-      // We create a HTML element with the <img> tag name.
-      let imgTag = document.createElement("img");
+      // We create a HTML element <img>.
+      let img = document.createElement("img");
       // We set a className to the <img>.
-      imgTag.setAttribute("class", "page__picture-delivery-mode");
+      img.setAttribute("class", "page__picture-delivery-mode");
       // We insert the <img> before the label.
-      label.insertAdjacentElement("beforebegin", imgTag);
+      label.insertAdjacentElement("beforebegin", img);
     }
 
     // We call form.displayDeliveryModePicture() to display before each delivery mode label the picture related to the delivery mode.
@@ -2835,15 +2842,16 @@ const form = {
       form.purchaseDeliveryModeField.dataset.pictures
     );
 
-    // We get all the HTML img tag witch the specify className.
-    const imgTags = document.querySelectorAll(".page__picture-delivery-mode");
+    // We get all the images by their class name.
+    const imgs = document.querySelectorAll(".page__picture-delivery-mode");
 
     // We initialize a counter which will be the index of each deliveryModePictures.
     let index = 0;
-    // For each tag of imgTags.
-    for (let tag of imgTags) {
+
+    // For each img of imgs.
+    for (let img of imgs) {
       // We set a src attribute with a path to the folder where we backup the picture of each delievery mode and we dynamically add the name of the picture to the path.
-      tag.setAttribute(
+      img.setAttribute(
         "src",
         "/" +
           form.purchaseDeliveryModeField.dataset.folderpath +
@@ -2855,7 +2863,7 @@ const form = {
     }
   },
   /**
-   * Methot that create a HTML img tag before each label content in the payment method field and call form.displayPaymentMethodPicture() to display the picture of each created img tag.
+   * Methot that create multiplie HTML elements <img> before each label content in the payment method field and call form.displayPaymentMethodPicture() to display the picture of each created <img> .
    * @return {void}
    */
   createImgTagForPaymentMethodPicture: function () {
@@ -2870,47 +2878,52 @@ const form = {
     const labels = purchaseConfirmPayementMethod.getElementsByTagName("label");
 
     // We create a empty array for the img tags.
-    let imgTags = [];
-    // We create a 3 HTML elements with the <img> tag name.
-    let firstImgTag = document.createElement("img");
-    let secondImgTag = document.createElement("img");
-    let thirdImgTag = document.createElement("img");
-    let fourthImgTag = document.createElement("img");
-    // We set a common and a specific className to each imgTag.
-    firstImgTag.setAttribute(
+    let imgs = [];
+
+    // We create a 3 HTML elements <img>.
+    let firstImg = document.createElement("img");
+    let secondImg = document.createElement("img");
+    let thirdImg = document.createElement("img");
+    let fourthImg = document.createElement("img");
+
+    // We set a common and a specific className to each images.
+    firstImg.setAttribute(
       "class",
       "page__picture-checkout-method page__picture-american-express"
     );
-    secondImgTag.setAttribute(
+    secondImg.setAttribute(
       "class",
       "page__picture-checkout-method page__picture-cb"
     );
-    thirdImgTag.setAttribute(
+    thirdImg.setAttribute(
       "class",
       "page__picture-checkout-method page__picture-mastercard"
     );
-    fourthImgTag.setAttribute(
+    fourthImg.setAttribute(
       "class",
       "page__picture-checkout-method page__picture-visa"
     );
-    // We push each img tag to imgTags.
-    imgTags.push(firstImgTag, secondImgTag, thirdImgTag, fourthImgTag);
 
-    // For each imgTag of imgTags.
-    for (let imgTag of imgTags) {
+    // We push each img to imgs.
+    imgs.push(firstImg, secondImg, thirdImg, fourthImg);
+
+    // For each img of imgs.
+    for (let img of imgs) {
       // We insert the <img> after the label.
-      labels[0].insertAdjacentElement("afterend", imgTag);
+      labels[0].insertAdjacentElement("afterend", img);
     }
 
     // We create a fourth img tag for the second field which is the Paypal payment method.
-    let fifthImgTag = document.createElement("img");
+    let fifthImg = document.createElement("img");
+
     // We set a className to the imgTag.
-    fifthImgTag.setAttribute(
+    fifthImg.setAttribute(
       "class",
       "page__picture-checkout-method page__picture-paypal"
     );
-    // We insert fifthImgTag after the second label.
-    labels[1].insertAdjacentElement("afterend", fifthImgTag);
+
+    // We insert fifthImg after the second label.
+    labels[1].insertAdjacentElement("afterend", fifthImg);
 
     // We call form.displayPaymentMethodPicture() to display after each payment method label the picture related to the payment method.
     form.displayPaymentMethodPicture();
@@ -2922,22 +2935,22 @@ const form = {
   displayPaymentMethodPicture: function () {
     console.log("form.displayPaymentMethodPicture()");
 
-    // We get all the HTML img tag witch the specify className.
-    const imgTags = document.querySelectorAll(".page__picture-checkout-method");
+    // We get all the images by their class name.
+    const imgs = document.querySelectorAll(".page__picture-checkout-method");
 
     // The path of the folder where the images of the logos are located.
     const folderPath = "/assets/images/logos/";
 
     // We set a src attribute with a path to the folder where we backup the pictures of each payment method. We the change the name of the picture we want to dislay according to the input.
-    imgTags[0].setAttribute("src", folderPath + "visa.svg");
-    imgTags[1].setAttribute("src", folderPath + "mastercard.svg");
-    imgTags[2].setAttribute("src", folderPath + "cb.svg");
-    imgTags[3].setAttribute("src", folderPath + "american-express.png");
-    imgTags[4].setAttribute("src", folderPath + "paypal.svg");
+    imgs[0].setAttribute("src", folderPath + "visa.svg");
+    imgs[1].setAttribute("src", folderPath + "mastercard.svg");
+    imgs[2].setAttribute("src", folderPath + "cb.svg");
+    imgs[3].setAttribute("src", folderPath + "american-express.png");
+    imgs[4].setAttribute("src", folderPath + "paypal.svg");
   },
   /**
    * Method that remove the disabled attribute from the inputs.
-   * @param {Element} inputs
+   * @param {NodeList} inputs
    * @return {void}
    */
   removeDisabledAttribute: function (inputs) {
@@ -2951,7 +2964,7 @@ const form = {
   },
   /**
    * Method that check if a form contain some errors and submit him if not.
-   * @param {Element} formToSubmit
+   * @param {HTMLFormElement} formToSubmit
    * @return {void}
    */
   submitFormIfNoError: function (formToSubmit) {
@@ -2962,7 +2975,7 @@ const form = {
     // If form.numberOfErrors is supperior to 0.
     if (form.numberOfErrors > 0) {
       console.log("Form not submitted ❌");
-      console.log("Number of error : " + form.numberOfErrors);
+      console.log("Number of error. " + form.numberOfErrors);
       // We reset form.numberOfErrors for the next submit control.
       form.numberOfErrors = 0;
       // We leave submitFormIfNoError().

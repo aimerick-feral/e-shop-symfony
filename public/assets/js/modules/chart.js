@@ -112,6 +112,8 @@ const chart = {
    * @return {void}
    */
   createPieChartForUserRolesByNumber: function () {
+    console.log("chart.createPieChartForUserRolesByNumber()");
+
     // We create a pie chart with the user data that we get from te database.
     chart.pieChartUserRolesByNumber = new Chart(
       chart.pieCanvasUserRolesByNumber,
@@ -178,6 +180,8 @@ const chart = {
    * @return {void}
    */
   createPieChartForUserRolesByProportion: function () {
+    console.log("chart.createPieChartForUserRolesByProportion()");
+
     // We create a pie chart with the user data that we get from te database.
     chart.pieChartUserRolesByProportion = new Chart(
       chart.pieCanvaUserRolesByProportion,
@@ -246,6 +250,8 @@ const chart = {
    * @return {void}
    */
   createPieChartforUserGenderByNumber: function () {
+    console.log("chart.createPieChartforUserGenderByNumber()");
+
     // We create a pie chart with the user data that we get from te database.
     chart.pieChartUserGenderByNumber = new Chart(
       chart.pieCanvaUserGenderByNumber,
@@ -307,6 +313,8 @@ const chart = {
    * @return {void}
    */
   createPieChartForUserGenderByProportion: function () {
+    console.log("chart.createPieChartForUserGenderByProportion()");
+
     // We create a pie chart with the user data that we get from te database.
     chart.pieChartUserGenderByProportion = new Chart(
       chart.pieCanvaUserGenderByProportion,

@@ -63,12 +63,12 @@ const mode = {
    * @return {void}
    */
   loadMode: function () {
-    // console.log("mode.loadMode()");
+    console.log("mode.loadMode()");
 
     // We get the value backup in localStorage.
     mode.backgroundColor = localStorage.getItem("mode");
 
-    // If mode.backgroundColor is dark.
+    // If mode.backgroundColor is strictly equal to "dark".
     if (mode.backgroundColor && mode.backgroundColor === "dark") {
       // We call the mode.switchBackgroundColor() method to change the color with the value of mode.backgroundColor.
       mode.switchBackgroundColor(mode.backgroundColor);
@@ -92,9 +92,9 @@ const mode = {
    * @return {void}
    */
   checkRightColorSwitchsOnLoad: function () {
-    // console.log("mode.checkRightColorSwitchsOnLoad()");
+    console.log("mode.checkRightColorSwitchsOnLoad()");
 
-    // If this the value of mode is light.
+    // If mode.backgroundColor is strictly equal to "light".
     if (mode.backgroundColor === "light") {
       // If the DOM element exist.
       if (mode.backgroundColor) {
@@ -107,7 +107,7 @@ const mode = {
         tools.uncheckInputs(mode.switch);
       }
     }
-    // Else the value of mode is dark.
+    // Else if mode.backgroundColor is strictly equal to "dark".
     else if (mode.backgroundColor === "dark") {
       // We call tools.checkInputs() to check the input.
       tools.checkInputs(mode.switch);
@@ -119,12 +119,12 @@ const mode = {
    * @return {void}
    */
   handleSelectBackgroundColorSwitch: function (event) {
-    // console.log("mode.handleSelectBackgroundColorSwitch()");
+    console.log("mode.handleSelectBackgroundColorSwitch()");
 
     // We get the DOM element form which the event occured.
     let selectedSwitch = event.currentTarget;
 
-    // If the mode item in localStorage have the dark value.
+    // If mode.backgroundColor is strictly equal to "dark".
     if (mode.backgroundColor === "dark") {
       // We set the value light to mode.backgroundColor.
       mode.backgroundColor = "light";
@@ -135,7 +135,7 @@ const mode = {
       // We call mode.switchElementsColor() to switch the color of the elements.
       mode.switchElementsColor();
     }
-    // Else if the mode item in localStorage have the light value.
+    // Else if mode.backgroundColor is strictly equal to "light".
     else if (mode.backgroundColor === "light") {
       // We set the value dark to mode.backgroundColor.
       mode.backgroundColor = "dark";
@@ -149,18 +149,18 @@ const mode = {
   },
   /**
    * Method that switch the current background color to a new background color.
-   * @param {string} newBackgroundColor
+   * @param {String} newBackgroundColor
    * @return {void}
    */
   switchBackgroundColor: function (newBackgroundColor) {
-    // console.log("mode.switchBackgroundColor()");
+    console.log("mode.switchBackgroundColor()");
 
-    // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+    // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
     tools.removeClassesFromElement(mode.body, "dark", "light");
 
     // If the newBackgroundColor is different than the mode.backgroundColor.
     if (newBackgroundColor !== mode.backgroundColor) {
-      // We call tools.toggleClassToElements() in order to toggle the className to one or many element.
+      // We call tools.toggleClassToElements() in order to toggle the className to one or several element.
       tools.toggleClassToElements(newBackgroundColor, mode.body);
     }
     // Else the newBackgroundColor is not different than the mode.backgroundColor.
@@ -174,7 +174,7 @@ const mode = {
    * @return {void}
    */
   switchElementsColor: function () {
-    // console.log("mode.switchElementsColor()");
+    console.log("mode.switchElementsColor()");
 
     // If the DOM element exist.
     if (chart.statsTitle) {
@@ -182,20 +182,20 @@ const mode = {
       location.reload();
     }
 
-    // If the mode item in localStorage have the dark value.
+    // If mode.backgroundColor is strictly equal to "dark".
     if (mode.backgroundColor === "dark") {
       // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
       tools.setColorToBeforeProperty(mode.switchModeSlider, mode.colors.black);
 
       // For each fontSwitchSlider of mode.fontSwitchSliders.
       for (let fontSwitchSlider of mode.fontSwitchSliders) {
-        // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+        // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
         tools.removeClassesFromElement(
           fontSwitchSlider,
           "switch__slider-font-color_background-color_black",
           "switch__slider-font-color_background-color_white"
         );
-        // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+        // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(
           fontSwitchSlider,
           "switch__slider-font-color_background-color_white"
@@ -204,19 +204,19 @@ const mode = {
 
       // For each input of mode.inputs.
       for (let input of mode.inputs) {
-        // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+        // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
         tools.removeClassesFromElement(
           input,
           "form-field__input_color_black",
           "form-field__input_color_white"
         );
-        // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+        // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(input, "form-field__input_color_white");
       }
 
       // For each icon of mode.quantityIcons.
       for (let icon of mode.quantityIcons) {
-        // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+        // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
         tools.removeClassesFromElement(
           icon,
           "page__icon_color_black",
@@ -229,25 +229,25 @@ const mode = {
           "page__icon_color_yellow",
           "page__icon_color_slimy-green"
         );
-        // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+        // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(icon, "page__icon_color_white");
       }
     }
 
-    // Else if the mode item in localStorage have the light value.
+    // Else if mode.backgroundColor is strictly equal to "light".
     else if (mode.backgroundColor === "light") {
       // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
       tools.setColorToBeforeProperty(mode.switchModeSlider, mode.colors.white);
 
       // For each fontSwitchSlider of mode.fontSwitchSliders.
       for (let fontSwitchSlider of mode.fontSwitchSliders) {
-        // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+        // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
         tools.removeClassesFromElement(
           fontSwitchSlider,
           "switch__slider-font-color_background-color_black",
           "switch__slider-font-color_background-color_white"
         );
-        // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+        // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(
           fontSwitchSlider,
           "switch__slider-font-color_background-color_black"
@@ -256,19 +256,19 @@ const mode = {
 
       // For each input of mode.inputs.
       for (let input of mode.inputs) {
-        // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+        // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
         tools.removeClassesFromElement(
           input,
           "form-field__input_color_black",
           "form-field__input_color_white"
         );
-        // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+        // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(input, "form-field__input_color_black");
       }
 
       // For each icon of mode.quantityIcons.
       for (let icon of mode.quantityIcons) {
-        // We call tools.removeClassesFromElement() in order to remove one or many classNames from the element.
+        // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
         tools.removeClassesFromElement(
           icon,
           "page__icon_color_black",
@@ -281,7 +281,7 @@ const mode = {
           "page__icon_color_yellow",
           "page__icon_color_slimy-green"
         );
-        // We call tools.addClassesToElement() in order to add one or many classNames to the element.
+        // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(icon, "page__icon_color_black");
       }
     }

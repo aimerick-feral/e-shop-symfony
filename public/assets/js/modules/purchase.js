@@ -66,7 +66,7 @@ const purchase = {
    * @return {void}
    */
   handleDeliveryModeInputs: function (event) {
-    // console.log("purchase.handleDeliveryModeInputs()");
+    console.log("purchase.handleDeliveryModeInputs()");
 
     // We get the DOM element from which the event occured.
     let clickedInput = event.currentTarget;

@@ -122,7 +122,7 @@ class AdminCategoryController extends AbstractController
                     301
                 );
             }
-        } 
+        }
 
         // We display our template.
         return $this->render(
@@ -416,7 +416,7 @@ class AdminCategoryController extends AbstractController
 
         // If the CSRF token is valid.
         if ($this->isCsrfTokenValid('admin-category-delete' . $category->getId(), $submittedToken)) {
-            // We don't want to allow the user the possibility of deleted a category who contain one or many products. 
+            // We don't want to allow to the user the possibility of deleted a category who contain one or several products. 
             // If the number of products in the category is superior than 0.
             if (count($category->getProducts()) > 0) {
                 // We display a flash message for the user.

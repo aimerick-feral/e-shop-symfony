@@ -183,7 +183,7 @@ const confirmDelete = {
   /**
    * Method that check the user answer to the window.confirm() dialog box.
    * @param {Event} event
-   * @param {boolean} answer
+   * @param {Boolean} answer
    * @return {void}
    */
   checkUserAnswer: function (event, answer) {
