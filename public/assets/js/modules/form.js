@@ -2009,7 +2009,7 @@ const form = {
       }
       // Else the number of checked input is egual to 0.
       else {
-        // We call tools.addDisplayNone() in order to remove the display-none class from errorMessageNotChecked.
+        // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements..
         tools.removeDisplayNone(errorMessageNotChecked);
         // We add a error to form.numberOfErrors.
         form.numberOfErrors++;
@@ -2027,7 +2027,7 @@ const form = {
         }
         // Else the input is not checked.
         else {
-          // We call tools.addDisplayNone() in order to remove the display-none class from errorMessageNotChecked.
+          // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
           tools.removeDisplayNone(errorMessageNotChecked);
           // We add a error to form.numberOfErrors.
           form.numberOfErrors++;
@@ -2042,7 +2042,7 @@ const form = {
         }
         // Else the input is not checked.
         else {
-          // We call tools.addDisplayNone() in order to remove the display-none class from errorMessageNotChecked.
+          // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
           tools.removeDisplayNone(errorMessageNotChecked);
           // We add a error to form.numberOfErrors.
           form.numberOfErrors++;
