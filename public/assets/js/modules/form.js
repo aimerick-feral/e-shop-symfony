@@ -2095,7 +2095,7 @@ const form = {
           isAuthorized = true;
           // We call form.checkUploadedFileSize() to check the size of the uploded file.
           form.checkUploadedFileSize(input, form.errorMessageFileSize);
-          // We leave checkUploadedFileMimeType().
+          // We leave form.checkUploadedFileMimeType().
           return;
         }
       }
