@@ -2083,7 +2083,7 @@ const form = {
     for (let index = 0; index < input.files.length; index++) {
       // For each authorizedMimeType of authorizedMimeTypes.
       for (let authorizedMimeType of authorizedMimeTypes) {
-        // If the mine type of the file is strictly equal to one of the authorizedMimeTypes.
+        // If the mine type of the file is strictly equal to authorizedMimeType.
         if (input.files[index].type === authorizedMimeType) {
           console.log(input.files[index].type);
           console.log("File mime type accepted ✅");
