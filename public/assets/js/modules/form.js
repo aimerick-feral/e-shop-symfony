@@ -749,7 +749,7 @@ const form = {
 
     // ==================== ERRORS ====================
 
-    // We initialize a error counter.
+    // We initialize a counter for the number errors.
     form.numberOfErrors = 0;
 
     // ==================== ERROR MESSAGES ====================
@@ -1800,28 +1800,28 @@ const form = {
 
       // If input contain a e-mail.
       if (form.regexMatchEmail.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
       }
       // Else input is not valid.
       else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
     }
     // Else input is empty.
     else {
-      // We call form.switchInputOutlineColor() to switch the input's outline in red.
+      // We call form.switchInputOutlineColor() to switch the input outline color.
       form.switchInputOutlineColor(input, form.colors.red);
       // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
-      // We add a error to form.numberOfErrors.
+      // We add 1 to form.numberOfErrors.
       form.numberOfErrors++;
     }
   },
@@ -1855,96 +1855,96 @@ const form = {
 
       // If input contain at leat 1 lowercase alphabetical character.
       if (form.regexMatchAtLeastOneLowercase.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageLowercase);
       }
       // Else input doesn't contain at least 1 lowercase alphabetical character.
       else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageLowercase);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
 
       // If input contain at leat 1 uppercase alphabetical character.
       if (form.regexMatchAtLeastOneUppercase.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageUppercase);
       }
       // Else the value of the password input doesn't contain at least 1 uppercase alphabetical character.
       else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageUppercase);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
 
       // If input contain at leat 1 numeric character.
       if (form.regexMatchAtLeastOneNumericCharacter.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageNumber);
       }
       // Else the value of the password input doesn't contain at least 1 numeric character.
       else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageNumber);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
 
       // If input contain at leat 1 special character.
       if (form.regexMatchAtLeastOneSpecialCharacter.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageSpecialCharacter);
       }
       // Else the value of the password input doesn't contain at least 1 special character.
       else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageSpecialCharacter);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
 
       // If input contain at leat 8 characters.
       if (form.regexMatchAtLeastHeightCharacters.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageLength);
       }
       // Else input is empty.
       else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageLength);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
     }
     // Else input is empty.
     else {
-      // We call form.switchInputOutlineColor() to switch the input's outline in red.
+      // We call form.switchInputOutlineColor() to switch the input outline color.
       form.switchInputOutlineColor(input, form.colors.red);
       // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
-      // We add a error to form.numberOfErrors.
+      // We add 1 to form.numberOfErrors.
       form.numberOfErrors++;
     }
   },
@@ -1959,18 +1959,18 @@ const form = {
 
     // If input contain a value.
     if (input.value) {
-      // We call form.switchInputOutlineColor() to switch the input's outline in green.
+      // We call form.switchInputOutlineColor() to switch the input outline color.
       form.switchInputOutlineColor(input, form.colors.green);
       // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
       tools.addDisplayNone(errorMessageEmpty);
     }
     // Else input is empty.
     else {
-      // We call form.switchInputOutlineColor() to switch the input's outline in red.
+      // We call form.switchInputOutlineColor() to switch the input outline color.
       form.switchInputOutlineColor(input, form.colors.red);
       // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
-      // We add a error to form.numberOfErrors.
+      // We add 1 to form.numberOfErrors.
       form.numberOfErrors++;
     }
   },
@@ -2011,7 +2011,7 @@ const form = {
       else {
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements..
         tools.removeDisplayNone(errorMessageNotChecked);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
     }
@@ -2029,7 +2029,7 @@ const form = {
         else {
           // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
           tools.removeDisplayNone(errorMessageNotChecked);
-          // We add a error to form.numberOfErrors.
+          // We add 1 to form.numberOfErrors.
           form.numberOfErrors++;
         }
       }
@@ -2044,7 +2044,7 @@ const form = {
         else {
           // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
           tools.removeDisplayNone(errorMessageNotChecked);
-          // We add a error to form.numberOfErrors.
+          // We add 1 to form.numberOfErrors.
           form.numberOfErrors++;
         }
       }
@@ -2087,7 +2087,7 @@ const form = {
         if (input.files[index].type === authorizedMimeType) {
           console.log(input.files[index].type);
           console.log("File mime type accepted ✅");
-          // We call form.switchInputOutlineColor() to switch the input's outline in green.
+          // We call form.switchInputOutlineColor() to switch the input outline color.
           form.switchInputOutlineColor(input, form.colors.green);
           // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
           tools.addDisplayNone(errorMessageFileMimeType);
@@ -2104,11 +2104,11 @@ const form = {
     // If none of the authorizedMimeTypes has been authorized.
     if (!isAuthorized) {
       console.log("File mime type denied ❌");
-      // We call form.switchInputOutlineColor() to switch the input's outline in red.
+      // We call form.switchInputOutlineColor() to switch the input outline color.
       form.switchInputOutlineColor(input, form.colors.red);
       // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageFileMimeType);
-      // We add a error to form.numberOfErrors.
+      // We add 1 to form.numberOfErrors.
       form.numberOfErrors++;
     }
   },
@@ -2127,18 +2127,18 @@ const form = {
       if (input.files[index].size > 300000) {
         console.log(input.files[index].size);
         console.log("File size denied ❌");
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageFileSize);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
       // Else the size of the file is lower than 300 000 bytes so we accept the file.
       else {
         console.log(input.files[index].size);
         console.log("File size accepted ✅");
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageFileSize);
@@ -2166,45 +2166,45 @@ const form = {
 
       // If input contain 10 numeric characters.
       if (form.regexMatchTenNumericCharacters.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
       }
       // Else input is not valid.
       else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
 
       // If input start with the numeric value 06 or 07.
       if (form.regexMatchStartBy06Or07.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
       }
       // Else input is not valid.
       else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
     }
     // Else input is empty.
     else {
-      // We call form.switchInputOutlineColor() to switch the input's outline in red.
+      // We call form.switchInputOutlineColor() to switch the input outline color.
       form.switchInputOutlineColor(input, form.colors.red);
       // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
-      // We add a error to form.numberOfErrors.
+      // We add 1 to form.numberOfErrors.
       form.numberOfErrors++;
     }
   },
@@ -2229,16 +2229,16 @@ const form = {
 
       // If input value contain a number it's invalid.
       if (form.regexMatchNumber.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in re.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
       // Else input is valid because it's a alphabetical character.
       else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
@@ -2246,11 +2246,11 @@ const form = {
     }
     // Else input is empty.
     else {
-      // We call form.switchInputOutlineColor() to switch the input's outline in red.
+      // We call form.switchInputOutlineColor() to switch the input outline color.
       form.switchInputOutlineColor(input, form.colors.red);
       // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
-      // We add a error to form.numberOfErrors.
+      // We add 1 to form.numberOfErrors.
       form.numberOfErrors++;
     }
   },
@@ -2271,28 +2271,28 @@ const form = {
 
       // If input is valid.
       if (form.regexMatchNumber.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
       }
       // Else input is not valid.
       else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
     }
     // Else input is empty.
     else {
-      // We call form.switchInputOutlineColor() to switch the input's outline in red.
+      // We call form.switchInputOutlineColor() to switch the input outline color.
       form.switchInputOutlineColor(input, form.colors.red);
       // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
-      // We add a error to form.numberOfErrors.
+      // We add 1 to form.numberOfErrors.
       form.numberOfErrors++;
     }
   },
@@ -2317,28 +2317,28 @@ const form = {
 
       // If input is valid.
       if (form.regexMatchAtLeastOneNumericCharacter.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageValidity);
       }
       // Else input is not valid.
       else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
     }
     // Else input is empty.
     else {
-      // We call form.switchInputOutlineColor() to switch the input's outline in red.
+      // We call form.switchInputOutlineColor() to switch the input outline color.
       form.switchInputOutlineColor(input, form.colors.red);
       // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
-      // We add a error to form.numberOfErrors.
+      // We add 1 to form.numberOfErrors.
       form.numberOfErrors++;
     }
   },
@@ -2370,7 +2370,7 @@ const form = {
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageValidity);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
     }
@@ -2380,7 +2380,7 @@ const form = {
       form.switchInputOutlineColor(input, form.colors.red);
       // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
-      // We add a error to form.numberOfErrors.
+      // We add 1 to form.numberOfErrors.
       form.numberOfErrors++;
     }
   },
@@ -2404,28 +2404,28 @@ const form = {
 
       // If input contain at leat 12 characters.
       if (form.regexMatchAtLeastTweleCharacters.test(input.value)) {
-        // We call form.switchInputOutlineColor() to switch the input's outline in green.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.green);
         // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
         tools.addDisplayNone(errorMessageLength);
       }
       // Else input is empty.
       else {
-        // We call form.switchInputOutlineColor() to switch the input's outline in red.
+        // We call form.switchInputOutlineColor() to switch the input outline color.
         form.switchInputOutlineColor(input, form.colors.red);
         // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
         tools.removeDisplayNone(errorMessageLength);
-        // We add a error to form.numberOfErrors.
+        // We add 1 to form.numberOfErrors.
         form.numberOfErrors++;
       }
     }
     // Else input is empty.
     else {
-      // We call form.switchInputOutlineColor() to switch the input's outline in red.
+      // We call form.switchInputOutlineColor() to switch the input outline color.
       form.switchInputOutlineColor(input, form.colors.red);
       // We call tools.removeDisplayNone() in order to remove the display-none class from one or several elements.
       tools.removeDisplayNone(errorMessageEmpty);
-      // We add a error to form.numberOfErrors.
+      // We add 1 to form.numberOfErrors.
       form.numberOfErrors++;
     }
   },
