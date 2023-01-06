@@ -586,13 +586,13 @@ const form = {
     );
     // For each input of form.purchaseStatusSendInputs.
     for (let input of form.purchaseStatusSendInputs) {
-      // -  We get the label related to form.purchaseStatusSendInputs.
+      //  We get the label related to form.purchaseStatusSendInputs.
       label = input.nextElementSibling;
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         label,
         "status__send",
-        "status__send_color_purple"
+        "status__send_color_electric-purple"
       );
     }
     form.purchaseStatusDeliverInputs = document.querySelectorAll(
@@ -989,7 +989,7 @@ const form = {
     form.submitButtons = document.querySelectorAll(".page__button-submit");
     // If the DOM elements exist.
     if (form.submitButtons) {
-      // - For each submitButton of form.submitButtons.
+      // For each submitButton of form.submitButtons.
       for (let submitButton of form.submitButtons) {
         // We add a listener and a handler on the click event.
         submitButton.addEventListener("click", form.handleFormSubmit);
@@ -1181,27 +1181,17 @@ const form = {
           // We call form.switchInputOutlineColor() to switch the outline color of the input.
           form.switchInputOutlineColor(clickedInput, mode.colors.white);
         }
-        // // Else if clickedInput is different than input.
-        // else if (clickedInput != input) {
-        //   // We remove the outline.
-        //   input.style.removeProperty("--outline");
-        // }
       }
     }
     // Else if the mode item in localStorage is strictly equal to "light".
     else if (mode.backgroundColor === "light") {
-      // - For each input of form.inputs.
+      // For each input of form.inputs.
       for (let input of form.inputs) {
         // If the clickedInput is strictly equal to input.
         if (clickedInput === input) {
           // We call form.switchInputOutlineColor() to switch the outline color of the input.
           form.switchInputOutlineColor(clickedInput, mode.colors.black);
         }
-        // // Else if clickedInput is different than input.
-        // else if (clickedInput != input) {
-        //   // We remove the outline.
-        //   input.style.removeProperty("--outline");
-        // }
       }
     }
   },
@@ -2058,13 +2048,6 @@ const form = {
    */
   checkUploadedFileMimeType: function (input, errorMessageFileMimeType) {
     console.log("form.checkUploadedFileMimeType()");
-
-    // Return the type of the variable.
-    console.log(typeof input);
-    // Return the type of the variable.
-    console.log(Object.prototype.toString.call(input));
-    // Return false if the variable is not a array and true if it is.
-    console.log(Array.isArray());
 
     console.log(input.files);
 

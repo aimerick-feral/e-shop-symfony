@@ -56,7 +56,7 @@ const mode = {
     mode.loadMode();
 
     // When the app is loaded we check or uncheck the switch according to the localStorage data.
-    mode.checkRightColorSwitchsOnLoad();
+    mode.checkRightColorSwitchOnLoad();
   },
   /**
    * Method that get the backgroundColor which is back up in localStorage and call the switchBackgroundColor() method to change the color with the value of backgroundColor.
@@ -91,8 +91,8 @@ const mode = {
    * Method that check or uncheck the switch according to the localStorage data.
    * @return {void}
    */
-  checkRightColorSwitchsOnLoad: function () {
-    console.log("mode.checkRightColorSwitchsOnLoad()");
+  checkRightColorSwitchOnLoad: function () {
+    console.log("mode.checkRightColorSwitchOnLoad()");
 
     // If mode.backgroundColor is strictly equal to "light".
     if (mode.backgroundColor === "light") {
@@ -225,8 +225,8 @@ const mode = {
           "page__icon_color_green",
           "page__icon_color_red",
           "page__icon_color_safety-orange",
-          "page__icon_color_purple",
-          "page__icon_color_yellow",
+          "page__icon_color_electric-purple",
+          "page__icon_color_mango",
           "page__icon_color_slimy-green"
         );
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -277,8 +277,8 @@ const mode = {
           "page__icon_color_green",
           "page__icon_color_red",
           "page__icon_color_safety-orange",
-          "page__icon_color_purple",
-          "page__icon_color_yellow",
+          "page__icon_color_electric-purple",
+          "page__icon_color_mango",
           "page__icon_color_slimy-green"
         );
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.

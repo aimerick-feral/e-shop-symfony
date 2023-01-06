@@ -1,6 +1,6 @@
-# E-Shop-Symfony 🛒
+# E-Shop 🛒
 
-The **E-Shop-Symfony** project is demo of a e-commerce application that I develop in order to practice the web developement langagues and increse my knowledge.
+The **E-Shop** project is demo of a e-commerce application that I develop in order to practice the web developement langagues and increse my knowledge.
 
 ## 🧰 **Stack**
 
@@ -34,14 +34,14 @@ The E-Shop-Symfony project use the **MariaDB** Relational Database Management Sy
 
 ![](github/images/database.png)
 
-To use the projet you have to follow this steps :
+<!-- To use the projet you have to follow this steps :
 
-- Git clone the repository
+- Git clone the repository -->
 
 ## 👀 Glimpse
 
-▶️ E-Shop-Symfony - Desktop tour with a administrator role :  
+▶️ E-Shop - Desktop tour with a administrator role :  
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/3DFKYjMYD3o/0.jpg)](https://www.youtube.com/watch?v=3DFKYjMYD3o&t=182s)
 
-▶️ E-Shop-Symfony - Mobile tour with a administrator role :  
+▶️ E-Shop - Mobile tour with a administrator role :  
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/mQNfD4YjoVY/0.jpg)](https://www.youtube.com/watch?v=mQNfD4YjoVY&t=62s)

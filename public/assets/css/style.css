@@ -20,13 +20,14 @@
   --light-gray: #cccccc;
   --blue: #0000ff;
   --green: #00ff00;
-  --purple: #cc00ff;
-  --yellow: #fbbc05;
+  --electric-purple: #cc00ff;
+  --mango: #fbbc05;
   --slimy-green: #009933;
   --sepia: #663300;
   --dodger-blue: #0092f2;
+  /* --tufts-blue: #0092f2; */
   --shady-lady: #999999;
-  /* --cornflower-blue: #7799e5; */
+  /* --spanish-grey: #999999; */
   /* flash-success */
   --ao-english: #00802b;
   --mint-green: #b3ffb3;
@@ -36,6 +37,8 @@
   /* flash-warning */
   --peach-crayola: #ffc299;
   --safety-orange: #ff6600;
+  /* Not used */
+  --cornflower-blue: #7799e5;
 }
 
 body {
@@ -58,8 +61,8 @@ body {
   color: var(--safety-orange);
 }
 
-.error-message_color_yellow {
-  color: var(--yellow);
+.error-message_color_mango {
+  color: var(--mango);
 }
 
 .error-message_color_blue {
@@ -94,8 +97,8 @@ body {
 
 /* If theme = lakers */
 .lakers {
-  background-color: var(--purple);
-  color: var(--yellow);
+  background-color: var(--electric-purple);
+  color: var(--mango);
 }
 
 /* If theme = spider-man */
@@ -107,19 +110,19 @@ body {
 /* If theme = jamaica */
 .jamaica {
   background-color: var(--slimy-green);
-  color: var(--yellow);
+  color: var(--mango);
 }
 
 /* If theme = golden-state-warriors */
 .golden-state-warriors {
-  background-color: var(--yellow);
+  background-color: var(--mango);
   color: var(--blue);
 }
 
 /* If theme = flash */
 .flash {
   background-color: var(--red);
-  color: var(--yellow);
+  color: var(--mango);
 }
 
 /* If theme = forest */
@@ -152,8 +155,8 @@ body {
   color: var(--safety-orange);
 }
 
-.availability_color_yellow {
-  color: var(--yellow);
+.availability_color_mango {
+  color: var(--mango);
 }
 
 .availability_color_blue {
@@ -169,8 +172,8 @@ body {
   color: var(--safety-orange);
 }
 
-.status_color_yellow {
-  color: var(--yellow);
+.status_color_mango {
+  color: var(--mango);
 }
 
 .status_color_blue {
@@ -189,8 +192,8 @@ body {
   color: var(--safety-orange);
 }
 
-.status__paid_color_yellow {
-  color: var(--yellow);
+.status__paid_color_mango {
+  color: var(--mango);
 }
 
 .status__paid_color_blue {
@@ -205,8 +208,8 @@ body {
   color: var(--safety-orange);
 }
 
-.status__in-progress_color_yellow {
-  color: var(--yellow);
+.status__in-progress_color_mango {
+  color: var(--mango);
 }
 
 .status__in-progress_color_blue {
@@ -217,16 +220,16 @@ body {
   color: var(--slimy-green);
 }
 
-.status__send_color_purple {
-  color: var(--purple);
+.status__send_color_electric-purple {
+  color: var(--electric-purple);
 }
 
 .status__send_color_safety-orange {
   color: var(--safety-orange);
 }
 
-.status__send_color_yellow {
-  color: var(--yellow);
+.status__send_color_mango {
+  color: var(--mango);
 }
 
 .status__send_color_blue {
@@ -245,8 +248,8 @@ body {
   color: var(--safety-orange);
 }
 
-.status__deliver_color_yellow {
-  color: var(--yellow);
+.status__deliver_color_mango {
+  color: var(--mango);
 }
 
 .status__deliver_color_blue {
@@ -261,8 +264,8 @@ body {
   color: var(--safety-orange);
 }
 
-.status__annul_color_yellow {
-  color: var(--yellow);
+.status__annul_color_mango {
+  color: var(--mango);
 }
 
 .status__annul_color_blue {
@@ -457,20 +460,20 @@ body {
     background-color: var(--safety-orange);
   }
 
-  #purple-switch {
+  #electric-purple-switch {
     top: 80%;
   }
 
-  .switch__slider-font-color_background-color_purple::before {
-    background-color: var(--purple);
+  .switch__slider-font-color_background-color_electric-purple::before {
+    background-color: var(--electric-purple);
   }
 
-  #yellow-switch {
+  #mango-switch {
     top: 95%;
   }
 
-  .switch__slider-font-color_background-color_yellow::before {
-    background-color: var(--yellow);
+  .switch__slider-font-color_background-color_mango::before {
+    background-color: var(--mango);
   }
 
   .switch__slider-font-color_background-color_white {
@@ -508,16 +511,16 @@ body {
     left: 70%;
   }
 
-  .switch__slider-theme_background-color_purple-lakers {
-    background-color: var(--purple);
+  .switch__slider-theme_background-color_electric-purple-lakers {
+    background-color: var(--electric-purple);
   }
 
-  input:checked + .switch__slider-theme_background-color_yellow-lakers {
-    background-color: var(--yellow);
+  input:checked + .switch__slider-theme_background-color_mango-lakers {
+    background-color: var(--mango);
   }
 
-  .switch__slider-theme_background-color_yellow-lakers::before {
-    background-color: var(--before, var(--yellow));
+  .switch__slider-theme_background-color_mango-lakers::before {
+    background-color: var(--before, var(--mango));
   }
 
   /* Switch for spider-man theme */
@@ -552,12 +555,12 @@ body {
     background-color: var(--slimy-green);
   }
 
-  input:checked + .switch__slider-theme_background-color_yellow-jamaica {
-    background-color: var(--yellow);
+  input:checked + .switch__slider-theme_background-color_mango-jamaica {
+    background-color: var(--mango);
   }
 
-  .switch__slider-theme_background-color_yellow-jamaica::before {
-    background-color: var(--before, var(--yellow));
+  .switch__slider-theme_background-color_mango-jamaica::before {
+    background-color: var(--before, var(--mango));
   }
 
   /* Switch for golden State Warriors theme */
@@ -566,8 +569,8 @@ body {
     left: 70%;
   }
 
-  .switch__slider-theme_background-color_yellow-golden-state-warriors {
-    background-color: var(--yellow);
+  .switch__slider-theme_background-color_mango-golden-state-warriors {
+    background-color: var(--mango);
   }
 
   input:checked
@@ -589,19 +592,19 @@ body {
     background-color: var(--red);
   }
 
-  .switch__slider-theme_background-color_yellow-flash-2 {
-    background-color: var(--yellow);
+  .switch__slider-theme_background-color_mango-flash-2 {
+    background-color: var(--mango);
   }
 
-  input:checked + .switch__slider-theme_background-color_yellow-flash {
-    background-color: var(--yellow);
+  input:checked + .switch__slider-theme_background-color_mango-flash {
+    background-color: var(--mango);
   }
 
-  .switch__slider-theme_background-color_yellow-flash::before {
-    background-color: var(--before, var(--yellow));
+  .switch__slider-theme_background-color_mango-flash::before {
+    background-color: var(--before, var(--mango));
   }
 
-  /* Switch for Flash theme */
+  /* Switch for Forest theme */
   #forest-switch {
     top: 95%;
     left: 70%;
@@ -656,12 +659,12 @@ body {
     background-color: var(--safety-orange);
   }
 
-  .page__button_background-color_purple {
-    background-color: var(--purple);
+  .page__button_background-color_electric-purple {
+    background-color: var(--electric-purple);
   }
 
-  .page__button_background-color_yellow {
-    background-color: var(--yellow);
+  .page__button_background-color_mango {
+    background-color: var(--mango);
   }
 
   .page__button_background-color_slimy-green {
@@ -684,8 +687,8 @@ body {
     color: var(--blue);
   }
 
-  .page__button_color_purple {
-    color: var(--purple);
+  .page__button_color_electric-purple {
+    color: var(--electric-purple);
   }
 
   .page__button_color_red {
@@ -696,8 +699,8 @@ body {
     color: var(--slimy-green);
   }
 
-  .page__button_color_yellow {
-    color: var(--yellow);
+  .page__button_color_mango {
+    color: var(--mango);
   }
 
   .page__button_color_sepia {
@@ -752,12 +755,12 @@ body {
     background-color: var(--safety-orange);
   }
 
-  .page__link_background-color_purple {
-    background-color: var(--purple);
+  .page__link_background-color_electric-purple {
+    background-color: var(--electric-purple);
   }
 
-  .page__link_background-color_yellow {
-    background-color: var(--yellow);
+  .page__link_background-color_mango {
+    background-color: var(--mango);
   }
 
   .page__link_background-color_dodger-blue {
@@ -796,12 +799,12 @@ body {
     color: var(--safety-orange);
   }
 
-  .page__link_color_purple {
-    color: var(--purple);
+  .page__link_color_electric-purple {
+    color: var(--electric-purple);
   }
 
-  .page__link_color_yellow {
-    color: var(--yellow);
+  .page__link_color_mango {
+    color: var(--mango);
   }
 
   .page__link_color_slimy-green {
@@ -951,12 +954,12 @@ body {
       brightness(105%) contrast(103%);
   }
 
-  .page__icon_color_purple {
+  .page__icon_color_electric-purple {
     filter: invert(21%) sepia(87%) saturate(6564%) hue-rotate(284deg)
       brightness(101%) contrast(126%);
   }
 
-  .page__icon_color_yellow {
+  .page__icon_color_mango {
     filter: invert(83%) sepia(10%) saturate(5304%) hue-rotate(352deg)
       brightness(97%) contrast(104%);
   }
@@ -999,12 +1002,12 @@ body {
     background-color: var(--safety-orange);
   }
 
-  .header_background-color_purple {
-    background-color: var(--purple);
+  .header_background-color_electric-purple {
+    background-color: var(--electric-purple);
   }
 
-  .header_background-color_yellow {
-    background-color: var(--yellow);
+  .header_background-color_mango {
+    background-color: var(--mango);
   }
 
   .header_background-color_slimy-green {
@@ -1032,8 +1035,8 @@ body {
     color: var(--blue);
   }
 
-  .header__title_color_purple a {
-    color: var(--purple);
+  .header__title_color_electric-purple a {
+    color: var(--electric-purple);
   }
 
   .header__title_color_red a {
@@ -1044,8 +1047,8 @@ body {
     color: var(--slimy-green);
   }
 
-  .header__title_color_yellow a {
-    color: var(--yellow);
+  .header__title_color_mango a {
+    color: var(--mango);
   }
 
   .header__title_color_sepia a {
@@ -1086,12 +1089,12 @@ body {
       brightness(105%) contrast(103%);
   }
 
-  .header__icon_color_purple {
+  .header__icon_color_electric-purple {
     filter: invert(21%) sepia(87%) saturate(6564%) hue-rotate(284deg)
       brightness(101%) contrast(126%);
   }
 
-  .header__icon_color_yellow {
+  .header__icon_color_mango {
     filter: invert(83%) sepia(10%) saturate(5304%) hue-rotate(352deg)
       brightness(97%) contrast(104%);
   }
@@ -1133,12 +1136,12 @@ body {
     background-color: var(--safety-orange);
   }
 
-  .burger-menu_background-color_purple {
-    background-color: var(--purple);
+  .burger-menu_background-color_electric-purple {
+    background-color: var(--electric-purple);
   }
 
-  .burger-menu_background-color_yellow {
-    background-color: var(--yellow);
+  .burger-menu_background-color_mango {
+    background-color: var(--mango);
   }
 
   .burger-menu_background-color_slimy-green {
@@ -1193,12 +1196,12 @@ body {
     background-color: var(--safety-orange);
   }
 
-  .circle_background-color_purple {
-    background-color: var(--purple);
+  .circle_background-color_electric-purple {
+    background-color: var(--electric-purple);
   }
 
-  .circle_background-color_yellow {
-    background-color: var(--yellow);
+  .circle_background-color_mango {
+    background-color: var(--mango);
   }
 
   .circle_background-color_slimy-green {
@@ -1233,12 +1236,12 @@ body {
     color: var(--safety-orange);
   }
 
-  .circle_color_purple {
-    color: var(--purple);
+  .circle_color_electric-purple {
+    color: var(--electric-purple);
   }
 
-  .circle_color_yellow {
-    color: var(--yellow);
+  .circle_color_mango {
+    color: var(--mango);
   }
 
   .circle_color_slimy-green {
@@ -1286,16 +1289,16 @@ body {
     color: var(--red);
   }
 
-  .nav-desktop__item_color_purple a {
-    color: var(--purple);
+  .nav-desktop__item_color_electric-purple a {
+    color: var(--electric-purple);
   }
 
   .nav-desktop__item_color_slimy-green a {
     color: var(--slimy-green);
   }
 
-  .nav-desktop__item_color_yellow a {
-    color: var(--yellow);
+  .nav-desktop__item_color_mango a {
+    color: var(--mango);
   }
 
   .nav-desktop__item_color_sepia a {
@@ -1334,20 +1337,20 @@ body {
     border-bottom: solid 0.1em var(--safety-orange);
   }
 
-  .nav-mobile__item_color_purple {
-    border-top: solid 0.1em var(--purple);
+  .nav-mobile__item_color_electric-purple {
+    border-top: solid 0.1em var(--electric-purple);
   }
 
-  .nav-mobile__item_color_purple:last-child {
-    border-bottom: solid 0.1em var(--purple);
+  .nav-mobile__item_color_electric-purple:last-child {
+    border-bottom: solid 0.1em var(--electric-purple);
   }
 
-  .nav-mobile__item_color_yellow {
-    border-top: solid 0.1em var(--yellow);
+  .nav-mobile__item_color_mango {
+    border-top: solid 0.1em var(--mango);
   }
 
-  .nav-mobile__item_color_yellow:last-child {
-    border-bottom: solid 0.1em var(--yellow);
+  .nav-mobile__item_color_mango:last-child {
+    border-bottom: solid 0.1em var(--mango);
   }
 
   .nav-mobile__item_color_slimy-green {
@@ -1414,12 +1417,12 @@ body {
     background-color: var(--safety-orange);
   }
 
-  .footer_background-color_purple {
-    background-color: var(--purple);
+  .footer_background-color_electric-purple {
+    background-color: var(--electric-purple);
   }
 
-  .footer_background-color_yellow {
-    background-color: var(--yellow);
+  .footer_background-color_mango {
+    background-color: var(--mango);
   }
 
   .footer_background-color_slimy-green {
@@ -1442,16 +1445,16 @@ body {
     color: var(--red);
   }
 
-  .footer__title_color_purple {
-    color: var(--purple);
+  .footer__title_color_electric-purple {
+    color: var(--electric-purple);
   }
 
   .footer__title_color_slimy-green {
     color: var(--slimy-green);
   }
 
-  .footer__title_color_yellow {
-    color: var(--yellow);
+  .footer__title_color_mango {
+    color: var(--mango);
   }
 
   .footer__title_color_sepia {
@@ -1514,16 +1517,16 @@ body {
     color: var(--red);
   }
 
-  .block-footer__copyright_color_purple {
-    color: var(--purple);
+  .block-footer__copyright_color_electric-purple {
+    color: var(--electric-purple);
   }
 
   .block-footer__copyright_color_slimy-green {
     color: var(--slimy-green);
   }
 
-  .block-footer__copyright_color_yellow {
-    color: var(--yellow);
+  .block-footer__copyright_color_mango {
+    color: var(--mango);
   }
 
   .block-footer__copyright_color_sepia {
@@ -1728,15 +1731,15 @@ body {
   }
 
   /* If theme = lakers */
-  .form-field__input_color_yellow,
-  .form-field__input-search_color_yellow {
-    background-color: var(--yellow);
-    color: var(--purple);
+  .form-field__input_color_mango,
+  .form-field__input-search_color_mango {
+    background-color: var(--mango);
+    color: var(--electric-purple);
   }
 
-  .form-field__input_color_yellow::placeholder,
-  .form-field__input-search_color_yellow::placeholder {
-    color: var(--purple);
+  .form-field__input_color_mango::placeholder,
+  .form-field__input-search_color_mango::placeholder {
+    color: var(--electric-purple);
   }
 
   /* If theme = spider-man */
@@ -1752,14 +1755,14 @@ body {
   }
 
   /* If theme = jamaica */
-  .form-field__input_color_yellow-jamaica,
-  .form-field__input-search_color_yellow-jamaica {
-    background-color: var(--yellow);
+  .form-field__input_color_mango-jamaica,
+  .form-field__input-search_color_mango-jamaica {
+    background-color: var(--mango);
     color: var(--slimy-green);
   }
 
-  .form-field__input_color_yellow-jamaica::placeholder,
-  .form-field__input-search_color_yellow-jamaica::placeholder {
+  .form-field__input_color_mango-jamaica::placeholder,
+  .form-field__input-search_color_mango-jamaica::placeholder {
     color: var(--slimy-green);
   }
 
@@ -1767,23 +1770,23 @@ body {
   .form-field__input_color_blue-golden-sate-warriors,
   .form-field__input-search_color_blue-golden-sate-warriors {
     background-color: var(--blue);
-    color: var(--yellow);
+    color: var(--mango);
   }
 
   .form-field__input_color_blue-golden-sate-warriors::placeholder,
   .form-field__input-search_color_blue-golden-sate-warriors::placeholder {
-    color: var(--yellow);
+    color: var(--mango);
   }
 
   /* If theme = flash */
-  .form-field__input_color_yellow-flash,
-  .form-field__input-search_color_yellow-flash {
-    background-color: var(--yellow);
+  .form-field__input_color_mango-flash,
+  .form-field__input-search_color_mango-flash {
+    background-color: var(--mango);
     color: var(--red);
   }
 
-  .form-field__input_color_yellow-flash::placeholder,
-  .form-field__input-search_color_yellow-flash::placeholder {
+  .form-field__input_color_mango-flash::placeholder,
+  .form-field__input-search_color_mango-flash::placeholder {
     color: var(--red);
   }
 
@@ -1872,12 +1875,12 @@ body {
     color: var(--safety-orange);
   }
 
-  .term__question_color_purple {
-    color: var(--purple);
+  .term__question_color_electric-purple {
+    color: var(--electric-purple);
   }
 
-  .term__question_color_yellow {
-    color: var(--yellow);
+  .term__question_color_mango {
+    color: var(--mango);
   }
 
   .term__question_color_white {
@@ -1997,12 +2000,12 @@ body {
     color: var(--safety-orange);
   }
 
-  .term__user-email_color_purple {
-    color: var(--purple);
+  .term__user-email_color_electric-purple {
+    color: var(--electric-purple);
   }
 
-  .term__user-email_color_yellow {
-    color: var(--yellow);
+  .term__user-email_color_mango {
+    color: var(--mango);
   }
 
   .term__user-email_color_slimy-green {
@@ -2087,20 +2090,20 @@ body {
     border: solid 0.1em var(--safety-orange);
   }
 
-  .card_border-color_purple,
+  .card_border-color_electric-purple,
   .admin-preview_border-color_bluepurple,
-  .admin-detail_border-color_purple,
-  .card-address_border-color_purple,
-  .card-purchase_border-color_purple {
-    border: solid 0.1em var(--purple);
+  .admin-detail_border-color_electric-purple,
+  .card-address_border-color_electric-purple,
+  .card-purchase_border-color_electric-purple {
+    border: solid 0.1em var(--electric-purple);
   }
 
-  .card_border-color_yellow,
+  .card_border-color_mango,
   .admin-preview_border-color_blueyellow,
-  .admin-detail_border-color_yellow,
-  .card-address_border-color_yellow,
-  .card-purchase_border-color_yellow {
-    border: solid 0.1em var(--yellow);
+  .admin-detail_border-color_mango,
+  .card-address_border-color_mango,
+  .card-purchase_border-color_mango {
+    border: solid 0.1em var(--mango);
   }
 
   .card_border-color_slimy-green,
@@ -2245,12 +2248,12 @@ body {
     border-top: solid 0.1em var(--safety-orange);
   }
 
-  .purchase-total_border-color_purple {
-    border-top: solid 0.1em var(--purple);
+  .purchase-total_border-color_electric-purple {
+    border-top: solid 0.1em var(--electric-purple);
   }
 
-  .purchase-total_border-color_yellow {
-    border-top: solid 0.1em var(--yellow);
+  .purchase-total_border-color_mango {
+    border-top: solid 0.1em var(--mango);
   }
 
   .purchase-total_border-color_slimy-green {
@@ -2489,7 +2492,7 @@ body {
     align-self: flex-start;
     margin: 0 1em 0 0;
     margin: 3.5em 1em 0 0;
-    /* background-color:  var(--purple); */
+    /* background-color:  var(--electric-purple); */
   }
 
   .pursue-shopping {
@@ -2533,12 +2536,12 @@ body {
     border-top: solid 0.1em var(--safety-orange);
   }
 
-  .total_border-color_purple {
-    border-top: solid 0.1em var(--purple);
+  .total_border-color_electric-purple {
+    border-top: solid 0.1em var(--electric-purple);
   }
 
-  .total_border-color_yellow {
-    border-top: solid 0.1em var(--yellow);
+  .total_border-color_mango {
+    border-top: solid 0.1em var(--mango);
   }
 
   .total_border-color_slimy-green {
@@ -3797,16 +3800,16 @@ body {
     color: var(--red);
   }
 
-  .table_color_purple thead tr {
-    color: var(--purple);
+  .table_color_electric-purple thead tr {
+    color: var(--electric-purple);
   }
 
   .table_color_slimy-green thead tr {
     color: var(--slimy-green);
   }
 
-  .table_color_yellow thead tr {
-    color: var(--yellow);
+  .table_color_mango thead tr {
+    color: var(--mango);
   }
 
   .table_color_sepia thead tr {
@@ -3865,30 +3868,30 @@ body {
     border: solid 0.1em var(--safety-orange);
   }
 
-  .table_background-color_purple thead tr {
-    background-color: var(--purple);
+  .table_background-color_electric-purple thead tr {
+    background-color: var(--electric-purple);
   }
 
-  .table_background-color_purple th,
-  .table_background-color_purple td {
-    border: solid 0.1em var(--purple);
+  .table_background-color_electric-purple th,
+  .table_background-color_electric-purple td {
+    border: solid 0.1em var(--electric-purple);
   }
 
-  .table_background-color_purple tbody tr {
-    border: solid 0.1em var(--purple);
+  .table_background-color_electric-purple tbody tr {
+    border: solid 0.1em var(--electric-purple);
   }
 
-  .table_background-color_yellow thead tr {
-    background-color: var(--yellow);
+  .table_background-color_mango thead tr {
+    background-color: var(--mango);
   }
 
-  .table_background-color_yellow th,
-  .table_background-color_yellow td {
-    border: solid 0.1em var(--yellow);
+  .table_background-color_mango th,
+  .table_background-color_mango td {
+    border: solid 0.1em var(--mango);
   }
 
-  .table_background-color_yellow tbody tr {
-    border: solid 0.1em var(--yellow);
+  .table_background-color_mango tbody tr {
+    border: solid 0.1em var(--mango);
   }
 
   .table_background-color_slimy-green thead tr {

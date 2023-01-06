@@ -35,10 +35,6 @@ class MultiAvatarAPI
      */
     public function donwloadAvatar(string $url)
     {
-        // // The value of $uploadeFolder is the value of the .env variable USER_PICTURE_UPLOAD_FOLDER_PATH.
-        // $uploadFolder = $_ENV['USER_PICTURE_UPLOAD_FOLDER_PATH'];
-        // // assets/uploads/pictures/users
-
         // We use the PHP function basename() to get the trailing name the component of the path. 
         // Exemple : "from https://api.multiavatar.com/toto-46d7d6702041b84dcdf0a3c6.png" we get "toto-46d7d6702041b84dcdf0a3c6.png". 
         $fileName = basename($url);

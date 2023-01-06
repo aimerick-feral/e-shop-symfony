@@ -148,11 +148,11 @@ const font = {
       safetyOrange: getComputedStyle(document.documentElement).getPropertyValue(
         "--safety-orange"
       ),
-      purple: getComputedStyle(document.documentElement).getPropertyValue(
-        "--purple"
-      ),
-      yellow: getComputedStyle(document.documentElement).getPropertyValue(
-        "--yellow"
+      electricPurple: getComputedStyle(
+        document.documentElement
+      ).getPropertyValue("--electric-purple"),
+      mango: getComputedStyle(document.documentElement).getPropertyValue(
+        "--mango"
       ),
       slimyGreen: getComputedStyle(document.documentElement).getPropertyValue(
         "--slimy-green"
@@ -179,17 +179,17 @@ const font = {
       "page__button_background-color_green",
       "page__button_background-color_red",
       "page__button_background-color_safety-orange",
-      "page__button_background-color_purple",
-      "page__button_background-color_yellow",
+      "page__button_background-color_electric-purple",
+      "page__button_background-color_mango",
       "page__button_background-color_slimy-green",
       "page__button_background-color_dodger-blue",
       "page__button_color_black",
       "page__button_color_white",
       "page__button_color_blue",
-      "page__button_color_purple",
+      "page__button_color_electric-purple",
       "page__button_color_red",
       "page__button_color_slimy-green",
-      "page__button_color_yellow",
+      "page__button_color_mango",
       "page__button_color_sepia",
     ];
 
@@ -199,8 +199,8 @@ const font = {
       "page__button_background-color_green",
       "page__button_background-color_red",
       "page__button_background-color_safety-orange",
-      "page__button_background-color_purple",
-      "page__button_background-color_yellow",
+      "page__button_background-color_electric-purple",
+      "page__button_background-color_mango",
       "page__button_background-color_slimy-green",
       "page__button_background-color_dodger-blue",
     ];
@@ -213,8 +213,8 @@ const font = {
       "page__button_color_green",
       "page__button_color_red",
       "page__button_color_safety-orange",
-      "page__button_color_purple",
-      "page__button_color_yellow",
+      "page__button_color_electric-purple",
+      "page__button_color_mango",
       "page__button_color_slimy-green",
       "page__button_color_sepia",
     ];
@@ -225,8 +225,8 @@ const font = {
       "page__link_background-color_green",
       "page__link_background-color_red",
       "page__link_background-color_safety-orange",
-      "page__link_background-color_purple",
-      "page__link_background-color_yellow",
+      "page__link_background-color_electric-purple",
+      "page__link_background-color_mango",
       "page__link_background-color_dodger-blue",
       "page__link_background-color_white",
       "page__link_background-color_slimy-green",
@@ -236,8 +236,8 @@ const font = {
       "page__link_color_green",
       "page__link_color_red",
       "page__link_color_safety-orange",
-      "page__link_color_purple",
-      "page__link_color_yellow",
+      "page__link_color_electric-purple",
+      "page__link_color_mango",
       "page__link_color_slimy-green",
       "page__link_color_sepia",
     ];
@@ -248,8 +248,8 @@ const font = {
       "page__link_background-color_green",
       "page__link_background-color_red",
       "page__link_background-color_safety-orange",
-      "page__link_background-color_purple",
-      "page__link_background-color_yellow",
+      "page__link_background-color_electric-purple",
+      "page__link_background-color_mango",
       "page__link_background-color_dodger-blue",
       "page__link_background-color_white",
       "page__link_background-color_slimy-green",
@@ -263,8 +263,8 @@ const font = {
       "page__link_color_green",
       "page__link_color_red",
       "page__link_color_safety-orange",
-      "page__link_color_purple",
-      "page__link_color_yellow",
+      "page__link_color_electric-purple",
+      "page__link_color_mango",
       "page__link_color_slimy-green",
       "page__link_color_sepia",
     ];
@@ -277,8 +277,8 @@ const font = {
       "page__icon_color_green",
       "page__icon_color_red",
       "page__icon_color_safety-orange",
-      "page__icon_color_purple",
-      "page__icon_color_yellow",
+      "page__icon_color_electric-purple",
+      "page__icon_color_mango",
       "page__icon_color_slimy-green",
       "page__icon_color_sepia",
     ];
@@ -289,8 +289,8 @@ const font = {
       "header_background-color_green",
       "header_background-color_red",
       "header_background-color_safety-orange",
-      "header_background-color_purple",
-      "header_background-color_yellow",
+      "header_background-color_electric-purple",
+      "header_background-color_mango",
       "header_background-color_slimy-green",
     ];
 
@@ -299,10 +299,10 @@ const font = {
       "header__title_color_black",
       "header__title_color_white",
       "header__title_color_blue",
-      "header__title_color_purple",
+      "header__title_color_electric-purple",
       "header__title_color_red",
       "header__title_color_slimy-green",
-      "header__title_color_yellow",
+      "header__title_color_mango",
       "header__title_color_sepia",
     ];
 
@@ -314,8 +314,8 @@ const font = {
       "header__icon_color_green",
       "header__icon_color_red",
       "header__icon_color_safety-orange",
-      "header__icon_color_purple",
-      "header__icon_color_yellow",
+      "header__icon_color_electric-purple",
+      "header__icon_color_mango",
       "header__icon_color_slimy-green",
       "header__icon_color_sepia",
     ];
@@ -326,8 +326,8 @@ const font = {
       "burger-menu_background-color_green",
       "burger-menu_background-color_red",
       "burger-menu_background-color_safety-orange",
-      "burger-menu_background-color_purple",
-      "burger-menu_background-color_yellow",
+      "burger-menu_background-color_electric-purple",
+      "burger-menu_background-color_mango",
       "burger-menu_background-color_slimy-green",
     ];
 
@@ -341,10 +341,10 @@ const font = {
       "nav-mobile__item_color_red:last-child",
       "nav-mobile__item_color_safety-orange",
       "nav-mobile__item_color_safety-orange:last-child",
-      "nav-mobile__item_color_purple",
-      "nav-mobile__item_color_purple:last-child",
-      "nav-mobile__item_color_yellow",
-      "nav-mobile__item_color_yellow:last-child",
+      "nav-mobile__item_color_electric-purple",
+      "nav-mobile__item_color_electric-purple:last-child",
+      "nav-mobile__item_color_mango",
+      "nav-mobile__item_color_mango:last-child",
       "nav-mobile__item_color_slimy-green",
       "nav-mobile__item_color_slimy-green:last-child",
     ];
@@ -355,8 +355,8 @@ const font = {
       "footer_background-color_green",
       "footer_background-color_red",
       "footer_background-color_safety-orange",
-      "footer_background-color_purple",
-      "footer_background-color_yellow",
+      "footer_background-color_electric-purple",
+      "footer_background-color_mango",
       "footer_background-color_slimy-green",
     ];
 
@@ -366,8 +366,8 @@ const font = {
       "card_border-color_green",
       "card_border-color_red",
       "card_border-color_safety-orange",
-      "card_border-color_purple",
-      "card_border-color_yellow",
+      "card_border-color_electric-purple",
+      "card_border-color_mango",
       "card_border-color_slimy-green",
     ];
 
@@ -388,8 +388,8 @@ const font = {
       "admin-detail_border-color_green",
       "admin-detail_border-color_red",
       "admin-detail_border-color_safety-orange",
-      "admin-detail_border-color_purple",
-      "admin-detail_border-color_yellow",
+      "admin-detail_border-color_electric-purple",
+      "admin-detail_border-color_mango",
       "admin-detail_border-color_slimy-green",
     ];
 
@@ -399,8 +399,8 @@ const font = {
       "total_border-color_green",
       "total_border-color_red",
       "total_border-color_safety-orange",
-      "total_border-color_purple",
-      "total_border-color_yellow",
+      "total_border-color_electric-purple",
+      "total_border-color_mango",
       "total_border-color_slimy-green",
     ];
 
@@ -409,7 +409,7 @@ const font = {
       "availability__avialable_color_green",
       "availability__unavailable_color_red",
       "availability_color_safety-orange",
-      "availability_color_yellow",
+      "availability_color_mango",
       "availability_color_blue",
       "availability_color_slimy-green",
     ];
@@ -420,8 +420,8 @@ const font = {
       "card-address_border-color_green",
       "card-address_border-color_red",
       "card-address_border-color_safety-orange",
-      "card-address_border-color_purple",
-      "card-address_border-color_yellow",
+      "card-address_border-color_electric-purple",
+      "card-address_border-color_mango",
       "card-address_border-color_slimy-green",
     ];
 
@@ -431,8 +431,8 @@ const font = {
       "card-purchase_border-color_green",
       "card-purchase_border-color_red",
       "card-purchase_border-color_safety-orange",
-      "card-purchase_border-color_purple",
-      "card-purchase_border-color_yellow",
+      "card-purchase_border-color_electric-purple",
+      "card-purchase_border-color_mango",
       "card-purchase_border-color_slimy-green",
     ];
 
@@ -440,29 +440,29 @@ const font = {
     font.statusColorClassNames = [
       "status__paid_color_green",
       "status__paid_color_safety-orange",
-      "status__paid_color_yellow",
+      "status__paid_color_mango",
       "status__paid_color_blue",
       "status__paid_color_slimy-green",
       "status__in-progress_color_safety-orange",
-      "status__in-progress_color_yellow",
+      "status__in-progress_color_mango",
       "status__in-progress_color_blue",
       "status__in-progress_color_slimy-green",
-      "status__send_color_purple",
+      "status__send_color_electric-purple",
       "status__send_color_safety-orange",
-      "status__send_color_yellow",
+      "status__send_color_mango",
       "status__send_color_blue",
       "status__send_color_slimy-green",
       "status__deliver_color_slimy-green",
       "status__deliver_color_safety-orange",
-      "status__deliver_color_yellow",
+      "status__deliver_color_mango",
       "status__deliver_color_blue",
       "status__annul_color_red",
       "status__annul_color_safety-orange",
-      "status__annul_color_yellow",
+      "status__annul_color_mango",
       "status__annul_color_blue",
       "status__annul_color_slimy-green",
       "status_color_safety-orange",
-      "status_color_yellow",
+      "status_color_mango",
       "status_color_blue",
       "status_color_slimy-green",
     ];
@@ -473,8 +473,8 @@ const font = {
       "purchase-total_border-color_green",
       "purchase-total_border-color_red",
       "purchase-total_border-color_safety-orange",
-      "purchase-total_border-color_purple",
-      "purchase-total_border-color_yellow",
+      "purchase-total_border-color_electric-purple",
+      "purchase-total_border-color_mango",
       "purchase-total_border-color_slimy-green",
     ];
 
@@ -482,7 +482,7 @@ const font = {
     font.errorMessageColorClassNames = [
       "error-message_color_red",
       "error-message_color_safety-orange",
-      "error-message_color_yellow",
+      "error-message_color_mango",
       "error-message_color_blue",
       "error-message_color_slimy-green",
     ];
@@ -493,8 +493,8 @@ const font = {
       "term__question_color_green",
       "term__question_color_red",
       "term__question_color_safety-orange",
-      "term__question_color_purple",
-      "term__question_color_yellow",
+      "term__question_color_electric-purple",
+      "term__question_color_mango",
       "term__question_color_white",
     ];
 
@@ -504,8 +504,8 @@ const font = {
       "term__user-email_color_green",
       "term__user-email_color_red",
       "term__user-email_color_safety-orange",
-      "term__user-email_color_purple",
-      "term__user-email_color_yellow",
+      "term__user-email_color_electric-purple",
+      "term__user-email_color_mango",
       "term__user-email_color_slimy-green",
       "term__user-email_color_white",
     ];
@@ -522,15 +522,15 @@ const font = {
 
     // All the font color switchs.
     font.fontSwitchs = document.querySelectorAll(".switch__input-font-color");
-
-    // All the theme switchs.
     font.themeSwitchs = document.querySelectorAll(".switch__input-theme");
     font.blueSwitch = document.getElementById("blue-switch-input");
     font.greenSwitch = document.getElementById("green-switch-input");
     font.redSwitch = document.getElementById("red-switch-input");
     font.orangeSwitch = document.getElementById("orange-switch-input");
     font.purpleSwitch = document.getElementById("purple-switch-input");
-    font.yellowSwitch = document.getElementById("yellow-switch-input");
+    font.yellowSwitch = document.getElementById("mango-switch-input");
+
+    // All the theme switchs.
     font.knickSwitch = document.getElementById("knick-switch-input");
     font.knickSwitchSlider = document.querySelector(".switch__slider-knick");
     font.knickSwitchBefore = window.getComputedStyle(
@@ -787,8 +787,8 @@ const font = {
         tools.uncheckInputs(font.orangeSwitch);
       }
 
-      // If the font item in localStorage is strictly equal to "purple".
-      if (font.color === "purple") {
+      // If the font item in localStorage is strictly equal to "electric-purple".
+      if (font.color === "electric-purple") {
         // We call tools.checkInputs() to check the input.
         tools.checkInputs(font.purpleSwitch);
         // We call tools.setDisabledAttribute() to set the disabled attribute to the element.
@@ -800,8 +800,8 @@ const font = {
         tools.uncheckInputs(font.purpleSwitch);
       }
 
-      // If the font item in localStorage is strictly equal to "yellow".
-      if (font.color === "yellow") {
+      // If the font item in localStorage is strictly equal to "mango".
+      if (font.color === "mango") {
         // We call tools.checkInputs() to check the input.
         tools.checkInputs(font.yellowSwitch);
         // We call tools.setDisabledAttribute() to set the disabled attribute to the element.
@@ -848,7 +848,7 @@ const font = {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(
           font.flashSwitchSlider,
-          "switch__slider-theme_background-color_yellow-flash-2"
+          "switch__slider-theme_background-color_mango-flash-2"
         );
         // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
         tools.setColorToBeforeProperty(font.flashSwitchSlider, font.colors.red);
@@ -954,7 +954,7 @@ const font = {
             // When the app is loaded we load to the page the mode.backgroundColor which is backup in localSatorage.
             mode.loadMode();
             // When the app is loaded we check or uncheck the switch according to the localStorage data.
-            mode.checkRightColorSwitchsOnLoad();
+            mode.checkRightColorSwitchOnLoad();
             // If font.color is strictly equal to "knick".
             if (font.color === "knick") {
               // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
@@ -968,7 +968,7 @@ const font = {
               // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
               tools.setColorToBeforeProperty(
                 font.lakersSwitchSlider,
-                font.colors.yellow
+                font.colors.mango
               );
             }
             // Else if font.color is strictly equal to "spider-man".
@@ -984,7 +984,7 @@ const font = {
               // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
               tools.setColorToBeforeProperty(
                 font.jamaicaSwitchSlider,
-                font.colors.yellow
+                font.colors.mango
               );
             }
             // Else if font.color is strictly equal to "golden-state-warriors".
@@ -1000,7 +1000,7 @@ const font = {
               // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
               tools.setColorToBeforeProperty(
                 font.flashSwitchSlider,
-                font.colors.yellow
+                font.colors.mango
               );
             }
             // Else if font.color is strictly equal to "forest".
@@ -1035,12 +1035,12 @@ const font = {
           // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
           tools.removeClassesFromElement(
             font.flashSwitchSlider,
-            "switch__slider-theme_background-color_yellow-flash-2"
+            "switch__slider-theme_background-color_mango-flash-2"
           );
           // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
           tools.setColorToBeforeProperty(
             font.flashSwitchSlider,
-            font.colors.yellow
+            font.colors.mango
           );
           // If clickedSwitch is strictly equal to themeSwitch.
           if (clickedSwitch === themeSwitch) {
@@ -1051,7 +1051,7 @@ const font = {
             // When the app is loaded we load to the page the mode.backgroundColor which is backup in localSatorage.
             mode.loadMode();
             // When the app is loaded we check or uncheck the switch according to the localStorage data.
-            mode.checkRightColorSwitchsOnLoad();
+            mode.checkRightColorSwitchOnLoad();
           }
           // Else if clickedSwitch is strictly equal to fontSwitch.
           else if (clickedSwitch === fontSwitch) {
@@ -1264,7 +1264,7 @@ const font = {
         font.forestSwitch
       );
       // We set the value purple to font.color.
-      font.color = "purple";
+      font.color = "electric-purple";
       // We backup in localStorage the value of font.color.
       localStorage.setItem("font", font.color);
       // We call the font.switchColor() method to switch the color with the value of font.color.
@@ -1306,7 +1306,7 @@ const font = {
         font.forestSwitch
       );
       // We set the value yellow to font.color.
-      font.color = "yellow";
+      font.color = "mango";
       // We backup in localStorage the value of font.color.
       localStorage.setItem("font", font.color);
       // We call the font.switchColor() method to switch the color with the value of font.color.
@@ -1448,7 +1448,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.flashSwitchSlider,
-        "switch__slider-theme_background-color_yellow-flash-2"
+        "switch__slider-theme_background-color_mango-flash-2"
       );
       // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
       tools.setColorToBeforeProperty(font.knickSwitchSlider, "#ff6600");
@@ -1738,8 +1738,8 @@ const font = {
       "circle_color_green",
       "circle_color_red",
       "circle_color_safety-orange",
-      "circle_color_purple",
-      "circle_color_yellow",
+      "circle_color_electric-purple",
+      "circle_color_mango",
       "circle_color_slimy-green"
     );
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -1756,83 +1756,92 @@ const font = {
       "footer_background-color_" + newColor
     );
 
-    // For each button of font.searchButtons.
-    for (let button of font.searchButtons) {
-      // For each className of font.buttonBackgroundColorClassNames.
-      for (let className of font.buttonBackgroundColorClassNames) {
+    // For each searchButton of font.searchButtons.
+    for (let searchButton of font.searchButtons) {
+      // For each buttonBackgroundColorClassName of font.buttonBackgroundColorClassNames.
+      for (let buttonBackgroundColorClassName of font.buttonBackgroundColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(button, className);
+        tools.removeClassesFromElement(
+          searchButton,
+          buttonBackgroundColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        searchButton,
         "page__button_background-color_" + newColor
       );
     }
 
-    // For each button of font.createButtons.
-    for (let button of font.createButtons) {
-      // For each className of font.buttonClassNames.
-      for (let className of font.buttonClassNames) {
+    // For each createButton of font.createButtons.
+    for (let createButton of font.createButtons) {
+      // For each buttonClassName of font.buttonClassNames.
+      for (let buttonClassName of font.buttonClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(button, className);
+        tools.removeClassesFromElement(createButton, buttonClassName);
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        createButton,
         "page__button_background-color_dodger-blue",
         "page__button_color_white"
       );
     }
 
-    // For each link of font.createLinks.
-    for (let link of font.createLinks) {
-      // For each className of font.linkClassNames.
-      for (let className of font.linkClassNames) {
+    // For each createLink of font.createLinks.
+    for (let createLink of font.createLinks) {
+      // For each linkClassName of font.linkClassNames.
+      for (let linkClassName of font.linkClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(createLink, linkClassName);
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        createLink,
         "page__link_background-color_dodger-blue",
         "page__link_color_white"
       );
     }
 
-    // For each link of font.reactivateUserAccountLinks.
-    for (let link of font.reactivateUserAccountLinks) {
-      // For each className of font.linkClassNames.
-      for (let className of font.linkClassNames) {
+    // For each reactivateUserAccountLink of font.reactivateUserAccountLinks.
+    for (let reactivateUserAccountLink of font.reactivateUserAccountLinks) {
+      // For each linkClassName of font.linkClassNames.
+      for (let linkClassName of font.linkClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(
+          reactivateUserAccountLink,
+          linkClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        reactivateUserAccountLink,
         "page__link_background-color_green",
         "page__link_color_black"
       );
     }
 
-    // For each link of font.addToCartLinks.
-    for (let link of font.addToCartLinks) {
-      // For each className of font.linkBackgroundColorClassNames.
-      for (let className of font.linkBackgroundColorClassNames) {
+    // For each addToCartLink of font.addToCartLinks.
+    for (let addToCartLink of font.addToCartLinks) {
+      // For each linkBackgroundColorClassName of font.linkBackgroundColorClassNames.
+      for (let linkBackgroundColorClassName of font.linkBackgroundColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(
+          addToCartLink,
+          linkBackgroundColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        addToCartLink,
         "page__link_background-color_" + newColor
       );
     }
 
     // If the DOM element exist.
     if (font.purchaseLink) {
-      // For each className of font.linkBackgroundColorClassNames.
-      for (let className of font.linkBackgroundColorClassNames) {
+      // For each linkBackgroundColorClassName of font.linkBackgroundColorClassNames.
+      for (let linkBackgroundColorClassName of font.linkBackgroundColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
         tools.removeClassesFromElement(font.purchaseLink, className);
       }
@@ -1843,15 +1852,18 @@ const font = {
       );
     }
 
-    // For each link of font.detailLinks.
-    for (let link of font.detailLinks) {
-      // For each className of font.linkBackgroundColorClassNames.
-      for (let className of font.linkBackgroundColorClassNames) {
+    // For each detailLink of font.detailLinks.
+    for (let detailLink of font.detailLinks) {
+      // For each linkBackgroundColorClassName of font.linkBackgroundColorClassNames.
+      for (let linkBackgroundColorClassName of font.linkBackgroundColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(
+          detailLink,
+          linkBackgroundColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_background-color_blue");
+      tools.addClassesToElement(detailLink, "page__link_background-color_blue");
     }
 
     // For each card of font.cards.
@@ -1865,15 +1877,15 @@ const font = {
       tools.addClassesToElement(card, "card_border-color_" + newColor);
     }
 
-    // For each link of font.cardsLinks.
-    for (let link of font.cardsLinks) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+    // For each cardsLink of font.cardsLinks.
+    for (let cardsLink of font.cardsLinks) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(cardsLink, linkColorClassName);
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_" + newColor);
+      tools.addClassesToElement(cardsLink, "page__link_color_" + newColor);
     }
 
     // For each adminPreview of font.adminPreviews.
@@ -1912,12 +1924,12 @@ const font = {
         "form-field__input_color_black",
         "form-field__input_color_white",
         "form-field__input_color_safety-orange",
-        "form-field__input_color_yellow",
+        "form-field__input_color_mango",
         "form-field__input_color_red",
         "form-field__input_color_blue",
-        "form-field__input_color_yellow-jamaica",
+        "form-field__input_color_mango-jamaica",
         "form-field__input_color_blue-golden-sate-warriors",
-        "form-field__input_color_yellow-flash",
+        "form-field__input_color_mango-flash",
         "form-field__input_color_slimy-green-forest"
       );
       // If mode.backgroundColor is strictly equal to "light".
@@ -1941,8 +1953,8 @@ const font = {
         "table_background-color_green",
         "table_background-color_red",
         "table_background-color_safety-orange",
-        "table_background-color_purple",
-        "table_background-color_yellow",
+        "table_background-color_electric-purple",
+        "table_background-color_mango",
         "table_background-color_slimy-green"
       );
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -1951,10 +1963,13 @@ const font = {
 
     // If the DOM element exist.
     if (font.pursueShoppingLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.pursueShoppingLink, className);
+        tools.removeClassesFromElement(
+          font.pursueShoppingLink,
+          linkColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
@@ -1963,15 +1978,15 @@ const font = {
       );
     }
 
-    // For each icon of font.deleteProductIcons.
-    for (let icon of font.deleteProductIcons) {
-      // For each className of font.iconColorClassNames.
-      for (let className of font.iconColorClassNames) {
+    // For each deleteProductIcon of font.deleteProductIcons.
+    for (let deleteProductIcon of font.deleteProductIcons) {
+      // For each iconColorClassName of font.iconColorClassNames.
+      for (let iconColorClassName of font.iconColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(icon, className);
+        tools.removeClassesFromElement(deleteProductIcon, iconColorClassName);
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_red");
+      tools.addClassesToElement(deleteProductIcon, "page__icon_color_red");
     }
 
     // If the DOM element exist.
@@ -1985,26 +2000,29 @@ const font = {
       tools.addClassesToElement(font.total, "total_border-color_" + newColor);
     }
 
-    // For each link of font.cartLinks.
-    for (let link of font.cartLinks) {
-      // For each className of font.linkBackgroundColorClassNames.
-      for (let className of font.linkBackgroundColorClassNames) {
+    // For each cartLink of font.cartLinks.
+    for (let cartLink of font.cartLinks) {
+      // For each linkBackgroundColorClassName of font.linkBackgroundColorClassNames.
+      for (let linkBackgroundColorClassName of font.linkBackgroundColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(cartLink, linkBackgroundColorClassName);
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        cartLink,
         "page__link_background-color_" + newColor
       );
     }
 
     // If the DOM element exist.
     if (font.contactEmailLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.contactEmailLink, className);
+        tools.removeClassesFromElement(
+          font.contactEmailLink,
+          linkColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
@@ -2015,10 +2033,13 @@ const font = {
 
     // If the DOM element exist.
     if (font.forgottenPasswordLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.forgottenPasswordLink, className);
+        tools.removeClassesFromElement(
+          font.forgottenPasswordLink,
+          linkColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
@@ -2029,17 +2050,17 @@ const font = {
 
     // If the DOM element exist.
     if (font.registerLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.registerLink, className);
+        tools.removeClassesFromElement(font.registerLink, linkColorClassName);
       }
-      // If newColor is strictly equal to "blue", or "green", or "purple", or "yellow".
+      // If newColor is strictly equal to "blue", or "green", or "electric-purple", or "mango".
       if (
         newColor === "blue" ||
         newColor === "green" ||
-        newColor === "purple" ||
-        newColor === "yellow"
+        newColor === "electric-purple" ||
+        newColor === "mango"
       ) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(
@@ -2070,10 +2091,13 @@ const font = {
 
     // If the DOM element exist.
     if (form.loginButton) {
-      // For each className of font.buttonBackgroundColorClassNames.
-      for (let className of font.buttonBackgroundColorClassNames) {
+      // For each buttonBackgroundColorClassName of font.buttonBackgroundColorClassNames.
+      for (let buttonBackgroundColorClassName of font.buttonBackgroundColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(form.loginButton, className);
+        tools.removeClassesFromElement(
+          form.loginButton,
+          buttonBackgroundColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
@@ -2084,10 +2108,13 @@ const font = {
 
     // If the DOM element exist.
     if (form.registrationButton) {
-      // For each className of font.buttonBackgroundColorClassNames.
-      for (let className of font.buttonBackgroundColorClassNames) {
+      // For each buttonBackgroundColorClassName of font.buttonBackgroundColorClassNames.
+      for (let buttonBackgroundColorClassName of font.buttonBackgroundColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(form.registrationButton, className);
+        tools.removeClassesFromElement(
+          form.registrationButton,
+          buttonBackgroundColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
@@ -2098,10 +2125,13 @@ const font = {
 
     // If the DOM element exist.
     if (font.termsOfServiceLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.termsOfServiceLink, className);
+        tools.removeClassesFromElement(
+          font.termsOfServiceLink,
+          linkColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
@@ -2112,18 +2142,21 @@ const font = {
 
     // If the DOM element exist.
     if (font.desktopLoginLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.desktopLoginLink, className);
+        tools.removeClassesFromElement(
+          font.desktopLoginLink,
+          linkColorClassName
+        );
       }
-      // If newColor is strictly equal to "blue", or "red", or "safety-orange", or "purple" or "yellow".
+      // If newColor is strictly equal to "blue", or "red", or "safety-orange", or "electric-purple" or "mango".
       if (
         newColor === "blue" ||
         newColor === "red" ||
         newColor === "safety-orange" ||
-        newColor === "purple" ||
-        newColor === "yellow"
+        newColor === "electric-purple" ||
+        newColor === "mango"
       ) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(
@@ -2143,17 +2176,20 @@ const font = {
 
     // If the DOM element exist.
     if (font.desktopLogoutLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.desktopLogoutLink, className);
+        tools.removeClassesFromElement(
+          font.desktopLogoutLink,
+          linkColorClassName
+        );
       }
-      // If newColor is strictly equal to "blue", or "green", or "safety-orange" or "yellow".
+      // If newColor is strictly equal to "blue", or "green", or "safety-orange" or "mango".
       if (
         newColor === "blue" ||
         newColor === "green" ||
         newColor === "safety-orange" ||
-        newColor === "yellow"
+        newColor === "mango"
       ) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(
@@ -2161,8 +2197,8 @@ const font = {
           "page__link_color_red"
         );
       }
-      // Else if new color is strictly equal to "red" or "purple".
-      else if (newColor === "red" || newColor === "purple") {
+      // Else if new color is strictly equal to "red" or "electric-purple".
+      else if (newColor === "red" || newColor === "electric-purple") {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(
           font.desktopLogoutLink,
@@ -2173,17 +2209,20 @@ const font = {
 
     // If the DOM element exist.
     if (font.desktopRegistrationLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.desktopRegistrationLink, className);
+        tools.removeClassesFromElement(
+          font.desktopRegistrationLink,
+          linkColorClassName
+        );
       }
-      // If newColor is strictly equal to "blue", or "green", or "purple" or "yellow".
+      // If newColor is strictly equal to "blue", or "green", or "electric-purple" or "mango".
       if (
         newColor === "blue" ||
         newColor === "green" ||
-        newColor === "purple" ||
-        newColor === "yellow"
+        newColor === "electric-purple" ||
+        newColor === "mango"
       ) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(
@@ -2212,133 +2251,162 @@ const font = {
       tools.addClassesToElement(errorMessage, "error-message_color_red");
     }
 
-    // For each element of font.productAviabilityElements.
-    for (let element of font.productAviabilityElements) {
+    // For each productAviabilityElement of font.productAviabilityElements.
+    for (let productAviabilityElement of font.productAviabilityElements) {
       // For each className of font.productAvailabilityColorClassNames.
       for (let className of font.productAvailabilityColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(element, className);
+        tools.removeClassesFromElement(productAviabilityElement, className);
       }
-      // If element contain the davailable class.
-      if (element.classList.contains("available")) {
+      // If productAviabilityElement contain the davailable class.
+      if (productAviabilityElement.classList.contains("available")) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(
-          element,
+          productAviabilityElement,
           "availability__avialable_color_green"
         );
       }
-      // Else if element contain the unavailable class.
-      else if (element.classList.contains("unavailable")) {
+      // Else if productAviabilityElement contain the unavailable class.
+      else if (productAviabilityElement.classList.contains("unavailable")) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(
-          element,
+          productAviabilityElement,
           "availability__unavailable_color_red"
         );
       }
     }
 
-    // For each card of font.addressCards.
-    for (let card of font.addressCards) {
-      // For each className of font.cardAddressColorClassNames.
-      for (let className of font.cardAddressColorClassNames) {
+    // For each addressCard of font.addressCards.
+    for (let addressCard of font.addressCards) {
+      // For each cardAddressColorClassName of font.cardAddressColorClassNames.
+      for (let cardAddressColorClassName of font.cardAddressColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(card, className);
-      }
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-address_border-color_" + newColor);
-    }
-
-    // For each icon of font.checkedIcons.
-    for (let icon of font.checkedIcons) {
-      // For each className of font.iconColorClassNames.
-      for (let className of font.iconColorClassNames) {
-        // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(icon, className);
-      }
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_green");
-    }
-
-    // For each link of font.deleteLinks.
-    for (let link of font.deleteLinks) {
-      // For each className of font.linkClassNames.
-      for (let className of font.linkClassNames) {
-        // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(addressCard, cardAddressColorClassName);
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        addressCard,
+        "card-address_border-color_" + newColor
+      );
+    }
+
+    // For each checkedIcon of font.checkedIcons.
+    for (let checkedIcon of font.checkedIcons) {
+      // For each iconColorClassName of font.iconColorClassNames.
+      for (let iconColorClassName of font.iconColorClassNames) {
+        // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
+        tools.removeClassesFromElement(checkedIcon, iconColorClassName);
+      }
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(checkedIcon, "page__icon_color_green");
+    }
+
+    // For each deleteLink of font.deleteLinks.
+    for (let deleteLink of font.deleteLinks) {
+      // For each linkClassName of font.linkClassNames.
+      for (let linkClassName of font.linkClassNames) {
+        // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
+        tools.removeClassesFromElement(deleteLink, linkClassName);
+      }
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(
+        deleteLink,
         "page__link_background-color_red",
         "page__link_color_white"
       );
     }
 
-    // For each link of font.textLinks.
-    for (let link of font.textLinks) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+    // For each textLink of font.textLinks.
+    for (let textLink of font.textLinks) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(textLink, linkColorClassName);
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_" + newColor);
+      tools.addClassesToElement(textLink, "page__link_color_" + newColor);
     }
 
-    // For each card of font.purchaseCards.
-    for (let card of font.purchaseCards) {
-      // For each className of font.cardPurchaseColorClassNames.
-      for (let className of font.cardPurchaseColorClassNames) {
+    // For each purchaseCard of font.purchaseCards.
+    for (let purchaseCard of font.purchaseCards) {
+      // For each cardPurchaseColorClassName of font.cardPurchaseColorClassNames.
+      for (let cardPurchaseColorClassName of font.cardPurchaseColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(card, className);
+        tools.removeClassesFromElement(
+          purchaseCard,
+          cardPurchaseColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_border-color_" + newColor);
+      tools.addClassesToElement(
+        purchaseCard,
+        "card-purchase_border-color_" + newColor
+      );
     }
 
-    // For each element of font.purchaseStatusElements.
-    for (let element of font.purchaseStatusElements) {
-      // For each className of font.statusColorClassNames.
-      for (let className of font.statusColorClassNames) {
+    // For each purchaseStatusElement of font.purchaseStatusElements.
+    for (let purchaseStatusElement of font.purchaseStatusElements) {
+      // For each statusColorClassName of font.statusColorClassNames.
+      for (let statusColorClassName of font.statusColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(element, className);
+        tools.removeClassesFromElement(
+          purchaseStatusElement,
+          statusColorClassName
+        );
       }
-      // If element contain the davailable class.
-      if (element.classList.contains("status__paid")) {
-        // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-        tools.addClassesToElement(element, "status__paid_color_green");
-      }
-      // Else if element contain the unavailable class.
-      else if (element.classList.contains("status__in-progress")) {
+      // If purchaseStatusElement contain the davailable class.
+      if (purchaseStatusElement.classList.contains("status__paid")) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
         tools.addClassesToElement(
-          element,
+          purchaseStatusElement,
+          "status__paid_color_green"
+        );
+      }
+      // Else if purchaseStatusElement contain the unavailable class.
+      else if (
+        purchaseStatusElement.classList.contains("status__in-progress")
+      ) {
+        // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+        tools.addClassesToElement(
+          purchaseStatusElement,
           "status__in-progress_color_safety-orange"
         );
       }
-      // Else if element contain the unavailable class.
-      else if (element.classList.contains("status__send")) {
+      // Else if purchaseStatusElement contain the unavailable class.
+      else if (purchaseStatusElement.classList.contains("status__send")) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-        tools.addClassesToElement(element, "status__send_color_purple");
+        tools.addClassesToElement(
+          purchaseStatusElement,
+          "status__send_color_electric-purple"
+        );
       }
-      // Else if element contain the unavailable class.
-      else if (element.classList.contains("status__deliver")) {
+      // Else if purchaseStatusElement contain the unavailable class.
+      else if (purchaseStatusElement.classList.contains("status__deliver")) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-        tools.addClassesToElement(element, "status__deliver_color_slimy-green");
+        tools.addClassesToElement(
+          purchaseStatusElement,
+          "status__deliver_color_slimy-green"
+        );
       }
-      // Else if element contain the unavailable class.
-      else if (element.classList.contains("status__annul")) {
+      // Else if purchaseStatusElement contain the unavailable class.
+      else if (purchaseStatusElement.classList.contains("status__annul")) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-        tools.addClassesToElement(element, "status__annul_color_red");
+        tools.addClassesToElement(
+          purchaseStatusElement,
+          "status__annul_color_red"
+        );
       }
     }
 
     // If the DOM element exist.
     if (font.purchaseTotal) {
-      // For each className of font.purchaseTotalBorderColorClassNames.
-      for (let className of font.purchaseTotalBorderColorClassNames) {
+      // For each purchaseTotalBorderColorClassName of font.purchaseTotalBorderColorClassNames.
+      for (let purchaseTotalBorderColorClassName of font.purchaseTotalBorderColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.purchaseTotal, className);
+        tools.removeClassesFromElement(
+          font.purchaseTotal,
+          purchaseTotalBorderColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
@@ -2349,10 +2417,13 @@ const font = {
 
     // If the DOM element exist.
     if (font.purchaseTotalReminder) {
-      // For each className of font.purchaseTotalBorderColorClassNames.
-      for (let className of font.purchaseTotalBorderColorClassNames) {
+      // For each purchaseTotalBorderColorClassName of font.purchaseTotalBorderColorClassNames.
+      for (let purchaseTotalBorderColorClassName of font.purchaseTotalBorderColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.purchaseTotalReminder, className);
+        tools.removeClassesFromElement(
+          font.purchaseTotalReminder,
+          purchaseTotalBorderColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
@@ -2363,10 +2434,13 @@ const font = {
 
     // If the DOM element exist.
     if (form.addNewAddressLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(form.addNewAddressLink, className);
+        tools.removeClassesFromElement(
+          form.addNewAddressLink,
+          linkColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
@@ -2377,10 +2451,13 @@ const font = {
 
     // If the DOM element exist.
     if (form.contactButton) {
-      // For each className of font.buttonBackgroundColorClassNames.
-      for (let className of font.buttonBackgroundColorClassNames) {
+      // For each buttonBackgroundColorClassName of font.buttonBackgroundColorClassNames.
+      for (let buttonBackgroundColorClassName of font.buttonBackgroundColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(form.contactButton, className);
+        tools.removeClassesFromElement(
+          form.contactButton,
+          buttonBackgroundColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
@@ -2395,11 +2472,11 @@ const font = {
       form.purchaseConfirmDeliveryModeButton ||
       form.purchaseConfirmButton
     ) {
-      // For each className of font.buttonBackgroundColorClassNames.
-      for (let className of font.buttonBackgroundColorClassNames) {
+      // For each buttonBackgroundColorClassName of font.buttonBackgroundColorClassNames.
+      for (let buttonBackgroundColorClassName of font.buttonBackgroundColorClassNames) {
         // We call tools.removeClassFromElements() in order to remove a className from one or several elements.
         tools.removeClassFromElements(
-          className,
+          buttonBackgroundColorClassName,
           form.purchaseConfirmAddressesButton,
           form.purchaseConfirmDeliveryModeButton,
           form.purchaseConfirmButton
@@ -2414,23 +2491,29 @@ const font = {
       );
     }
 
-    // For each question of font.customerServiceQuestions.
-    for (let question of font.customerServiceQuestions) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.customerServiceQuestionsClassNames) {
+    // For each customerServiceQuestion of font.customerServiceQuestions.
+    for (let customerServiceQuestion of font.customerServiceQuestions) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let customerServiceQuestionsClassName of font.customerServiceQuestionsClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(question, className);
+        tools.removeClassesFromElement(
+          customerServiceQuestion,
+          customerServiceQuestionsClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(question, "term__question_color_" + newColor);
+      tools.addClassesToElement(
+        customerServiceQuestion,
+        "term__question_color_" + newColor
+      );
     }
 
     // If the DOM element exist.
     if (font.userEmail) {
-      // For each className of font.userEmailClassNames.
-      for (let className of font.userEmailClassNames) {
+      // For each userEmailClassName of font.userEmailClassNames.
+      for (let userEmailClassName of font.userEmailClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.userEmail, className);
+        tools.removeClassesFromElement(font.userEmail, userEmailClassName);
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
@@ -2446,43 +2529,52 @@ const font = {
   removeClassesFromElementsForContrast: function () {
     console.log("font.removeClassesFromElementsForContrast()");
 
-    // For each className of font.headerTitleColorClassNames.
-    for (let className of font.headerTitleColorClassNames) {
+    // For each headerTitleColorClassName of font.headerTitleColorClassNames.
+    for (let headerTitleColorClassName of font.headerTitleColorClassNames) {
       // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-      tools.removeClassesFromElement(font.headerTitle, className);
+      tools.removeClassesFromElement(
+        font.headerTitle,
+        headerTitleColorClassName
+      );
     }
 
-    // For each className of font.headerIconColorClassNames.
-    for (let className of font.headerIconColorClassNames) {
+    // For each headerIconColorClassName of font.headerIconColorClassNames.
+    for (let headerIconColorClassName of font.headerIconColorClassNames) {
       // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-      tools.removeClassesFromElement(font.headerCartIcon, className);
+      tools.removeClassesFromElement(
+        font.headerCartIcon,
+        headerIconColorClassName
+      );
     }
 
     // If the DOM elements exist.
     if (font.burgerMenus) {
-      // For each className of font.headerIconColorClassNames.
-      for (let className of font.headerIconColorClassNames) {
+      // For each headerIconColorClassName of font.headerIconColorClassNames.
+      for (let headerIconColorClassName of font.headerIconColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.burgerMenuImageBar, className);
+        tools.removeClassesFromElement(
+          font.burgerMenuImageBar,
+          headerIconColorClassName
+        );
         tools.removeClassesFromElement(
           font.burgerMenuImageUncheckMark,
-          className
+          headerIconColorClassName
         );
       }
     }
 
-    // For each link of font.menuNavDesktopLinks.
-    for (let link of font.menuNavDesktopLinks) {
+    // For each menuNavDesktopLink of font.menuNavDesktopLinks.
+    for (let menuNavDesktopLink of font.menuNavDesktopLinks) {
       // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
       tools.removeClassesFromElement(
-        link,
+        menuNavDesktopLink,
         "nav-desktop__item_color_black",
         "nav-desktop__item_color_white",
         "nav-desktop__item_color_blue",
-        "nav-desktop__item_color_purple",
+        "nav-desktop__item_color_electric-purple",
         "nav-desktop__item_color_red",
         "nav-desktop__item_color_slimy-green",
-        "nav-desktop__item_color_yellow",
+        "nav-desktop__item_color_mango",
         "nav-desktop__item_color_sepia"
       );
     }
@@ -2496,34 +2588,34 @@ const font = {
       "circle_background-color_green",
       "circle_background-color_red",
       "circle_background-color_safety-orange",
-      "circle_background-color_purple",
-      "circle_background-color_yellow",
+      "circle_background-color_electric-purple",
+      "circle_background-color_mango",
       "circle_background-color_slimy-green",
       "circle_background-color_sepia"
     );
 
-    // For each title of font.footerTitles.
-    for (let title of font.footerTitles) {
+    // For each footerTitle of font.footerTitles.
+    for (let footerTitle of font.footerTitles) {
       // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
       tools.removeClassesFromElement(
-        title,
+        footerTitle,
         "footer__title_color_black",
         "footer__title_color_white",
         "footer__title_color_blue",
-        "footer__title_color_purple",
+        "footer__title_color_electric-purple",
         "footer__title_color_red",
         "footer__title_color_slimy-green",
-        "footer__title_color_yellow",
+        "footer__title_color_mango",
         "footer__title_color_sepia"
       );
     }
 
-    // For each link of font.footerTitles.
-    for (let link of font.footerLinks) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+    // For each footerLink of font.footerLinks.
+    for (let footerLink of font.footerLinks) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(footerLink, linkColorClassName);
       }
     }
 
@@ -2533,64 +2625,64 @@ const font = {
       "block-footer__copyright_color_black",
       "block-footer__copyright_color_white",
       "block-footer__copyright_color_blue",
-      "block-footer__copyright_color_purple",
+      "block-footer__copyright_color_electric-purple",
       "block-footer__copyright_color_red",
       "block-footer__copyright_color_slimy-green",
-      "block-footer__copyright_color_yellow",
+      "block-footer__copyright_color_mango",
       "block-footer__copyright_color_sepia"
     );
 
-    // For each button of font.searchButtons.
-    for (let button of font.searchButtons) {
-      // For each className of font.buttonColorClassNames.
-      for (let className of font.buttonColorClassNames) {
+    // For each searchButton of font.searchButtons.
+    for (let searchButton of font.searchButtons) {
+      // For each buttonColorClassName of font.buttonColorClassNames.
+      for (let buttonColorClassName of font.buttonColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(button, className);
+        tools.removeClassesFromElement(searchButton, buttonColorClassName);
       }
     }
 
-    // For each button of font.createButtons.
-    for (let button of font.createButtons) {
-      // For each className of font.buttonColorClassNames.
-      for (let className of font.buttonColorClassNames) {
+    // For each createButton of font.createButtons.
+    for (let createButton of font.createButtons) {
+      // For each buttonColorClassName of font.buttonColorClassNames.
+      for (let buttonColorClassName of font.buttonColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(button, className);
+        tools.removeClassesFromElement(createButton, buttonColorClassName);
       }
     }
 
-    // For each link of font.createLinks.
-    for (let link of font.createLinks) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+    // For each createLink of font.createLinks.
+    for (let createLink of font.createLinks) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(createLink, linkColorClassName);
       }
     }
 
-    // For each link of font.addToCartLinks.
-    for (let link of font.addToCartLinks) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+    // For each addToCartLink of font.addToCartLinks.
+    for (let addToCartLink of font.addToCartLinks) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(addToCartLink, linkColorClassName);
       }
     }
 
     // If the DOM element exist.
     if (font.purchaseLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.purchaseLink, className);
+        tools.removeClassesFromElement(font.purchaseLink, linkColorClassName);
       }
     }
 
-    // For each link of font.detailLinks.
-    for (let link of font.detailLinks) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+    // For each detailLink of font.detailLinks.
+    for (let detailLink of font.detailLinks) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(detailLink, linkColorClassName);
       }
     }
 
@@ -2602,47 +2694,53 @@ const font = {
         "table_color_black",
         "table_color_white",
         "table_color_blue",
-        "table_color_purple",
+        "table_color_electric-purple",
         "table_color_red",
         "table_color_slimy-green",
-        "table_color_yellow",
+        "table_color_mango",
         "table_color_sepia"
       );
     }
 
-    // For each image of font.cartButtonImages.
-    for (let image of font.cartButtonImages) {
-      // For each className of font.iconColorClassNames.
-      for (let className of font.iconColorClassNames) {
+    // For each cartButtonImage of font.cartButtonImages.
+    for (let cartButtonImage of font.cartButtonImages) {
+      // For each iconColorClassName of font.iconColorClassNames.
+      for (let iconColorClassName of font.iconColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(image, className);
+        tools.removeClassesFromElement(cartButtonImage, iconColorClassName);
       }
     }
 
     // If the DOM element exist.
     if (form.loginButton) {
-      // For each className of font.buttonColorClassNames.
-      for (let className of font.buttonColorClassNames) {
+      // For each buttonColorClassName of font.buttonColorClassNames.
+      for (let buttonColorClassName of font.buttonColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(form.loginButton, className);
+        tools.removeClassesFromElement(form.loginButton, buttonColorClassName);
       }
     }
 
     // If the DOM element exist.
     if (form.registrationButton) {
-      // For each className of font.buttonColorClassNames.
-      for (let className of font.buttonColorClassNames) {
+      // For each buttonColorClassName of font.buttonColorClassNames.
+      for (let buttonColorClassName of font.buttonColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(form.registrationButton, className);
+        tools.removeClassesFromElement(
+          form.registrationButton,
+          buttonColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (form.contactButton) {
-      // For each className of font.buttonColorClassNames.
-      for (let className of font.buttonColorClassNames) {
+      // For each buttonColorClassName of font.buttonColorClassNames.
+      for (let buttonColorClassName of font.buttonColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(form.contactButton, className);
+        tools.removeClassesFromElement(
+          form.contactButton,
+          buttonColorClassName
+        );
       }
     }
 
@@ -2652,11 +2750,11 @@ const font = {
       form.purchaseConfirmDeliveryModeButton ||
       form.purchaseConfirmButton
     ) {
-      // For each className of font.buttonColorClassNames.
-      for (let className of font.buttonColorClassNames) {
+      // For each buttonColorClassName of font.buttonColorClassNames.
+      for (let buttonColorClassName of font.buttonColorClassNames) {
         // We call tools.removeClassFromElements() in order to remove a className from one or several elements.
         tools.removeClassFromElements(
-          className,
+          buttonColorClassName,
           form.purchaseConfirmAddressesButton,
           form.purchaseConfirmDeliveryModeButton,
           form.purchaseConfirmButton
@@ -2685,9 +2783,9 @@ const font = {
     font.removeClassesFromElementsForContrast();
 
     // All the colors for black writing.
-    let blackWritingColors = ["green", "safety-orange", "yellow"];
+    let blackWritingColors = ["green", "safety-orange", "mango"];
     // All the colors for white writing.
-    let whiteWritingColors = ["blue", "red", "purple"];
+    let whiteWritingColors = ["blue", "red", "electric-purple"];
 
     // For each blackWritingColor of blackWritingColors.
     for (let blackWritingColor of blackWritingColors) {
@@ -2721,10 +2819,13 @@ const font = {
             "header__icon_color_black"
           );
 
-          // For each link of font.menuNavDesktopLinks.
-          for (let link of font.menuNavDesktopLinks) {
+          // For each menuNavDesktopLink of font.menuNavDesktopLinks.
+          for (let menuNavDesktopLink of font.menuNavDesktopLinks) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(link, "nav-desktop__item_color_black");
+            tools.addClassesToElement(
+              menuNavDesktopLink,
+              "nav-desktop__item_color_black"
+            );
           }
 
           // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -2733,16 +2834,16 @@ const font = {
             "circle_background-color_black"
           );
 
-          // For each title of font.footerTitles.
-          for (let title of font.footerTitles) {
+          // For each footerTitle of font.footerTitles.
+          for (let footerTitle of font.footerTitles) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(title, "footer__title_color_black");
+            tools.addClassesToElement(footerTitle, "footer__title_color_black");
           }
 
-          // For each link of font.footerTitles.
-          for (let link of font.footerLinks) {
+          // For each footerLink of font.footerLinks.
+          for (let footerLink of font.footerLinks) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(link, "page__link_color_black");
+            tools.addClassesToElement(footerLink, "page__link_color_black");
           }
 
           // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -2751,28 +2852,28 @@ const font = {
             "block-footer__copyright_color_black"
           );
 
-          // For each button of font.searchButtons.
-          for (let button of font.searchButtons) {
+          // For each searchButton of font.searchButtons.
+          for (let searchButton of font.searchButtons) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(button, "page__button_color_black");
+            tools.addClassesToElement(searchButton, "page__button_color_black");
           }
 
-          // For each button of font.createButtons.
-          for (let button of font.createButtons) {
+          // For each createButton of font.createButtons.
+          for (let createButton of font.createButtons) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(button, "page__button_color_white");
+            tools.addClassesToElement(createButton, "page__button_color_white");
           }
 
-          // For each link of font.createLinks.
-          for (let link of font.createLinks) {
+          // For each createLink of font.createLinks.
+          for (let createLink of font.createLinks) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(link, "page__link_color_white");
+            tools.addClassesToElement(createLink, "page__link_color_white");
           }
 
-          // For each link of font.addToCartLinks.
-          for (let link of font.addToCartLinks) {
+          // For each addToCartLink of font.addToCartLinks.
+          for (let addToCartLink of font.addToCartLinks) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(link, "page__link_color_black");
+            tools.addClassesToElement(addToCartLink, "page__link_color_black");
           }
 
           // If the DOM element exist.
@@ -2784,10 +2885,10 @@ const font = {
             );
           }
 
-          // For each link of font.detailLinks.
-          for (let link of font.detailLinks) {
+          // For each detailLink of font.detailLinks.
+          for (let detailLink of font.detailLinks) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(link, "page__link_color_white");
+            tools.addClassesToElement(detailLink, "page__link_color_white");
           }
 
           // For each table of font.tables.
@@ -2796,10 +2897,13 @@ const font = {
             tools.addClassesToElement(table, "table_color_black");
           }
 
-          // For each image of font.cartButtonImages.
-          for (let image of font.cartButtonImages) {
+          // For each cartButtonImage of font.cartButtonImages.
+          for (let cartButtonImage of font.cartButtonImages) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(image, "page__icon_color_black");
+            tools.addClassesToElement(
+              cartButtonImage,
+              "page__icon_color_black"
+            );
           }
 
           // If the DOM element exist.
@@ -2872,10 +2976,13 @@ const font = {
             "header__icon_color_white"
           );
 
-          // For each link of font.menuNavDesktopLinks.
-          for (let link of font.menuNavDesktopLinks) {
+          // For each menuNavDesktopLink of font.menuNavDesktopLinks.
+          for (let menuNavDesktopLink of font.menuNavDesktopLinks) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(link, "nav-desktop__item_color_white");
+            tools.addClassesToElement(
+              menuNavDesktopLink,
+              "nav-desktop__item_color_white"
+            );
           }
 
           // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -2884,16 +2991,16 @@ const font = {
             "circle_background-color_white"
           );
 
-          // For each title of font.footerTitles.
-          for (let title of font.footerTitles) {
+          // For each footerTitle of font.footerTitles.
+          for (let footerTitle of font.footerTitles) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(title, "footer__title_color_white");
+            tools.addClassesToElement(footerTitle, "footer__title_color_white");
           }
 
-          // For each link of font.footerTitles.
-          for (let link of font.footerLinks) {
+          // For each footerLink of font.footerLinks.
+          for (let footerLink of font.footerLinks) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(link, "page__link_color_white");
+            tools.addClassesToElement(footerLink, "page__link_color_white");
           }
 
           // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -2902,28 +3009,28 @@ const font = {
             "block-footer__copyright_color_white"
           );
 
-          // For each button of font.searchButtons.
-          for (let button of font.searchButtons) {
+          // For each searchButton of font.searchButtons.
+          for (let searchButton of font.searchButtons) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(button, "page__button_color_white");
+            tools.addClassesToElement(searchButton, "page__button_color_white");
           }
 
-          // For each button of font.createButtons.
-          for (let button of font.createButtons) {
+          // For each createButton of font.createButtons.
+          for (let createButton of font.createButtons) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(button, "page__button_color_white");
+            tools.addClassesToElement(createButton, "page__button_color_white");
           }
 
-          // For each link of font.createLinks.
-          for (let link of font.createLinks) {
+          // For each createLink of font.createLinks.
+          for (let createLink of font.createLinks) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(link, "page__link_color_white");
+            tools.addClassesToElement(createLink, "page__link_color_white");
           }
 
-          // For each link of font.addToCartLinks.
-          for (let link of font.addToCartLinks) {
+          // For each addToCartLink of font.addToCartLinks.
+          for (let addToCartLink of font.addToCartLinks) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(link, "page__link_color_white");
+            tools.addClassesToElement(addToCartLink, "page__link_color_white");
           }
 
           // If the DOM element exist.
@@ -2935,10 +3042,10 @@ const font = {
             );
           }
 
-          // For each link of font.detailLinks.
-          for (let link of font.detailLinks) {
+          // For each detailLink of font.detailLinks.
+          for (let detailLink of font.detailLinks) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(link, "page__link_color_white");
+            tools.addClassesToElement(detailLink, "page__link_color_white");
           }
 
           // For each table of font.tables.
@@ -2947,10 +3054,13 @@ const font = {
             tools.addClassesToElement(table, "table_color_white");
           }
 
-          // For each image of font.cartButtonImages.
-          for (let image of font.cartButtonImages) {
+          // For each cartButtonImage of font.cartButtonImages.
+          for (let cartButtonImage of font.cartButtonImages) {
             // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-            tools.addClassesToElement(image, "page__icon_color_white");
+            tools.addClassesToElement(
+              cartButtonImage,
+              "page__icon_color_white"
+            );
           }
 
           // If the DOM element exist.
@@ -3020,13 +3130,16 @@ const font = {
         tools.removeClassesFromElement(font.closingButton, className);
       }
 
-      // For each className of font.headerIconColorClassNames.
-      for (let className of font.headerIconColorClassNames) {
+      // For each headerIconColorClassName of font.headerIconColorClassNames.
+      for (let headerIconColorClassName of font.headerIconColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.burgerMenuImageBar, className);
+        tools.removeClassesFromElement(
+          font.burgerMenuImageBar,
+          headerIconColorClassName
+        );
         tools.removeClassesFromElement(
           font.burgerMenuImageUncheckMark,
-          className
+          headerIconColorClassName
         );
       }
     }
@@ -3040,30 +3153,36 @@ const font = {
       }
     }
 
-    // For each className of font.headerTitleColorClassNames.
-    for (let className of font.headerTitleColorClassNames) {
-      // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-      tools.removeClassesFromElement(font.headerTitle, className);
-    }
-
-    // For each className of font.headerIconColorClassNames.
-    for (let className of font.headerIconColorClassNames) {
-      // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-      tools.removeClassesFromElement(font.headerCartIcon, className);
-    }
-
-    // For each link of font.menuNavDesktopLinks.
-    for (let link of font.menuNavDesktopLinks) {
+    // For each headerTitleColorClassName of font.headerTitleColorClassNames.
+    for (let headerTitleColorClassName of font.headerTitleColorClassNames) {
       // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
       tools.removeClassesFromElement(
-        link,
+        font.headerTitle,
+        headerTitleColorClassName
+      );
+    }
+
+    // For each headerIconColorClassName of font.headerIconColorClassNames.
+    for (let headerIconColorClassName of font.headerIconColorClassNames) {
+      // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
+      tools.removeClassesFromElement(
+        font.headerCartIcon,
+        headerIconColorClassName
+      );
+    }
+
+    // For each menuNavDesktopLink of font.menuNavDesktopLinks.
+    for (let menuNavDesktopLink of font.menuNavDesktopLinks) {
+      // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
+      tools.removeClassesFromElement(
+        menuNavDesktopLink,
         "nav-desktop__item_color_black",
         "nav-desktop__item_color_white",
         "nav-desktop__item_color_blue",
         "nav-desktop__item_color_red",
-        "nav-desktop__item_color_purple",
+        "nav-desktop__item_color_electric-purple",
         "nav-desktop__item_color_slimy-green",
-        "nav-desktop__item_color_yellow",
+        "nav-desktop__item_color_mango",
         "nav-desktop__item_color_sepia"
       );
     }
@@ -3077,8 +3196,8 @@ const font = {
       "circle_background-color_green",
       "circle_background-color_red",
       "circle_background-color_safety-orange",
-      "circle_background-color_purple",
-      "circle_background-color_yellow",
+      "circle_background-color_electric-purple",
+      "circle_background-color_mango",
       "circle_background-color_slimy-green",
       "circle_background-color_sepia",
       "circle_color_black",
@@ -3087,8 +3206,8 @@ const font = {
       "circle_color_green",
       "circle_color_red",
       "circle_color_safety-orange",
-      "circle_color_purple",
-      "circle_color_yellow",
+      "circle_color_electric-purple",
+      "circle_color_mango",
       "circle_color_slimy-green"
     );
 
@@ -3098,28 +3217,28 @@ const font = {
       tools.removeClassesFromElement(font.footer, className);
     }
 
-    // For each title of font.footerTitles.
-    for (let title of font.footerTitles) {
+    // For each footerTitle of font.footerTitles.
+    for (let footerTitle of font.footerTitles) {
       // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
       tools.removeClassesFromElement(
-        title,
+        footerTitle,
         "footer__title_color_black",
         "footer__title_color_white",
         "footer__title_color_blue",
         "footer__title_color_red",
-        "footer__title_color_purple",
+        "footer__title_color_electric-purple",
         "footer__title_color_slimy-green",
-        "footer__title_color_yellow",
+        "footer__title_color_mango",
         "footer__title_color_sepia"
       );
     }
 
-    // For each link of font.footerTitles.
-    for (let link of font.footerLinks) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+    // For each footerLink of font.footerLinks.
+    for (let footerLink of font.footerLinks) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(footerLink, linkColorClassName);
       }
     }
 
@@ -3130,73 +3249,76 @@ const font = {
       "block-footer__copyright_color_white",
       "block-footer__copyright_color_blue",
       "block-footer__copyright_color_red",
-      "block-footer__copyright_color_purple",
+      "block-footer__copyright_color_electric-purple",
       "block-footer__copyright_color_red",
       "block-footer__copyright_color_slimy-green",
-      "block-footer__copyright_color_yellow",
+      "block-footer__copyright_color_mango",
       "block-footer__copyright_color_sepia"
     );
 
-    // For each button of font.searchButtons.
-    for (let button of font.searchButtons) {
-      // For each className of font.buttonClassNames.
-      for (let className of font.buttonClassNames) {
+    // For each searchButton of font.searchButtons.
+    for (let searchButton of font.searchButtons) {
+      // For each buttonClassName of font.buttonClassNames.
+      for (let buttonClassName of font.buttonClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(button, className);
+        tools.removeClassesFromElement(searchButton, buttonClassName);
       }
     }
 
-    // For each button of font.createButtons.
-    for (let button of font.createButtons) {
-      // For each className of font.buttonClassNames.
-      for (let className of font.buttonClassNames) {
+    // For each createButton of font.createButtons.
+    for (let createButton of font.createButtons) {
+      // For each buttonClassName of font.buttonClassNames.
+      for (let buttonClassName of font.buttonClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(button, className);
+        tools.removeClassesFromElement(createButton, buttonClassName);
       }
     }
 
-    // For each link of font.createLinks.
-    for (let link of font.createLinks) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkClassNames) {
-        // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+    // For each createLink of font.createLinks.
+    for (let createLink of font.createLinks) {
+      // For each linkClassName of font.linkClassNames.
+      for (let linkClassName of font.linkClassNames) {
+        // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.linkClassName
+        tools.removeClassesFromElement(createLink, linkClassName);
       }
     }
 
-    // For each link of font.reactivateUserAccountLinks.
-    for (let link of font.reactivateUserAccountLinks) {
-      // For each className of font.linkClassNames.
-      for (let className of font.linkClassNames) {
+    // For each reactivateUserAccountLink of font.reactivateUserAccountLinks.
+    for (let reactivateUserAccountLink of font.reactivateUserAccountLinks) {
+      // For each linkClassName of font.linkClassNames.
+      for (let linkClassName of font.linkClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(
+          reactivateUserAccountLink,
+          linkClassName
+        );
       }
     }
 
-    // For each link of font.addToCartLinks.
-    for (let link of font.addToCartLinks) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkClassNames) {
+    // For each addToCartLink of font.addToCartLinks.
+    for (let addToCartLink of font.addToCartLinks) {
+      // For each linkClassName of font.linkClassNames.
+      for (let linkClassName of font.linkClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(addToCartLink, linkClassName);
       }
     }
 
     // If the DOM element exist.
     if (font.purchaseLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkClassNames) {
+      // For each linkClassName of font.linkClassNames.
+      for (let linkClassName of font.linkClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.purchaseLink, className);
+        tools.removeClassesFromElement(font.purchaseLink, linkClassName);
       }
     }
 
-    // For each link of font.detailLinks.
-    for (let link of font.detailLinks) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkClassNames) {
+    // For each detailLink of font.detailLinks.
+    for (let detailLink of font.detailLinks) {
+      // For each linkClassName of font.linkClassNames.
+      for (let linkClassName of font.linkClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(detailLink, linkClassName);
       }
     }
 
@@ -3209,44 +3331,47 @@ const font = {
         "table_background-color_green",
         "table_background-color_red",
         "table_background-color_safety-orange",
-        "table_background-color_purple",
-        "table_background-color_yellow",
+        "table_background-color_electric-purple",
+        "table_background-color_mango",
         "table_background-color_slimy-green",
         "table_color_black",
         "table_color_white",
         "table_color_blue",
-        "table_color_purple",
+        "table_color_electric-purple",
         "table_color_red",
         "table_color_slimy-green",
-        "table_color_yellow",
+        "table_color_mango",
         "table_color_sepia"
       );
     }
 
     // If the DOM elements exist.
     if (font.pursueShoppingLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.pursueShoppingLink, className);
+        tools.removeClassesFromElement(
+          font.pursueShoppingLink,
+          linkColorClassName
+        );
       }
     }
 
-    // For each icon of mode.quantityIcons.
-    for (let icon of mode.quantityIcons) {
-      // For each className of font.iconColorClassNames.
-      for (let className of font.iconColorClassNames) {
+    // For each quantityIcon of mode.quantityIcons.
+    for (let quantityIcon of mode.quantityIcons) {
+      // For each iconColorClassName of font.iconColorClassNames.
+      for (let iconColorClassName of font.iconColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(icon, className);
+        tools.removeClassesFromElement(quantityIcon, iconColorClassName);
       }
     }
 
-    // For each icon of font.deleteProductIcons.
-    for (let icon of font.deleteProductIcons) {
-      // For each className of font.iconColorClassNames.
-      for (let className of font.iconColorClassNames) {
+    // For each deleteProductIcon of font.deleteProductIcons.
+    for (let deleteProductIcon of font.deleteProductIcons) {
+      // For each iconColorClassName of font.iconColorClassNames.
+      for (let iconColorClassName of font.iconColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(icon, className);
+        tools.removeClassesFromElement(deleteProductIcon, iconColorClassName);
       }
     }
 
@@ -3259,21 +3384,21 @@ const font = {
       }
     }
 
-    // For each link of font.cartLinks.
-    for (let link of font.cartLinks) {
-      // For each className of font.linkBackgroundColorClassNames.
-      for (let className of font.linkBackgroundColorClassNames) {
+    // For each cartLink of font.cartLinks.
+    for (let cartLink of font.cartLinks) {
+      // For each linkBackgroundColorClassName of font.linkBackgroundColorClassNames.
+      for (let linkBackgroundColorClassName of font.linkBackgroundColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(cartLink, linkBackgroundColorClassName);
       }
     }
 
-    // For each image of font.cartButtonImages.
-    for (let image of font.cartButtonImages) {
-      // For each className of font.iconColorClassNames.
-      for (let className of font.iconColorClassNames) {
+    // For each cartButtonImage of font.cartButtonImages.
+    for (let cartButtonImage of font.cartButtonImages) {
+      // For each iconColorClassName of font.iconColorClassNames.
+      for (let iconColorClassName of font.iconColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(image, className);
+        tools.removeClassesFromElement(cartButtonImage, iconColorClassName);
       }
     }
 
@@ -3286,12 +3411,12 @@ const font = {
       }
     }
 
-    // For each link of font.cardsLinks.
-    for (let link of font.cardsLinks) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+    // For each cardsLink of font.cardsLinks.
+    for (let cardsLink of font.cardsLinks) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(cardsLink, linkColorClassName);
       }
     }
 
@@ -3326,120 +3451,150 @@ const font = {
         "form-field__input_color_black",
         "form-field__input_color_white",
         "form-field__input_color_safety-orange",
-        "form-field__input_color_yellow",
+        "form-field__input_color_mango",
         "form-field__input_color_blue",
-        "form-field__input_color_yellow-jamaica",
+        "form-field__input_color_mango-jamaica",
         "form-field__input_color_blue-golden-sate-warriors",
-        "form-field__input_color_yellow-flash",
+        "form-field__input_color_mango-flash",
         "form-field__input_color_slimy-green-forest"
       );
     }
 
     // If the DOM element exist.
     if (font.contactEmailLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.contactEmailLink, className);
+        tools.removeClassesFromElement(
+          font.contactEmailLink,
+          linkColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (form.loginButton) {
-      // For each className of font.buttonClassNames.
-      for (let className of font.buttonClassNames) {
+      // For each buttonClassName of font.buttonClassNames.
+      for (let buttonClassName of font.buttonClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(form.loginButton, className);
+        tools.removeClassesFromElement(form.loginButton, buttonClassName);
       }
     }
 
     // If the DOM element exist.
     if (font.forgottenPasswordLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.forgottenPasswordLink, className);
+        tools.removeClassesFromElement(
+          font.forgottenPasswordLink,
+          linkColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (font.registerLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.registerLink, className);
+        tools.removeClassesFromElement(font.registerLink, linkColorClassName);
       }
     }
 
     // If the DOM element exist.
     if (font.mobileLoginLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.mobileLoginLink, className);
+        tools.removeClassesFromElement(
+          font.mobileLoginLink,
+          linkColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (font.mobileLogoutLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.mobileLogoutLink, className);
+        tools.removeClassesFromElement(
+          font.mobileLogoutLink,
+          linkColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (font.mobileRegistrationLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.mobileRegistrationLink, className);
+        tools.removeClassesFromElement(
+          font.mobileRegistrationLink,
+          linkColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (font.desktopLoginLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.desktopLoginLink, className);
+        tools.removeClassesFromElement(
+          font.desktopLoginLink,
+          linkColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (font.desktopLogoutLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.desktopLogoutLink, className);
+        tools.removeClassesFromElement(
+          font.desktopLogoutLink,
+          linkColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (font.desktopRegistrationLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.desktopRegistrationLink, className);
+        tools.removeClassesFromElement(
+          font.desktopRegistrationLink,
+          linkColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (form.registrationButton) {
-      // For each className of font.buttonClassNames.
-      for (let className of font.buttonClassNames) {
+      // For each buttonClassName of font.buttonClassNames.
+      for (let buttonClassName of font.buttonClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(form.registrationButton, className);
+        tools.removeClassesFromElement(
+          form.registrationButton,
+          buttonClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (font.termsOfServiceLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.termsOfServiceLink, className);
+        tools.removeClassesFromElement(
+          font.termsOfServiceLink,
+          linkColorClassName
+        );
       }
     }
 
@@ -3452,102 +3607,117 @@ const font = {
       }
     }
 
-    // For each element of font.productAviabilityElements.
-    for (let element of font.productAviabilityElements) {
+    // For each productAviabilityElement of font.productAviabilityElements.
+    for (let productAviabilityElement of font.productAviabilityElements) {
       // For each className of font.productAvailabilityColorClassNames.
       for (let className of font.productAvailabilityColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(element, className);
+        tools.removeClassesFromElement(productAviabilityElement, className);
       }
     }
 
-    // For each card of font.addressCards.
-    for (let card of font.addressCards) {
-      // For each className of font.cardAddressColorClassNames.
-      for (let className of font.cardAddressColorClassNames) {
+    // For each addressCard of font.addressCards.
+    for (let addressCard of font.addressCards) {
+      // For each cardAddressColorClassName of font.cardAddressColorClassNames.
+      for (let cardAddressColorClassName of font.cardAddressColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(card, className);
+        tools.removeClassesFromElement(addressCard, cardAddressColorClassName);
       }
     }
 
-    // For each icon of font.checkedIcons.
-    for (let icon of font.checkedIcons) {
-      // For each className of font.iconColorClassNames.
-      for (let className of font.iconColorClassNames) {
+    // For each checkedIcon of font.checkedIcons.
+    for (let checkedIcon of font.checkedIcons) {
+      // For each iconColorClassName of font.iconColorClassNames.
+      for (let iconColorClassName of font.iconColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(icon, className);
+        tools.removeClassesFromElement(checkedIcon, iconColorClassName);
       }
     }
 
-    // For each link of font.deleteLinks.
-    for (let link of font.deleteLinks) {
-      // For each className of font.linkClassNames.
-      for (let className of font.linkClassNames) {
+    // For each deleteLink of font.deleteLinks.
+    for (let deleteLink of font.deleteLinks) {
+      // For each linkClassName of font.linkClassNames.
+      for (let linkClassName of font.linkClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(deleteLink, linkClassName);
       }
     }
 
-    // For each link of font.textLinks.
-    for (let link of font.textLinks) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+    // For each textLink of font.textLinks.
+    for (let textLink of font.textLinks) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(link, className);
+        tools.removeClassesFromElement(textLink, linkColorClassName);
       }
     }
 
-    // For each card of font.purchaseCards.
-    for (let card of font.purchaseCards) {
-      // For each className of font.cardPurchaseColorClassNames.
-      for (let className of font.cardPurchaseColorClassNames) {
+    // For each purchaseCard of font.purchaseCards.
+    for (let purchaseCard of font.purchaseCards) {
+      // For each cardPurchaseColorClassName of font.cardPurchaseColorClassNames.
+      for (let cardPurchaseColorClassName of font.cardPurchaseColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(card, className);
+        tools.removeClassesFromElement(
+          purchaseCard,
+          cardPurchaseColorClassName
+        );
       }
     }
 
-    // For each element of font.purchaseStatusElements.
-    for (let element of font.purchaseStatusElements) {
-      // For each className of font.statusColorClassNames.
-      for (let className of font.statusColorClassNames) {
+    // For each purchaseStatusElement of font.purchaseStatusElements.
+    for (let purchaseStatusElement of font.purchaseStatusElements) {
+      // For each statusColorClassName of font.statusColorClassNames.
+      for (let statusColorClassName of font.statusColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(element, className);
+        tools.removeClassesFromElement(
+          purchaseStatusElement,
+          statusColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (font.purchaseTotal) {
-      // For each className of font.purchaseTotalBorderColorClassNames.
-      for (let className of font.purchaseTotalBorderColorClassNames) {
+      // For each purchaseTotalBorderColorClassName of font.purchaseTotalBorderColorClassNames.
+      for (let purchaseTotalBorderColorClassName of font.purchaseTotalBorderColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.purchaseTotal, className);
+        tools.removeClassesFromElement(
+          font.purchaseTotal,
+          purchaseTotalBorderColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (font.purchaseTotalReminder) {
-      // For each className of font.purchaseTotalBorderColorClassNames.
-      for (let className of font.purchaseTotalBorderColorClassNames) {
+      // For each purchaseTotalBorderColorClassName of font.purchaseTotalBorderColorClassNames.
+      for (let purchaseTotalBorderColorClassName of font.purchaseTotalBorderColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.purchaseTotalReminder, className);
+        tools.removeClassesFromElement(
+          font.purchaseTotalReminder,
+          purchaseTotalBorderColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (form.addNewAddressLink) {
-      // For each className of font.linkColorClassNames.
-      for (let className of font.linkColorClassNames) {
+      // For each linkColorClassName of font.linkColorClassNames.
+      for (let linkColorClassName of font.linkColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(form.addNewAddressLink, className);
+        tools.removeClassesFromElement(
+          form.addNewAddressLink,
+          linkColorClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (form.contactButton) {
-      // For each className of font.buttonClassNames.
-      for (let className of font.buttonClassNames) {
+      // For each buttonClassName of font.buttonClassNames.
+      for (let buttonClassName of font.buttonClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(form.contactButton, className);
+        tools.removeClassesFromElement(form.contactButton, buttonClassName);
       }
     }
 
@@ -3557,11 +3727,11 @@ const font = {
       form.purchaseConfirmDeliveryModeButton ||
       form.purchaseConfirmButton
     ) {
-      // For each className of font.buttonClassNames.
-      for (let className of font.buttonClassNames) {
+      // For each buttonClassName of font.buttonClassNames.
+      for (let buttonClassName of font.buttonClassNames) {
         // We call tools.removeClassFromElements() in order to remove a className from one or several elements.
         tools.removeClassFromElements(
-          className,
+          buttonClassName,
           form.purchaseConfirmAddressesButton,
           form.purchaseConfirmDeliveryModeButton,
           form.purchaseConfirmButton
@@ -3569,21 +3739,24 @@ const font = {
       }
     }
 
-    // For each question of font.customerServiceQuestions.
-    for (let question of font.customerServiceQuestions) {
-      // For each className of font.customerServiceQuestionsClassNames.
-      for (let className of font.customerServiceQuestionsClassNames) {
+    // For each customerServiceQuestion of font.customerServiceQuestions.
+    for (let customerServiceQuestion of font.customerServiceQuestions) {
+      // For each customerServiceQuestionsClassName of font.customerServiceQuestionsClassNames.
+      for (let customerServiceQuestionsClassName of font.customerServiceQuestionsClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(question, className);
+        tools.removeClassesFromElement(
+          customerServiceQuestion,
+          customerServiceQuestionsClassName
+        );
       }
     }
 
     // If the DOM element exist.
     if (font.userEmail) {
-      // For each className of font.userEmailClassNames.
-      for (let className of font.userEmailClassNames) {
+      // For each userEmailClassName of font.userEmailClassNames.
+      for (let userEmailClassName of font.userEmailClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.userEmail, className);
+        tools.removeClassesFromElement(font.userEmail, userEmailClassName);
       }
     }
   },
@@ -3617,6 +3790,7 @@ const font = {
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
+
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(mode.body, "knick");
 
@@ -3660,10 +3834,13 @@ const font = {
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(font.headerCartIcon, "header__icon_color_blue");
 
-    // For each link of font.menuNavDesktopLinks.
-    for (let link of font.menuNavDesktopLinks) {
+    // For each menuNavDesktopLink of font.menuNavDesktopLinks.
+    for (let menuNavDesktopLink of font.menuNavDesktopLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "nav-desktop__item_color_blue");
+      tools.addClassesToElement(
+        menuNavDesktopLink,
+        "nav-desktop__item_color_blue"
+      );
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -3679,16 +3856,16 @@ const font = {
       "footer_background-color_safety-orange"
     );
 
-    // For each title of font.footerTitles.
-    for (let title of font.footerTitles) {
+    // For each footerTitle of font.footerTitles.
+    for (let footerTitle of font.footerTitles) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(title, "footer__title_color_blue");
+      tools.addClassesToElement(footerTitle, "footer__title_color_blue");
     }
 
-    // For each link of font.footerTitles.
-    for (let link of font.footerLinks) {
+    // For each footerLink of font.footerLinks.
+    for (let footerLink of font.footerLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_blue");
+      tools.addClassesToElement(footerLink, "page__link_color_blue");
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -3697,61 +3874,51 @@ const font = {
       "block-footer__copyright_color_blue"
     );
 
-    // For each button of font.searchButtons.
-    for (let button of font.searchButtons) {
+    // For each searchButton of font.searchButtons.
+    for (let searchButton of font.searchButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        searchButton,
         "page__button_background-color_safety-orange",
         "page__button_color_blue"
       );
     }
 
-    // For each button of font.createButtons.
-    for (let button of font.createButtons) {
+    // For each createButton of font.createButtons.
+    for (let createButton of font.createButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        createButton,
         "page__button_background-color_white",
         "page__button_color_blue"
       );
     }
 
-    // For each link of font.createLinks.
-    for (let link of font.createLinks) {
+    // For each createLink of font.createLinks.
+    for (let createLink of font.createLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        createLink,
         "page__link_background-color_white",
         "page__link_color_blue"
       );
     }
 
-    // If the DOM element exist.
-    if (font.reactivateUserAccountLink) {
+    // For each reactivateUserAccountLink of font.reactivateUserAccountLinks.
+    for (let reactivateUserAccountLink of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        font.reactivateUserAccountLink,
+        reactivateUserAccountLink,
         "page__link_background-color_safety-orange",
         "page__link_color_blue"
       );
     }
 
-    // For each link of font.reactivateUserAccountLinks.
-    for (let link of font.reactivateUserAccountLinks) {
+    // For each addToCartLink of font.addToCartLinks.
+    for (let addToCartLink of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
-        "page__link_background-color_safety-orange",
-        "page__link_color_blue"
-      );
-    }
-
-    // For each link of font.addToCartLinks.
-    for (let link of font.addToCartLinks) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(
-        link,
+        addToCartLink,
         "page__link_background-color_safety-orange",
         "page__link_color_blue"
       );
@@ -3767,11 +3934,11 @@ const font = {
       );
     }
 
-    // For each link of font.detailLinks.
-    for (let link of font.detailLinks) {
+    // For each detailLink of font.detailLinks.
+    for (let detailLink of font.detailLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        detailLink,
         "page__link_background-color_white",
         "page__link_color_blue"
       );
@@ -3794,17 +3961,20 @@ const font = {
         font.pursueShoppingLink,
         "page__link_color_safety-orange"
       );
-      // For each icon of font.deleteProductIcons.
-      for (let icon of font.deleteProductIcons) {
+      // For each deleteProductIcon of font.deleteProductIcons.
+      for (let deleteProductIcon of font.deleteProductIcons) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-        tools.addClassesToElement(icon, "page__icon_color_safety-orange");
+        tools.addClassesToElement(
+          deleteProductIcon,
+          "page__icon_color_safety-orange"
+        );
       }
     }
 
-    // For each icon of mode.quantityIcons.
-    for (let icon of mode.quantityIcons) {
+    // For each quantityIcon of mode.quantityIcons.
+    for (let quantityIcon of mode.quantityIcons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_safety-orange");
+      tools.addClassesToElement(quantityIcon, "page__icon_color_safety-orange");
     }
 
     // If the DOM element exist.
@@ -3813,19 +3983,19 @@ const font = {
       tools.addClassesToElement(font.total, "total_border-color_safety-orange");
     }
 
-    // For each link of font.cartLinks.
-    for (let link of font.cartLinks) {
+    // For each cartLink of font.cartLinks.
+    for (let cartLink of font.cartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        cartLink,
         "page__link_background-color_safety-orange"
       );
     }
 
-    // For each image of font.cartButtonImages.
-    for (let image of font.cartButtonImages) {
+    // For each cartButtonImage of font.cartButtonImages.
+    for (let cartButtonImage of font.cartButtonImages) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(image, "page__icon_color_blue");
+      tools.addClassesToElement(cartButtonImage, "page__icon_color_blue");
     }
 
     // For each card of font.cards.
@@ -3834,10 +4004,10 @@ const font = {
       tools.addClassesToElement(card, "card_border-color_safety-orange");
     }
 
-    // For each link of font.cardsLinks.
-    for (let link of font.cardsLinks) {
+    // For each cardsLink of font.cardsLinks.
+    for (let cardsLink of font.cardsLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_safety-orange");
+      tools.addClassesToElement(cardsLink, "page__link_color_safety-orange");
     }
 
     // For each adminPreview of font.cards.
@@ -3980,56 +4150,62 @@ const font = {
       );
     }
 
-    // For each element of font.productAviabilityElements.
-    for (let element of font.productAviabilityElements) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "availability_color_safety-orange");
-    }
-
-    // For each card of font.addressCards.
-    for (let card of font.addressCards) {
+    // For each productAviabilityElement of font.productAviabilityElements.
+    for (let productAviabilityElement of font.productAviabilityElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        card,
+        productAviabilityElement,
+        "availability_color_safety-orange"
+      );
+    }
+
+    // For each addressCard of font.addressCards.
+    for (let addressCard of font.addressCards) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(
+        addressCard,
         "card-address_border-color_safety-orange"
       );
     }
 
-    // For each icon of font.checkedIcons.
-    for (let icon of font.checkedIcons) {
+    // For each checkedIcon of font.checkedIcons.
+    for (let checkedIcon of font.checkedIcons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_safety-orange");
+      tools.addClassesToElement(checkedIcon, "page__icon_color_safety-orange");
     }
 
-    // For each link of font.deleteLinks.
-    for (let link of font.deleteLinks) {
+    // For each deleteLink of font.deleteLinks.
+    for (let deleteLink of font.deleteLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        deleteLink,
         "page__link_background-color_red",
         "page__link_color_white"
       );
     }
 
-    // For each link of font.textLinks.
-    for (let link of font.textLinks) {
+    // For each textLink of font.textLinks.
+    for (let textLink of font.textLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_white");
+      tools.addClassesToElement(textLink, "page__link_color_white");
     }
 
-    // For each card of font.purchaseCards.
-    for (let card of font.purchaseCards) {
+    // For each purchaseCard of font.purchaseCards.
+    for (let purchaseCard of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        card,
+        purchaseCard,
         "card-purchase_border-color_safety-orange"
       );
     }
 
-    // For each element of font.purchaseStatusElements.
-    for (let element of font.purchaseStatusElements) {
+    // For each purchaseStatusElement of font.purchaseStatusElements.
+    for (let purchaseStatusElement of font.purchaseStatusElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "status_color_safety-orange");
+      tools.addClassesToElement(
+        purchaseStatusElement,
+        "status_color_safety-orange"
+      );
     }
 
     // If the DOM element exist.
@@ -4095,10 +4271,13 @@ const font = {
       );
     }
 
-    // For each question of font.customerServiceQuestions.
-    for (let question of font.customerServiceQuestions) {
+    // For each customerServiceQuestion of font.customerServiceQuestions.
+    for (let customerServiceQuestion of font.customerServiceQuestions) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(question, "term__question_color_white");
+      tools.addClassesToElement(
+        customerServiceQuestion,
+        "term__question_color_white"
+      );
     }
   },
   /**
@@ -4110,29 +4289,33 @@ const font = {
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
+
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(mode.body, "lakers");
 
     // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
-    tools.setColorToBeforeProperty(font.lakersSwitchSlider, font.colors.purple);
+    tools.setColorToBeforeProperty(
+      font.lakersSwitchSlider,
+      font.colors.electricPurple
+    );
 
     // We call font.removeClassesFromElements() in order to remove multiple classNames from all the elements.
     font.removeClassesFromElements();
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-    tools.addClassesToElement(font.header, "header_background-color_yellow");
+    tools.addClassesToElement(font.header, "header_background-color_mango");
 
     // If the DOM elements exist.
     if (font.burgerMenus) {
       // We call tools.addClassToElements() in order to add a className to one or several elements.
       tools.addClassToElements(
-        "burger-menu_background-color_yellow",
+        "burger-menu_background-color_mango",
         font.openingButton,
         font.closingButton
       );
       // We call tools.addClassToElements() in order to add a className to one or several elements.
       tools.addClassToElements(
-        "header__icon_color_purple",
+        "header__icon_color_electric-purple",
         font.burgerMenuImageBar,
         font.burgerMenuImageUncheckMark
       );
@@ -4141,96 +4324,108 @@ const font = {
     // For each link of font.menuNavMobileLinks.
     for (let link of font.menuNavMobileLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "nav-mobile__item_color_yellow");
+      tools.addClassesToElement(link, "nav-mobile__item_color_mango");
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-    tools.addClassesToElement(font.headerTitle, "header__title_color_purple");
+    tools.addClassesToElement(
+      font.headerTitle,
+      "header__title_color_electric-purple"
+    );
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-    tools.addClassesToElement(font.headerCartIcon, "header__icon_color_purple");
+    tools.addClassesToElement(
+      font.headerCartIcon,
+      "header__icon_color_electric-purple"
+    );
 
-    // For each link of font.menuNavDesktopLinks.
-    for (let link of font.menuNavDesktopLinks) {
+    // For each menuNavDesktopLink of font.menuNavDesktopLinks.
+    for (let menuNavDesktopLink of font.menuNavDesktopLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "nav-desktop__item_color_purple");
+      tools.addClassesToElement(
+        menuNavDesktopLink,
+        "nav-desktop__item_color_electric-purple"
+      );
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(
       font.circle,
-      "circle_background-color_purple",
-      "circle_color_yellow"
+      "circle_background-color_electric-purple",
+      "circle_color_mango"
     );
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-    tools.addClassesToElement(font.footer, "footer_background-color_yellow");
+    tools.addClassesToElement(font.footer, "footer_background-color_mango");
 
-    // For each title of font.footerTitles.
-    for (let title of font.footerTitles) {
+    // For each footerTitle of font.footerTitles.
+    for (let footerTitle of font.footerTitles) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(title, "footer__title_color_purple");
+      tools.addClassesToElement(
+        footerTitle,
+        "footer__title_color_electric-purple"
+      );
     }
 
-    // For each link of font.footerTitles.
-    for (let link of font.footerLinks) {
+    // For each footerLink of font.footerLinks.
+    for (let footerLink of font.footerLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_purple");
+      tools.addClassesToElement(footerLink, "page__link_color_electric-purple");
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(
       font.copyright,
-      "block-footer__copyright_color_purple"
+      "block-footer__copyright_color_electric-purple"
     );
 
-    // For each button of font.searchButtons.
-    for (let button of font.searchButtons) {
+    // For each searchButton of font.searchButtons.
+    for (let searchButton of font.searchButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
-        "page__button_background-color_yellow",
-        "page__button_color_purple"
+        searchButton,
+        "page__button_background-color_mango",
+        "page__button_color_electric-purple"
       );
     }
 
-    // For each button of font.createButtons.
-    for (let button of font.createButtons) {
+    // For each createButton of font.createButtons.
+    for (let createButton of font.createButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        createButton,
         "page__button_background-color_white",
-        "page__button_color_purple"
+        "page__button_color_electric-purple"
       );
     }
 
-    // For each link of font.createLinks.
-    for (let link of font.createLinks) {
+    // For each createLink of font.createLinks.
+    for (let createLink of font.createLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        createLink,
         "page__link_background-color_white",
-        "page__link_color_purple"
+        "page__link_color_electric-purple"
       );
     }
 
-    // For each link of font.reactivateUserAccountLinks.
-    for (let link of font.reactivateUserAccountLinks) {
+    // For each reactivateUserAccountLink of font.reactivateUserAccountLinks.
+    for (let reactivateUserAccountLink of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
-        "page__link_background-color_yellow",
-        "page__link_color_purple"
+        reactivateUserAccountLink,
+        "page__link_background-color_mango",
+        "page__link_color_electric-purple"
       );
     }
 
-    // For each link of font.addToCartLinks.
-    for (let link of font.addToCartLinks) {
+    // For each addToCartLink of font.addToCartLinks.
+    for (let addToCartLink of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
-        "page__link_background-color_yellow",
-        "page__link_color_purple"
+        addToCartLink,
+        "page__link_background-color_mango",
+        "page__link_color_electric-purple"
       );
     }
 
@@ -4239,16 +4434,16 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.purchaseLink,
-        "page__link_background-color_yellow",
-        "page__link_color_purple"
+        "page__link_background-color_mango",
+        "page__link_color_electric-purple"
       );
     }
 
-    // For each link of font.detailLinks.
-    for (let link of font.detailLinks) {
+    // For each detailLink of font.detailLinks.
+    for (let detailLink of font.detailLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        detailLink,
         "page__link_background-color_blue",
         "page__link_color_white"
       );
@@ -4259,8 +4454,8 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         table,
-        "table_background-color_yellow",
-        "table_color_purple"
+        "table_background-color_mango",
+        "table_color_electric-purple"
       );
     }
 
@@ -4269,49 +4464,52 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.pursueShoppingLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
-      // For each icon of font.deleteProductIcons.
-      for (let icon of font.deleteProductIcons) {
+      // For each deleteProductIcon of font.deleteProductIcons.
+      for (let deleteProductIcon of font.deleteProductIcons) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-        tools.addClassesToElement(icon, "page__icon_color_yellow");
+        tools.addClassesToElement(deleteProductIcon, "page__icon_color_mango");
       }
     }
 
-    // For each icon of mode.quantityIcons.
-    for (let icon of mode.quantityIcons) {
+    // For each quantityIcon of mode.quantityIcons.
+    for (let quantityIcon of mode.quantityIcons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_yellow");
+      tools.addClassesToElement(quantityIcon, "page__icon_color_mango");
     }
 
     // If the DOM element exist.
     if (font.total) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(font.total, "total_border-color_yellow");
+      tools.addClassesToElement(font.total, "total_border-color_mango");
     }
 
-    // For each link of font.cartLinks.
-    for (let link of font.cartLinks) {
+    // For each cartLink of font.cartLinks.
+    for (let cartLink of font.cartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_background-color_yellow");
+      tools.addClassesToElement(cartLink, "page__link_background-color_mango");
     }
 
-    // For each image of font.cartButtonImages.
-    for (let image of font.cartButtonImages) {
+    // For each cartButtonImage of font.cartButtonImages.
+    for (let cartButtonImage of font.cartButtonImages) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(image, "page__icon_color_purple");
+      tools.addClassesToElement(
+        cartButtonImage,
+        "page__icon_color_electric-purple"
+      );
     }
 
     // For each card of font.cards.
     for (let card of font.cards) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card_border-color_yellow");
+      tools.addClassesToElement(card, "card_border-color_mango");
     }
 
-    // For each link of font.cardsLinks.
-    for (let link of font.cardsLinks) {
+    // For each cardsLink of font.cardsLinks.
+    for (let cardsLink of font.cardsLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_yellow");
+      tools.addClassesToElement(cardsLink, "page__link_color_mango");
     }
 
     // For each adminPreview of font.cards.
@@ -4326,16 +4524,13 @@ const font = {
     // For each adminPreview of font.cards.
     for (let adminDetail of font.adminDetails) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(
-        adminDetail,
-        "admin-detail_border-color_yellow"
-      );
+      tools.addClassesToElement(adminDetail, "admin-detail_border-color_mango");
     }
 
     // For each input of mode.inputs.
     for (let input of mode.inputs) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(input, "form-field__input_color_yellow");
+      tools.addClassesToElement(input, "form-field__input_color_mango");
     }
 
     // If the DOM element exist.
@@ -4343,7 +4538,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.contactEmailLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -4352,8 +4547,8 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.registrationButton,
-        "page__button_background-color_yellow",
-        "page__button_color_purple"
+        "page__button_background-color_mango",
+        "page__button_color_electric-purple"
       );
     }
 
@@ -4362,8 +4557,8 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.loginButton,
-        "page__button_background-color_yellow",
-        "page__button_color_purple"
+        "page__button_background-color_mango",
+        "page__button_color_electric-purple"
       );
     }
 
@@ -4372,23 +4567,20 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.forgottenPasswordLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
     // If the DOM element exist.
     if (font.registerLink) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(font.registerLink, "page__link_color_yellow");
+      tools.addClassesToElement(font.registerLink, "page__link_color_mango");
     }
 
     // If the DOM element exist.
     if (font.mobileLoginLink) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(
-        font.mobileLoginLink,
-        "page__link_color_yellow"
-      );
+      tools.addClassesToElement(font.mobileLoginLink, "page__link_color_mango");
     }
 
     // If the DOM element exist.
@@ -4396,7 +4588,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.mobileLogoutLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -4405,7 +4597,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.mobileRegistrationLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -4414,7 +4606,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.desktopLoginLink,
-        "page__link_color_purple"
+        "page__link_color_electric-purple"
       );
     }
 
@@ -4423,7 +4615,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.desktopLogoutLink,
-        "page__link_color_purple"
+        "page__link_color_electric-purple"
       );
     }
 
@@ -4432,7 +4624,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.desktopRegistrationLink,
-        "page__link_color_purple"
+        "page__link_color_electric-purple"
       );
     }
 
@@ -4441,60 +4633,66 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.termsOfServiceLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
     // For each errorMessage of font.errorMessages.
     for (let errorMessage of font.errorMessages) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(errorMessage, "error-message_color_yellow");
+      tools.addClassesToElement(errorMessage, "error-message_color_mango");
     }
 
-    // For each element of font.productAviabilityElements.
-    for (let element of font.productAviabilityElements) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "availability_color_yellow");
-    }
-
-    // For each card of font.addressCards.
-    for (let card of font.addressCards) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-address_border-color_yellow");
-    }
-
-    // For each icon of font.checkedIcons.
-    for (let icon of font.checkedIcons) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_yellow");
-    }
-
-    // For each link of font.deleteLinks.
-    for (let link of font.deleteLinks) {
+    // For each productAviabilityElement of font.productAviabilityElements.
+    for (let productAviabilityElement of font.productAviabilityElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        productAviabilityElement,
+        "availability_color_mango"
+      );
+    }
+
+    // For each addressCard of font.addressCards.
+    for (let addressCard of font.addressCards) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(addressCard, "card-address_border-color_mango");
+    }
+
+    // For each checkedIcon of font.checkedIcons.
+    for (let checkedIcon of font.checkedIcons) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(checkedIcon, "page__icon_color_mango");
+    }
+
+    // For each deleteLink of font.deleteLinks.
+    for (let deleteLink of font.deleteLinks) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(
+        deleteLink,
         "page__link_background-color_red",
         "page__link_color_white"
       );
     }
 
-    // For each link of font.textLinks.
-    for (let link of font.textLinks) {
+    // For each textLink of font.textLinks.
+    for (let textLink of font.textLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_white");
+      tools.addClassesToElement(textLink, "page__link_color_white");
     }
 
-    // For each card of font.purchaseCards.
-    for (let card of font.purchaseCards) {
+    // For each purchaseCard of font.purchaseCards.
+    for (let purchaseCard of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_border-color_yellow");
+      tools.addClassesToElement(
+        purchaseCard,
+        "card-purchase_border-color_mango"
+      );
     }
 
-    // For each element of font.purchaseStatusElements.
-    for (let element of font.purchaseStatusElements) {
+    // For each purchaseStatusElement of font.purchaseStatusElements.
+    for (let purchaseStatusElement of font.purchaseStatusElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "status_color_yellow");
+      tools.addClassesToElement(purchaseStatusElement, "status_color_mango");
     }
 
     // If the DOM element exist.
@@ -4502,7 +4700,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.purchaseTotal,
-        "purchase-total_border-color_yellow"
+        "purchase-total_border-color_mango"
       );
     }
 
@@ -4511,7 +4709,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.purchaseTotalReminder,
-        "purchase-total_border-color_yellow"
+        "purchase-total_border-color_mango"
       );
     }
 
@@ -4529,8 +4727,8 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.contactButton,
-        "page__button_background-color_yellow",
-        "page__button_color_purple"
+        "page__button_background-color_mango",
+        "page__button_color_electric-purple"
       );
     }
 
@@ -4543,27 +4741,30 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.purchaseConfirmAddressesButton,
-        "page__button_background-color_yellow",
-        "page__button_color_purple"
+        "page__button_background-color_mango",
+        "page__button_color_electric-purple"
       );
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.purchaseConfirmDeliveryModeButton,
-        "page__button_background-color_yellow",
-        "page__button_color_purple"
+        "page__button_background-color_mango",
+        "page__button_color_electric-purple"
       );
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.purchaseConfirmButton,
-        "page__button_background-color_yellow",
-        "page__button_color_purple"
+        "page__button_background-color_mango",
+        "page__button_color_electric-purple"
       );
     }
 
-    // For each question of font.customerServiceQuestions.
-    for (let question of font.customerServiceQuestions) {
+    // For each customerServiceQuestion of font.customerServiceQuestions.
+    for (let customerServiceQuestion of font.customerServiceQuestions) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(question, "term__question_color_white");
+      tools.addClassesToElement(
+        customerServiceQuestion,
+        "term__question_color_white"
+      );
     }
   },
   /**
@@ -4575,6 +4776,7 @@ const font = {
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
+
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(mode.body, "spider-man");
 
@@ -4615,10 +4817,13 @@ const font = {
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(font.headerCartIcon, "header__icon_color_red");
 
-    // For each link of font.menuNavDesktopLinks.
-    for (let link of font.menuNavDesktopLinks) {
+    // For each menuNavDesktopLink of font.menuNavDesktopLinks.
+    for (let menuNavDesktopLink of font.menuNavDesktopLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "nav-desktop__item_color_red");
+      tools.addClassesToElement(
+        menuNavDesktopLink,
+        "nav-desktop__item_color_red"
+      );
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -4631,16 +4836,16 @@ const font = {
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(font.footer, "footer_background-color_blue");
 
-    // For each title of font.footerTitles.
-    for (let title of font.footerTitles) {
+    // For each footerTitle of font.footerTitles.
+    for (let footerTitle of font.footerTitles) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(title, "footer__title_color_red");
+      tools.addClassesToElement(footerTitle, "footer__title_color_red");
     }
 
-    // For each link of font.footerTitles.
-    for (let link of font.footerLinks) {
+    // For each footerLink of font.footerLinks.
+    for (let footerLink of font.footerLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_red");
+      tools.addClassesToElement(footerLink, "page__link_color_red");
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -4649,51 +4854,51 @@ const font = {
       "block-footer__copyright_color_red"
     );
 
-    // For each button of font.searchButtons.
-    for (let button of font.searchButtons) {
+    // For each searchButton of font.searchButtons.
+    for (let searchButton of font.searchButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        searchButton,
         "page__button_background-color_blue",
         "page__button_color_red"
       );
     }
 
-    // For each button of font.createButtons.
-    for (let button of font.createButtons) {
+    // For each createButton of font.createButtons.
+    for (let createButton of font.createButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        createButton,
         "page__button_background-color_white",
         "page__button_color_red"
       );
     }
 
-    // For each link of font.createLinks.
-    for (let link of font.createLinks) {
+    // For each createLink of font.createLinks.
+    for (let createLink of font.createLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        createLink,
         "page__link_background-color_white",
         "page__link_color_red"
       );
     }
 
-    // For each link of font.reactivateUserAccountLinks.
-    for (let link of font.reactivateUserAccountLinks) {
+    // For each reactivateUserAccountLink of font.reactivateUserAccountLinks.
+    for (let reactivateUserAccountLink of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        reactivateUserAccountLink,
         "page__link_background-color_blue",
         "page__link_color_red"
       );
     }
 
-    // For each link of font.addToCartLinks.
-    for (let link of font.addToCartLinks) {
+    // For each addToCartLink of font.addToCartLinks.
+    for (let addToCartLink of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        addToCartLink,
         "page__link_background-color_blue",
         "page__link_color_red"
       );
@@ -4709,11 +4914,11 @@ const font = {
       );
     }
 
-    // For each link of font.detailLinks.
-    for (let link of font.detailLinks) {
+    // For each detailLink of font.detailLinks.
+    for (let detailLink of font.detailLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        detailLink,
         "page__link_background-color_blue",
         "page__link_color_white"
       );
@@ -4736,17 +4941,17 @@ const font = {
         font.pursueShoppingLink,
         "page__link_color_blue"
       );
-      // For each icon of font.deleteProductIcons.
-      for (let icon of font.deleteProductIcons) {
+      // For each deleteProductIcon of font.deleteProductIcons.
+      for (let deleteProductIcon of font.deleteProductIcons) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-        tools.addClassesToElement(icon, "page__icon_color_blue");
+        tools.addClassesToElement(deleteProductIcon, "page__icon_color_blue");
       }
     }
 
-    // For each icon of mode.quantityIcons.
-    for (let icon of mode.quantityIcons) {
+    // For each quantityIcon of mode.quantityIcons.
+    for (let quantityIcon of mode.quantityIcons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_blue");
+      tools.addClassesToElement(quantityIcon, "page__icon_color_blue");
     }
 
     // If the DOM elements exist.
@@ -4755,16 +4960,16 @@ const font = {
       tools.addClassesToElement(font.total, "total_border-color_blue");
     }
 
-    // For each link of font.cartLinks.
-    for (let link of font.cartLinks) {
+    // For each cartLink of font.cartLinks.
+    for (let cartLink of font.cartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_background-color_blue");
+      tools.addClassesToElement(cartLink, "page__link_background-color_blue");
     }
 
-    // For each image of font.cartButtonImages.
-    for (let image of font.cartButtonImages) {
+    // For each cartButtonImage of font.cartButtonImages.
+    for (let cartButtonImage of font.cartButtonImages) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(image, "page__icon_color_red");
+      tools.addClassesToElement(cartButtonImage, "page__icon_color_red");
     }
 
     // For each card of font.cards.
@@ -4773,10 +4978,10 @@ const font = {
       tools.addClassesToElement(card, "card_border-color_blue");
     }
 
-    // For each link of font.cardsLinks.
-    for (let link of font.cardsLinks) {
+    // For each cardsLink of font.cardsLinks.
+    for (let cardsLink of font.cardsLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_blue");
+      tools.addClassesToElement(cardsLink, "page__link_color_blue");
     }
 
     // For each adminPreview of font.cards.
@@ -4921,49 +5126,55 @@ const font = {
       tools.addClassesToElement(errorMessage, "error-message_color_blue");
     }
 
-    // For each element of font.productAviabilityElements.
-    for (let element of font.productAviabilityElements) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "availability_color_blue");
-    }
-    // For each card of font.addressCards.
-    for (let card of font.addressCards) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-address_border-color_blue");
-    }
-
-    // For each icon of font.checkedIcons.
-    for (let icon of font.checkedIcons) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_blue");
-    }
-
-    // For each link of font.deleteLinks.
-    for (let link of font.deleteLinks) {
+    // For each productAviabilityElement of font.productAviabilityElements.
+    for (let productAviabilityElement of font.productAviabilityElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        productAviabilityElement,
+        "availability_color_blue"
+      );
+    }
+    // For each addressCard of font.addressCards.
+    for (let addressCard of font.addressCards) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(addressCard, "card-address_border-color_blue");
+    }
+
+    // For each checkedIcon of font.checkedIcons.
+    for (let checkedIcon of font.checkedIcons) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(checkedIcon, "page__icon_color_blue");
+    }
+
+    // For each deleteLink of font.deleteLinks.
+    for (let deleteLink of font.deleteLinks) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(
+        deleteLink,
         "page__link_background-color_white",
         "page__link_color_red"
       );
     }
 
-    // For each link of font.textLinks.
-    for (let link of font.textLinks) {
+    // For each textLink of font.textLinks.
+    for (let textLink of font.textLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_white");
+      tools.addClassesToElement(textLink, "page__link_color_white");
     }
 
-    // For each card of font.purchaseCards.
-    for (let card of font.purchaseCards) {
+    // For each purchaseCard of font.purchaseCards.
+    for (let purchaseCard of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_border-color_blue");
+      tools.addClassesToElement(
+        purchaseCard,
+        "card-purchase_border-color_blue"
+      );
     }
 
-    // For each element of font.purchaseStatusElements.
-    for (let element of font.purchaseStatusElements) {
+    // For each purchaseStatusElement of font.purchaseStatusElements.
+    for (let purchaseStatusElement of font.purchaseStatusElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "status_color_blue");
+      tools.addClassesToElement(purchaseStatusElement, "status_color_blue");
     }
 
     // If the DOM element exist.
@@ -5029,10 +5240,13 @@ const font = {
       );
     }
 
-    // For each question of font.customerServiceQuestions.
-    for (let question of font.customerServiceQuestions) {
+    // For each customerServiceQuestion of font.customerServiceQuestions.
+    for (let customerServiceQuestion of font.customerServiceQuestions) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(question, "term__question_color_white");
+      tools.addClassesToElement(
+        customerServiceQuestion,
+        "term__question_color_white"
+      );
     }
   },
   /**
@@ -5044,6 +5258,7 @@ const font = {
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
+
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(mode.body, "jamaica");
 
@@ -5057,13 +5272,13 @@ const font = {
     font.removeClassesFromElements();
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-    tools.addClassesToElement(font.header, "header_background-color_yellow");
+    tools.addClassesToElement(font.header, "header_background-color_mango");
 
     // If the DOM elements exist.
     if (font.burgerMenus) {
       // We call tools.addClassToElements() in order to add a className to one or several elements.
       tools.addClassToElements(
-        "burger-menu_background-color_yellow",
+        "burger-menu_background-color_mango",
         font.openingButton,
         font.closingButton
       );
@@ -5078,7 +5293,7 @@ const font = {
     // For each link of font.menuNavMobileLinks.
     for (let link of font.menuNavMobileLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "nav-mobile__item_color_yellow");
+      tools.addClassesToElement(link, "nav-mobile__item_color_mango");
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -5093,32 +5308,35 @@ const font = {
       "header__icon_color_slimy-green"
     );
 
-    // For each link of font.menuNavDesktopLinks.
-    for (let link of font.menuNavDesktopLinks) {
+    // For each menuNavDesktopLink of font.menuNavDesktopLinks.
+    for (let menuNavDesktopLink of font.menuNavDesktopLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "nav-desktop__item_color_slimy-green");
+      tools.addClassesToElement(
+        menuNavDesktopLink,
+        "nav-desktop__item_color_slimy-green"
+      );
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(
       font.circle,
       "circle_background-color_slimy-green",
-      "circle_color_yellow"
+      "circle_color_mango"
     );
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-    tools.addClassesToElement(font.footer, "footer_background-color_yellow");
+    tools.addClassesToElement(font.footer, "footer_background-color_mango");
 
-    // For each title of font.footerTitles.
-    for (let title of font.footerTitles) {
+    // For each footerTitle of font.footerTitles.
+    for (let footerTitle of font.footerTitles) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(title, "footer__title_color_slimy-green");
+      tools.addClassesToElement(footerTitle, "footer__title_color_slimy-green");
     }
 
-    // For each link of font.footerTitles.
-    for (let link of font.footerLinks) {
+    // For each footerLink of font.footerLinks.
+    for (let footerLink of font.footerLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_slimy-green");
+      tools.addClassesToElement(footerLink, "page__link_color_slimy-green");
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -5127,52 +5345,52 @@ const font = {
       "block-footer__copyright_color_slimy-green"
     );
 
-    // For each button of font.searchButtons.
-    for (let button of font.searchButtons) {
+    // For each searchButton of font.searchButtons.
+    for (let searchButton of font.searchButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
-        "page__button_background-color_yellow",
+        searchButton,
+        "page__button_background-color_mango",
         "page__button_color_slimy-green"
       );
     }
 
-    // For each button of font.createButtons.
-    for (let button of font.createButtons) {
+    // For each createButton of font.createButtons.
+    for (let createButton of font.createButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        createButton,
         "page__button_background-color_white",
         "page__button_color_slimy-green"
       );
     }
 
-    // For each link of font.createLinks.
-    for (let link of font.createLinks) {
+    // For each createLink of font.createLinks.
+    for (let createLink of font.createLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        createLink,
         "page__link_background-color_white",
         "page__link_color_slimy-green"
       );
     }
 
-    // For each link of font.reactivateUserAccountLinks.
-    for (let link of font.reactivateUserAccountLinks) {
+    // For each reactivateUserAccountLink of font.reactivateUserAccountLinks.
+    for (let reactivateUserAccountLink of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
-        "page__link_background-color_yellow",
+        reactivateUserAccountLink,
+        "page__link_background-color_mango",
         "page__link_color_slimy-green"
       );
     }
 
-    // For each link of font.addToCartLinks.
-    for (let link of font.addToCartLinks) {
+    // For each addToCartLink of font.addToCartLinks.
+    for (let addToCartLink of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
-        "page__link_background-color_yellow",
+        addToCartLink,
+        "page__link_background-color_mango",
         "page__link_color_slimy-green"
       );
     }
@@ -5182,16 +5400,16 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.purchaseLink,
-        "page__link_background-color_yellow",
+        "page__link_background-color_mango",
         "page__link_color_slimy-green"
       );
     }
 
-    // For each link of font.detailLinks.
-    for (let link of font.detailLinks) {
+    // For each detailLink of font.detailLinks.
+    for (let detailLink of font.detailLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        detailLink,
         "page__link_background-color_blue",
         "page__link_color_white"
       );
@@ -5202,7 +5420,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         table,
-        "table_background-color_yellow",
+        "table_background-color_mango",
         "table_color_slimy-green"
       );
     }
@@ -5212,49 +5430,52 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.pursueShoppingLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
-      // For each icon of font.deleteProductIcons.
-      for (let icon of font.deleteProductIcons) {
+      // For each deleteProductIcon of font.deleteProductIcons.
+      for (let deleteProductIcon of font.deleteProductIcons) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-        tools.addClassesToElement(icon, "page__icon_color_yellow");
+        tools.addClassesToElement(deleteProductIcon, "page__icon_color_mango");
       }
     }
 
-    // For each icon of mode.quantityIcons.
-    for (let icon of mode.quantityIcons) {
+    // For each quantityIcon of mode.quantityIcons.
+    for (let quantityIcon of mode.quantityIcons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_yellow");
+      tools.addClassesToElement(quantityIcon, "page__icon_color_mango");
     }
 
     // If the DOM element exist.
     if (font.total) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(font.total, "total_border-color_yellow");
+      tools.addClassesToElement(font.total, "total_border-color_mango");
     }
 
-    // For each link of font.cartLinks.
-    for (let link of font.cartLinks) {
+    // For each cartLink of font.cartLinks.
+    for (let cartLink of font.cartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_background-color_yellow");
+      tools.addClassesToElement(cartLink, "page__link_background-color_mango");
     }
 
-    // For each image of font.cartButtonImages.
-    for (let image of font.cartButtonImages) {
+    // For each cartButtonImage of font.cartButtonImages.
+    for (let cartButtonImage of font.cartButtonImages) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(image, "page__icon_color_slimy-green");
+      tools.addClassesToElement(
+        cartButtonImage,
+        "page__icon_color_slimy-green"
+      );
     }
 
     // For each card of font.cards.
     for (let card of font.cards) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card_border-color_yellow");
+      tools.addClassesToElement(card, "card_border-color_mango");
     }
 
-    // For each link of font.cardsLinks.
-    for (let link of font.cardsLinks) {
+    // For each cardsLink of font.cardsLinks.
+    for (let cardsLink of font.cardsLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_yellow");
+      tools.addClassesToElement(cardsLink, "page__link_color_mango");
     }
 
     // For each adminPreview of font.cards.
@@ -5269,19 +5490,13 @@ const font = {
     // For each adminPreview of font.cards.
     for (let adminDetail of font.adminDetails) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(
-        adminDetail,
-        "admin-detail_border-color_yellow"
-      );
+      tools.addClassesToElement(adminDetail, "admin-detail_border-color_mango");
     }
 
     // For each input of mode.inputs.
     for (let input of mode.inputs) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(
-        input,
-        "form-field__input_color_yellow-jamaica"
-      );
+      tools.addClassesToElement(input, "form-field__input_color_mango-jamaica");
     }
 
     // If the DOM element exist.
@@ -5289,7 +5504,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.contactEmailLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -5298,7 +5513,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.registrationButton,
-        "page__button_background-color_yellow",
+        "page__button_background-color_mango",
         "page__button_color_slimy-green"
       );
     }
@@ -5308,7 +5523,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.loginButton,
-        "page__button_background-color_yellow",
+        "page__button_background-color_mango",
         "page__button_color_slimy-green"
       );
     }
@@ -5318,23 +5533,20 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.forgottenPasswordLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
     // If the DOM element exist.
     if (font.registerLink) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(font.registerLink, "page__link_color_yellow");
+      tools.addClassesToElement(font.registerLink, "page__link_color_mango");
     }
 
     // If the DOM element exist.
     if (font.mobileLoginLink) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(
-        font.mobileLoginLink,
-        "page__link_color_yellow"
-      );
+      tools.addClassesToElement(font.mobileLoginLink, "page__link_color_mango");
     }
 
     // If the DOM element exist.
@@ -5342,7 +5554,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.mobileLogoutLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -5351,7 +5563,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.mobileRegistrationLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -5387,60 +5599,66 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.termsOfServiceLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
     // For each errorMessage of font.errorMessages.
     for (let errorMessage of font.errorMessages) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(errorMessage, "error-message_color_yellow");
+      tools.addClassesToElement(errorMessage, "error-message_color_mango");
     }
 
-    // For each element of font.productAviabilityElements.
-    for (let element of font.productAviabilityElements) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "availability_color_yellow");
-    }
-
-    // For each card of font.addressCards.
-    for (let card of font.addressCards) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-address_border-color_yellow");
-    }
-
-    // For each icon of font.checkedIcons.
-    for (let icon of font.checkedIcons) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_yellow");
-    }
-
-    // For each link of font.deleteLinks.
-    for (let link of font.deleteLinks) {
+    // For each productAviabilityElement of font.productAviabilityElements.
+    for (let productAviabilityElement of font.productAviabilityElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        productAviabilityElement,
+        "availability_color_mango"
+      );
+    }
+
+    // For each productAviabilityElement of font.addressCards.
+    for (let addressCard of font.addressCards) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(addressCard, "card-address_border-color_mango");
+    }
+
+    // For each checkedIcon of font.checkedIcons.
+    for (let checkedIcon of font.checkedIcons) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(checkedIcon, "page__icon_color_mango");
+    }
+
+    // For each deleteLink of font.deleteLinks.
+    for (let deleteLink of font.deleteLinks) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(
+        deleteLink,
         "page__link_background-color_red",
         "page__link_color_white"
       );
     }
 
-    // For each link of font.textLinks.
-    for (let link of font.textLinks) {
+    // For each textLink of font.textLinks.
+    for (let textLink of font.textLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_white");
+      tools.addClassesToElement(textLink, "page__link_color_white");
     }
 
-    // For each card of font.purchaseCards.
-    for (let card of font.purchaseCards) {
+    // For each purchaseCard of font.purchaseCards.
+    for (let purchaseCard of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_border-color_yellow");
+      tools.addClassesToElement(
+        purchaseCard,
+        "card-purchase_border-color_mango"
+      );
     }
 
-    // For each element of font.purchaseStatusElements.
-    for (let element of font.purchaseStatusElements) {
+    // For each purchaseStatusElement of font.purchaseStatusElements.
+    for (let purchaseStatusElement of font.purchaseStatusElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "status_color_yellow");
+      tools.addClassesToElement(purchaseStatusElement, "status_color_mango");
     }
 
     // If the DOM element exist.
@@ -5448,7 +5666,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.purchaseTotal,
-        "purchase-total_border-color_yellow"
+        "purchase-total_border-color_mango"
       );
     }
 
@@ -5457,7 +5675,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.purchaseTotalReminder,
-        "purchase-total_border-color_yellow"
+        "purchase-total_border-color_mango"
       );
     }
 
@@ -5475,7 +5693,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.contactButton,
-        "page__button_background-color_yellow",
+        "page__button_background-color_mango",
         "page__button_color_slimy-green"
       );
     }
@@ -5489,27 +5707,30 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.purchaseConfirmAddressesButton,
-        "page__button_background-color_yellow",
+        "page__button_background-color_mango",
         "page__button_color_slimy-green"
       );
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.purchaseConfirmDeliveryModeButton,
-        "page__button_background-color_yellow",
+        "page__button_background-color_mango",
         "page__button_color_slimy-green"
       );
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.purchaseConfirmButton,
-        "page__button_background-color_yellow",
+        "page__button_background-color_mango",
         "page__button_color_slimy-green"
       );
     }
 
-    // For each question of font.customerServiceQuestions.
-    for (let question of font.customerServiceQuestions) {
+    // For each customerServiceQuestion of font.customerServiceQuestions.
+    for (let customerServiceQuestion of font.customerServiceQuestions) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(question, "term__question_color_white");
+      tools.addClassesToElement(
+        customerServiceQuestion,
+        "term__question_color_white"
+      );
     }
   },
   /**
@@ -5521,13 +5742,14 @@ const font = {
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
+
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(mode.body, "golden-state-warriors");
 
     // We call tools.setColorToBeforeProperty() to set a new color for the before property on the element.
     tools.setColorToBeforeProperty(
       font.goldenStateWarriorsSwitchSlider,
-      font.colors.yellow
+      font.colors.mango
     );
 
     // We call font.removeClassesFromElements() in order to remove multiple classNames from all the elements.
@@ -5546,7 +5768,7 @@ const font = {
       );
       // We call tools.addClassToElements() in order to add a className to one or several elements.
       tools.addClassToElements(
-        "header__icon_color_yellow",
+        "header__icon_color_mango",
         font.burgerMenuImageBar,
         font.burgerMenuImageUncheckMark
       );
@@ -5559,92 +5781,95 @@ const font = {
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-    tools.addClassesToElement(font.headerTitle, "header__title_color_yellow");
+    tools.addClassesToElement(font.headerTitle, "header__title_color_mango");
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-    tools.addClassesToElement(font.headerCartIcon, "header__icon_color_yellow");
+    tools.addClassesToElement(font.headerCartIcon, "header__icon_color_mango");
 
-    // For each link of font.menuNavDesktopLinks.
-    for (let link of font.menuNavDesktopLinks) {
+    // For each menuNavDesktopLink of font.menuNavDesktopLinks.
+    for (let menuNavDesktopLink of font.menuNavDesktopLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "nav-desktop__item_color_yellow");
+      tools.addClassesToElement(
+        menuNavDesktopLink,
+        "nav-desktop__item_color_mango"
+      );
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(
       font.circle,
-      "circle_background-color_yellow",
+      "circle_background-color_mango",
       "circle_color_blue"
     );
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(font.footer, "footer_background-color_blue");
 
-    // For each title of font.footerTitles.
-    for (let title of font.footerTitles) {
+    // For each footerTitle of font.footerTitles.
+    for (let footerTitle of font.footerTitles) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(title, "footer__title_color_yellow");
+      tools.addClassesToElement(footerTitle, "footer__title_color_mango");
     }
 
-    // For each link of font.footerTitles.
-    for (let link of font.footerLinks) {
+    // For each footerLink of font.footerLinks.
+    for (let footerLink of font.footerLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_yellow");
+      tools.addClassesToElement(footerLink, "page__link_color_mango");
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(
       font.copyright,
-      "block-footer__copyright_color_yellow"
+      "block-footer__copyright_color_mango"
     );
 
-    // For each button of font.searchButtons.
-    for (let button of font.searchButtons) {
+    // For each searchButton of font.searchButtons.
+    for (let searchButton of font.searchButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        searchButton,
         "page__button_background-color_blue",
-        "page__button_color_yellow"
+        "page__button_color_mango"
       );
     }
 
-    // For each button of font.createButtons.
-    for (let button of font.createButtons) {
+    // For each createButton of font.createButtons.
+    for (let createButton of font.createButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        createButton,
         "page__button_background-color_white",
-        "page__button_color_yellow"
+        "page__button_color_mango"
       );
     }
 
-    // For each link of font.createLinks.
-    for (let link of font.createLinks) {
+    // For each createLink of font.createLinks.
+    for (let createLink of font.createLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        createLink,
         "page__link_background-color_white",
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
-    // For each link of font.reactivateUserAccountLinks.
-    for (let link of font.reactivateUserAccountLinks) {
+    // For each reactivateUserAccountLink of font.reactivateUserAccountLinks.
+    for (let reactivateUserAccountLink of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        reactivateUserAccountLink,
         "page__link_background-color_blue",
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
-    // For each link of font.addToCartLinks.
-    for (let link of font.addToCartLinks) {
+    // For each addToCartLink of font.addToCartLinks.
+    for (let addToCartLink of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        addToCartLink,
         "page__link_background-color_blue",
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -5654,15 +5879,15 @@ const font = {
       tools.addClassesToElement(
         font.purchaseLink,
         "page__link_background-color_blue",
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
-    // For each link of font.detailLinks.
-    for (let link of font.detailLinks) {
+    // For each detailLink of font.detailLinks.
+    for (let detailLink of font.detailLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        detailLink,
         "page__link_background-color_blue",
         "page__link_color_white"
       );
@@ -5674,7 +5899,7 @@ const font = {
       tools.addClassesToElement(
         table,
         "table_background-color_blue",
-        "table_color_yellow"
+        "table_color_mango"
       );
     }
 
@@ -5685,17 +5910,17 @@ const font = {
         font.pursueShoppingLink,
         "page__link_color_blue"
       );
-      // For each icon of font.deleteProductIcons.
-      for (let icon of font.deleteProductIcons) {
+      // For each deleteProductIcon of font.deleteProductIcons.
+      for (let deleteProductIcon of font.deleteProductIcons) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-        tools.addClassesToElement(icon, "page__icon_color_blue");
+        tools.addClassesToElement(deleteProductIcon, "page__icon_color_blue");
       }
     }
 
-    // For each icon of mode.quantityIcons.
-    for (let icon of mode.quantityIcons) {
+    // For each quantityIcon of mode.quantityIcons.
+    for (let quantityIcon of mode.quantityIcons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_blue");
+      tools.addClassesToElement(quantityIcon, "page__icon_color_blue");
     }
 
     // If the DOM element exist.
@@ -5704,16 +5929,16 @@ const font = {
       tools.addClassesToElement(font.total, "total_border-color_blue");
     }
 
-    // For each link of font.cartLinks.
-    for (let link of font.cartLinks) {
+    // For each cartLink of font.cartLinks.
+    for (let cartLink of font.cartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_background-color_blue");
+      tools.addClassesToElement(cartLink, "page__link_background-color_blue");
     }
 
-    // For each image of font.cartButtonImages.
-    for (let image of font.cartButtonImages) {
+    // For each cartButtonImage of font.cartButtonImages.
+    for (let cartButtonImage of font.cartButtonImages) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(image, "page__icon_color_yellow");
+      tools.addClassesToElement(cartButtonImage, "page__icon_color_mango");
     }
 
     // For each card of font.cards.
@@ -5722,10 +5947,10 @@ const font = {
       tools.addClassesToElement(card, "card_border-color_blue");
     }
 
-    // For each link of font.cardsLinks.
-    for (let link of font.cardsLinks) {
+    // For each cardsLink of font.cardsLinks.
+    for (let cardsLink of font.cardsLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_blue");
+      tools.addClassesToElement(cardsLink, "page__link_color_blue");
     }
 
     // For each adminPreview of font.cards.
@@ -5764,7 +5989,7 @@ const font = {
       tools.addClassesToElement(
         form.registrationButton,
         "page__button_background-color_blue",
-        "page__button_color_yellow"
+        "page__button_color_mango"
       );
     }
 
@@ -5774,7 +5999,7 @@ const font = {
       tools.addClassesToElement(
         form.loginButton,
         "page__button_background-color_blue",
-        "page__button_color_yellow"
+        "page__button_color_mango"
       );
     }
 
@@ -5819,7 +6044,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.desktopLoginLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -5828,7 +6053,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.desktopLogoutLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -5837,7 +6062,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.desktopRegistrationLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -5856,50 +6081,56 @@ const font = {
       tools.addClassesToElement(errorMessage, "error-message_color_blue");
     }
 
-    // For each element of font.productAviabilityElements.
-    for (let element of font.productAviabilityElements) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "availability_color_blue");
-    }
-
-    // For each card of font.addressCards.
-    for (let card of font.addressCards) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-address_border-color_blue");
-    }
-
-    // For each icon of font.checkedIcons.
-    for (let icon of font.checkedIcons) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_blue");
-    }
-
-    // For each link of font.deleteLinks.
-    for (let link of font.deleteLinks) {
+    // For each productAviabilityElement of font.productAviabilityElements.
+    for (let productAviabilityElement of font.productAviabilityElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        productAviabilityElement,
+        "availability_color_blue"
+      );
+    }
+
+    // For each addressCard of font.addressCards.
+    for (let addressCard of font.addressCards) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(addressCard, "card-address_border-color_blue");
+    }
+
+    // For each checkedIcon of font.checkedIcons.
+    for (let checkedIcon of font.checkedIcons) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(checkedIcon, "page__icon_color_blue");
+    }
+
+    // For each deleteLink of font.deleteLinks.
+    for (let deleteLink of font.deleteLinks) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(
+        deleteLink,
         "page__link_background-color_red",
         "page__link_color_white"
       );
     }
 
-    // For each link of font.textLinks.
-    for (let link of font.textLinks) {
+    // For each textLink of font.textLinks.
+    for (let textLink of font.textLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_white");
+      tools.addClassesToElement(textLink, "page__link_color_white");
     }
 
-    // For each card of font.purchaseCards.
-    for (let card of font.purchaseCards) {
+    // For each purchaseCard of font.purchaseCards.
+    for (let purchaseCard of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_border-color_blue");
+      tools.addClassesToElement(
+        purchaseCard,
+        "card-purchase_border-color_blue"
+      );
     }
 
-    // For each element of font.purchaseStatusElements.
-    for (let element of font.purchaseStatusElements) {
+    // For each purchaseStatusElement of font.purchaseStatusElements.
+    for (let purchaseStatusElement of font.purchaseStatusElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "status_color_blue");
+      tools.addClassesToElement(purchaseStatusElement, "status_color_blue");
     }
 
     // If the DOM element exist.
@@ -5935,7 +6166,7 @@ const font = {
       tools.addClassesToElement(
         form.contactButton,
         "page__button_background-color_blue",
-        "page__button_color_yellow"
+        "page__button_color_mango"
       );
     }
 
@@ -5949,26 +6180,29 @@ const font = {
       tools.addClassesToElement(
         form.purchaseConfirmAddressesButton,
         "page__button_background-color_blue",
-        "page__button_color_yellow"
+        "page__button_color_mango"
       );
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.purchaseConfirmDeliveryModeButton,
         "page__button_background-color_blue",
-        "page__button_color_yellow"
+        "page__button_color_mango"
       );
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.purchaseConfirmButton,
         "page__button_background-color_blue",
-        "page__button_color_yellow"
+        "page__button_color_mango"
       );
     }
 
-    // For each question of font.customerServiceQuestions.
-    for (let question of font.customerServiceQuestions) {
+    // For each customerServiceQuestion of font.customerServiceQuestions.
+    for (let customerServiceQuestion of font.customerServiceQuestions) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(question, "term__question_color_white");
+      tools.addClassesToElement(
+        customerServiceQuestion,
+        "term__question_color_white"
+      );
     }
   },
   /**
@@ -5980,6 +6214,7 @@ const font = {
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
+
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(mode.body, "flash");
 
@@ -5990,13 +6225,13 @@ const font = {
     font.removeClassesFromElements();
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-    tools.addClassesToElement(font.header, "header_background-color_yellow");
+    tools.addClassesToElement(font.header, "header_background-color_mango");
 
     // If the DOM elements exist.
     if (font.burgerMenus) {
       // We call tools.addClassToElements() in order to add a className to one or several elements.
       tools.addClassToElements(
-        "burger-menu_background-color_yellow",
+        "burger-menu_background-color_mango",
         font.openingButton,
         font.closingButton
       );
@@ -6011,7 +6246,7 @@ const font = {
     // For each link of font.menuNavMobileLinks.
     for (let link of font.menuNavMobileLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "nav-mobile__item_color_yellow");
+      tools.addClassesToElement(link, "nav-mobile__item_color_mango");
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -6020,32 +6255,35 @@ const font = {
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(font.headerCartIcon, "header__icon_color_red");
 
-    // For each link of font.menuNavDesktopLinks.
-    for (let link of font.menuNavDesktopLinks) {
+    // For each menuNavDesktopLink of font.menuNavDesktopLinks.
+    for (let menuNavDesktopLink of font.menuNavDesktopLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "nav-desktop__item_color_red");
+      tools.addClassesToElement(
+        menuNavDesktopLink,
+        "nav-desktop__item_color_red"
+      );
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(
       font.circle,
       "circle_background-color_red",
-      "circle_color_yellow"
+      "circle_color_mango"
     );
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-    tools.addClassesToElement(font.footer, "footer_background-color_yellow");
+    tools.addClassesToElement(font.footer, "footer_background-color_mango");
 
-    // For each title of font.footerTitles.
-    for (let title of font.footerTitles) {
+    // For each footerTitle of font.footerTitles.
+    for (let footerTitle of font.footerTitles) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(title, "footer__title_color_red");
+      tools.addClassesToElement(footerTitle, "footer__title_color_red");
     }
 
-    // For each link of font.footerTitles.
-    for (let link of font.footerLinks) {
+    // For each footerLink of font.footerLinks.
+    for (let footerLink of font.footerLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_red");
+      tools.addClassesToElement(footerLink, "page__link_color_red");
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -6054,52 +6292,52 @@ const font = {
       "block-footer__copyright_color_red"
     );
 
-    // For each button of font.searchButtons.
-    for (let button of font.searchButtons) {
+    // For each searchButton of font.searchButtons.
+    for (let searchButton of font.searchButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
-        "page__button_background-color_yellow",
+        searchButton,
+        "page__button_background-color_mango",
         "page__button_color_red"
       );
     }
 
-    // For each button of font.createButtons.
-    for (let button of font.createButtons) {
+    // For each createButton of font.createButtons.
+    for (let createButton of font.createButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        createButton,
         "page__button_background-color_white",
         "page__button_color_red"
       );
     }
 
-    // For each link of font.createLinks.
-    for (let link of font.createLinks) {
+    // For each createLink of font.createLinks.
+    for (let createLink of font.createLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        createLink,
         "page__link_background-color_white",
         "page__link_color_red"
       );
     }
 
-    // For each link of font.reactivateUserAccountLinks.
-    for (let link of font.reactivateUserAccountLinks) {
+    // For each reactivateUserAccountLink of font.reactivateUserAccountLinks.
+    for (let reactivateUserAccountLink of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
-        "page__link_background-color_yellow",
+        reactivateUserAccountLink,
+        "page__link_background-color_mango",
         "page__link_color_red"
       );
     }
 
-    // For each link of font.addToCartLinks.
-    for (let link of font.addToCartLinks) {
+    // For each addToCartLink of font.addToCartLinks.
+    for (let addToCartLink of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
-        "page__link_background-color_yellow",
+        addToCartLink,
+        "page__link_background-color_mango",
         "page__link_color_red"
       );
     }
@@ -6109,16 +6347,16 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.purchaseLink,
-        "page__link_background-color_yellow",
+        "page__link_background-color_mango",
         "page__link_color_red"
       );
     }
 
-    // For each link of font.detailLinks.
-    for (let link of font.detailLinks) {
+    // For each detailLink of font.detailLinks.
+    for (let detailLink of font.detailLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        detailLink,
         "page__link_background-color_blue",
         "page__link_color_white"
       );
@@ -6129,7 +6367,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         table,
-        "table_background-color_yellow",
+        "table_background-color_mango",
         "table_color_red"
       );
     }
@@ -6139,49 +6377,49 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.pursueShoppingLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
-      // For each icon of font.deleteProductIcons.
-      for (let icon of font.deleteProductIcons) {
+      // For each deleteProductIcon of font.deleteProductIcons.
+      for (let deleteProductIcon of font.deleteProductIcons) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-        tools.addClassesToElement(icon, "page__icon_color_yellow");
+        tools.addClassesToElement(deleteProductIcon, "page__icon_color_mango");
       }
     }
 
-    // For each icon of mode.quantityIcons.
-    for (let icon of mode.quantityIcons) {
+    // For each quantityIcon of mode.quantityIcons.
+    for (let quantityIcon of mode.quantityIcons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_yellow");
+      tools.addClassesToElement(quantityIcon, "page__icon_color_mango");
     }
 
     // If the DOM element exist.
     if (font.total) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(font.total, "total_border-color_yellow");
+      tools.addClassesToElement(font.total, "total_border-color_mango");
     }
 
-    // For each link of font.cartLinks.
-    for (let link of font.cartLinks) {
+    // For each cartLink of font.cartLinks.
+    for (let cartLink of font.cartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_background-color_yellow");
+      tools.addClassesToElement(cartLink, "page__link_background-color_mango");
     }
 
-    // For each image of font.cartButtonImages.
-    for (let image of font.cartButtonImages) {
+    // For each cartButtonImage of font.cartButtonImages.
+    for (let cartButtonImage of font.cartButtonImages) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(image, "page__icon_color_red");
+      tools.addClassesToElement(cartButtonImage, "page__icon_color_red");
     }
 
     // For each card of font.cards.
     for (let card of font.cards) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card_border-color_yellow");
+      tools.addClassesToElement(card, "card_border-color_mango");
     }
 
-    // For each link of font.cardsLinks.
-    for (let link of font.cardsLinks) {
+    // For each cardsLink of font.cardsLinks.
+    for (let cardsLink of font.cardsLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_yellow");
+      tools.addClassesToElement(cardsLink, "page__link_color_mango");
     }
     // For each adminPreview of font.cards.
     for (let adminPreview of font.adminPreviews) {
@@ -6195,16 +6433,13 @@ const font = {
     // For each adminPreview of font.cards.
     for (let adminDetail of font.adminDetails) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(
-        adminDetail,
-        "admin-detail_border-color_yellow"
-      );
+      tools.addClassesToElement(adminDetail, "admin-detail_border-color_mango");
     }
 
     // For each input of mode.inputs.
     for (let input of mode.inputs) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(input, "form-field__input_color_yellow-flash");
+      tools.addClassesToElement(input, "form-field__input_color_mango-flash");
     }
 
     // If the DOM element exist.
@@ -6212,7 +6447,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.contactEmailLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -6221,7 +6456,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.registrationButton,
-        "page__button_background-color_yellow",
+        "page__button_background-color_mango",
         "page__button_color_red"
       );
     }
@@ -6231,7 +6466,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.loginButton,
-        "page__button_background-color_yellow",
+        "page__button_background-color_mango",
         "page__button_color_red"
       );
     }
@@ -6241,23 +6476,20 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.forgottenPasswordLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
     // If the DOM element exist.
     if (font.registerLink) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(font.registerLink, "page__link_color_yellow");
+      tools.addClassesToElement(font.registerLink, "page__link_color_mango");
     }
 
     // If the DOM element exist.
     if (font.mobileLoginLink) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(
-        font.mobileLoginLink,
-        "page__link_color_yellow"
-      );
+      tools.addClassesToElement(font.mobileLoginLink, "page__link_color_mango");
     }
 
     // If the DOM element exist.
@@ -6265,7 +6497,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.mobileLogoutLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -6274,7 +6506,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.mobileRegistrationLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
@@ -6304,60 +6536,66 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.termsOfServiceLink,
-        "page__link_color_yellow"
+        "page__link_color_mango"
       );
     }
 
     // For each errorMessage of font.errorMessages.
     for (let errorMessage of font.errorMessages) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(errorMessage, "error-message_color_yellow");
+      tools.addClassesToElement(errorMessage, "error-message_color_mango");
     }
 
-    // For each element of font.productAviabilityElements.
-    for (let element of font.productAviabilityElements) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "availability_color_yellow");
-    }
-
-    // For each card of font.addressCards.
-    for (let card of font.addressCards) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-address_border-color_yellow");
-    }
-
-    // For each icon of font.checkedIcons.
-    for (let icon of font.checkedIcons) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_yellow");
-    }
-
-    // For each link of font.deleteLinks.
-    for (let link of font.deleteLinks) {
+    // For each productAviabilityElement of font.productAviabilityElements.
+    for (let productAviabilityElement of font.productAviabilityElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        productAviabilityElement,
+        "availability_color_mango"
+      );
+    }
+
+    // For each addressCard of font.addressCards.
+    for (let addressCard of font.addressCards) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(addressCard, "card-address_border-color_mango");
+    }
+
+    // For each checkedIcon of font.checkedIcons.
+    for (let checkedIcon of font.checkedIcons) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(checkedIcon, "page__icon_color_mango");
+    }
+
+    // For each deleteLink of font.deleteLinks.
+    for (let deleteLink of font.deleteLinks) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(
+        deleteLink,
         "page__link_background-color_white",
         "page__link_color_red"
       );
     }
 
-    // For each link of font.textLinks.
-    for (let link of font.textLinks) {
+    // For each textLink of font.textLinks.
+    for (let textLink of font.textLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_white");
+      tools.addClassesToElement(textLink, "page__link_color_white");
     }
 
-    // For each card of font.purchaseCards.
-    for (let card of font.purchaseCards) {
+    // For each purchaseCard of font.purchaseCards.
+    for (let purchaseCard of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_border-color_yellow");
+      tools.addClassesToElement(
+        purchaseCard,
+        "card-purchase_border-color_mango"
+      );
     }
 
-    // For each element of font.purchaseStatusElements.
-    for (let element of font.purchaseStatusElements) {
+    // For each purchaseStatusElement of font.purchaseStatusElements.
+    for (let purchaseStatusElement of font.purchaseStatusElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "status_color_yellow");
+      tools.addClassesToElement(purchaseStatusElement, "status_color_mango");
     }
 
     // If the DOM element exist.
@@ -6365,7 +6603,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.purchaseTotal,
-        "purchase-total_border-color_yellow"
+        "purchase-total_border-color_mango"
       );
     }
 
@@ -6374,7 +6612,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         font.purchaseTotalReminder,
-        "purchase-total_border-color_yellow"
+        "purchase-total_border-color_mango"
       );
     }
 
@@ -6392,7 +6630,7 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.contactButton,
-        "page__button_background-color_yellow",
+        "page__button_background-color_mango",
         "page__button_color_red"
       );
     }
@@ -6406,27 +6644,30 @@ const font = {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.purchaseConfirmAddressesButton,
-        "page__button_background-color_yellow",
+        "page__button_background-color_mango",
         "page__button_color_red"
       );
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.purchaseConfirmDeliveryModeButton,
-        "page__button_background-color_yellow",
+        "page__button_background-color_mango",
         "page__button_color_red"
       );
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
         form.purchaseConfirmButton,
-        "page__button_background-color_yellow",
+        "page__button_background-color_mango",
         "page__button_color_red"
       );
     }
 
-    // For each question of font.customerServiceQuestions.
-    for (let question of font.customerServiceQuestions) {
+    // For each customerServiceQuestion of font.customerServiceQuestions.
+    for (let customerServiceQuestion of font.customerServiceQuestions) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(question, "term__question_color_white");
+      tools.addClassesToElement(
+        customerServiceQuestion,
+        "term__question_color_white"
+      );
     }
   },
   /**
@@ -6438,6 +6679,7 @@ const font = {
 
     // We call font.removeAllClassesFromBody() to remove all the CSS classes from the body.
     font.removeAllClassesFromBody();
+
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(mode.body, "forest");
 
@@ -6481,10 +6723,13 @@ const font = {
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
     tools.addClassesToElement(font.headerCartIcon, "header__icon_color_sepia");
 
-    // For each link of font.menuNavDesktopLinks.
-    for (let link of font.menuNavDesktopLinks) {
+    // For each menuNavDesktopLink of font.menuNavDesktopLinks.
+    for (let menuNavDesktopLink of font.menuNavDesktopLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "nav-desktop__item_color_sepia");
+      tools.addClassesToElement(
+        menuNavDesktopLink,
+        "nav-desktop__item_color_sepia"
+      );
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -6500,16 +6745,16 @@ const font = {
       "footer_background-color_slimy-green"
     );
 
-    // For each title of font.footerTitles.
-    for (let title of font.footerTitles) {
+    // For each footerTitle of font.footerTitles.
+    for (let footerTitle of font.footerTitles) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(title, "footer__title_color_sepia");
+      tools.addClassesToElement(footerTitle, "footer__title_color_sepia");
     }
 
-    // For each link of font.footerTitles.
-    for (let link of font.footerLinks) {
+    // For each footerLink of font.footerLinks.
+    for (let footerLink of font.footerLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_sepia");
+      tools.addClassesToElement(footerLink, "page__link_color_sepia");
     }
 
     // We call tools.addClassesToElement() in order to add one or several classNames to the element.
@@ -6518,51 +6763,51 @@ const font = {
       "block-footer__copyright_color_sepia"
     );
 
-    // For each button of font.searchButtons.
-    for (let button of font.searchButtons) {
+    // For each searchButton of font.searchButtons.
+    for (let searchButton of font.searchButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        searchButton,
         "page__button_background-color_slimy-green",
         "page__button_color_sepia"
       );
     }
 
-    // For each button of font.createButtons.
-    for (let button of font.createButtons) {
+    // For each createButton of font.createButtons.
+    for (let createButton of font.createButtons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        button,
+        createButton,
         "page__button_background-color_white",
         "page__button_color_sepia"
       );
     }
 
-    // For each link of font.createLinks.
-    for (let link of font.createLinks) {
+    // For each createLink of font.createLinks.
+    for (let createLink of font.createLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        createLink,
         "page__link_background-color_white",
         "page__link_color_sepia"
       );
     }
 
-    // For each link of font.reactivateUserAccountLinks.
-    for (let link of font.reactivateUserAccountLinks) {
+    // For each reactivateUserAccountLink of font.reactivateUserAccountLinks.
+    for (let reactivateUserAccountLink of font.reactivateUserAccountLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        reactivateUserAccountLink,
         "page__link_background-color_slimy-green",
         "page__link_color_sepia"
       );
     }
 
-    // For each link of font.addToCartLinks.
-    for (let link of font.addToCartLinks) {
+    // For each addToCartLink of font.addToCartLinks.
+    for (let addToCartLink of font.addToCartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        addToCartLink,
         "page__link_background-color_slimy-green",
         "page__link_color_sepia"
       );
@@ -6578,11 +6823,11 @@ const font = {
       );
     }
 
-    // For each link of font.detailLinks.
-    for (let link of font.detailLinks) {
+    // For each detailLink of font.detailLinks.
+    for (let detailLink of font.detailLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        detailLink,
         "page__link_background-color_blue",
         "page__link_color_white"
       );
@@ -6605,17 +6850,20 @@ const font = {
         font.pursueShoppingLink,
         "page__link_color_slimy-green"
       );
-      // For each icon of font.deleteProductIcons.
-      for (let icon of font.deleteProductIcons) {
+      // For each deleteProductIcon of font.deleteProductIcons.
+      for (let deleteProductIcon of font.deleteProductIcons) {
         // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-        tools.addClassesToElement(icon, "page__icon_color_slimy-green");
+        tools.addClassesToElement(
+          deleteProductIcon,
+          "page__icon_color_slimy-green"
+        );
       }
     }
 
-    // For each icon of mode.quantityIcons.
-    for (let icon of mode.quantityIcons) {
+    // For each quantityIcon of mode.quantityIcons.
+    for (let quantityIcon of mode.quantityIcons) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_slimy-green");
+      tools.addClassesToElement(quantityIcon, "page__icon_color_slimy-green");
     }
 
     // If the DOM elements exist.
@@ -6624,19 +6872,19 @@ const font = {
       tools.addClassesToElement(font.total, "total_border-color_slimy-green");
     }
 
-    // For each link of font.cartLinks.
-    for (let link of font.cartLinks) {
+    // For each cartLink of font.cartLinks.
+    for (let cartLink of font.cartLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        cartLink,
         "page__link_background-color_slimy-green"
       );
     }
 
-    // For each image of font.cartButtonImages.
-    for (let image of font.cartButtonImages) {
+    // For each cartButtonImage of font.cartButtonImages.
+    for (let cartButtonImage of font.cartButtonImages) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(image, "page__icon_color_sepia");
+      tools.addClassesToElement(cartButtonImage, "page__icon_color_sepia");
     }
 
     // For each card of font.cards.
@@ -6645,10 +6893,10 @@ const font = {
       tools.addClassesToElement(card, "card_border-color_slimy-green");
     }
 
-    // For each link of font.cardsLinks.
-    for (let link of font.cardsLinks) {
+    // For each cardsLink of font.cardsLinks.
+    for (let cardsLink of font.cardsLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_slimy-green");
+      tools.addClassesToElement(cardsLink, "page__link_color_slimy-green");
     }
 
     // For each adminPreview of font.cards.
@@ -6797,50 +7045,62 @@ const font = {
       );
     }
 
-    // For each element of font.productAviabilityElements.
-    for (let element of font.productAviabilityElements) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "availability_color_slimy-green");
-    }
-
-    // For each card of font.addressCards.
-    for (let card of font.addressCards) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-address_border-color_slimy-green");
-    }
-
-    // For each icon of font.checkedIcons.
-    for (let icon of font.checkedIcons) {
-      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(icon, "page__icon_color_slimy-green");
-    }
-
-    // For each link of font.deleteLinks.
-    for (let link of font.deleteLinks) {
+    // For each productAviabilityElement of font.productAviabilityElements.
+    for (let productAviabilityElement of font.productAviabilityElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
-        link,
+        productAviabilityElement,
+        "availability_color_slimy-green"
+      );
+    }
+
+    // For each addressCard of font.addressCards.
+    for (let addressCard of font.addressCards) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(
+        addressCard,
+        "card-address_border-color_slimy-green"
+      );
+    }
+
+    // For each checkedIcon of font.checkedIcons.
+    for (let checkedIcon of font.checkedIcons) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(checkedIcon, "page__icon_color_slimy-green");
+    }
+
+    // For each deleteLink of font.deleteLinks.
+    for (let deleteLink of font.deleteLinks) {
+      // We call tools.addClassesToElement() in order to add one or several classNames to the element.
+      tools.addClassesToElement(
+        deleteLink,
         "page__link_background-color_red",
         "page__link_color_white"
       );
     }
 
-    // For each link of font.textLinks.
-    for (let link of font.textLinks) {
+    // For each textLink of font.textLinks.
+    for (let textLink of font.textLinks) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(link, "page__link_color_white");
+      tools.addClassesToElement(textLink, "page__link_color_white");
     }
 
-    // For each card of font.purchaseCards.
-    for (let card of font.purchaseCards) {
+    // For each purchaseCard of font.purchaseCards.
+    for (let purchaseCard of font.purchaseCards) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(card, "card-purchase_border-color_slimy-green");
+      tools.addClassesToElement(
+        purchaseCard,
+        "card-purchase_border-color_slimy-green"
+      );
     }
 
-    // For each element of font.purchaseStatusElements.
-    for (let element of font.purchaseStatusElements) {
+    // For each purchaseStatusElement of font.purchaseStatusElements.
+    for (let purchaseStatusElement of font.purchaseStatusElements) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(element, "status_color_slimy-green");
+      tools.addClassesToElement(
+        purchaseStatusElement,
+        "status_color_slimy-green"
+      );
     }
 
     // If the DOM element exist.
@@ -6906,10 +7166,13 @@ const font = {
       );
     }
 
-    // For each question of font.customerServiceQuestions.
-    for (let question of font.customerServiceQuestions) {
+    // For each customerServiceQuestion of font.customerServiceQuestions.
+    for (let customerServiceQuestion of font.customerServiceQuestions) {
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
-      tools.addClassesToElement(question, "term__question_color_white");
+      tools.addClassesToElement(
+        customerServiceQuestion,
+        "term__question_color_white"
+      );
     }
   },
 };
