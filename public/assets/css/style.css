@@ -813,7 +813,6 @@ body {
 
   .page__link_color_sepia {
     color: var(--sepia);
-    padding: 0;
   }
 
   .page__link_text-transform_uppercase {
