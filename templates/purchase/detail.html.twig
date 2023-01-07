@@ -80,10 +80,10 @@
 				{% for purchaseItem in purchaseItems %}
 					<div class="purchase-item">
 						<div class="purchase-item-property">
-							<h3>{{ purchaseItem.drawingName }}</h3>
+							<h3>{{ purchaseItem.productName }}</h3>
 							<p>Référence :
-								{{ purchaseItem.drawingReference}}</p>
-							<p>{{ purchaseItem.drawingPrice|amount }}</p>
+								{{ purchaseItem.productReference}}</p>
+							<p>{{ purchaseItem.productPrice|amount }}</p>
 							<p>
 								Quantité x
 								{{ purchaseItem.quantity }}
@@ -205,10 +205,10 @@
 					{% for purchaseItem in purchaseItems %}
 						<tbody>
 							<tr>
-								<td>{{ purchaseItem.drawingName }}<br>Référence :
-									{{ purchaseItem.drawingReference }}</td>
+								<td>{{ purchaseItem.productName }}<br>Référence :
+									{{ purchaseItem.productReference }}</td>
 								<td>{{ purchaseItem.quantity }}</td>
-								<td>{{ purchaseItem.drawingPrice|amount }}</td>
+								<td>{{ purchaseItem.productPrice|amount }}</td>
 								<td>{{ purchaseItem.total|amount }}</td>
 							</tr>
 						{% endfor %}

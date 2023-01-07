@@ -40,8 +40,8 @@ The E-Shop-Symfony project use the **MariaDB** Relational Database Management Sy
 
 ## 👀 Glimpse
 
-▶️ E-Shop - Desktop tour with a administrator role :  
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/3DFKYjMYD3o/0.jpg)](https://www.youtube.com/watch?v=3DFKYjMYD3o&t=182s)
-
 ▶️ E-Shop - Mobile tour with a administrator role :  
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/mQNfD4YjoVY/0.jpg)](https://www.youtube.com/watch?v=mQNfD4YjoVY&t=62s)
+[![IMAGE ALT TEXT HERE](https://i3.ytimg.com/vi/Ocfd6QnveMI/maxresdefault.jpg)](https://www.youtube.com/watch?v=Ocfd6QnveMI&list=PLmG5X1Z2gVyV-tgnb5x13pWOOUMkHYtRk&index=1&t=2s)
+
+▶️ E-Shop - Desktop tour with a administrator role :  
+[![IMAGE ALT TEXT HERE](https://i3.ytimg.com/vi/gaIlEr4ww0I/maxresdefault.jpg)](https://www.youtube.com/watch?v=gaIlEr4ww0I)

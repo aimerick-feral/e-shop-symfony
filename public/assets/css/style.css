@@ -3753,6 +3753,7 @@ body {
   .table {
     display: table;
     width: 80%;
+    /* width: 100%; */
     margin: 2em 0 2em;
     border-collapse: collapse;
     font-size: 1em;

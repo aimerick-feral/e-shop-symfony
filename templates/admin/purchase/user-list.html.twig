@@ -70,7 +70,7 @@
 								{{ purchase.status }}
 							</p>
 						{% endif %}
-						<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_blue page__link_color_white" href="{{ path('admin_purchase_user_detail', {'userId': user.id, 'reference': purchase.reference}) }}">Détails</a>
+						<a class="page__link page__link-detail page__link_text-transform_uppercase page__link_background-color_blue page__link_color_white" href="{{ path('admin_purchase_user_detail', {'userId': user.id, 'reference': purchase.reference}) }}">Détails</a>
 						<a class="page__link page__link_text-transform_uppercase page__link_margin-bottom_1em page__link_background-color_safety-orange page__link_color_white" href="{{ path('admin_purchase_update', {'userId': user.id, 'reference': purchase.reference}) }}?returnToAdminPurchaseUserList=true">Modifier</a>
 					</div>
 				{% endfor %}

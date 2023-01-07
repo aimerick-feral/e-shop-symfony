@@ -2070,12 +2070,12 @@ const form = {
         if (input.files[index].type === authorizedMimeType) {
           console.log(input.files[index].type);
           console.log("File mime type accepted ✅");
+          // We confirm that a authorizedMimeTypes is authorized.
+          isAuthorized = true;
           // We call form.switchInputOutlineColor() to switch the input outline color.
           form.switchInputOutlineColor(input, form.colors.green);
           // We call tools.addDisplayNone() in order to add the display-none class to one or several elements.
           tools.addDisplayNone(errorMessageFileMimeType);
-          // We confirm that a authorizedMimeTypes is authorized.
-          isAuthorized = true;
           // We call form.checkUploadedFileSize() to check the size of the uploded file.
           form.checkUploadedFileSize(input, form.errorMessageFileSize);
           // We leave form.checkUploadedFileMimeType().
