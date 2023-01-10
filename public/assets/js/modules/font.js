@@ -1843,7 +1843,10 @@ const font = {
       // For each linkBackgroundColorClassName of font.linkBackgroundColorClassNames.
       for (let linkBackgroundColorClassName of font.linkBackgroundColorClassNames) {
         // We call tools.removeClassesFromElement() in order to remove one or several classNames from the element.
-        tools.removeClassesFromElement(font.purchaseLink, className);
+        tools.removeClassesFromElement(
+          font.purchaseLink,
+          linkBackgroundColorClassName
+        );
       }
       // We call tools.addClassesToElement() in order to add one or several classNames to the element.
       tools.addClassesToElement(
